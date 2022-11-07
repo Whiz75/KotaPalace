@@ -131,7 +131,7 @@ namespace KotaPalace.Dialogs
         {
             try
             {
-                var request = new GeolocationRequest(GeolocationAccuracy.Medium);
+                var request = new GeolocationRequest(GeolocationAccuracy.High);
                 var location = await Geolocation.GetLocationAsync(request);
 
                 if (location != null)
