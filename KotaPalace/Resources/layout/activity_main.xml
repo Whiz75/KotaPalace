@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_nav_cardview"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_nav_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="8dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="4dp">
+
+        <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+            android:id="@+id/bottom_navigation_view_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:paddingHorizontal="10dp"
+            >
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/item_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_colorActive="@color/purple_active"
+                app:bt_colorInactive="@color/purple_inactive"
+                app:bt_icon="@drawable/cart"
+                app:bt_shape="@drawable/transition_background_drawable_home"
+                app:bt_title="Order"
+                app:bt_padding="10dp"
+                app:bt_titlePadding="5dp"/>
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/item_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_colorActive="@color/blue_active"
+                app:bt_colorInactive="@color/blue_inactive"
+                app:bt_icon="@drawable/restaurant"
+                app:bt_shape="@drawable/transition_background_drawable_home"
+                app:bt_title="Menu"
+                app:bt_padding="10dp"
+                app:bt_titlePadding="5dp"/>
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/item_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_colorActive="@color/orange_active"
+                app:bt_colorInactive="@color/orange_inactive"
+                app:bt_icon="@drawable/user"
+                app:bt_shape="@drawable/transition_background_drawable_home"
+                app:bt_title="Profile"
+                app:bt_padding="10dp"
+                app:bt_titlePadding="5dp"/>
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/item_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_colorActive="@color/blue_grey_active"
+                app:bt_colorInactive="@color/blue_grey_inactive"
+                app:bt_icon="@drawable/graph_bar"
+                app:bt_shape="@drawable/transition_background_drawable_home"
+                app:bt_title="Report"
+                app:bt_padding="10dp"
+                app:bt_titlePadding="5dp"/>
+        </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

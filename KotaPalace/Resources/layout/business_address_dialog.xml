@@ -1,0 +1,48 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/cancel_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mtrl_ic_cancel"
+                    android:backgroundTint="@color/black"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription=""
+                    android:layout_margin="5dp"/>
+            </RelativeLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+    
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragMap"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        tools:ignore="MissingAndroidNamespace" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ConfirmAddressBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="confirm address"
+        android:layout_gravity="bottom|center"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
