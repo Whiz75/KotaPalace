@@ -1,5 +1,6 @@
 ﻿using Android.Content;
 using Android.OS;
+using Android.Preferences;
 using Android.Runtime;
 using Android.Text.Format;
 using Android.Views;
@@ -32,12 +33,12 @@ namespace KotaPalace.Activities
         private TextInputEditText InputBusinessPhone;
         private TextInputEditText InputBusinessDescription;
         private TextInputEditText InputBusinessEmail;
-        private MaterialAutoCompleteTextView InputBusinessMFOpen;
-        private MaterialAutoCompleteTextView InputBusinessMFClose;
-        private MaterialAutoCompleteTextView InputBusinessSatOpen;
-        private MaterialAutoCompleteTextView InputBusinessSatClose;
-        private MaterialAutoCompleteTextView InputBusinessSunOpen;
-        private MaterialAutoCompleteTextView InputBusinessSunClose;
+        private TextInputEditText InputBusinessMFOpen;
+        private TextInputEditText InputBusinessMFClose;
+        private TextInputEditText InputBusinessSatOpen;
+        private TextInputEditText InputBusinessSatClose;
+        private TextInputEditText InputBusinessSunOpen;
+        private TextInputEditText InputBusinessSunClose;
 
         private MaterialButton InputBusinessAddress;
         private MaterialButton BtnUpdateBusinessProfile;
@@ -62,12 +63,12 @@ namespace KotaPalace.Activities
             InputBusinessPhone = FindViewById<TextInputEditText>(Resource.Id.InputBusinessPhone);
             InputBusinessDescription = FindViewById<TextInputEditText>(Resource.Id.InputBusinessDescription);
             InputBusinessEmail = FindViewById<TextInputEditText>(Resource.Id.InputBusinessEmail);
-            InputBusinessMFOpen = FindViewById<MaterialAutoCompleteTextView>(Resource.Id.InputBusinessMFOpen);
-            InputBusinessMFClose = FindViewById<MaterialAutoCompleteTextView>(Resource.Id.InputBusinessMFClose);
-            InputBusinessSatOpen = FindViewById<MaterialAutoCompleteTextView>(Resource.Id.InputBusinessSatOpen);
-            InputBusinessSatClose = FindViewById<MaterialAutoCompleteTextView>(Resource.Id.InputBusinessSatClose);
-            InputBusinessSunOpen = FindViewById<MaterialAutoCompleteTextView>(Resource.Id.InputBusinessSatClose);
-            InputBusinessSunClose = FindViewById<MaterialAutoCompleteTextView>(Resource.Id.InputBusinessSatClose);
+            InputBusinessMFOpen = FindViewById<TextInputEditText>(Resource.Id.InputBusinessMFOpen);
+            InputBusinessMFClose = FindViewById<TextInputEditText>(Resource.Id.InputBusinessMFClose);
+            InputBusinessSatOpen = FindViewById<TextInputEditText>(Resource.Id.InputBusinessSatOpen);
+            InputBusinessSatClose = FindViewById<TextInputEditText>(Resource.Id.InputBusinessSatClose);
+            InputBusinessSunOpen = FindViewById<TextInputEditText>(Resource.Id.InputBusinessSatClose);
+            InputBusinessSunClose = FindViewById<TextInputEditText>(Resource.Id.InputBusinessSatClose);
 
             InputBusinessAddress = FindViewById<MaterialButton>(Resource.Id.InputBusinessAddress);
             BtnUpdateBusinessProfile = FindViewById<MaterialButton>(Resource.Id.BtnUpdateBusinessProfile);
@@ -75,11 +76,7 @@ namespace KotaPalace.Activities
 
         private void GoToHome()
         {
-            BtnUpdateBusinessProfile.Click += (s, e) =>
-            {
-                //StartActivity(new Intent(this, typeof(MainActivity)));
-                RegisterBusinessProfile();
-            };
+            
         }
 
         private void GetBusinessAddress()
@@ -87,7 +84,29 @@ namespace KotaPalace.Activities
             InputBusinessAddress.Click += (s, e) =>
             {
                 new BusinessAddressDialogFragment()
-                .Show(SupportFragmentManager.BeginTransaction(), "");
+                .Show(SupportFragmentManager.BeginTransaction(), "Address");
+
+                try
+                {
+                    ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
+                    string address = prefs.GetString("address", "");
+
+                    if (address != null)
+                    {
+                        InputBusinessAddress.Text = address;
+                        InputBusinessAddress.Enabled = false;
+
+                        BtnUpdateBusinessProfile.Click += (s, e) =>
+                        {
+                            //StartActivity(new Intent(this, typeof(MainActivity)));
+                            RegisterBusinessProfile(address);
+                        };
+                    }
+                }
+                catch(Exception ex)
+                {
+                    ErrorMessage(ex.Message);
+                }
             };
         }
 
@@ -157,7 +176,7 @@ namespace KotaPalace.Activities
             }
         }
 
-        private async void RegisterBusinessProfile()
+        private async void RegisterBusinessProfile(string address)
         {
             Inputvalidation();
 
@@ -175,7 +194,7 @@ namespace KotaPalace.Activities
                 BusinessSatClose = InputBusinessSatClose.Text.Trim(),
                 BusinessSunOpen = InputBusinessSunOpen.Text.Trim(),
                 BusinessSunClose = InputBusinessSunClose.Text.Trim(),
-                BusinessAddress = null,
+                BusinessAddress = address,
                 OnlineStatus = "Online",
                 ImgUrl = "",
                 Coordinates = "0 / 0"
@@ -220,38 +239,39 @@ namespace KotaPalace.Activities
 
         private void GetOpenAndCloseTime()
         {
-            InputBusinessMFOpen.Click += (s, e) =>
+
+            InputBusinessMFOpen.Touch += (s, e) =>
             {
                 Timepicker(InputBusinessMFOpen);
             };
 
-            InputBusinessMFClose.Click += (s, e) =>
+            InputBusinessMFClose.Touch += (s, e) =>
             {
                 Timepicker(InputBusinessMFClose);
             };
 
-            InputBusinessSatOpen.Click += (s, e) =>
+            InputBusinessSatOpen.Touch += (s, e) =>
             {
                 Timepicker(InputBusinessSatOpen);
             };
 
-            InputBusinessSatClose.Click += (s, e) =>
+            InputBusinessSatClose.Touch += (s, e) =>
             {
                 Timepicker(InputBusinessSatClose);
             };
 
-            InputBusinessSunOpen.Click += (s, e) =>
+            InputBusinessSunOpen.Touch += (s, e) =>
             {
                 Timepicker(InputBusinessSunOpen);
             };
 
-            InputBusinessSunClose.Click += (s, e) =>
+            InputBusinessSunClose.Touch += (s, e) =>
             {
                 Timepicker(InputBusinessSunClose);
             };
         }
 
-        private void Timepicker(MaterialAutoCompleteTextView tv)
+        private void Timepicker(TextInputEditText tv)
         {
             //tv.Text = 
             TimePickerDlg frag = TimePickerDlg.NewInstance(

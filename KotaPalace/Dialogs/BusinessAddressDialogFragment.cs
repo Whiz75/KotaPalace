@@ -6,6 +6,7 @@ using Android.Gms.Maps.Model;
 using Android.Gms.Tasks;
 using Android.Locations;
 using Android.OS;
+using Android.Preferences;
 using Android.Runtime;
 using Android.Util;
 using Android.Views;
@@ -14,6 +15,7 @@ using AndroidHUD;
 using AndroidX.AppCompat.App;
 using AndroidX.Fragment.App;
 using Google.Android.Material.Button;
+using Google.Android.Material.TextField;
 using Java.Util;
 using System;
 using System.Collections.Generic;
@@ -34,6 +36,8 @@ namespace KotaPalace.Dialogs
 
         private ImageView cancel_iv;
 
+        private TextInputEditText txt_address;
+
         private MaterialButton ConfirmAddressBtn;
         private SupportMapFragment mapFrag;
 
@@ -53,6 +57,13 @@ namespace KotaPalace.Dialogs
 
         public BusinessAddressDialogFragment()
         {
+        }
+
+        public static BusinessAddressDialogFragment NewInstance(Bundle bundle)
+        {
+            BusinessAddressDialogFragment fragment = new BusinessAddressDialogFragment();
+            fragment.Arguments = bundle;
+            return fragment;
         }
 
         public override void OnStart()
@@ -82,6 +93,8 @@ namespace KotaPalace.Dialogs
             context = view.Context;
 
             cancel_iv = view.FindViewById<ImageView>(Resource.Id.cancel_iv);
+            txt_address = view.FindViewById<TextInputEditText>(Resource.Id.txt_address);
+
             ConfirmAddressBtn = view.FindViewById<MaterialButton>(Resource.Id.ConfirmAddressBtn);
 
             mapFrag = ChildFragmentManager.FindFragmentById(Resource.Id.fragMap).JavaCast<SupportMapFragment>();
@@ -140,10 +153,12 @@ namespace KotaPalace.Dialogs
                     googleMap.AddMarker(Options);
 
                     //get address here
-                    var address = await ReverseGeocodeCurrentLocation(location.Latitude, location.Longitude);
+                    var addresses = await ReverseGeocodeCurrentLocation(location.Latitude, location.Longitude);
+                    string address = addresses.GetAddressLine(0);
+                    txt_address.Text = $"{address}";
 
-                    DisplayMessage($"{address}");
-                    //DisplayAddress(address);
+                    //pass address to activity
+                    GetAddress(address);
                 }
             }
             catch (Exception ex)
@@ -160,26 +175,6 @@ namespace KotaPalace.Dialogs
 
             Address address = addressList.FirstOrDefault();
             return address;
-        }
-
-        private void DisplayAddress(Address address)
-        {
-            if (address != null)
-            {
-                StringBuilder deviceAddress = new StringBuilder();
-                for (int i = 0; i < address.MaxAddressLineIndex; i++)
-                {
-                    deviceAddress.AppendLine(address.GetAddressLine(i));
-                }
-                // Remove the last comma from the end of the address.
-                //_addressText.Text = deviceAddress.ToString();
-                DisplayMessage(deviceAddress.ToString());
-            }
-            else
-            {
-                //_addressText.Text = "Unable to determine the address. Try again in a few minutes.";
-                DisplayMessage("Unable to determine the address. Try again in a few minutes.");
-            }
         }
 
         private void CheckGps()
@@ -210,6 +205,23 @@ namespace KotaPalace.Dialogs
             {
                 GetLocation();
             }
+        }
+
+        private void GetAddress(string a)
+        {
+            ConfirmAddressBtn.Click += (s, e) =>
+            {
+                ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(Context);
+                ISharedPreferencesEditor editor = prefs.Edit();
+                editor.PutString("address", a);
+                editor.Apply();
+
+                BusinessAddressDialogFragment fragment = (BusinessAddressDialogFragment)FragmentManager.FindFragmentByTag("Address");
+                if (fragment != null)
+                {
+                    fragment.Dismiss();
+                }
+            };
         }
 
         private void DisplayMessage(string m)

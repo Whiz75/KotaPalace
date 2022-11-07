@@ -78,10 +78,10 @@ namespace KotaPalace.Activities
         {
             btn_proceed_signup.Click += (s, e) =>
             {
-                //SignUpUserAsync();
+                SignUpUserAsync();
 
-                StartActivity(new Intent(this, typeof(SignUpBusiness)));
-                OverridePendingTransition(Resource.Animation.Side_in_left, Resource.Animation.Side_out_right);
+                //StartActivity(new Intent(this, typeof(SignUpBusiness)));
+                //OverridePendingTransition(Resource.Animation.Side_in_left, Resource.Animation.Side_out_right);
             };
         }
 

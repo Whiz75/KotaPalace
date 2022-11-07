@@ -36,7 +36,6 @@ namespace KotaPalace.Activities
             Init();
             GoToSignuUp();
             GoToMainActivity();
-            
         }
 
         private void Init()
