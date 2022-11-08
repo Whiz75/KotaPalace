@@ -23,8 +23,6 @@ namespace KotaPalace.Activities
     [Activity(Label = "SignUp")]
     public class SignUp : Activity
     {
-        private string conn = "https://kota-palace-api.herokuapp.com/api";
-
         private MaterialTextView back_to_signin_text;
         private TextInputEditText InputFirstname;
         private TextInputEditText InputLastname;
@@ -79,9 +77,6 @@ namespace KotaPalace.Activities
             btn_proceed_signup.Click += (s, e) =>
             {
                 SignUpUserAsync();
-
-                //StartActivity(new Intent(this, typeof(SignUpBusiness)));
-                //OverridePendingTransition(Resource.Animation.Side_in_left, Resource.Animation.Side_out_right);
             };
         }
 
@@ -154,13 +149,13 @@ namespace KotaPalace.Activities
             if (results.IsSuccessStatusCode)
             {
                 var str = await results.Content.ReadAsStringAsync();
-                //var response = Newtonsoft.Json.JsonConvert.DeserializeObject<AppUsers>(str);
 
                 if (str != null)
                 {
+                    //var response = Newtonsoft.Json.JsonConvert.DeserializeObject<AppUsers>(str);
                     SuccessMessage("Your account has been successfully created");
 
-                    //Preferences.Set("id", str);
+                    Preferences.Set("Id", str);
 
                     //open sign up business activity
                     StartActivity(new Intent(this, typeof(SignUpBusiness)));

@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using AndroidHUD;
 using AndroidX.Fragment.App;
+using Google.Android.Material.TextView;
 using KotaPalace.Models;
 using KotaPalace_Api.Models;
 using System;
@@ -14,11 +15,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using Xamarin.Essentials;
 
 namespace KotaPalace.Fragments
 {
     public class ProfileFragment : Fragment
     {
+        private MaterialTextView testTv;
+
         public ProfileFragment()
         {
         }
@@ -37,20 +41,20 @@ namespace KotaPalace.Fragments
 
             View rootView = inflater.Inflate(Resource.Layout.fragment_profile, container, false);
 
-            //Init(view);
+            Init(rootView);
             GetUserDetails();
 
             return rootView;
         }
 
-        private void Init(object view)
+        private void Init(View view)
         {
-            
+            testTv = view.FindViewById<MaterialTextView>(Resource.Id.testTv);
         }
 
         private async void GetUserDetails()
         {
-            //var Id = Preferences.Get("id", null);
+            var Id = Preferences.Get("id", null);
 
             try
             {
@@ -69,7 +73,9 @@ namespace KotaPalace.Fragments
                         //InputSurnameTextView.Text = user.Surname;
                         //InputPhoneTextView.Text = user.PhoneNumber;
                         //InputEmailTextView.Text = user.Email;
+                        //Message($"{user.Firstname}-{user.Lastname}-{user.Email}-{user.PhoneNumber}");
 
+                        testTv.Text = $"{user.Firstname}-{user.Lastname}-{user.Email}-{user.PhoneNumber}";
                     }
                 }
             }

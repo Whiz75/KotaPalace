@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout 
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".fragments.MenuFragment">
 
-    <com.google.android.material.textview.MaterialTextView
+    <!-- TODO: Update blank fragment layout -->
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="MENU"/>
+        android:text="Menu"
+        android:layout_centerInParent="true"/>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorThemeColor"
+        android:layout_height="160dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:padding="10dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/menu_tittle"
+            android:textStyle="bold"
+            android:inputType="textMultiLine"
+            android:layout_toStartOf="@+id/BtnAddMenu"
+            android:textSize="@dimen/abc_action_bar_content_inset_material"
+            android:textColor="@android:color/white"
+            android:text="Add a menu to your inventory for customers to make their orders"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/BtnAddMenu"
+            android:layout_alignParentRight="true"
+            android:text="add menu"
+            />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menu_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout" />
 
 </RelativeLayout>

@@ -104,6 +104,18 @@ namespace KotaPalace.Dialogs
             {
                 Dismiss();
             };
+            ConfirmAddressBtn.Click += (s, e) =>
+            {
+                CoordinatesHandler.Invoke(this, new CoordinatesEventHandler() { Address = address, Coordinates = $"{latLng.Latitude}/{latLng.Longitude}" });
+            };
+        }
+        private string address;
+        private LatLng latLng;
+        public event EventHandler<CoordinatesEventHandler > CoordinatesHandler; 
+        public class CoordinatesEventHandler : EventArgs
+        {
+            public string Coordinates { get; set; }
+            public string Address { get; set; } 
         }
 
         private GoogleMap googleMap;
@@ -127,9 +139,16 @@ namespace KotaPalace.Dialogs
             MapStyleOptions mapStyleOptions = new MapStyleOptions(file);
 
             this.googleMap.SetMapStyle(mapStyleOptions);
-
+            this.googleMap.CameraChange += GoogleMap_CameraChange;
             //GetLastLocation();
             CheckGps();
+        }
+
+        private async void GoogleMap_CameraChange(object sender, GoogleMap.CameraChangeEventArgs e)
+        {
+            latLng = new LatLng(e.Position.Target.Latitude, e.Position.Target.Longitude);
+            var result = await ReverseGeocodeCurrentLocation(e.Position.Target.Latitude, e.Position.Target.Longitude);
+            address = result.GetAddressLine(0);
         }
 
         private async void GetLocation()
@@ -209,19 +228,7 @@ namespace KotaPalace.Dialogs
 
         private void GetAddress(string a)
         {
-            ConfirmAddressBtn.Click += (s, e) =>
-            {
-                ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(Context);
-                ISharedPreferencesEditor editor = prefs.Edit();
-                editor.PutString("address", a);
-                editor.Apply();
-
-                BusinessAddressDialogFragment fragment = (BusinessAddressDialogFragment)FragmentManager.FindFragmentByTag("Address");
-                if (fragment != null)
-                {
-                    fragment.Dismiss();
-                }
-            };
+            
         }
 
         private void DisplayMessage(string m)

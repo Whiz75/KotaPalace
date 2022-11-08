@@ -1,26 +1,30 @@
-﻿using Android.App;
-using Android.Content;
+﻿using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using AndroidHUD;
+using AndroidX.AppCompat.App;
 using Google.Android.Material.Button;
 using Google.Android.Material.TextField;
 using Google.Android.Material.TextView;
+using KotaPalace.Dialogs;
 using KotaPalace.Models;
 using KotaPalace_Api.Models;
 using System;
 using System.Net.Http;
 using System.Text;
+using Xamarin.Essentials;
 
 namespace KotaPalace.Activities
 {
-    [Activity(Label = "SignIn", Theme = "@style/AppTheme", MainLauncher = false)]
-    public class SignIn : Activity
+    [Android.App.Activity(Label = "SignIn", Theme = "@style/AppTheme", MainLauncher = false)]
+    public class SignIn : AppCompatActivity
     {
         private string conn = "https://kota-palace-api.herokuapp.com/api";
 
         private TextInputEditText InputLoginEmail;
         private TextInputEditText InputLoginPassword;
+
+        private MaterialTextView TxtForgotPassword;
 
         private MaterialButton btn_signin;
         private MaterialTextView go_to_signup_text;
@@ -36,12 +40,15 @@ namespace KotaPalace.Activities
             Init();
             GoToSignuUp();
             GoToMainActivity();
+            ResetPassword();
         }
 
         private void Init()
         {
             InputLoginEmail = FindViewById<TextInputEditText>(Resource.Id.InputLoginEmail);
             InputLoginPassword = FindViewById<TextInputEditText>(Resource.Id.InputLoginPassword);
+
+            TxtForgotPassword = FindViewById<MaterialTextView>(Resource.Id.TxtForgotPassword);
 
             btn_signin = FindViewById<MaterialButton>(Resource.Id.btn_signin);
             go_to_signup_text = FindViewById<MaterialTextView>(Resource.Id.go_to_signup_text);
@@ -52,6 +59,15 @@ namespace KotaPalace.Activities
             go_to_signup_text.Click += (s, e) =>
             {
                 StartActivity(new Intent(this,typeof(SignUp)));
+            };
+        }
+
+        private void ResetPassword()
+        {
+            TxtForgotPassword.Click += (s, e) =>
+            {
+                ForgotPasswordDialogFragment fragment = new ForgotPasswordDialogFragment();
+                fragment.Show(SupportFragmentManager.BeginTransaction(), "");
             };
         }
 
@@ -101,6 +117,8 @@ namespace KotaPalace.Activities
                 if (results.IsSuccessStatusCode)
                 {
                     string str_out = await results.Content.ReadAsStringAsync();
+                    var user = Newtonsoft.Json.JsonConvert.DeserializeObject<AppUsers>(str_out);
+                    Preferences.Set("Id", user.Id);
 
                     StartActivity(new Intent(this, typeof(MainActivity)));
                     OverridePendingTransition(Resource.Animation.Side_in_left, Resource.Animation.Side_out_right);

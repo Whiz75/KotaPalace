@@ -6,8 +6,12 @@ using AndroidX.AppCompat.App;
 using Gauravk.BubbleNavigation;
 using Gauravk.BubbleNavigation.Listeners;
 using KotaPalace.Fragments;
+using KotaPalace.Models;
+using KotaPalace_Api.Models;
 using System;
 using System.ComponentModel;
+using System.Net.Http;
+using Xamarin.Essentials;
 
 namespace KotaPalace
 {
@@ -65,6 +69,28 @@ namespace KotaPalace
                 default:
                     SupportFragmentManager.BeginTransaction().Replace(Resource.Id.fragHost, new OrdersFragment()).Commit();
                     break;
+            }
+        }
+
+        private async void GetId()
+        {
+            string id = Preferences.Get("Id", null);
+            try
+            {
+                HttpClient httpClient = new HttpClient();
+                var response = await httpClient.GetAsync($"{API.Url}/businesses/specific/{id}");
+                if (response.IsSuccessStatusCode)
+                {
+                    var str = await response.Content.ReadAsStringAsync();
+                    var b = Newtonsoft.Json.JsonConvert.DeserializeObject<Business>(str);
+                    Preferences.Set("businessId", b.Id);
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

@@ -8,10 +8,10 @@ namespace KotaPalace_Api.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Price { get; set; }
+        public double Price { get; set; }
         public string Url { get; set; }
         public bool Status { get; set; }
-        public int BusinessId { get; set; } 
-        public ICollection<Extras> Extras { get; set; } //
+        public int BusinessId { get; set; }
+        public List<Extras> Extras { get; set; }
     }
 }

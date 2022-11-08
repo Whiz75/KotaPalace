@@ -5,6 +5,8 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using AndroidX.Fragment.App;
+using Google.Android.Material.Button;
+using KotaPalace.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,8 @@ namespace KotaPalace.Fragments
 {
     public class MenuFragment : Fragment
     {
+        private MaterialButton BtnAddMenu;
+
         public MenuFragment()
         {
         }
@@ -31,7 +35,24 @@ namespace KotaPalace.Fragments
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
             View rootView = inflater.Inflate(Resource.Layout.fragment_menu, container, false);
 
+            Init(rootView);
+            AddMenu();
+
             return rootView;
+        }
+
+        private void Init(View view)
+        {
+            BtnAddMenu = view.FindViewById<MaterialButton>(Resource.Id.BtnAddMenu);
+        }
+
+        private void AddMenu()
+        {
+            BtnAddMenu.Click += (s, e) =>
+            {
+                new AddMenuDialogFragment()
+                .Show(ChildFragmentManager.BeginTransaction(), "");
+            };
         }
     }
 }

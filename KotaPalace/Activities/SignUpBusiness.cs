@@ -27,7 +27,6 @@ namespace KotaPalace.Activities
     [Android.App.Activity(Label = "SignUpBusiness")]
     public class SignUpBusiness : AppCompatActivity
     {
-        private string conn = "https://kota-palace-api.herokuapp.com/api";
 
         private TextInputEditText InputBusinessName;
         private TextInputEditText InputBusinessPhone;
@@ -52,9 +51,8 @@ namespace KotaPalace.Activities
 
             //call methods here 
             Init();
-            GoToHome();
             GetOpenAndCloseTime();
-            GetBusinessAddress();
+            //GetBusinessAddress();
         }
 
         private void Init()
@@ -72,41 +70,24 @@ namespace KotaPalace.Activities
 
             InputBusinessAddress = FindViewById<MaterialButton>(Resource.Id.InputBusinessAddress);
             BtnUpdateBusinessProfile = FindViewById<MaterialButton>(Resource.Id.BtnUpdateBusinessProfile);
-        }
 
-        private void GoToHome()
-        {
-            
-        }
+            InputBusinessAddress.Click += InputBusinessAddress_Click;
 
-        private void GetBusinessAddress()
-        {
-            InputBusinessAddress.Click += (s, e) =>
+            BtnUpdateBusinessProfile.Click += (s, e) =>
             {
-                new BusinessAddressDialogFragment()
-                .Show(SupportFragmentManager.BeginTransaction(), "Address");
-
-                try
-                {
-                    ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
-                    string address = prefs.GetString("address", "");
-
-                    if (address != null)
-                    {
-                        InputBusinessAddress.Text = address;
-                        InputBusinessAddress.Enabled = false;
-
-                        BtnUpdateBusinessProfile.Click += (s, e) =>
-                        {
-                            //StartActivity(new Intent(this, typeof(MainActivity)));
-                            RegisterBusinessProfile(address);
-                        };
-                    }
-                }
-                catch(Exception ex)
-                {
-                    ErrorMessage(ex.Message);
-                }
+                RegisterBusinessProfile();
+            };
+        }
+        string address;
+        string coordinates;
+        private void InputBusinessAddress_Click(object sender, EventArgs e)
+        {
+            var dlg = new BusinessAddressDialogFragment();
+            dlg.Show(SupportFragmentManager.BeginTransaction(), "Address");
+            dlg.CoordinatesHandler += (ss, ee) =>
+            {
+                address = ee.Address;
+                coordinates = ee.Coordinates;
             };
         }
 
@@ -176,14 +157,12 @@ namespace KotaPalace.Activities
             }
         }
 
-        private async void RegisterBusinessProfile(string address)
+        private async void RegisterBusinessProfile()
         {
             Inputvalidation();
-
+            string Ownerid = Preferences.Get("Id", null);
             Business user = new Business()
             {
-                Id = 0,
-                //OwnerId = Preferences..Get("id")
                 BusinessName = InputBusinessName.Text.Trim(),
                 BusinessPhoneNumber = InputBusinessPhone.Text.Trim(),
                 BusinessDescription = InputBusinessDescription.Text.Trim(),
@@ -197,7 +176,8 @@ namespace KotaPalace.Activities
                 BusinessAddress = address,
                 OnlineStatus = "Online",
                 ImgUrl = "",
-                Coordinates = "0 / 0"
+                Coordinates = coordinates,
+                OwnerId = Ownerid
             };
 
 
@@ -212,11 +192,13 @@ namespace KotaPalace.Activities
                 if (results.IsSuccessStatusCode)
                 {
                     var str = await results.Content.ReadAsStringAsync();
-                    var response = Newtonsoft.Json.JsonConvert.DeserializeObject<AppUsers>(str);
+                    var response = Newtonsoft.Json.JsonConvert.DeserializeObject<Business>(str);
 
                     if (response != null)
                     {
                         SuccessMessage("Your account has been successfully created");
+
+                        //Preferences.Set("businessId", response.Id);
 
                         //open main activity
                         StartActivity(new Intent(this, typeof(SignIn)));
