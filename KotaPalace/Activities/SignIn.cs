@@ -81,6 +81,9 @@ namespace KotaPalace.Activities
 
         private void inputValidations()
         {
+            InputLoginEmail.Text = "y@yahoo.com";
+            InputLoginPassword.Text = "1234567";
+
             if (string.IsNullOrEmpty(InputLoginEmail.Text) && string.IsNullOrWhiteSpace(InputLoginEmail.Text))
             {
                 InputLoginEmail.RequestFocus();
@@ -98,12 +101,14 @@ namespace KotaPalace.Activities
         private async void Login()
         {
             inputValidations();
-
+           
             UserLogin login = new UserLogin()
             {
-                Email = InputLoginEmail.Text.Trim(),
-                Password = InputLoginPassword.Text.Trim()
-                
+                //Email = InputLoginEmail.Text.Trim(),
+                //Password = InputLoginPassword.Text.Trim()
+                Email = "y@yahoo.com",
+                Password = "1234567"
+
             };
 
             try

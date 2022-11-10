@@ -1,17 +1,12 @@
 ﻿using Android.Content;
-using Android.Gms.Tasks;
 using Android.OS;
-using Android.Text;
 using Android.Views;
-using Android.Widget;
 using AndroidHUD;
-using AndroidX.AppCompat.App;
 using AndroidX.Fragment.App;
 using Google.Android.Material.Button;
 using Google.Android.Material.Chip;
-using Google.Android.Material.Dialog;
+using Google.Android.Material.FloatingActionButton;
 using Google.Android.Material.TextField;
-using Java.Util;
 using KotaPalace.Models;
 using KotaPalace_Api.Models;
 using Plugin.FirebaseStorage;
@@ -22,8 +17,6 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
-using static Android.Renderscripts.ScriptGroup;
-using static Android.Views.View;
 using Menu = KotaPalace_Api.Models.Menu;
 
 namespace KotaPalace.Dialogs
@@ -34,6 +27,8 @@ namespace KotaPalace.Dialogs
 
         private TextInputEditText InputItemName;
         private TextInputEditText InputItemPrice;
+
+        private FloatingActionButton FabMenuImg;
 
         private ChipGroup chipGroup;
         private  List<Extras> Items = new List<Extras>();
@@ -84,13 +79,21 @@ namespace KotaPalace.Dialogs
 
         private void Init(View view)
         {
+
             InputItemName = view.FindViewById<TextInputEditText>(Resource.Id.InputItemName);
             InputItemPrice = view.FindViewById<TextInputEditText>(Resource.Id.InputItemPrice);
             chipGroup = view.FindViewById<ChipGroup>(Resource.Id.chipAddOns);
 
+            FabMenuImg = view.FindViewById<FloatingActionButton>(Resource.Id.FabMenuImg);
+
             BtnOpenAddDlg = view.FindViewById<MaterialButton>(Resource.Id.BtnOpenAddDlg);
 
             BtnSubmitMenu = view.FindViewById<MaterialButton>(Resource.Id.BtnSubmitMenu);
+
+            FabMenuImg.Click += (s, e) =>
+            {
+
+            };
 
             BtnOpenAddDlg.Click += (s, e) =>
             {
@@ -118,12 +121,7 @@ namespace KotaPalace.Dialogs
             chip.Text = e.Item;
 
             Items.Add( new Extras() { Title =  e.Item });
-            //call the upload menu function
-            //SubmitMenu(view, BtnSubmitMenu, Items);
-
-            //test the list
-            //AndHUD.Shared.ShowSuccess(context, Items.ToString(), MaskType.None, TimeSpan.FromSeconds(3));
-
+           
             //chip.SetOnCloseIconClickListener(v1->
             //        chipGroup.removeView(chip));
 
@@ -146,32 +144,32 @@ namespace KotaPalace.Dialogs
             {
                 try
                 {
-                    var businessId = Preferences.Get("businessId", null);
+                    var businessId = Preferences.Get("businessId", 0);
 
-                    var file = await PickAndShow();
+                    //var file = await PickAndShow();
 
-                    var memoryStream = new MemoryStream();
-                    var st = await file.OpenReadAsync();
-                    string filename = $"{businessId}";
+                    //var memoryStream = new MemoryStream();
+                    //var st = await file.OpenReadAsync();
+                    //string filename = $"{businessId}_menu_image";
 
-                    var result = CrossFirebaseStorage.Current
-                        .Instance
-                        .RootReference
-                        .Child("Menu Images")
-                        .Child(filename);
+                    //var result = CrossFirebaseStorage.Current
+                    //    .Instance
+                    //    .RootReference
+                    //    .Child("Menu Images")
+                    //    .Child(filename);
 
-                    await result.PutStreamAsync(st);
+                    //await result.PutStreamAsync(st);
 
-                    var url = await result.GetDownloadUrlAsync();
+                    //var url = await result.GetDownloadUrlAsync();
 
                     Menu menu = new Menu()
                     {
-                        BusinessId = int.Parse(businessId),
+                        BusinessId = businessId,
                         Name = InputItemName.Text.Trim(),
                         Price = Convert.ToDouble(InputItemPrice.Text),
                         Extras = Items,
                         Status = true,
-                        Url = url.ToString()
+                        Url = null
                     };
 
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(menu);
@@ -183,6 +181,11 @@ namespace KotaPalace.Dialogs
                     if (results.IsSuccessStatusCode)
                     {
                         string str_out = await results.Content.ReadAsStringAsync();
+                        Message("Menu added successfully!!!");
+
+                        InputItemName.Text = "";
+                        InputItemPrice.Text = "";
+                        chipGroup.RemoveAllViews();
                     }
                 }
                 catch (Exception ex)

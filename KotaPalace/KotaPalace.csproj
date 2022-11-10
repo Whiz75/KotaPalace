@@ -66,6 +66,8 @@
     <Compile Include="Activities\SignUp.cs" />
     <Compile Include="Activities\SignUpBusiness.cs" />
     <Compile Include="Activities\SplashScreen.cs" />
+    <Compile Include="Adapters\MenuAdapter.cs" />
+    <Compile Include="Adapters\OrderAdapter.cs" />
     <Compile Include="Dialogs\BusinessAddressDialogFragment.cs" />
     <Compile Include="Dialogs\ForgotPasswordDialogFragment.cs" />
     <Compile Include="Dialogs\AddMenuDialogFragment.cs" />
@@ -328,6 +330,19 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\fragment_add_extras.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\marker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\menu_row.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\order_row.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

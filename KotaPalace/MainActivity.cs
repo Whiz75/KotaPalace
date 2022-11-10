@@ -2,6 +2,7 @@
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using AndroidHUD;
 using AndroidX.AppCompat.App;
 using Gauravk.BubbleNavigation;
 using Gauravk.BubbleNavigation.Listeners;
@@ -34,6 +35,7 @@ namespace KotaPalace
 
             //call methods here
             Init();
+            GetId();
         }
 
         private void Init()
@@ -84,13 +86,14 @@ namespace KotaPalace
                     var str = await response.Content.ReadAsStringAsync();
                     var b = Newtonsoft.Json.JsonConvert.DeserializeObject<Business>(str);
                     Preferences.Set("businessId", b.Id);
+                    
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                AndHUD.Shared.ShowError(this, ex.Message, MaskType.None, TimeSpan.FromSeconds(3));
             }
         }
     }

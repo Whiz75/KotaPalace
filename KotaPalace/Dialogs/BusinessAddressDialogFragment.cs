@@ -16,6 +16,7 @@ using AndroidX.AppCompat.App;
 using AndroidX.Fragment.App;
 using Google.Android.Material.Button;
 using Google.Android.Material.TextField;
+using Java.Lang;
 using Java.Util;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using static Android.Icu.Text.Transliterator;
 using Context = Android.Content.Context;
+using Exception = Java.Lang.Exception;
 using Task = Android.Gms.Tasks.Task;
 
 namespace KotaPalace.Dialogs
@@ -104,9 +106,12 @@ namespace KotaPalace.Dialogs
             {
                 Dismiss();
             };
+
             ConfirmAddressBtn.Click += (s, e) =>
             {
-                CoordinatesHandler.Invoke(this, new CoordinatesEventHandler() { Address = address, Coordinates = $"{latLng.Latitude}/{latLng.Longitude}" });
+                CoordinatesHandler.Invoke(this, new CoordinatesEventHandler() 
+                { Address = address, Coordinates = $"{latLng.Latitude}/{latLng.Longitude}" });
+                Dismiss();
             };
         }
         private string address;
@@ -119,7 +124,7 @@ namespace KotaPalace.Dialogs
         }
 
         private GoogleMap googleMap;
-        public void OnMapReady(GoogleMap googleMap)
+        public async void OnMapReady(GoogleMap googleMap)
         {
             System.Globalization.CultureInfo cultureInfo = new System.Globalization.CultureInfo("en-US");
             cultureInfo.NumberFormat.NumberDecimalSeparator = ".";
@@ -137,26 +142,97 @@ namespace KotaPalace.Dialogs
                 file = reader.ReadToEnd();
             }
             MapStyleOptions mapStyleOptions = new MapStyleOptions(file);
-
             this.googleMap.SetMapStyle(mapStyleOptions);
-            this.googleMap.CameraChange += GoogleMap_CameraChange;
-            //GetLastLocation();
-            CheckGps();
+
+            var location = await Xamarin.Essentials.Geolocation.GetLocationAsync();
+
+            if(location != null)
+            {
+                this.googleMap.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(location.Latitude, location.Longitude), 17));
+                latLng = new LatLng(location.Latitude, location.Longitude);
+
+                var add = await ReverseGeocodeCurrentLocation(location.Latitude, location.Longitude);
+                address = add?.GetAddressLine(0);
+            }
+            
+
+
+
+
+            this.googleMap.CameraIdle += GoogleMap_CameraIdle;
+
+            
         }
 
-        private async void GoogleMap_CameraChange(object sender, GoogleMap.CameraChangeEventArgs e)
+        private async void GoogleMap_CameraIdle(object sender, EventArgs e)
         {
-            latLng = new LatLng(e.Position.Target.Latitude, e.Position.Target.Longitude);
-            var result = await ReverseGeocodeCurrentLocation(e.Position.Target.Latitude, e.Position.Target.Longitude);
-            address = result.GetAddressLine(0);
+            var pos = googleMap.CameraPosition.Target;
+            if (pos != null)
+            {
+                latLng = new LatLng(pos.Latitude, pos.Longitude);
+                var result = await ReverseGeocodeCurrentLocation(pos.Latitude, pos.Longitude);
+                address = result?.GetAddressLine(0);
+
+                txt_address.Text = address;
+            }
+        }
+
+        private async void GoogleMap_CameraIdleAsync2(object sender, EventArgs e)
+        {
+           var pos =  googleMap.CameraPosition.Target;
+
+            LocationManager locationManager = (LocationManager)context.GetSystemService(Context.LocationService);
+            bool gps_enable = false;
+
+            gps_enable = locationManager.IsProviderEnabled(LocationManager.GpsProvider);
+
+            if (gps_enable)
+            {
+                if (pos != null)
+                {
+                    latLng = new LatLng(pos.Latitude, pos.Longitude);
+
+                    var location = await Xamarin.Essentials.Geolocation.GetLocationAsync();
+                    this.googleMap.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(location.Latitude, location.Longitude), 10));
+                    
+
+                    MarkerOptions Options = new MarkerOptions();
+                    Options.SetPosition(latLng);
+                    Options.SetTitle("My location");
+                    Options.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.shop));
+
+                    Options.Anchor((float)0.5, (float)0.5);
+                    googleMap.AddMarker(Options);
+                    //DisplayMessage(address);
+
+                    var result = await ReverseGeocodeCurrentLocation(pos.Latitude, pos.Longitude);
+                    address = result.GetAddressLine(0);
+                }
+                
+            }
+            else
+            {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.SetTitle("Confirm");
+                builder.SetMessage("Please enable your location to continue");
+                builder.SetNegativeButton("Cancel", delegate
+                {
+                    builder.Dispose();
+                });
+                builder.SetPositiveButton("Settings", delegate
+                {
+                    StartActivity(new Intent(Android.Provider.Settings.ActionLocationSourceSettings));
+                });
+                builder.Show();
+            } 
         }
 
         private async void GetLocation()
         {
             try
             {
-                var request = new GeolocationRequest(GeolocationAccuracy.High);
-                var location = await Geolocation.GetLocationAsync(request);
+                var request = new Xamarin.Essentials.GeolocationRequest(GeolocationAccuracy.High);
+                var location = await Xamarin.Essentials.Geolocation.GetLocationAsync(request);
 
                 if (location != null)
                 {
@@ -177,7 +253,7 @@ namespace KotaPalace.Dialogs
                     txt_address.Text = $"{address}";
 
                     //pass address to activity
-                    GetAddress(address);
+                    //GetAddress(address);
                 }
             }
             catch (Exception ex)
@@ -192,7 +268,7 @@ namespace KotaPalace.Dialogs
             Geocoder geocoder = new Geocoder(context);
             IList<Address> addressList = await geocoder.GetFromLocationAsync(lat, lon, 5);
 
-            Address address = addressList.FirstOrDefault();
+            Address address = addressList?.FirstOrDefault();
             return address;
         }
 
@@ -224,11 +300,6 @@ namespace KotaPalace.Dialogs
             {
                 GetLocation();
             }
-        }
-
-        private void GetAddress(string a)
-        {
-            
         }
 
         private void DisplayMessage(string m)

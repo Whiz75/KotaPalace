@@ -15,7 +15,6 @@
             android:theme="@style/Widget.MaterialComponents.Toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/menu_toolbar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         />
 
@@ -53,7 +52,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="name"
+                    android:hint="Name"
                     android:textColorHint="@color/colorThemeColor"
                     android:textColor="@color/colorThemeColor"
                     android:id="@+id/InputItemName" />

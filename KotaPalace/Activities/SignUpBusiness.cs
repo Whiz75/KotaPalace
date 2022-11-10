@@ -88,6 +88,8 @@ namespace KotaPalace.Activities
             {
                 address = ee.Address;
                 coordinates = ee.Coordinates;
+
+                InputBusinessAddress.Text = address;
             };
         }
 
