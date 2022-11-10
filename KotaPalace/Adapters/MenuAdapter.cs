@@ -34,10 +34,10 @@ namespace KotaPalace.Adapters
             MenuViewHolder vh = holder as MenuViewHolder;
             var menu = MenuList[position];
 
-            vh.Name.Text = $"Name :{menu.Name}" ;
-            vh.Price.Text = $"Price :{menu.Price}";
-            vh.MenuId.Text = $"Menu Id :{menu.Id}";
-            vh.Status.Text = $"Available :{menu.Status}";
+            vh.Name.Text = $"{menu.Name}" ;
+            vh.Price.Text = $"R{menu.Price}";
+            //vh.MenuId.Text = $"Menu Id :{menu.Id}";
+            vh.Status.Text = $"{menu.Status}";
 
             foreach (var i in menu.Extras)
             {
@@ -91,7 +91,7 @@ namespace KotaPalace.Adapters
         {
             Name = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_name);
             Price = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_price);
-            MenuId = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_menu_id);
+            //MenuId = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_menu_id);
             Status = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_status);
 
           

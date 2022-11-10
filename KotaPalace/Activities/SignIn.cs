@@ -13,13 +13,15 @@ using System;
 using System.Net.Http;
 using System.Text;
 using Xamarin.Essentials;
+using static Android.Provider.ContactsContract.CommonDataKinds;
 
 namespace KotaPalace.Activities
 {
     [Android.App.Activity(Label = "SignIn", Theme = "@style/AppTheme", MainLauncher = false)]
     public class SignIn : AppCompatActivity
     {
-        private string conn = "https://kota-palace-api.herokuapp.com/api";
+        private string email = "y@yahoo.com";
+        private string password = "1234567";
 
         private TextInputEditText InputLoginEmail;
         private TextInputEditText InputLoginPassword;
@@ -41,6 +43,8 @@ namespace KotaPalace.Activities
             GoToSignuUp();
             GoToMainActivity();
             ResetPassword();
+
+            InitLogins();
         }
 
         private void Init()
@@ -79,10 +83,10 @@ namespace KotaPalace.Activities
             };
         }
 
-        private void inputValidations()
+        private void InputValidations()
         {
-            InputLoginEmail.Text = "y@yahoo.com";
-            InputLoginPassword.Text = "1234567";
+            //InputLoginEmail.Text = "y@yahoo.com";
+            //InputLoginPassword.Text = "1234567";
 
             if (string.IsNullOrEmpty(InputLoginEmail.Text) && string.IsNullOrWhiteSpace(InputLoginEmail.Text))
             {
@@ -100,14 +104,14 @@ namespace KotaPalace.Activities
 
         private async void Login()
         {
-            inputValidations();
+            InputValidations();
            
             UserLogin login = new UserLogin()
             {
                 //Email = InputLoginEmail.Text.Trim(),
                 //Password = InputLoginPassword.Text.Trim()
-                Email = "y@yahoo.com",
-                Password = "1234567"
+                Email = InputLoginEmail.Text,
+                Password = InputLoginPassword.Text
 
             };
 
@@ -139,6 +143,12 @@ namespace KotaPalace.Activities
             {
                 Message(ex.Message);
             }
+        }
+
+        private void InitLogins()
+        {
+            InputLoginEmail.Text = email;
+            InputLoginPassword.Text = password;
         }
 
         private void Message(string t)
