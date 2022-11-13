@@ -85,8 +85,6 @@ namespace KotaPalace.Activities
 
         private void InputValidations()
         {
-            //InputLoginEmail.Text = "y@yahoo.com";
-            //InputLoginPassword.Text = "1234567";
 
             if (string.IsNullOrEmpty(InputLoginEmail.Text) && string.IsNullOrWhiteSpace(InputLoginEmail.Text))
             {

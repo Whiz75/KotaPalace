@@ -7,6 +7,9 @@ using Android.Views;
 using Android.Widget;
 using AndroidHUD;
 using AndroidX.Fragment.App;
+using Google.Android.Material.Button;
+using Google.Android.Material.MaterialSwitch;
+using Google.Android.Material.TextField;
 using Google.Android.Material.TextView;
 using KotaPalace.Models;
 using KotaPalace_Api.Models;
@@ -15,13 +18,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 
 namespace KotaPalace.Fragments
 {
     public class ProfileFragment : Fragment
     {
-        private MaterialTextView testTv;
+        //private textin
+        private MaterialSwitch OutputStatus;
+
+        private TextInputEditText OutputName;
+        private TextInputEditText OutputLastname;
+        private TextInputEditText OutputEmail;
+        private TextInputEditText OutputPhoneNumber;
+        private TextInputEditText OutputUserType;
+
+        private MaterialButton BtnUpdateProfile;
+
+        string Id = Preferences.Get("Id", null);
 
         public ProfileFragment()
         {
@@ -43,19 +58,31 @@ namespace KotaPalace.Fragments
 
             Init(rootView);
             GetUserDetails();
+            //GetUserStatusAsync();
 
             return rootView;
         }
 
         private void Init(View view)
         {
-            testTv = view.FindViewById<MaterialTextView>(Resource.Id.testTv);
+            OutputStatus = view.FindViewById<MaterialSwitch>(Resource.Id.OutputStatus);
+
+            OutputName = view.FindViewById<TextInputEditText>(Resource.Id.OutputName);
+            OutputLastname = view.FindViewById<TextInputEditText>(Resource.Id.OutputLastname);
+            OutputEmail = view.FindViewById<TextInputEditText>(Resource.Id.OutputEmail);
+            OutputPhoneNumber = view.FindViewById<TextInputEditText>(Resource.Id.OutputPhoneNumber);
+            OutputUserType = view.FindViewById<TextInputEditText>(Resource.Id.OutputUserType);
+
+            BtnUpdateProfile = view.FindViewById<MaterialButton>(Resource.Id.BtnUpdateProfile);
+
+            BtnUpdateProfile.Click += (s, e) =>
+            {
+                UpdateUserDetails();
+            };
         }
 
         private async void GetUserDetails()
         {
-            var Id = Preferences.Get("id", null);
-
             try
             {
                 HttpClient httpClient = new HttpClient();
@@ -68,14 +95,15 @@ namespace KotaPalace.Fragments
 
                     if (user != null)
                     {
-                        //DriverNameTextView.Text = $"{user.Name} {user.Surname}";
-                        //InputNamesTextView.Text = user.Name;
-                        //InputSurnameTextView.Text = user.Surname;
-                        //InputPhoneTextView.Text = user.PhoneNumber;
-                        //InputEmailTextView.Text = user.Email;
-                        //Message($"{user.Firstname}-{user.Lastname}-{user.Email}-{user.PhoneNumber}");
-
-                        testTv.Text = $"{user.Firstname}-{user.Lastname}-{user.Email}-{user.PhoneNumber}";
+                        OutputName.Text = user.Firstname;
+                        OutputLastname.Text = user.Lastname;
+                        OutputEmail.Text = user.Email;
+                        OutputPhoneNumber.Text = user.PhoneNumber;
+                        OutputUserType.Text = user.UserType;
+                    }
+                    else
+                    {
+                        Message("User records not found!!!");
                     }
                 }
             }
@@ -83,6 +111,35 @@ namespace KotaPalace.Fragments
             {
                 Message(ex.Message);
             }
+        }
+
+        private async void GetUserStatusAsync()
+        {
+            try
+            {
+                HttpClient httpClient = new HttpClient();
+                var response = await httpClient.GetAsync($"{API.Url}/account/{Id}");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string str_out = await response.Content.ReadAsStringAsync();
+                    var user = Newtonsoft.Json.JsonConvert.DeserializeObject<AppUsers>(str_out);
+
+                    if(user != null)
+                    {
+                    }
+                   
+                }
+            }catch(HttpRequestException ex)
+            {
+
+            }
+        }
+            
+
+        private void UpdateUserDetails()
+        {
+            
         }
 
         private void Message(string message)

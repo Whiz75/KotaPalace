@@ -2,6 +2,7 @@
 using Android.OS;
 using Android.Views;
 using AndroidHUD;
+using AndroidX.AppCompat.Widget;
 using AndroidX.Fragment.App;
 using Google.Android.Material.Button;
 using Google.Android.Material.Chip;
@@ -29,6 +30,8 @@ namespace KotaPalace.Dialogs
         private TextInputEditText InputItemPrice;
 
         private FloatingActionButton FabMenuImg;
+        private AppCompatImageView CloseDialogImg;
+
 
         private ChipGroup chipGroup;
         private  List<Extras> Items = new List<Extras>();
@@ -79,7 +82,7 @@ namespace KotaPalace.Dialogs
 
         private void Init(View view)
         {
-
+            CloseDialogImg = view.FindViewById<AppCompatImageView>(Resource.Id.CloseDialogImg);
             InputItemName = view.FindViewById<TextInputEditText>(Resource.Id.InputItemName);
             InputItemPrice = view.FindViewById<TextInputEditText>(Resource.Id.InputItemPrice);
             chipGroup = view.FindViewById<ChipGroup>(Resource.Id.chipAddOns);
@@ -90,9 +93,14 @@ namespace KotaPalace.Dialogs
 
             BtnSubmitMenu = view.FindViewById<MaterialButton>(Resource.Id.BtnSubmitMenu);
 
-            FabMenuImg.Click += (s, e) =>
+            CloseDialogImg.Click += (s, e) =>
             {
+                Dismiss();
+            };
 
+            FabMenuImg.Click += async (s, e) =>
+            {
+                var file = await PickAndShow();
             };
 
             BtnOpenAddDlg.Click += (s, e) =>
