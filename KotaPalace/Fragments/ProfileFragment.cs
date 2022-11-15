@@ -58,14 +58,13 @@ namespace KotaPalace.Fragments
 
             Init(rootView);
             GetUserDetails();
-            //GetUserStatusAsync();
+            GetBusinessAsync();
 
             return rootView;
         }
 
         private void Init(View view)
         {
-            OutputStatus = view.FindViewById<MaterialSwitch>(Resource.Id.OutputStatus);
 
             OutputName = view.FindViewById<TextInputEditText>(Resource.Id.OutputName);
             OutputLastname = view.FindViewById<TextInputEditText>(Resource.Id.OutputLastname);
@@ -113,26 +112,27 @@ namespace KotaPalace.Fragments
             }
         }
 
-        private async void GetUserStatusAsync()
+        private async void GetBusinessAsync()
         {
             try
             {
                 HttpClient httpClient = new HttpClient();
-                var response = await httpClient.GetAsync($"{API.Url}/account/{Id}");
+                var response = await httpClient.GetAsync($"{API.Url}/businesses/specific/{Id}");
 
                 if (response.IsSuccessStatusCode)
                 {
                     string str_out = await response.Content.ReadAsStringAsync();
-                    var user = Newtonsoft.Json.JsonConvert.DeserializeObject<AppUsers>(str_out);
+                    var business = Newtonsoft.Json.JsonConvert.DeserializeObject<Business>(str_out);
 
-                    if(user != null)
+                    if(business != null)
                     {
+                        
                     }
                    
                 }
             }catch(HttpRequestException ex)
             {
-
+                Message(ex.Message);
             }
         }
             

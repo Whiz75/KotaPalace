@@ -20,7 +20,7 @@ namespace KotaPalace.Activities
     [Android.App.Activity(Label = "SignIn", Theme = "@style/AppTheme", MainLauncher = false)]
     public class SignIn : AppCompatActivity
     {
-        private string email = "y@yahoo.com";
+        private string email = "shanekhotsoka@gmail.com";
         private string password = "1234567";
 
         private TextInputEditText InputLoginEmail;

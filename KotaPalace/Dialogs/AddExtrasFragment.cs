@@ -4,6 +4,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using AndroidX.AppCompat.Widget;
 using AndroidX.Fragment.App;
 using Google.Android.Material.Button;
 using Google.Android.Material.TextField;
@@ -16,6 +17,7 @@ namespace KotaPalace.Dialogs
 {
     public class AddExtrasFragment : DialogFragment
     {
+        private AppCompatImageView close_add_ons;
         private TextInputEditText AddOnName;
         private MaterialButton BtnAddChip;
 
@@ -58,8 +60,14 @@ namespace KotaPalace.Dialogs
 
         private void Init(View view)
         {
+            close_add_ons = view.FindViewById<AppCompatImageView>(Resource.Id.close_add_ons);
             AddOnName = view.FindViewById<TextInputEditText>(Resource.Id.AddOnName);
-            BtnAddChip = view.FindViewById<MaterialButton>(Resource.Id.BtnAddChip); 
+            BtnAddChip = view.FindViewById<MaterialButton>(Resource.Id.BtnAddChip);
+
+            close_add_ons.Click += (s, e) =>
+            {
+                Dismiss();
+            };
         }
         public event EventHandler<AddOnHandler> AddOnAdded;
         public class AddOnHandler : EventArgs
