@@ -9542,22 +9542,25 @@ namespace KotaPalace
 			public const int splash_screen = 2131165443;
 			
 			// aapt resource value: 0x7F070104
-			public const int tooltip_frame_dark = 2131165444;
+			public const int splash_screen_bg = 2131165444;
 			
 			// aapt resource value: 0x7F070105
-			public const int tooltip_frame_light = 2131165445;
+			public const int tooltip_frame_dark = 2131165445;
 			
 			// aapt resource value: 0x7F070106
-			public const int transition_background_drawable = 2131165446;
+			public const int tooltip_frame_light = 2131165446;
 			
 			// aapt resource value: 0x7F070107
-			public const int transition_background_drawable_home = 2131165447;
+			public const int transition_background_drawable = 2131165447;
 			
 			// aapt resource value: 0x7F070108
-			public const int transition_background_drawable_person = 2131165448;
+			public const int transition_background_drawable_home = 2131165448;
 			
 			// aapt resource value: 0x7F070109
-			public const int user = 2131165449;
+			public const int transition_background_drawable_person = 2131165449;
+			
+			// aapt resource value: 0x7F07010A
+			public const int user = 2131165450;
 			
 			static Drawable()
 			{
