@@ -18,9 +18,9 @@ namespace KotaPalace.Adapters
 {
     public class OrderAdapter : RecyclerView.Adapter
     {
-        ObservableCollection<Order> orders = new ObservableCollection<Order>();
+        ObservableCollection<OrderItems> orders = new ObservableCollection<OrderItems>();
 
-        public OrderAdapter(ObservableCollection<Order> orders)
+        public OrderAdapter(ObservableCollection<OrderItems> orders)
         {
             this.orders = orders;
         }
@@ -33,9 +33,9 @@ namespace KotaPalace.Adapters
             var order = orders[position];
 
             vh.Name.Text = $"Name :{order.Id}";
-            vh.Price.Text = $"Price :{order.BusinessId}";
+            vh.Price.Text = $"Price :{order.Price}";
            
-            vh.Status.Text = $"Available :{order.Status}";
+            vh.Quantity.Text = $"Available :{order.Quantity}";
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
@@ -50,14 +50,14 @@ namespace KotaPalace.Adapters
     {
         public AppCompatTextView Name { get; set;}
         public AppCompatTextView Price {get; set;}
-        public AppCompatTextView Status { get; set; }
+        public AppCompatTextView Quantity { get; set; }
 
         public OrderViewHolder(View itemview) : base(itemview)
         {
             Name = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_name);
             Price = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_price);
             //MenuId = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_menu_id);
-            Status = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_status);
+            Quantity = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_quantity);
 
             //chipGroup = itemview.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);
         }

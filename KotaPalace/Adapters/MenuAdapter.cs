@@ -37,7 +37,7 @@ namespace KotaPalace.Adapters
             vh.Name.Text = $"{menu.Name}" ;
             vh.Price.Text = $"R{menu.Price}";
             //vh.MenuId.Text = $"Menu Id :{menu.Id}";
-            vh.Status.Text = $"{menu.Status}";
+            //vh.Status.Text = $"{menu.Status}";
 
             foreach (var i in menu.Extras)
             {
@@ -85,14 +85,12 @@ namespace KotaPalace.Adapters
             get; set;
         }
 
-
-
         public MenuViewHolder(View itemview) : base(itemview)
         {
             Name = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_name);
             Price = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_price);
             //MenuId = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_menu_id);
-            Status = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_status);
+            //Status = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_status);
 
           
             chipGroup = itemview.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);

@@ -108,6 +108,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="phone"
                     android:id="@+id/InputRegPhoneNumber"
+                    android:maxLength="10"
                     android:hint="Phone Number"/>
 
             </com.google.android.material.textfield.TextInputLayout>

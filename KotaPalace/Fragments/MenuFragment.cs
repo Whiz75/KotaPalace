@@ -96,9 +96,6 @@ namespace KotaPalace.Fragments
 
                 }
 
-                
-
-
                 RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
                 menu_rv.SetLayoutManager(mLayoutManager);
                 MenuAdapter mAdapter = new MenuAdapter(MenuList);
@@ -110,7 +107,6 @@ namespace KotaPalace.Fragments
                 var str_results = await response.Content.ReadAsStringAsync();
                 Message(str_results);
             }
-
         }
 
         private void Message(string t)

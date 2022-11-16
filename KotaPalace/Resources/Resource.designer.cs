@@ -10917,7 +10917,7 @@ namespace KotaPalace
 			public const int row_price = 2131231176;
 			
 			// aapt resource value: 0x7F0801C9
-			public const int row_status = 2131231177;
+			public const int row_quantity = 2131231177;
 			
 			// aapt resource value: 0x7F0801CA
 			public const int rtl = 2131231178;
