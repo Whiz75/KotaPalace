@@ -10,7 +10,7 @@ namespace KotaPalace_Api.Models
         public string Quantity { get; set; } //
         public int MenuId { set; get; }//product id
         public decimal Price { get; set; }
-        public ICollection<OrderItemsExtras> Extras { get; set; } 
+        public string Extras { get; set; } 
     }
     public class OrderItemsExtras
     {

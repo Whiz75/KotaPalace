@@ -88,6 +88,7 @@ namespace KotaPalace.Dialogs
                 else
                 {
                     AddOnAdded.Invoke(this, new AddOnHandler() { Item = AddOnName.Text });
+                    AddOnName.Text = "";
                     Dismiss();
                 }
             };

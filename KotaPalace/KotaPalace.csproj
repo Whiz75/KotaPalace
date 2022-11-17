@@ -72,6 +72,7 @@
     <Compile Include="Dialogs\ForgotPasswordDialogFragment.cs" />
     <Compile Include="Dialogs\AddMenuDialogFragment.cs" />
     <Compile Include="Dialogs\AddExtrasFragment.cs" />
+    <Compile Include="Dialogs\OrderViewFragment.cs" />
     <Compile Include="Fragments\MenuFragment.cs" />
     <Compile Include="Fragments\OrdersFragment.cs" />
     <Compile Include="Fragments\PrepareOrderFragmentTab.cs" />
@@ -348,6 +349,27 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_screen_bg.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\order_row_view.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\button_bg.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\row_menu.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\chip_group_bg.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

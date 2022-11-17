@@ -6,14 +6,17 @@ using Android.Views;
 using Android.Widget;
 using AndroidX.AppCompat.Widget;
 using AndroidX.RecyclerView.Widget;
+using Google.Android.Material.Button;
 using Google.Android.Material.Chip;
 using Java.Util.Zip;
+using KotaPalace.Dialogs;
 using KotaPalace_Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using static Android.Views.View;
 using Menu = KotaPalace_Api.Models.Menu;
 
 namespace KotaPalace.Adapters
@@ -49,11 +52,16 @@ namespace KotaPalace.Adapters
                 
             }
 
+            vh.AcceptBtn.Click += (s, e) =>
+            {
+                OrderViewFragment frag = new OrderViewFragment();
+            };
+                
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.menu_row, parent, false);
+            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.row_menu, parent, false);
             MenuViewHolder vh = new MenuViewHolder(itemView);
             return vh;
         }
@@ -61,29 +69,16 @@ namespace KotaPalace.Adapters
 
     public class MenuViewHolder : RecyclerView.ViewHolder
     {
-        public AppCompatTextView Name
-        {
-            get; set;
-        }
-        public AppCompatTextView Price
-        {
-            get; set;
-        }
+        public AppCompatTextView Name { get; set; }
+        public AppCompatTextView Price { get; set; }
 
-        public ChipGroup chipGroup
-        {
-            get; set;
-        }
+        public ChipGroup chipGroup { get; set; }
 
-        public AppCompatTextView MenuId
-        {
-            get;set;
-        }
+        public AppCompatTextView MenuId { get;set; }
 
-        public AppCompatTextView Status
-        {
-            get; set;
-        }
+        public AppCompatTextView Status { get; set;}
+
+        public MaterialButton AcceptBtn { get; set; }
 
         public MenuViewHolder(View itemview) : base(itemview)
         {
@@ -94,6 +89,8 @@ namespace KotaPalace.Adapters
 
           
             chipGroup = itemview.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);
+
+            AcceptBtn = itemview.FindViewById<MaterialButton>(Resource.Id.row_btn_update);
         }
     }
 }
