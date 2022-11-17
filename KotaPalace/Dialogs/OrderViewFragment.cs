@@ -8,6 +8,7 @@ using AndroidHUD;
 using AndroidX.Fragment.App;
 using AndroidX.RecyclerView.Widget;
 using Google.Android.Material.Button;
+using Google.Android.Material.Chip;
 using KotaPalace.Adapters;
 using KotaPalace.Models;
 using KotaPalace_Api.Models;
@@ -30,11 +31,14 @@ namespace KotaPalace.Dialogs
 
         private TextView business_name;
         private TextView business_order_price;
+        private TextView order_quantity;
         private TextView business_order_description;
         private TextView business_Id;
         private TextView business_status;
 
         private MaterialButton BtnBuyNow;
+
+        private ChipGroup chipGroup;
 
         private int id;
 
@@ -78,11 +82,14 @@ namespace KotaPalace.Dialogs
 
             business_name = view.FindViewById<TextView>(Resource.Id.business_name);
             business_order_price = view.FindViewById<TextView>(Resource.Id.business_order_price);
+            order_quantity = view.FindViewById<TextView>(Resource.Id.order_quantity);
             business_order_description = view.FindViewById<TextView>(Resource.Id.business_order_description);
             business_Id = view.FindViewById<TextView>(Resource.Id.business_Id);
             business_status = view.FindViewById<TextView>(Resource.Id.business_status);
 
             BtnBuyNow = view.FindViewById<MaterialButton>(Resource.Id.BtnBuyNow);
+
+            chipGroup = view.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);
 
             close_order_view.Click += (s, e) =>
             {
@@ -107,6 +114,8 @@ namespace KotaPalace.Dialogs
                 var str_results = await response.Content.ReadAsStringAsync();
                 var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(str_results);
 
+                Chip chip = new Chip(context);
+
                 foreach (var item in results)
                 {
                     if(item.BusinessId == businessId)
@@ -116,20 +125,22 @@ namespace KotaPalace.Dialogs
 
                         var extras = item.OrderItems.ToList<OrderItems>();
 
-                        string[] str = extras.ToString().Split('#');
-
                         foreach (var item2 in extras)
                         {
                             business_order_price.Text = $"R{item2.Price}";
-                            var i = item2.Extras.Split('#');
-                            foreach(string str2 in i)
+                            order_quantity.Text = $"Quantity: {item2.Quantity}";
+
+                            string i = item2.Extras;
+                            string[] itemList = i.Split('#', StringSplitOptions.RemoveEmptyEntries);
+
+                            foreach (string str2 in itemList)
                             {
-                               
+                                Message(str2);
+
                             }
 
-                        }
 
-                        //Message(extras.ToString());
+                        }
                     }
                 }
             }

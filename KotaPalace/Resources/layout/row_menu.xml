@@ -77,20 +77,28 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/business_Id"
+                            android:id="@+id/row_menu_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
-                            android:text="Business ID:"
+                            android:text="Menu ID:"
                             android:textSize="16sp" />
 
-                        <TextView
+                        <!--<TextView
                             android:id="@+id/row_quantity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
+                            android:text="Quantity:"
+                            android:textSize="16sp" />-->
+
+                        <!--<TextView
+                            android:id="@+id/row_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
                             android:text="Status:"
-                            android:textSize="16sp" />
+                            android:textSize="16sp" />-->
 
                     </LinearLayout>
 
@@ -109,7 +117,6 @@
                 app:singleLine="false"
                 app:singleSelection="true"
                 app:chipSpacingHorizontal="1dp"
-                android:background="@drawable/chip_group_bg"
             />
 
             <View

@@ -38,7 +38,7 @@ namespace KotaPalace.Adapters
             vh.Status.Text = $"Status :{order.Status}";
 
             //vh.OrderId.Text = $"Available :{order.Id}";
-            vh.prepare_btn.Click += (s, e) => { BtnClick.Invoke(vh.ItemView.Context, new OrderBtnClick() { Position = position }); };
+            vh.view_btn.Click += (s, e) => { BtnClick.Invoke(vh.ItemView.Context, new OrderBtnClick() { Position = position }); };
         }
         public event EventHandler<OrderBtnClick> BtnClick;
 
@@ -60,7 +60,7 @@ namespace KotaPalace.Adapters
         public MaterialTextView CustomerId { get; set;}
         public MaterialTextView Status {get; set;}
         public MaterialTextView OrderId { get; set; }
-        public MaterialButton prepare_btn { get; set; }
+        public MaterialButton view_btn { get; set; }
 
         public OrderViewHolder(View itemview) : base(itemview)
         {
@@ -71,7 +71,7 @@ namespace KotaPalace.Adapters
 
             //chipGroup = itemview.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);
 
-            prepare_btn = itemview.FindViewById<MaterialButton>(Resource.Id.prepare_btn);
+            view_btn = itemview.FindViewById<MaterialButton>(Resource.Id.view_btn);
         }
     }
 }
