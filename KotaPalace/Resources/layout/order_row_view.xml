@@ -6,14 +6,15 @@
     android:layout_height="match_parent"
    >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <RelativeLayout
+            android:id="@+id/topLayout"
             android:layout_width="match_parent"
-            android:layout_height="360dp">
+            android:layout_height="320dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -38,11 +39,13 @@
         </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/midLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="16dp"
-            android:weightSum="100">
+            android:weightSum="100"
+            android:layout_below="@id/topLayout">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -73,13 +76,13 @@
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <!--<TextView
                         android:id="@+id/order_quantity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="R19"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold" />-->
                 </LinearLayout>
 
             </LinearLayout>
@@ -118,13 +121,24 @@
         </LinearLayout>
 
         <View
+            android:id="@+id/TopLine"
             android:layout_width="200dp"
             android:layout_height="4dp"
-            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:background="#dedede" />
+            android:background="#dedede" 
+            android:layout_below="@id/midLayout"/>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/orderItemsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_below="@id/TopLine"
+            android:layout_above="@id/BtnProcess"
+            />
+<!--
         <TextView
             android:id="@+id/business_order_description"
             android:layout_width="match_parent"
@@ -132,19 +146,31 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:textColor="#444444"
-            android:textSize="16sp" />
+            android:textSize="16sp" />-->
+
+        <View
+            android:id="@+id/BottomLine"
+            android:layout_width="200dp"
+            android:layout_height="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="#dedede" 
+            android:layout_above="@id/BtnProcess"
+            android:layout_below="@id/orderItemsRecyclerView"
+            />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/BtnBuyNow"
+            android:id="@+id/BtnProcess"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:text="Buy Now"
-            android:textAllCaps="false"
+            android:text="Process"
+            android:textAllCaps="true"
             android:textColor="#ffffff"
-            style="@drawable/button_bg"/>
-    </LinearLayout>
+            style="@drawable/button_bg"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

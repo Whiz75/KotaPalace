@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Context = Android.Content.Context;
 
@@ -36,11 +37,17 @@ namespace KotaPalace.Dialogs
         private TextView business_Id;
         private TextView business_status;
 
-        private MaterialButton BtnBuyNow;
+        private RecyclerView orderItemsRecyclerView;
+
+        private MaterialButton BtnProcess;
 
         private ChipGroup chipGroup;
 
         private int id;
+
+        private int businessId = Preferences.Get("businessId", 0);
+        private Order order;
+        List<OrderItems> OrderItemList = new List<OrderItems>();
 
         public OrderViewFragment()
         {
@@ -49,6 +56,11 @@ namespace KotaPalace.Dialogs
         public OrderViewFragment(int id)
         {
             this.id = id;
+        }
+
+        public OrderViewFragment(Order order)
+        {
+            this.order = order;
         }
 
         public override void OnCreate(Bundle savedInstanceState)
@@ -72,6 +84,7 @@ namespace KotaPalace.Dialogs
             context = view.Context;
             Init(view);
             LoadOrdersAsync();
+            //LoadOrderItemsAsync();
 
             return view;
         }
@@ -82,12 +95,15 @@ namespace KotaPalace.Dialogs
 
             business_name = view.FindViewById<TextView>(Resource.Id.business_name);
             business_order_price = view.FindViewById<TextView>(Resource.Id.business_order_price);
-            order_quantity = view.FindViewById<TextView>(Resource.Id.order_quantity);
-            business_order_description = view.FindViewById<TextView>(Resource.Id.business_order_description);
             business_Id = view.FindViewById<TextView>(Resource.Id.business_Id);
             business_status = view.FindViewById<TextView>(Resource.Id.business_status);
 
-            BtnBuyNow = view.FindViewById<MaterialButton>(Resource.Id.BtnBuyNow);
+            //order_quantity.Text = order.OrderItems.Count.ToString();
+            business_status.Text = order.Status;
+
+            orderItemsRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.orderItemsRecyclerView);
+
+            BtnProcess = view.FindViewById<MaterialButton>(Resource.Id.BtnProcess);
 
             chipGroup = view.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);
 
@@ -96,58 +112,157 @@ namespace KotaPalace.Dialogs
                 Dismiss();
             };
 
-            BtnBuyNow.Click += (s, e) =>
+            BtnProcess.Click += (s, e) =>
             {
-                //LoadOrdersAsync();
+                //ProcessOrderAsync();
             };
         }
 
         private async void LoadOrdersAsync()
         {
-            var businessId = Preferences.Get("businessId", 0);
+            try
+            {
+                HttpClient client = new HttpClient();
+                var response = await client.GetAsync($"{API.Url}/orders/{businessId}"); // car details
 
+                if (response.IsSuccessStatusCode)
+                {
+                    var str_results = await response.Content.ReadAsStringAsync();
+                    var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(str_results);
+
+                    Chip chip = new Chip(context);
+
+                    foreach (var item in results)
+                    {
+                        if (item.BusinessId == businessId)
+                        {
+                            business_Id.Text = $"Business ID: {item.BusinessId}";
+                            business_status.Text = $"Status: {item.Status}";
+
+                            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
+                            orderItemsRecyclerView.SetLayoutManager(mLayoutManager);
+                            OrderItemAdapter mAdapter = new OrderItemAdapter(OrderItemList);
+
+                            var extras = item.OrderItems;//.ToList<OrderItems>();
+
+                            foreach (var item2 in extras)
+                            {
+                                //business_order_price.Text = $"R{item2.Price}";
+                                //order_quantity.Text = $"Quantity: {item2.Quantity}";
+                                //business_name.Text = item2.ItemName;
+
+                                //string i = item2.Extras;
+                                //string[] itemList = i.Split('#', StringSplitOptions.RemoveEmptyEntries);
+
+                                //foreach (string str2 in itemList)
+                                //{
+                                //    Message(str2);
+
+                                //}
+                                OrderItemList.Add(item2);
+
+                            }
+                            orderItemsRecyclerView.SetAdapter(mAdapter);
+                        }
+                    }
+                }
+                else
+                {
+                    var str_results = await response.Content.ReadAsStringAsync();
+                    Message(str_results);
+                }
+            }
+            catch (HttpRequestException e)
+            {
+                Message(e.Message);
+            }
+        }
+
+        private async void LoadOrderItemsAsync()
+        {
             HttpClient client = new HttpClient();
             var response = await client.GetAsync($"{API.Url}/orders/{businessId}"); // car details
+
+            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
+            orderItemsRecyclerView.SetLayoutManager(mLayoutManager);
+            OrderItemAdapter mAdapter = new OrderItemAdapter(OrderItemList);
 
             if (response.IsSuccessStatusCode)
             {
                 var str_results = await response.Content.ReadAsStringAsync();
-                var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(str_results);
 
-                Chip chip = new Chip(context);
+                var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<OrderItems>>(str_results);
 
                 foreach (var item in results)
                 {
-                    if(item.BusinessId == businessId)
-                    {
-                        business_Id.Text = $"Business ID: {item.BusinessId}";
-                        business_status.Text = $"Status: {item.Status}";
-
-                        var extras = item.OrderItems.ToList<OrderItems>();
-
-                        foreach (var item2 in extras)
-                        {
-                            business_order_price.Text = $"R{item2.Price}";
-                            order_quantity.Text = $"Quantity: {item2.Quantity}";
-
-                            string i = item2.Extras;
-                            string[] itemList = i.Split('#', StringSplitOptions.RemoveEmptyEntries);
-
-                            foreach (string str2 in itemList)
-                            {
-                                Message(str2);
-
-                            }
-
-
-                        }
-                    }
+                    OrderItemList.Add(item);
+                    mAdapter.NotifyDataSetChanged();
                 }
+
             }
             else
             {
                 var str_results = await response.Content.ReadAsStringAsync();
                 Message(str_results);
+            }
+
+            orderItemsRecyclerView.HasFixedSize = true;
+            orderItemsRecyclerView.SetAdapter(mAdapter);
+
+        }
+
+        private async void ProcessOrderAsync()
+        {
+            Order order = new Order();
+            HttpClient client = new HttpClient();
+
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(order);
+            HttpContent data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            try
+            {
+                var status = await client.GetAsync($"{API.Url}/orders/single/{id}");
+
+                if (status.IsSuccessStatusCode)
+                {
+                    var str = await status.Content.ReadAsStringAsync();
+                    var results = Newtonsoft.Json.JsonConvert.DeserializeObject<Order> (str);
+
+                    if(results != null)
+                    {
+                        
+                        var response = await client.PutAsync($"{API.Url}/orders/process/{id}", data);
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            if (results.Status == "Pending")
+                            {
+                                //var str_pending_results = await response.Content.ReadAsStringAsync();
+                            }
+
+                            if (results.Status == "In-process")
+                            {
+                                //var str_pending_results = await response.Content.ReadAsStringAsync();
+                            }
+
+                            if (results.Status == "Complete")
+                            {
+                                //var str_pending_results = await response.Content.ReadAsStringAsync();
+                            }
+
+                        }
+                        else
+                        {
+                            var str_results = await response.Content.ReadAsStringAsync();
+                            Message(str_results);
+                        }
+                    }
+                }
+                
+            }
+            catch (HttpRequestException ex)
+            {
+                Message(ex.Message);
             }
         }
 

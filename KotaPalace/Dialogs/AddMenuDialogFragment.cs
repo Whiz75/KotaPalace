@@ -14,6 +14,7 @@ using Plugin.FirebaseStorage;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Pipes;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,7 @@ namespace KotaPalace.Dialogs
     {
         private Context context;
 
+        private AppCompatImageView imgMenu;
         private TextInputEditText InputItemName;
         private TextInputEditText InputItemPrice;
 
@@ -40,6 +42,8 @@ namespace KotaPalace.Dialogs
 
         private MaterialButton BtnOpenAddDlg;
         private MaterialButton BtnSubmitMenu;
+
+        private string id = Preferences.Get("Id",null);
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -83,6 +87,8 @@ namespace KotaPalace.Dialogs
         private void Init(View view)
         {
             CloseDialogImg = view.FindViewById<AppCompatImageView>(Resource.Id.CloseDialogImg);
+
+            imgMenu = view.FindViewById<AppCompatImageView>(Resource.Id.imgMenu);
             InputItemName = view.FindViewById<TextInputEditText>(Resource.Id.InputItemName);
             InputItemPrice = view.FindViewById<TextInputEditText>(Resource.Id.InputItemPrice);
             chipGroup = view.FindViewById<ChipGroup>(Resource.Id.chipAddOns);
@@ -100,7 +106,7 @@ namespace KotaPalace.Dialogs
 
             FabMenuImg.Click += async (s, e) =>
             {
-                var file = await PickAndShow();
+                //var file = await PickAndShow();
             };
 
             BtnOpenAddDlg.Click += (s, e) =>
@@ -154,22 +160,6 @@ namespace KotaPalace.Dialogs
                 {
                     var businessId = Preferences.Get("businessId", 0);
 
-                    //var file = await PickAndShow();
-
-                    //var memoryStream = new MemoryStream();
-                    //var st = await file.OpenReadAsync();
-                    //string filename = $"{businessId}_menu_image";
-
-                    //var result = CrossFirebaseStorage.Current
-                    //    .Instance
-                    //    .RootReference
-                    //    .Child("Menu Images")
-                    //    .Child(filename);
-
-                    //await result.PutStreamAsync(st);
-
-                    //var url = await result.GetDownloadUrlAsync();
-
                     Menu menu = new Menu()
                     {
                         BusinessId = businessId,
@@ -203,6 +193,59 @@ namespace KotaPalace.Dialogs
             }
         }
 
+
+
+
+        //How to get Id from menu????
+        private async void UploadMenuImageAsync()
+        {  
+            try
+            {
+                var file = await PickAndShow();
+
+                var memoryStream = new MemoryStream();
+                var st = await file.OpenReadAsync();
+                string filename = $"{file.FileName}";
+                var results = CrossFirebaseStorage.Current
+                    .Instance
+                    .RootReference
+                    .Child("Documents")
+                    .Child(filename);
+
+                await results.PutBytesAsync(st.ToByteArray());
+
+                var url = await results.GetDownloadUrlAsync();
+
+                Menu update = new Menu()
+                {
+                    Url = url.ToString()
+                };
+
+                var j_data = Newtonsoft.Json.JsonConvert.SerializeObject(update);
+                HttpContent httpContent = new StringContent(j_data, Encoding.UTF8, mediaType: "application/json");
+                HttpClient httpClient = new HttpClient();
+
+                var response = await httpClient.PutAsync($"{API.Url}/menus/{key}", httpContent);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string str_out = await response.Content.ReadAsStringAsync();
+
+                    AndHUD.Shared.ShowSuccess(context,"Menu has image", MaskType.None, TimeSpan.FromSeconds(3));
+                    FabMenuImg.Enabled = false;
+                }
+                else
+                {
+                    var str_r = await response.Content.ReadAsStringAsync();
+                    Message(str_r);
+                }
+            }
+            catch (Exception ex)
+            {
+                Message(ex.Message);
+            }
+        }
+
         private async Task<FileResult> PickAndShow()
         {
             try
@@ -230,5 +273,11 @@ namespace KotaPalace.Dialogs
             AndHUD.Shared.ShowSuccess(context, s, MaskType.None, TimeSpan.FromSeconds(3));
         }
         
+    }
+
+    public class MenuImage
+    {
+        public int Id { get; set; }
+        public string Url { get; set; }
     }
 }

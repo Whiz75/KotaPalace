@@ -65,8 +65,7 @@ namespace KotaPalace.Fragments
             OrderAdapter mAdapter = new OrderAdapter(OrderList);
             mAdapter.BtnClick += (s, e) =>
             {
-                //OrderViewFragment order = new OrderViewFragment(OrderList[e.Position].Id);
-                OrderViewFragment order = new OrderViewFragment();
+                OrderViewFragment order = new OrderViewFragment(OrderList[e.Position]);
                 order.Show(ChildFragmentManager.BeginTransaction(), "");
             };
 
@@ -78,9 +77,6 @@ namespace KotaPalace.Fragments
                 var str_results = await response.Content.ReadAsStringAsync();
                 //get driver info
                 var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(str_results);
-
-                //ObservableCollection<Order> OrderList = new ObservableCollection<Order>();
-                
 
                 foreach (var item in results)
                 {

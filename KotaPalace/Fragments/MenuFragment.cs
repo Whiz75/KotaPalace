@@ -88,19 +88,18 @@ namespace KotaPalace.Fragments
                 var results = Newtonsoft.Json.JsonConvert.DeserializeObject<ObservableCollection<Menu>>(str_results);
 
                 ObservableCollection<Menu> MenuList = new ObservableCollection<Menu>();
+                MenuAdapter mAdapter = new MenuAdapter(MenuList);
+                RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
+                menu_rv.SetLayoutManager(mLayoutManager);
+
+                menu_rv.HasFixedSize = true;
+                menu_rv.SetAdapter(mAdapter);
 
                 foreach (var item in results)
                 {
                     MenuList.Add(item);
-                    //is it okay like this?yezs. thanks you saw it?
-
+                    mAdapter.NotifyDataSetChanged();
                 }
-
-                RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
-                menu_rv.SetLayoutManager(mLayoutManager);
-                MenuAdapter mAdapter = new MenuAdapter(MenuList);
-                menu_rv.HasFixedSize = true;
-                menu_rv.SetAdapter(mAdapter);
             }
             else
             {

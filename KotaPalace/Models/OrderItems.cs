@@ -9,6 +9,7 @@ namespace KotaPalace_Api.Models
         public int Id { get; set; }
         public string Quantity { get; set; } //
         public int MenuId { set; get; }//product id
+        public string ItemName { set; get; }
         public decimal Price { get; set; }
         public string Extras { get; set; } 
     }

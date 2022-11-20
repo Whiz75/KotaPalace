@@ -67,6 +67,7 @@
     <Compile Include="Activities\SignUpBusiness.cs" />
     <Compile Include="Activities\SplashScreen.cs" />
     <Compile Include="Adapters\MenuAdapter.cs" />
+    <Compile Include="Adapters\OrderItemsAdapter.cs" />
     <Compile Include="Adapters\OrderAdapter.cs" />
     <Compile Include="Dialogs\BusinessAddressDialogFragment.cs" />
     <Compile Include="Dialogs\ForgotPasswordDialogFragment.cs" />
@@ -370,6 +371,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\chip_group_bg.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\order_items_row.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

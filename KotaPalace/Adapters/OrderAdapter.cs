@@ -34,7 +34,7 @@ namespace KotaPalace.Adapters
             OrderViewHolder vh = holder as OrderViewHolder;
             var order = orders[position];
 
-            vh.CustomerId.Text = $"Id :{order.Customer_Id}";
+            vh.OrderId.Text = $"Id :{order.Id}";
             vh.Status.Text = $"Status :{order.Status}";
 
             //vh.OrderId.Text = $"Available :{order.Id}";
@@ -64,7 +64,7 @@ namespace KotaPalace.Adapters
 
         public OrderViewHolder(View itemview) : base(itemview)
         {
-            CustomerId = itemview.FindViewById<MaterialTextView>(Resource.Id.customer_id);
+            OrderId = itemview.FindViewById<MaterialTextView>(Resource.Id.customer_id);
             Status = itemview.FindViewById<MaterialTextView>(Resource.Id.order_status);
             //MenuId = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_menu_id);
             //OrderId = itemview.FindViewById<MaterialTextView>(Resource.Id.row_quantity);
