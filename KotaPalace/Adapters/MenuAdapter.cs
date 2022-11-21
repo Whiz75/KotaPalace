@@ -4,17 +4,21 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using AndroidHUD;
 using AndroidX.AppCompat.Widget;
 using AndroidX.RecyclerView.Widget;
+using FFImageLoading;
 using Google.Android.Material.Button;
 using Google.Android.Material.Chip;
 using Java.Util.Zip;
 using KotaPalace.Dialogs;
+using KotaPalace.Models;
 using KotaPalace_Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using static Android.Views.View;
 using Menu = KotaPalace_Api.Models.Menu;
@@ -42,19 +46,55 @@ namespace KotaPalace.Adapters
             vh.MenuId.Text = $"Menu Id :{menu.Id}";
             //vh.Status.Text = $"Status :{menu.Status}";
 
+            if(menu.Url != null)
+            {
+                ImageService.Instance.LoadUrl(menu.Url).Into(vh.row_menuIcon);
+            }
+
+            vh.chipGroup.RemoveAllViews();
+
             foreach (var i in menu.Extras)
             {
                 Chip chip = new Chip(vh.ItemView.Context);
 
-                //vh.chipGroup.RemoveView(chip);
                 chip.Text = i.Title;
                 vh.chipGroup.AddView(chip);
-                
             }
+            
 
-            vh.AcceptBtn.Click += (s, e) =>
+            vh.BtnUpdate.Click += (s, e) =>
             {
                 OrderViewFragment frag = new OrderViewFragment();
+            };
+
+            vh.BtnDelete.Click += (s, e) =>
+            {
+                AlertDialog.Builder builder = new AlertDialog.Builder(vh.ItemView.Context);
+                builder.SetTitle("Remove Item");
+                builder.SetMessage("Are you sure want to remove item?");
+                builder.SetNegativeButton("No", delegate
+                {
+                    builder.Dispose();
+                });
+                builder.SetPositiveButton("Yes", async delegate
+                {
+                    HttpClient httpClient = new HttpClient();
+
+                    var result = await httpClient.DeleteAsync($"{API.Url}/menus/{menu.Id}");
+
+                    if (result.IsSuccessStatusCode)
+                    {
+                        string str_out = await result.Content.ReadAsStringAsync();
+                        AndHUD.Shared.ShowSuccess(vh.ItemView.Context, str_out, MaskType.None, TimeSpan.FromSeconds(3));
+                    }
+                    else
+                    {
+                        string str_out = await result.Content.ReadAsStringAsync();
+                        AndHUD.Shared.ShowError(vh.ItemView.Context, str_out, MaskType.None, TimeSpan.FromSeconds(3));
+                    }
+                    builder.Dispose();
+                });
+                builder.Show();
             };
                 
         }
@@ -77,8 +117,10 @@ namespace KotaPalace.Adapters
         public AppCompatTextView MenuId { get;set; }
 
         public AppCompatTextView Status { get; set;}
+        public AppCompatImageView row_menuIcon { get; set; }
 
-        public MaterialButton AcceptBtn { get; set; }
+        public MaterialButton BtnUpdate { get; set; }
+        public MaterialButton BtnDelete { get; set; }
 
         public MenuViewHolder(View itemview) : base(itemview)
         {
@@ -86,11 +128,13 @@ namespace KotaPalace.Adapters
             Price = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_price);
             MenuId = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_menu_id);
             //Status = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_status);
+            row_menuIcon = itemview.FindViewById<AppCompatImageView>(Resource.Id.row_menuIcon);
 
-          
+
             chipGroup = itemview.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);
 
-            AcceptBtn = itemview.FindViewById<MaterialButton>(Resource.Id.row_btn_update);
+            BtnUpdate = itemview.FindViewById<MaterialButton>(Resource.Id.row_btn_update);
+            BtnDelete = itemview.FindViewById<MaterialButton>(Resource.Id.row_btn_delete);
         }
     }
 }

@@ -17,6 +17,10 @@ using KotaPalace_Api.Models;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using Plugin.FirebaseStorage;
+using System.IO;
+using System.Runtime.Remoting.Contexts;
+using Android.Net;
 
 namespace KotaPalace.Activities
 {
@@ -170,6 +174,77 @@ namespace KotaPalace.Activities
             }
         }
 
+        private async void UploadMenuImageAsync()
+        {
+            try
+            {
+                var file = await PickAndShow();
+
+                var memoryStream = new MemoryStream();
+                var st = await file.OpenReadAsync();
+                string filename = $"{file.FileName}";
+                var results = CrossFirebaseStorage.Current
+                    .Instance
+                    .RootReference
+                    .Child("Documents")
+                    .Child(filename);
+
+                await results.PutStreamAsync(st);
+
+                var url = await results.GetDownloadUrlAsync();
+
+                UpdateUser update = new UpdateUser()
+                {
+                    Id = Preferences.Get("Id",null),
+                    Url = url.ToString()
+                };
+
+                var j_data = Newtonsoft.Json.JsonConvert.SerializeObject(update);
+                HttpContent httpContent = new StringContent(j_data, Encoding.UTF8, mediaType: "application/json");
+                HttpClient httpClient = new HttpClient();
+
+                var response = await httpClient.PutAsync($"{API.Url}/account/", httpContent);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string str_out = await response.Content.ReadAsStringAsync();
+
+                    AndHUD.Shared.ShowSuccess(this, "Menu has image", MaskType.None, TimeSpan.FromSeconds(3));
+                }
+                else
+                {
+                    var str_r = await response.Content.ReadAsStringAsync();
+                    SuccessMessage(str_r);
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage(ex.Message);
+            }
+        }
+
+        private async Task<FileResult> PickAndShow()
+        {
+            try
+            {
+                var file = await FilePicker.PickAsync(new PickOptions()
+                {
+                    FileTypes = FilePickerFileType.Images
+                });
+
+                if (file != null)
+                {
+                    return file;
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage(ex.Message);
+            }
+
+            return null;
+        }
+
         private void SuccessMessage(string t)
         {
             AndHUD.Shared.ShowSuccess(this, t, MaskType.None, TimeSpan.FromSeconds(3));
@@ -184,14 +259,17 @@ namespace KotaPalace.Activities
 
 public class UserSignUp
 {
-    public UserSignUp()
-    {
-    }
-
     public string Email { get; set; }
     public string Password { get; set; }
     public string Firstname { get; set; }
     public string Lastname { get; set; }
     public string PhoneNumber { get; set; }
     public string UserType { get; set; }
+    
+}
+
+public class UpdateUser
+{
+    public string Id { get; set; }
+    public string Url { get; set; }
 }

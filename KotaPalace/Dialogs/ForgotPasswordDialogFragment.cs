@@ -46,9 +46,7 @@ namespace KotaPalace.Dialogs
             mContext = view.Context;
 
             Init(view);
-            //ResetPassword();
-            closeDialog();
-
+            
             return view;
         }
 
@@ -63,6 +61,11 @@ namespace KotaPalace.Dialogs
             BtnResetPassword.Click += (s, e) =>
             {
                 ResetPassword();
+            };
+
+            cancel_iv.Click += (s, e) =>
+            {
+                Dialog.Dismiss();
             };
         }
 
@@ -100,17 +103,17 @@ namespace KotaPalace.Dialogs
                     if(output != null)
                     {
                         Message(output);
+                        //reset input
+                        InputResetEmail.Text = "";
+                        InputResetPassword.Text = "";
                     }
                 }
+                else
+                {
+                    string output = await results.Content.ReadAsStringAsync();
+                    Message(output);
+                }
             }
-        }
-
-        private void closeDialog()
-        {
-            cancel_iv.Click += (s, e) =>
-            {
-                Dialog.Dismiss();
-            };
         }
 
         private void Message(string txt)
@@ -121,10 +124,6 @@ namespace KotaPalace.Dialogs
 
     public class UserLogin
     {
-        public UserLogin()
-        {
-        }
-
         public string Email { get; set; }
         public string Password { get; set; }
     }

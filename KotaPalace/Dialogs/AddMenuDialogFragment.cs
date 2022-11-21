@@ -57,6 +57,8 @@ namespace KotaPalace.Dialogs
         }
 
         private string key;
+        private FileResult file;
+
         public AddMenuDialogFragment(string key)
         {
             this.key = key;
@@ -78,6 +80,7 @@ namespace KotaPalace.Dialogs
             context = view.Context;
 
             Init(view);
+            
             //SubmitMenu();
             //OpenAddExtrasDialog(view);
 
@@ -107,6 +110,7 @@ namespace KotaPalace.Dialogs
             FabMenuImg.Click += async (s, e) =>
             {
                 //var file = await PickAndShow();
+                file = await PickAndShow();
             };
 
             BtnOpenAddDlg.Click += (s, e) =>
@@ -153,12 +157,29 @@ namespace KotaPalace.Dialogs
             else if (string.IsNullOrEmpty(InputItemPrice.Text) || string.IsNullOrWhiteSpace(InputItemPrice.Text))
             {
                 InputItemPrice.Error = "Please the item's price";
+            }else if(file == null)
+            {
+                Message("Please upload image for the menu");
             }
             else
             {
                 try
                 {
+
                     var businessId = Preferences.Get("businessId", 0);
+
+                    var memoryStream = new MemoryStream();
+                    var st = await file.OpenReadAsync();
+                    string filename = $"{file.FileName}";
+                    var results = CrossFirebaseStorage.Current
+                        .Instance
+                        .RootReference
+                        .Child("Menu images")
+                        .Child(filename);
+
+                    await results.PutStreamAsync(st);
+
+                    var url = await results.GetDownloadUrlAsync();
 
                     Menu menu = new Menu()
                     {
@@ -167,82 +188,34 @@ namespace KotaPalace.Dialogs
                         Price = Convert.ToDouble(InputItemPrice.Text),
                         Extras = Items,
                         Status = true,
-                        Url = null
+                        Url = url.ToString()
                     };
 
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(menu);
                     HttpContent data = new StringContent(json, Encoding.UTF8, "application/json");
                     HttpClient httpClient = new HttpClient();
 
-                    var results = await httpClient.PostAsync($"{API.Url}/menus", data);
+                    var result = await httpClient.PostAsync($"{API.Url}/menus", data);
 
-                    if (results.IsSuccessStatusCode)
+                    if (result.IsSuccessStatusCode)
                     {
-                        string str_out = await results.Content.ReadAsStringAsync();
+                        string str_out = await result.Content.ReadAsStringAsync();
                         Message("Menu added successfully!!!");
 
                         InputItemName.Text = "";
                         InputItemPrice.Text = "";
                         chipGroup.RemoveAllViews();
+                        Items.Clear();
                     }
                 }
                 catch (Exception ex)
                 {
                     Message(ex.Message);
                 }
-            }
-        }
-
-
-
-
-        //How to get Id from menu????
-        private async void UploadMenuImageAsync()
-        {  
-            try
-            {
-                var file = await PickAndShow();
-
-                var memoryStream = new MemoryStream();
-                var st = await file.OpenReadAsync();
-                string filename = $"{file.FileName}";
-                var results = CrossFirebaseStorage.Current
-                    .Instance
-                    .RootReference
-                    .Child("Documents")
-                    .Child(filename);
-
-                await results.PutBytesAsync(st.ToByteArray());
-
-                var url = await results.GetDownloadUrlAsync();
-
-                Menu update = new Menu()
+                finally
                 {
-                    Url = url.ToString()
-                };
 
-                var j_data = Newtonsoft.Json.JsonConvert.SerializeObject(update);
-                HttpContent httpContent = new StringContent(j_data, Encoding.UTF8, mediaType: "application/json");
-                HttpClient httpClient = new HttpClient();
-
-                var response = await httpClient.PutAsync($"{API.Url}/menus/{key}", httpContent);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    string str_out = await response.Content.ReadAsStringAsync();
-
-                    AndHUD.Shared.ShowSuccess(context,"Menu has image", MaskType.None, TimeSpan.FromSeconds(3));
-                    FabMenuImg.Enabled = false;
                 }
-                else
-                {
-                    var str_r = await response.Content.ReadAsStringAsync();
-                    Message(str_r);
-                }
-            }
-            catch (Exception ex)
-            {
-                Message(ex.Message);
             }
         }
 
@@ -270,7 +243,7 @@ namespace KotaPalace.Dialogs
 
         private void Message(string s)
         {
-            AndHUD.Shared.ShowSuccess(context, s, MaskType.None, TimeSpan.FromSeconds(3));
+            AndHUD.Shared.ShowSuccess(context, s, MaskType.None, TimeSpan.FromSeconds(6));
         }
         
     }
