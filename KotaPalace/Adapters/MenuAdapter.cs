@@ -19,14 +19,19 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
+using static Android.Resource;
 using static Android.Views.View;
+using Context = Android.Content.Context;
 using Menu = KotaPalace_Api.Models.Menu;
 
 namespace KotaPalace.Adapters
 {
     public class MenuAdapter : RecyclerView.Adapter
     {
+        Context context;
+
         public ObservableCollection<Menu> MenuList;
 
         public MenuAdapter(ObservableCollection<Menu> menuList)
@@ -40,15 +45,18 @@ namespace KotaPalace.Adapters
         {
             MenuViewHolder vh = holder as MenuViewHolder;
             var menu = MenuList[position];
+            context = vh.ItemView.Context;
 
             vh.Name.Text = $"{menu.Name}" ;
             vh.Price.Text = $"R{menu.Price}";
             vh.MenuId.Text = $"Menu Id :{menu.Id}";
-            //vh.Status.Text = $"Status :{menu.Status}";
 
             if(menu.Url != null)
             {
-                ImageService.Instance.LoadUrl(menu.Url).Into(vh.row_menuIcon);
+                ImageService
+                    .Instance
+                    .LoadUrl(menu.Url)
+                    .Into(vh.row_menuIcon);
             }
 
             vh.chipGroup.RemoveAllViews();
@@ -64,37 +72,12 @@ namespace KotaPalace.Adapters
 
             vh.BtnUpdate.Click += (s, e) =>
             {
-                OrderViewFragment frag = new OrderViewFragment();
+                
             };
 
             vh.BtnDelete.Click += (s, e) =>
             {
-                AlertDialog.Builder builder = new AlertDialog.Builder(vh.ItemView.Context);
-                builder.SetTitle("Remove Item");
-                builder.SetMessage("Are you sure want to remove item?");
-                builder.SetNegativeButton("No", delegate
-                {
-                    builder.Dispose();
-                });
-                builder.SetPositiveButton("Yes", async delegate
-                {
-                    HttpClient httpClient = new HttpClient();
-
-                    var result = await httpClient.DeleteAsync($"{API.Url}/menus/{menu.Id}");
-
-                    if (result.IsSuccessStatusCode)
-                    {
-                        string str_out = await result.Content.ReadAsStringAsync();
-                        AndHUD.Shared.ShowSuccess(vh.ItemView.Context, str_out, MaskType.None, TimeSpan.FromSeconds(3));
-                    }
-                    else
-                    {
-                        string str_out = await result.Content.ReadAsStringAsync();
-                        AndHUD.Shared.ShowError(vh.ItemView.Context, str_out, MaskType.None, TimeSpan.FromSeconds(3));
-                    }
-                    builder.Dispose();
-                });
-                builder.Show();
+                RemoveItem(menu.Id);
             };
                 
         }
@@ -104,6 +87,37 @@ namespace KotaPalace.Adapters
             View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.row_menu, parent, false);
             MenuViewHolder vh = new MenuViewHolder(itemView);
             return vh;
+        }
+
+
+        private void RemoveItem(int id)
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.SetTitle("Remove Item");
+            builder.SetMessage("Are you sure want to remove item?");
+            builder.SetNegativeButton("No", delegate
+            {
+                builder.Dispose();
+            });
+            builder.SetPositiveButton("Yes", async delegate
+            {
+                HttpClient httpClient = new HttpClient();
+
+                var result = await httpClient.DeleteAsync($"{API.Url}/menus/{id}");
+
+                if (result.IsSuccessStatusCode)
+                {
+                    string str_out = await result.Content.ReadAsStringAsync();
+                    AndHUD.Shared.ShowSuccess(context, str_out, MaskType.None, TimeSpan.FromSeconds(3));
+                }
+                else
+                {
+                    string str_out = await result.Content.ReadAsStringAsync();
+                    AndHUD.Shared.ShowError(context, str_out, MaskType.None, TimeSpan.FromSeconds(3));
+                }
+                builder.Dispose();
+            });
+            builder.Show();
         }
     }
 
