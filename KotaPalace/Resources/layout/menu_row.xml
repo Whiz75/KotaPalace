@@ -1,160 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView 
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:layout_marginStart="10dp"
-    android:layout_marginEnd="10dp"
-    app:cardPreventCornerOverlap="false"
-    app:cardElevation="8dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#dcdcdc"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:id="@+id/blog_item">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-    >
-        <LinearLayout    
+        tools:ignore="MissingConstraints"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-        >
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/blog_like"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blogDescription"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/blog_comment"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="232dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blogDescription"
+                app:layout_constraintVertical_bias="1.0"
+                android:src="@drawable/abc_ab_share_pack_mtrl_alpha"
+                app:tint="@color/slate_gray"
+                tools:ignore="ContentDescription" />
+
             <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="match_parent"
-                android:id="@+id/row_menuIcon"
-                android:src="@mipmap/logo_food"
-                android:layout_height="160dp"
-                android:scaleType="centerCrop"/>
-            
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:id="@+id/postProfilePic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_account_circle_black_18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/postUsername"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                app:cardCornerRadius="10dp"
-                app:cardBackgroundColor="@color/gray">
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="username"
+                android:textColor="#2a2929"
+                android:textStyle="normal"
+                android:textSize="24sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/postProfilePic"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:paddingTop="0dp"
-                    android:paddingBottom="0dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name:"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:id="@+id/row_name"
-                            android:layout_alignParentEnd="true"/>
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Quantity:"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="status"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:id="@+id/row_quantity"
-                            android:layout_alignParentEnd="true"
-                            />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Price:"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            />
-
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="shop"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:id="@+id/row_price"
-                            android:layout_alignParentEnd="true"
-                        />
-                    </RelativeLayout>
-
-                    <com.google.android.material.chip.ChipGroup
-                        android:minWidth="25dp"
-                        android:minHeight="25dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/AddOnsChips"
-                        android:layout_margin="5dp"
-                        app:singleLine="false"
-                        app:singleSelection="true"
-                        app:chipSpacingHorizontal="12dp"
-                    />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/postDate"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
-            >
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/row_btn_delete"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="delete"
-                    android:textAlignment="center"
-                    android:textColor="@color/red"
-                    android:textSize="12sp"
-                    app:strokeColor="@color/red"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="10dp"
-                    />
+                android:layout_marginStart="8dp"
+                android:text="Posted date"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/postProfilePic"
+                app:layout_constraintTop_toBottomOf="@+id/postUsername" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/row_btn_update"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="5dp"
-                    android:text="update"
-                    android:textAlignment="center"
-                    android:textColor="@color/green"
-                    android:textSize="12sp"
-                    app:strokeColor="@color/green"
-                    android:layout_toStartOf="@id/row_btn_delete"/>
-            </RelativeLayout>
-        </LinearLayout>
-        
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</com.google.android.material.card.MaterialCardView>
+            <View
+                android:id="@+id/top_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintTop_toBottomOf="@+id/postDate"/>
+
+            <ImageView
+                android:id="@+id/postImage"
+                android:layout_height="204dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/postProfilePic"
+                android:src="@drawable/ic_account_circle_black_18dp"
+                tools:ignore="ContentDescription"
+                app:elevation="3dp" />
+
+            <View
+                android:id="@+id/bottom_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/postImage"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/blogDescription"
+                android:layout_width="359dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="12dp"
+                android:text="description"
+                android:textColor="@color/gray"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bottom_view" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/blog_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/blog_like"
+                app:layout_constraintTop_toBottomOf="@+id/blogDescription"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/blog_comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="228dp"
+                android:layout_marginTop="8dp"
+                android:text="name"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/blog_like"
+                app:layout_constraintTop_toBottomOf="@+id/blogDescription"
+                app:layout_constraintVertical_bias="0.692" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
