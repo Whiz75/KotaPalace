@@ -14,6 +14,8 @@ using Microcharts.Droid;
 using static Android.Provider.ContactsContract.RawContacts;
 using Facebook.Shimmer;
 using System.Threading.Tasks;
+using Microcharts;
+using SkiaSharp;
 
 namespace KotaPalace.Fragments
 {
@@ -22,6 +24,9 @@ namespace KotaPalace.Fragments
         private Context context;
         private ShimmerFrameLayout container;
         private ChartView chartReport;
+
+        private readonly List<string> months = new List<string>();
+        private readonly List<int> counter = new List<int>();
 
         public ReportFragment()
         {
@@ -75,6 +80,37 @@ namespace KotaPalace.Fragments
                 }
             }, TaskScheduler.FromCurrentSynchronizationContext());
             startWork.Start();
+        }
+
+        private void DrawCharts()
+        {
+            List<ChartEntry> DataEntry = new List<ChartEntry>();
+            string[] colors = { "#157979", "#154779", "#5F1C80", "#801C59",
+                            "#9CBDD6", "#75863D" , "#1E1011", "#48D53B",
+                            "#48D5C7", "#6761F0", "#8A80A3", "#D3C6F4"
+            };
+
+            for (int i = 0; i < months.Count; i++)
+            {
+                DataEntry.Add(new ChartEntry(counter[i])
+                {
+                    Label = months[i],
+                    Color = SKColor.Parse(colors[i]),
+                    ValueLabel = counter[i].ToString(),
+                    TextColor = SKColor.Parse(colors[i]),
+                    ValueLabelColor = SKColor.Parse(colors[i])
+                });
+                if (months[i].Contains(DateTime.Now.ToString("MMMM")))
+                {
+                    break;
+                }
+            }
+
+            var chart = new RadarChart()
+            {
+                Entries = DataEntry,
+            };
+            chartReport.Chart = chart;
         }
     }
 }
