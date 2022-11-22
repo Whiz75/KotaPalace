@@ -36,7 +36,7 @@ namespace KotaPalace.Adapters
 
             vh.Name.Text = $"Name:{orderItems.ItemName}" ;
             vh.Price.Text = $"Price:R{orderItems.Price}";
-            vh.Quantity.Text = $"Quantity:{orderItems.Quantity}";
+            vh.Quantity.Text = orderItems.Quantity;
         }
         public event EventHandler<OrderBtnClick> BtnClick;
 

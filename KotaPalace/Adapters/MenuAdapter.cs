@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using AndroidHUD;
 using AndroidX.AppCompat.Widget;
+using AndroidX.Fragment.App;
 using AndroidX.RecyclerView.Widget;
 using FFImageLoading;
 using Google.Android.Material.Button;
@@ -49,7 +50,7 @@ namespace KotaPalace.Adapters
 
             vh.Name.Text = $"{menu.Name}" ;
             vh.Price.Text = $"R{menu.Price}";
-            vh.MenuId.Text = $"Menu Id :{menu.Id}";
+            vh.MenuId.Text = $"{menu.Id}";
 
             if(menu.Url != null)
             {
@@ -72,7 +73,8 @@ namespace KotaPalace.Adapters
 
             vh.BtnUpdate.Click += (s, e) =>
             {
-                
+                BtnClick.Invoke(vh.ItemView.Context, new MenuBtnClick { pos = position});
+                //update.Show()
             };
 
             vh.BtnDelete.Click += (s, e) =>
@@ -80,6 +82,13 @@ namespace KotaPalace.Adapters
                 RemoveItem(menu.Id);
             };
                 
+        }
+
+        public event EventHandler<MenuBtnClick> BtnClick;
+
+        public class MenuBtnClick: EventArgs
+        {
+            public int pos { get; set; }
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

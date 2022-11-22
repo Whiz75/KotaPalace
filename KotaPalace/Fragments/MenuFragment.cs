@@ -89,6 +89,11 @@ namespace KotaPalace.Fragments
 
                 ObservableCollection<Menu> MenuList = new ObservableCollection<Menu>();
                 MenuAdapter mAdapter = new MenuAdapter(MenuList);
+                mAdapter.BtnClick += (s, e) =>
+                {
+                    UpdateMenuDialogFragment fragment = new UpdateMenuDialogFragment(MenuList[e.pos]);
+                    fragment.Show(ChildFragmentManager.BeginTransaction(), "");
+                };
                 RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
                 menu_rv.SetLayoutManager(mLayoutManager);
 

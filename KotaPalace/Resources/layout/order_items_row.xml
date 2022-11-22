@@ -35,22 +35,20 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/order_item_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content"/>
             
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/order_item_quantity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:background="@drawable/button_bg"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/order_item_price"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-        
-            
+                android:layout_height="wrap_content"/>
+
         </LinearLayout>
     </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>

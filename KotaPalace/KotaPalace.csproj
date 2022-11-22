@@ -69,6 +69,7 @@
     <Compile Include="Adapters\MenuAdapter.cs" />
     <Compile Include="Adapters\OrderItemsAdapter.cs" />
     <Compile Include="Adapters\OrderAdapter.cs" />
+    <Compile Include="Dialogs\UpdateMenuDialogFragment.cs" />
     <Compile Include="Dialogs\BusinessAddressDialogFragment.cs" />
     <Compile Include="Dialogs\ForgotPasswordDialogFragment.cs" />
     <Compile Include="Dialogs\AddMenuDialogFragment.cs" />
@@ -135,6 +136,9 @@
     <PackageReference Include="Karamunting.Android.Gauravk95.BubbleNavigation">
       <Version>1.0.7.1</Version>
     </PackageReference>
+    <PackageReference Include="Microcharts">
+      <Version>0.9.5.9</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
     </PackageReference>
@@ -168,6 +172,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData">
       <Version>2.5.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Facebook.Shimmer">
+      <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading">
       <Version>2.4.11.982</Version>
@@ -379,6 +386,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\order_items_row.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_update_menu.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
