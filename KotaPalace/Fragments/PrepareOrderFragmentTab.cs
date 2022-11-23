@@ -42,8 +42,9 @@ namespace KotaPalace.Fragments
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
 
             View view = inflater.Inflate(Resource.Layout.prepare_orders_fragment_tab, container, false);
-
+            
             Init(view);
+            shimmerFrameLayout1.StartLayoutAnimation();
             LoadOrdersAsync();
             
             return view;
@@ -58,41 +59,49 @@ namespace KotaPalace.Fragments
         private async void LoadOrdersAsync()
         {
             var businessId = Preferences.Get("businessId", 0);
-            shimmerFrameLayout1.StartLayoutAnimation();
-
-            HttpClient client = new HttpClient();
-            var response = await client.GetAsync($"{API.Url}/orders/{businessId}"); // car details
-
-            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
-            orders_rv.SetLayoutManager(mLayoutManager);
-            OrderAdapter mAdapter = new OrderAdapter(OrderList);
-            mAdapter.BtnClick += (s, e) =>
+            try
             {
-                OrderViewFragment order = new OrderViewFragment(OrderList[e.Position]);
-                order.Show(ChildFragmentManager.BeginTransaction(), "");
-            };
+                
 
-            orders_rv.HasFixedSize = true;
-            orders_rv.SetAdapter(mAdapter);
+                HttpClient client = new HttpClient();
+                var response = await client.GetAsync($"{API.Url}/orders/{businessId}"); // car details
 
-            if (response.IsSuccessStatusCode)
-            {
-                var str_results = await response.Content.ReadAsStringAsync();
-                //get driver info
-                var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(str_results);
-
-                foreach (var item in results)
+                RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
+                orders_rv.SetLayoutManager(mLayoutManager);
+                OrderAdapter mAdapter = new OrderAdapter(OrderList);
+                mAdapter.BtnClick += (s, e) =>
                 {
-                    OrderList.Add(item);
-                    mAdapter.NotifyDataSetChanged();
+                    OrderViewFragment order = new OrderViewFragment(OrderList[e.Position]);
+                    order.Show(ChildFragmentManager.BeginTransaction(), "");
+                };
+
+                orders_rv.HasFixedSize = true;
+                orders_rv.SetAdapter(mAdapter);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var str_results = await response.Content.ReadAsStringAsync();
+                    //get driver info
+                    var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(str_results);
+
+                    foreach (var item in results)
+                    {
+                        OrderList.Add(item);
+                        mAdapter.NotifyDataSetChanged();
+                    }
                 }
+                else
+                {
+                    var str_results = await response.Content.ReadAsStringAsync();
+                    Message(str_results);
+                }
+                shimmerFrameLayout1.StopShimmer();
+                shimmerFrameLayout1.Visibility = ViewStates.Gone;
             }
-            else
+            catch (Exception ex)
             {
-                var str_results = await response.Content.ReadAsStringAsync();
-                Message(str_results);
+                Message(ex.Message);
             }
-            shimmerFrameLayout1.StopShimmer();
         }
 
         private void Message(string str_results)

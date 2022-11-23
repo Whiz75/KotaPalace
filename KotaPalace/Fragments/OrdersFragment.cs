@@ -44,7 +44,6 @@ namespace KotaPalace.Fragments
 
         private void Init(View view)
         {
-            shimmer_container = view.FindViewById<ShimmerFrameLayout>(Resource.Id.shimmer_container);
             //initialize variables
             tabHost = view.FindViewById<TabLayout>(Resource.Id.TabHost);
             viewpager = view.FindViewById<ViewPager>(Resource.Id.viewpager);
