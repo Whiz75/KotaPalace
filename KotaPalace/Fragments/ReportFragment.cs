@@ -22,12 +22,16 @@ using Xamarin.Essentials;
 using KotaPalace_Api.Models;
 using AndroidHUD;
 using OperationCanceledException = System.OperationCanceledException;
+using Google.Android.Material.Button;
 
 namespace KotaPalace.Fragments
 {
     public class ReportFragment : Fragment
     {
         private Context context;
+
+        private MaterialButton btn_chart_type;
+        private MaterialButton btn_year;
         private ShimmerFrameLayout container;
         private ChartView chartReport;
 
@@ -35,6 +39,7 @@ namespace KotaPalace.Fragments
         private readonly List<int> counter = new List<int>();
 
         private int businessId = Preferences.Get("businessId", 0);
+
         public ReportFragment()
         {
         }
@@ -52,46 +57,44 @@ namespace KotaPalace.Fragments
             View view = inflater.Inflate(Resource.Layout.fragment_report, container, false);
             context = view.Context;
             Init(view);
-            LoadGraphs();
-            GetADates();
+            LoadGraphsAsync();
 
             return view;
         }
 
         private void Init(View view)
         {
-            //var charts = Data.CreateQuickstart();
+            btn_chart_type = view.FindViewById<MaterialButton>(Resource.Id.btn_chart_type);
+            //btn_year = view.FindViewById<MaterialButton>(Resource.Id.btn_year);
             container = view.FindViewById<ShimmerFrameLayout>(Resource.Id.shimmer_view_container);
             
             chartReport = view.FindViewById<ChartView>(Resource.Id.chartReport);
+
+            btn_chart_type.Click += (s, e) =>
+            {
+                PopupMenu popupMenu = new PopupMenu(context, btn_chart_type);
+                popupMenu.Menu.Add(IMenu.First, 0, 1, "Bar Chart");
+                popupMenu.Menu.Add(IMenu.First, 1, 1, "Line Chart");
+                popupMenu.Menu.Add(IMenu.First, 2, 1, "Point Chart");
+                popupMenu.Menu.Add(IMenu.First, 3, 1, "Donut Chart");
+                popupMenu.Menu.Add(IMenu.First, 4, 1, "Radar Chart");
+                popupMenu.Show();
+                //popupMenu.MenuItemClick += PopupMenu_MenuItemClick;
+            };
         }
 
-        private void LoadGraphs()
+        //private void PopupMenu_MenuItemClick(object sender, PopupMenu.MenuItemClickEventArgs e)
+        //{
+        //    type = e.Item.ItemId;
+        //    btn_year.Text = e.Item.TitleFormatted.ToString();
+        //    DrawCharts();
+        //}
+
+        private int type = 0;
+        private async void LoadGraphsAsync()
         {
             container.StartShimmer(); // If auto-start is set to false
 
-            Task startWork = new Task(() =>
-            {
-                Task.Delay(3000);
-            });
-            startWork.ContinueWith(t =>
-            {
-                try
-                {
-                    container.StopShimmer();
-                    container.Visibility = ViewStates.Gone;
-                }
-                catch (Exception ex)
-                {
-
-                    Toast.MakeText(context, ex.Message, ToastLength.Long).Show();
-                }
-            }, TaskScheduler.FromCurrentSynchronizationContext());
-            startWork.Start();
-        }
-
-        private async void GetADates()
-        {
             string[] monthNames = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.MonthNames;
             foreach (var m in monthNames)
             {
@@ -134,7 +137,6 @@ namespace KotaPalace.Fragments
             }
         }
 
-       
         private void DrawCharts()
         {
             List<ChartEntry> DataEntry = new List<ChartEntry>();
@@ -161,16 +163,48 @@ namespace KotaPalace.Fragments
                     }
                 }
 
-                //var chart = new RadarChart()
+                //if (type == 0)
                 //{
-                //    Entries = DataEntry,
-                //};
+                //    var chart = new BarChart()
+                //    {
+                //        Entries = DataEntry,
+                //    };
+                //    chartReport.Chart = chart;
+                //}
+                //if (type == 1)
+                //{
+                //    var chart = new LineChart()
+                //    {
+                //        Entries = DataEntry,
+                //    };
+                //    chartReport.Chart = chart;
+                //}
+                //if (type == 2)
+                //{
+                //    var chart = new PointChart()
+                //    {
+                //        Entries = DataEntry,
+                //    };
+                //    chartReport.Chart = chart;
+                //}
+                //if (type == 3)
+                //{
+                //    var chart = new DonutChart()
+                //    {
+                //        Entries = DataEntry,
+                //    };
+                //    chartReport.Chart = chart;
+                //}
+                //if (type == 4)
+                //{
+                //    var chart = new RadarChart()
+                //    {
+                //        Entries = DataEntry,
+                //    };
+                //    chartReport.Chart = chart;
+                //}
 
-                //var chart = new BarChart()
-                //{
-                //    Entries = DataEntry,
-                //};
-                var chart = new DonutChart()
+                var chart = new RadarChart()
                 {
                     Entries = DataEntry,
                 };
