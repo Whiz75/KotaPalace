@@ -21,6 +21,7 @@ using KotaPalace.Models;
 using Xamarin.Essentials;
 using KotaPalace_Api.Models;
 using AndroidHUD;
+using OperationCanceledException = System.OperationCanceledException;
 
 namespace KotaPalace.Fragments
 {
@@ -52,6 +53,7 @@ namespace KotaPalace.Fragments
             context = view.Context;
             Init(view);
             LoadGraphs();
+            GetADates();
 
             return view;
         }
@@ -105,19 +107,25 @@ namespace KotaPalace.Fragments
                 if (response.IsSuccessStatusCode)
                 {
                     var data = await response.Content.ReadAsStringAsync();
-                    var order = Newtonsoft.Json.JsonConvert.DeserializeObject<Order>(data);
+                    var order = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(data);
 
                     if (order != null)
                     {
-                        foreach (var item in order.OrderDate.ToString())
+                        foreach (var item in order)
                         {
-                            if (months.Contains(order.OrderDate.ToString("MMMM")))
+                            if (months.Contains(item.OrderDate.ToString("MMMM")))
                             {
-                                int pos = months.IndexOf(order.OrderDate.ToString("MMMM"));
+                                int pos = months.IndexOf(item.OrderDate.ToString("MMMM"));
                                 counter[pos] = counter[pos] + 1;
                             }
                         }
+                        DrawCharts();
                     }
+                }
+                else
+                {
+                    var data = await response.Content.ReadAsStringAsync();
+                    Message(data);
                 }
             }
             catch (HttpRequestException ex)
@@ -135,27 +143,43 @@ namespace KotaPalace.Fragments
                             "#48D5C7", "#6761F0", "#8A80A3", "#D3C6F4"
             };
 
-            for (int i = 0; i < months.Count; i++)
+            try
             {
-                DataEntry.Add(new ChartEntry(counter[i])
+                for (int i = 0; i < months.Count; i++)
                 {
-                    Label = months[i],
-                    Color = SKColor.Parse(colors[i]),
-                    ValueLabel = counter[i].ToString(),
-                    TextColor = SKColor.Parse(colors[i]),
-                    ValueLabelColor = SKColor.Parse(colors[i])
-                });
-                if (months[i].Contains(DateTime.Now.ToString("MMMM")))
-                {
-                    break;
+                    DataEntry.Add(new ChartEntry(counter[i])
+                    {
+                        Label = months[i],
+                        Color = SKColor.Parse(colors[i]),
+                        ValueLabel = counter[i].ToString(),
+                        TextColor = SKColor.Parse(colors[i]),
+                        ValueLabelColor = SKColor.Parse(colors[i])
+                    });
+                    if (months[i].Contains(DateTime.Now.ToString("MMMM")))
+                    {
+                        break;
+                    }
                 }
-            }
 
-            var chart = new RadarChart()
+                //var chart = new RadarChart()
+                //{
+                //    Entries = DataEntry,
+                //};
+
+                //var chart = new BarChart()
+                //{
+                //    Entries = DataEntry,
+                //};
+                var chart = new DonutChart()
+                {
+                    Entries = DataEntry,
+                };
+                chartReport.Chart = chart;
+            }
+            catch (OperationCanceledException ex)
             {
-                Entries = DataEntry,
-            };
-            chartReport.Chart = chart;
+                Message(ex.Message);
+            }
         }
 
         private void Message(string message)
