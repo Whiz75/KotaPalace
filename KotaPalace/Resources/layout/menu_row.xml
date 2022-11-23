@@ -27,35 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/blog_like"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/blogDescription"
-                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                tools:ignore="ContentDescription" />
-
-            <ImageView
-                android:id="@+id/blog_comment"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginStart="232dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/blogDescription"
-                app:layout_constraintVertical_bias="1.0"
-                android:src="@drawable/abc_ab_share_pack_mtrl_alpha"
-                app:tint="@color/slate_gray"
-                tools:ignore="ContentDescription" />
-
-            <androidx.appcompat.widget.AppCompatImageView
+            <!--<androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/postProfilePic"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -63,47 +35,50 @@
                 android:layout_marginTop="16dp"
                 android:src="@drawable/ic_account_circle_black_18dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />-->
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/postUsername"
+                android:id="@+id/row_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:text="username"
+                android:text="Name"
                 android:textColor="#2a2929"
                 android:textStyle="normal"
                 android:textSize="24sp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintStart_toEndOf="@+id/postProfilePic"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/postDate"
+                android:id="@+id/row_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Posted date"
+                android:text="Price"
                 android:textSize="12sp"
-                app:layout_constraintStart_toEndOf="@+id/postProfilePic"
-                app:layout_constraintTop_toBottomOf="@+id/postUsername" />
+                android:textColor="@color/price_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/row_name"
+                />
 
             <View
                 android:id="@+id/top_view"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                app:layout_constraintTop_toBottomOf="@+id/postDate"/>
+                app:layout_constraintTop_toBottomOf="@+id/row_price"/>
 
-            <ImageView
-                android:id="@+id/postImage"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/row_menuIcon"
                 android:layout_height="204dp"
+                android:layout_width="match_parent"
                 android:layout_marginTop="8dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/postProfilePic"
+                app:layout_constraintTop_toBottomOf="@+id/top_view"
                 android:src="@drawable/ic_account_circle_black_18dp"
                 tools:ignore="ContentDescription"
                 app:elevation="3dp" />
@@ -113,53 +88,82 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
-                app:layout_constraintTop_toBottomOf="@+id/postImage"/>
+                app:layout_constraintTop_toBottomOf="@+id/row_menuIcon"/>
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/blogDescription"
-                android:layout_width="359dp"
+            <com.google.android.material.chip.ChipGroup
+                android:minWidth="25dp"
+                android:minHeight="25dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="18dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="12dp"
-                android:text="description"
-                android:textColor="@color/gray"
-                android:textSize="18sp"
+                android:id="@+id/AddOnsChips"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:singleLine="false"
+                app:singleSelection="true"
+                app:chipSpacingHorizontal="1dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/bottom_view" />
 
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/blog_like_count"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:text="0"
-                android:textColor="@color/gray"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/blog_like"
-                app:layout_constraintTop_toBottomOf="@+id/blogDescription"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toBottomOf="@+id/AddOnsChips">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/blog_comment_count"
-                android:layout_width="wrap_content"
-                android:layout_height="19dp"
-                android:layout_marginBottom="12dp"
-                android:layout_marginStart="228dp"
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/row_btn_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="update"
+                    android:textColor="@color/gray"
+                    android:textStyle="normal"
+                    android:layout_toStartOf="@+id/row_btn_delete"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/row_btn_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="delete"
+                    android:textColor="@color/gray"
+                    android:textStyle="normal"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+             <!--<ImageView
+                android:id="@+id/blog_like"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="name"
-                android:textColor="@color/gray"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/blog_like"
-                app:layout_constraintTop_toBottomOf="@+id/blogDescription"
-                app:layout_constraintVertical_bias="0.692" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AddOnsChips"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                tools:ignore="ContentDescription" />-->
+
+            <!--<ImageView
+                android:id="@+id/blog_comment"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="232dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AddOnsChips"
+                app:layout_constraintVertical_bias="1.0"
+                android:src="@drawable/abc_ab_share_pack_mtrl_alpha"
+                app:tint="@color/slate_gray"
+                tools:ignore="ContentDescription" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
