@@ -9,12 +9,15 @@ using AndroidX.RecyclerView.Widget;
 using Google.Android.Material.Button;
 using Google.Android.Material.Chip;
 using Google.Android.Material.TextView;
+using KotaPalace.Models;
 using KotaPalace_Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace KotaPalace.Adapters
 {
@@ -34,11 +37,15 @@ namespace KotaPalace.Adapters
             OrderViewHolder vh = holder as OrderViewHolder;
             var order = orders[position];
 
-            vh.OrderId.Text = $"Id :{order.Id}";
-            vh.Status.Text = $"Status :{order.Status}";
+            vh.row_order_no.Text = $"{order.Id}";
+            //vh.row_order_id.Text = $"ORDER NO:{order.Id}";
+            vh.row_order_status.Text = $"{order.Status}";
+            vh.row_order_date.Text = order.OrderDate.ToString();
 
             //vh.OrderId.Text = $"Available :{order.Id}";
             vh.view_btn.Click += (s, e) => { BtnClick.Invoke(vh.ItemView.Context, new OrderBtnClick() { Position = position }); };
+
+            FindUserAsync(order.Customer_Id, vh.row_order_id);
         }
         public event EventHandler<OrderBtnClick> BtnClick;
 
@@ -53,23 +60,41 @@ namespace KotaPalace.Adapters
             OrderViewHolder vh = new OrderViewHolder(itemview);
             return vh;
         }
+
+        private async void FindUserAsync(string id,MaterialTextView textView)
+        {
+            HttpClient httpClient = new HttpClient();
+            var response = await httpClient.GetAsync($"{API.Url}/account/{id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                string str_out = await response.Content.ReadAsStringAsync();
+                var user = Newtonsoft.Json.JsonConvert.DeserializeObject<AppUsers>(str_out);
+
+                if(user != null)
+                {
+                    textView.Text = $"{user.Firstname}";
+                }
+            }
+        }
     }
 
     public class OrderViewHolder : RecyclerView.ViewHolder
     {
-        public MaterialTextView CustomerId { get; set;}
-        public MaterialTextView Status {get; set;}
-        public MaterialTextView OrderId { get; set; }
+        public AppCompatImageView row_order_image { get; set; }
+        public MaterialTextView row_order_id { get; set;}
+        public MaterialTextView row_order_status { get; set;}
+        public MaterialTextView row_order_no { get; set; }
+        public MaterialTextView row_order_date { get; set; }
         public MaterialButton view_btn { get; set; }
 
         public OrderViewHolder(View itemview) : base(itemview)
         {
-            OrderId = itemview.FindViewById<MaterialTextView>(Resource.Id.customer_id);
-            Status = itemview.FindViewById<MaterialTextView>(Resource.Id.order_status);
-            //MenuId = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_menu_id);
-            //OrderId = itemview.FindViewById<MaterialTextView>(Resource.Id.row_quantity);
-
-            //chipGroup = itemview.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);
+            //row_order_image = itemview.FindViewById<AppCompatImageView>(Resource.Id.row_order_image);
+            row_order_no = itemview.FindViewById<MaterialTextView>(Resource.Id.row_order_no);
+            row_order_status = itemview.FindViewById<MaterialTextView>(Resource.Id.row_order_status);
+            row_order_id = itemview.FindViewById<MaterialTextView>(Resource.Id.row_order_id);
+            row_order_date = itemview.FindViewById<MaterialTextView>(Resource.Id.row_order_date);
 
             view_btn = itemview.FindViewById<MaterialButton>(Resource.Id.view_btn);
         }

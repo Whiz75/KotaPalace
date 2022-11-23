@@ -10,6 +10,7 @@ using KotaPalace.Dialogs;
 using KotaPalace.Models;
 using KotaPalace_Api.Models;
 using System;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using Xamarin.Essentials;
@@ -70,8 +71,15 @@ namespace KotaPalace.Activities
         {
             TxtForgotPassword.Click += (s, e) =>
             {
-                ForgotPasswordDialogFragment fragment = new ForgotPasswordDialogFragment();
-                fragment.Show(SupportFragmentManager.BeginTransaction(), "");
+                try
+                {
+                    ForgotPasswordDialogFragment fragment = new ForgotPasswordDialogFragment();
+                    fragment.Show(SupportFragmentManager.BeginTransaction(), "");
+                }
+                catch (WebException ex)
+                {
+                    Message(ex.Message);
+                }
             };
         }
 
@@ -79,7 +87,14 @@ namespace KotaPalace.Activities
         {
             btn_signin.Click += (s, e) =>
             {
-                Login();
+                try
+                {
+                    Login();
+                }
+                catch (WebException ex)
+                {
+                    Message(ex.Message);
+                }
             };
         }
 

@@ -7,6 +7,7 @@ using Android.Widget;
 using AndroidHUD;
 using AndroidX.Fragment.App;
 using AndroidX.RecyclerView.Widget;
+using Facebook.Shimmer;
 using KotaPalace.Adapters;
 using KotaPalace.Dialogs;
 using KotaPalace.Models;
@@ -24,6 +25,7 @@ namespace KotaPalace.Fragments
     public class PrepareOrderFragmentTab : Fragment
     {
         private Context context;
+        private ShimmerFrameLayout shimmerFrameLayout1;
         private RecyclerView orders_rv;
 
         List<Order> OrderList = new List<Order>();
@@ -31,7 +33,6 @@ namespace KotaPalace.Fragments
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             // Create your fragment here
         }
 
@@ -44,18 +45,20 @@ namespace KotaPalace.Fragments
 
             Init(view);
             LoadOrdersAsync();
-
+            
             return view;
         }
 
         private void Init(View view)
         {
+            shimmerFrameLayout1 = view.FindViewById<ShimmerFrameLayout>(Resource.Id.shimmerFrameLayout1);
             orders_rv = view.FindViewById<RecyclerView>(Resource.Id.orders_rv);
         }
 
         private async void LoadOrdersAsync()
         {
             var businessId = Preferences.Get("businessId", 0);
+            shimmerFrameLayout1.StartLayoutAnimation();
 
             HttpClient client = new HttpClient();
             var response = await client.GetAsync($"{API.Url}/orders/{businessId}"); // car details
@@ -83,14 +86,13 @@ namespace KotaPalace.Fragments
                     OrderList.Add(item);
                     mAdapter.NotifyDataSetChanged();
                 }
-
-                
             }
             else
             {
                 var str_results = await response.Content.ReadAsStringAsync();
                 Message(str_results);
             }
+            shimmerFrameLayout1.StopShimmer();
         }
 
         private void Message(string str_results)

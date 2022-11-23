@@ -7,39 +7,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.OrderFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/appbarLayout1"
-        android:background="@color/white">
-
-        <!--<androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/HomeToolBar"
-            />-->
-
-        <com.google.android.material.tabs.TabLayout
-            app:tabGravity="fill"
-            app:tabMode="fixed"
-            app:tabIndicatorHeight="5dp"
-            app:tabIndicatorColor="@color/dodger_blue"
-            app:tabSelectedTextColor="@color/dodger_blue"
-            app:tabPaddingBottom="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabBackground="@color/white"
-            android:id="@+id/TabHost"
-            />
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.viewpager.widget.ViewPager
+    <com.facebook.shimmer.ShimmerFrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:minWidth="25dp"
-        android:minHeight="25dp"
-        android:id="@+id/viewpager"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        />
+        android:id="@+id/shimmer_container"
+        >
 
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/appbarLayout1"
+                android:background="@color/white">
+
+                <com.google.android.material.tabs.TabLayout
+                    app:tabGravity="fill"
+                    app:tabMode="fixed"
+                    app:tabIndicatorHeight="5dp"
+                    app:tabIndicatorColor="@color/dodger_blue"
+                    app:tabSelectedTextColor="@color/dodger_blue"
+                    app:tabPaddingBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabBackground="@color/white"
+                    android:id="@+id/TabHost"
+                    />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minWidth="25dp"
+                android:minHeight="25dp"
+                android:id="@+id/viewpager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

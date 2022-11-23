@@ -1,5 +1,6 @@
 ﻿using Android.OS;
 using Android.Views;
+using Facebook.Shimmer;
 using Google.Android.Material.Tabs;
 using System.Collections.Generic;
 using Fragment = AndroidX.Fragment.App.Fragment;
@@ -10,6 +11,8 @@ namespace KotaPalace.Fragments
 {
     public class OrdersFragment : Fragment
     {
+        private ShimmerFrameLayout shimmer_container;
+
         private TabLayout tabHost;
         private ViewPager viewpager;
 
@@ -41,6 +44,7 @@ namespace KotaPalace.Fragments
 
         private void Init(View view)
         {
+            shimmer_container = view.FindViewById<ShimmerFrameLayout>(Resource.Id.shimmer_container);
             //initialize variables
             tabHost = view.FindViewById<TabLayout>(Resource.Id.TabHost);
             viewpager = view.FindViewById<ViewPager>(Resource.Id.viewpager);
