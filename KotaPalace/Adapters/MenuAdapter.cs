@@ -74,14 +74,12 @@ namespace KotaPalace.Adapters
             vh.BtnUpdate.Click += (s, e) =>
             {
                 BtnClick.Invoke(vh.ItemView.Context, new MenuBtnClick { pos = position});
-                //update.Show()
             };
 
             vh.BtnDelete.Click += (s, e) =>
             {
                 RemoveItem(menu.Id);
-            };
-                
+            };   
         }
 
         public event EventHandler<MenuBtnClick> BtnClick;
@@ -93,7 +91,7 @@ namespace KotaPalace.Adapters
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.row_menu, parent, false);
+            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.menu_row, parent, false);
             MenuViewHolder vh = new MenuViewHolder(itemView);
             return vh;
         }
@@ -139,7 +137,6 @@ namespace KotaPalace.Adapters
 
         public AppCompatTextView MenuId { get;set; }
 
-        public AppCompatTextView Status { get; set;}
         public AppCompatImageView row_menuIcon { get; set; }
 
         public MaterialButton BtnUpdate { get; set; }
@@ -150,9 +147,7 @@ namespace KotaPalace.Adapters
             Name = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_name);
             Price = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_price);
             MenuId = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_menu_id);
-            //Status = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_status);
             row_menuIcon = itemview.FindViewById<AppCompatImageView>(Resource.Id.row_menuIcon);
-
 
             chipGroup = itemview.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);
 
