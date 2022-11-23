@@ -16,6 +16,11 @@ using Facebook.Shimmer;
 using System.Threading.Tasks;
 using Microcharts;
 using SkiaSharp;
+using System.Net.Http;
+using KotaPalace.Models;
+using Xamarin.Essentials;
+using KotaPalace_Api.Models;
+using AndroidHUD;
 
 namespace KotaPalace.Fragments
 {
@@ -28,6 +33,7 @@ namespace KotaPalace.Fragments
         private readonly List<string> months = new List<string>();
         private readonly List<int> counter = new List<int>();
 
+        private int businessId = Preferences.Get("businessId", 0);
         public ReportFragment()
         {
         }
@@ -82,6 +88,45 @@ namespace KotaPalace.Fragments
             startWork.Start();
         }
 
+        private async void GetADates()
+        {
+            string[] monthNames = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.MonthNames;
+            foreach (var m in monthNames)
+            {
+                months.Add(m);
+                counter.Add(0);
+            }
+
+            HttpClient client = new HttpClient();
+            try
+            {
+                var response = await client.GetAsync($"{API.Url}/orders/{businessId}");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var data = await response.Content.ReadAsStringAsync();
+                    var order = Newtonsoft.Json.JsonConvert.DeserializeObject<Order>(data);
+
+                    if (order != null)
+                    {
+                        foreach (var item in order.OrderDate.ToString())
+                        {
+                            if (months.Contains(order.OrderDate.ToString("MMMM")))
+                            {
+                                int pos = months.IndexOf(order.OrderDate.ToString("MMMM"));
+                                counter[pos] = counter[pos] + 1;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                Message(ex.Message);
+            }
+        }
+
+       
         private void DrawCharts()
         {
             List<ChartEntry> DataEntry = new List<ChartEntry>();
@@ -112,5 +157,11 @@ namespace KotaPalace.Fragments
             };
             chartReport.Chart = chart;
         }
+
+        private void Message(string message)
+        {
+            AndHUD.Shared.ShowError(context, message,MaskType.None,TimeSpan.FromSeconds(3));
+        }
+
     }
 }

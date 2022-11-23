@@ -1,47 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.facebook.shimmer.ShimmerFrameLayout 
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/shimmer_view_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="report"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_centerHorizontal="true"/>
+
+    <microcharts.droid.ChartView
+        android:id="@+id/chartReport"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="350dp" 
+        android:layout_centerInParent="true"/>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="report"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:layout_centerHorizontal="true"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/BtnGetReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get report"
+        android:layout_above="@id/footer"
+        android:layout_centerHorizontal="true"/>
 
-        <microcharts.droid.ChartView
-            android:id="@+id/chartReport"
-            android:layout_width="match_parent"
-            android:layout_height="350dp" 
-            android:layout_centerInParent="true"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@Kota Palace"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/BtnGetReport"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="get report"
-            android:layout_above="@id/footer"
-            android:layout_centerHorizontal="true"/>
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/footer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="@Kota Palace"
-            android:textAllCaps="false"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"/>
-    </RelativeLayout>
-</com.facebook.shimmer.ShimmerFrameLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

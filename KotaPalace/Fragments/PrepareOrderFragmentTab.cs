@@ -18,6 +18,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 
 namespace KotaPalace.Fragments
@@ -44,7 +45,6 @@ namespace KotaPalace.Fragments
             View view = inflater.Inflate(Resource.Layout.prepare_orders_fragment_tab, container, false);
             
             Init(view);
-            shimmerFrameLayout1.StartLayoutAnimation();
             LoadOrdersAsync();
             
             return view;
@@ -61,7 +61,7 @@ namespace KotaPalace.Fragments
             var businessId = Preferences.Get("businessId", 0);
             try
             {
-                
+                shimmerFrameLayout1.StartLayoutAnimation();
 
                 HttpClient client = new HttpClient();
                 var response = await client.GetAsync($"{API.Url}/orders/{businessId}"); // car details
@@ -95,8 +95,27 @@ namespace KotaPalace.Fragments
                     var str_results = await response.Content.ReadAsStringAsync();
                     Message(str_results);
                 }
+
                 shimmerFrameLayout1.StopShimmer();
-                shimmerFrameLayout1.Visibility = ViewStates.Gone;
+
+                //Task startWork = new Task(() =>
+                //{
+                //    Task.Delay(3000);
+                //});
+                //startWork.ContinueWith(t =>
+                //{
+                //    try
+                //    {
+                //        shimmerFrameLayout1.StopShimmer();
+                //        shimmerFrameLayout1.Visibility = ViewStates.Gone;
+                //    }
+                //    catch (Exception ex)
+                //    {
+
+                //        Toast.MakeText(context, ex.Message, ToastLength.Long).Show();
+                //    }
+                //}, TaskScheduler.FromCurrentSynchronizationContext());
+                //startWork.Start();
             }
             catch (Exception ex)
             {
