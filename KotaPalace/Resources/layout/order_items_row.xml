@@ -14,14 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/user_image"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="5dp"
-            android:layout_centerVertical="true"
-            android:contentDescription=""
-            />
+        <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/order_item_quantity"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:background="@drawable/button_bg"
+                android:layout_centerVertical="true"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,20 +29,12 @@
             android:orientation="vertical"
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
-            android:layout_toEndOf="@id/user_image"
-            android:layout_toStartOf="@id/view_btn">
+            android:layout_toEndOf="@+id/order_item_quantity">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/order_item_name"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-            
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/order_item_quantity"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:gravity="center"
-                android:background="@drawable/button_bg"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/order_item_price"

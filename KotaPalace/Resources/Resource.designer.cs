@@ -9864,11 +9864,11 @@ namespace KotaPalace
 			// aapt resource value: 0x7F080082
 			public const int antiClockwise = 2131230850;
 			
-			// aapt resource value: 0x7F080086
-			public const int appbarLayout1 = 2131230854;
-			
 			// aapt resource value: 0x7F080084
 			public const int appBarLayout1 = 2131230852;
+			
+			// aapt resource value: 0x7F080086
+			public const int appbarLayout1 = 2131230854;
 			
 			// aapt resource value: 0x7F080085
 			public const int app_bar = 2131230853;
@@ -11506,70 +11506,67 @@ namespace KotaPalace
 			public const int useLogo = 2131231339;
 			
 			// aapt resource value: 0x7F08026C
-			public const int user_image = 2131231340;
-			
-			// aapt resource value: 0x7F08026D
-			public const int vertical_only = 2131231341;
-			
-			// aapt resource value: 0x7F080275
-			public const int viewpager = 2131231349;
-			
-			// aapt resource value: 0x7F08026E
-			public const int view_btn = 2131231342;
-			
-			// aapt resource value: 0x7F08026F
-			public const int view_offset_helper = 2131231343;
-			
-			// aapt resource value: 0x7F080270
-			public const int view_transition = 2131231344;
-			
-			// aapt resource value: 0x7F080271
-			public const int view_tree_lifecycle_owner = 2131231345;
-			
-			// aapt resource value: 0x7F080272
-			public const int view_tree_on_back_pressed_dispatcher_owner = 2131231346;
-			
-			// aapt resource value: 0x7F080273
-			public const int view_tree_saved_state_registry_owner = 2131231347;
+			public const int vertical_only = 2131231340;
 			
 			// aapt resource value: 0x7F080274
-			public const int view_tree_view_model_store_owner = 2131231348;
+			public const int viewpager = 2131231348;
+			
+			// aapt resource value: 0x7F08026D
+			public const int view_btn = 2131231341;
+			
+			// aapt resource value: 0x7F08026E
+			public const int view_offset_helper = 2131231342;
+			
+			// aapt resource value: 0x7F08026F
+			public const int view_transition = 2131231343;
+			
+			// aapt resource value: 0x7F080270
+			public const int view_tree_lifecycle_owner = 2131231344;
+			
+			// aapt resource value: 0x7F080271
+			public const int view_tree_on_back_pressed_dispatcher_owner = 2131231345;
+			
+			// aapt resource value: 0x7F080272
+			public const int view_tree_saved_state_registry_owner = 2131231346;
+			
+			// aapt resource value: 0x7F080273
+			public const int view_tree_view_model_store_owner = 2131231347;
+			
+			// aapt resource value: 0x7F080275
+			public const int visible = 2131231349;
 			
 			// aapt resource value: 0x7F080276
-			public const int visible = 2131231350;
+			public const int visible_removing_fragment_view_tag = 2131231350;
 			
 			// aapt resource value: 0x7F080277
-			public const int visible_removing_fragment_view_tag = 2131231351;
+			public const int west = 2131231351;
 			
 			// aapt resource value: 0x7F080278
-			public const int west = 2131231352;
-			
-			// aapt resource value: 0x7F080279
-			public const int wide = 2131231353;
-			
-			// aapt resource value: 0x7F08027C
-			public const int withinBounds = 2131231356;
-			
-			// aapt resource value: 0x7F08027A
-			public const int withText = 2131231354;
+			public const int wide = 2131231352;
 			
 			// aapt resource value: 0x7F08027B
-			public const int with_icon = 2131231355;
+			public const int withinBounds = 2131231355;
+			
+			// aapt resource value: 0x7F080279
+			public const int withText = 2131231353;
+			
+			// aapt resource value: 0x7F08027A
+			public const int with_icon = 2131231354;
+			
+			// aapt resource value: 0x7F08027C
+			public const int wrap = 2131231356;
 			
 			// aapt resource value: 0x7F08027D
-			public const int wrap = 2131231357;
+			public const int wrap_content = 2131231357;
 			
 			// aapt resource value: 0x7F08027E
-			public const int wrap_content = 2131231358;
+			public const int wrap_content_constrained = 2131231358;
 			
 			// aapt resource value: 0x7F08027F
-			public const int wrap_content_constrained = 2131231359;
+			public const int x_left = 2131231359;
 			
 			// aapt resource value: 0x7F080280
-			public const int x_left = 2131231360;
-			
-			// aapt resource value: 0x7F080281
-			public const int x_right = 2131231361;
+			public const int x_right = 2131231360;
 			
 			static Id()
 			{

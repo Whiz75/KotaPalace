@@ -79,16 +79,16 @@ namespace KotaPalace.Fragments
                 popupMenu.Menu.Add(IMenu.First, 3, 1, "Donut Chart");
                 popupMenu.Menu.Add(IMenu.First, 4, 1, "Radar Chart");
                 popupMenu.Show();
-                //popupMenu.MenuItemClick += PopupMenu_MenuItemClick;
+                popupMenu.MenuItemClick += PopupMenu_MenuItemClick;
             };
         }
 
-        //private void PopupMenu_MenuItemClick(object sender, PopupMenu.MenuItemClickEventArgs e)
-        //{
-        //    type = e.Item.ItemId;
-        //    btn_year.Text = e.Item.TitleFormatted.ToString();
-        //    DrawCharts();
-        //}
+        private void PopupMenu_MenuItemClick(object sender, PopupMenu.MenuItemClickEventArgs e)
+        {
+            type = e.Item.ItemId;
+            //btn_year.Text = e.Item.TitleFormatted.ToString();
+            DrawCharts();
+        }
 
         private int type = 0;
         private async void LoadGraphsAsync()
@@ -163,52 +163,52 @@ namespace KotaPalace.Fragments
                     }
                 }
 
-                //if (type == 0)
-                //{
-                //    var chart = new BarChart()
-                //    {
-                //        Entries = DataEntry,
-                //    };
-                //    chartReport.Chart = chart;
-                //}
-                //if (type == 1)
-                //{
-                //    var chart = new LineChart()
-                //    {
-                //        Entries = DataEntry,
-                //    };
-                //    chartReport.Chart = chart;
-                //}
-                //if (type == 2)
-                //{
-                //    var chart = new PointChart()
-                //    {
-                //        Entries = DataEntry,
-                //    };
-                //    chartReport.Chart = chart;
-                //}
-                //if (type == 3)
-                //{
-                //    var chart = new DonutChart()
-                //    {
-                //        Entries = DataEntry,
-                //    };
-                //    chartReport.Chart = chart;
-                //}
-                //if (type == 4)
-                //{
-                //    var chart = new RadarChart()
-                //    {
-                //        Entries = DataEntry,
-                //    };
-                //    chartReport.Chart = chart;
-                //}
-
-                var chart = new RadarChart()
+                if (type == 0)
                 {
-                    Entries = DataEntry,
-                };
-                chartReport.Chart = chart;
+                    var chart = new BarChart()
+                    {
+                        Entries = DataEntry,
+                    };
+                    chartReport.Chart = chart;
+                }
+                if (type == 1)
+                {
+                    var chart = new LineChart()
+                    {
+                        Entries = DataEntry,
+                    };
+                    chartReport.Chart = chart;
+                }
+                if (type == 2)
+                {
+                    var chart = new PointChart()
+                    {
+                        Entries = DataEntry,
+                    };
+                    chartReport.Chart = chart;
+                }
+                if (type == 3)
+                {
+                    var chart = new DonutChart()
+                    {
+                        Entries = DataEntry,
+                    };
+                    chartReport.Chart = chart;
+                }
+                if (type == 4)
+                {
+                    var chart = new RadarChart()
+                    {
+                        Entries = DataEntry,
+                    };
+                    chartReport.Chart = chart;
+                }
+
+                //var chart = new RadarChart()
+                //{
+                //    Entries = DataEntry,
+                //};
+                //chartReport.Chart = chart;
             }
             catch (OperationCanceledException ex)
             {
