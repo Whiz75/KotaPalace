@@ -21,12 +21,16 @@ using Plugin.FirebaseStorage;
 using System.IO;
 using System.Runtime.Remoting.Contexts;
 using Android.Net;
+using Google.Android.Material.FloatingActionButton;
+using static System.Net.WebRequestMethods;
 
 namespace KotaPalace.Activities
 {
     [Activity(Label = "SignUp")]
     public class SignUp : Activity
     {
+        private FloatingActionButton fab_edit_img;
+
         private MaterialTextView back_to_signin_text;
         private TextInputEditText InputFirstname;
         private TextInputEditText InputLastname;
@@ -36,6 +40,9 @@ namespace KotaPalace.Activities
         private TextInputEditText InputConfirmPassword;
 
         private MaterialButton btn_proceed_signup;
+
+        //File file = await PickAndShow();
+        private FileResult file;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -55,6 +62,7 @@ namespace KotaPalace.Activities
 
         private void Init()
         {
+            fab_edit_img = FindViewById<FloatingActionButton>(Resource.Id.fab_edit_img);
             back_to_signin_text = FindViewById<MaterialTextView>(Resource.Id.back_to_signin_text);
 
             InputFirstname = FindViewById<TextInputEditText>(Resource.Id.InputRegFirstname);
@@ -65,6 +73,11 @@ namespace KotaPalace.Activities
             InputConfirmPassword = FindViewById<TextInputEditText>(Resource.Id.InputRegConfirmPassword);
 
             btn_proceed_signup = FindViewById<MaterialButton>(Resource.Id.btn_proceed_signup);
+
+            fab_edit_img.Click += async (s, e) =>
+            {
+                file = await PickAndShow();
+            };
         }
 
         private void GoToSignIn()
@@ -83,6 +96,8 @@ namespace KotaPalace.Activities
                 SignUpUserAsync();
             };
         }
+
+        
 
         private void InputValidations()
         {
@@ -127,11 +142,34 @@ namespace KotaPalace.Activities
                 InputConfirmPassword.Error = "Provide email confirmation";
                 return;
             }
+
+            //if(file == null)
+            //{
+            //    Message("Please upload image for your profile");
+            //}
+        }
+
+        private void Message(string v)
+        {
+            AndHUD.Shared.ShowError(this, v, MaskType.None, TimeSpan.FromSeconds(3));
         }
 
         private async void SignUpUserAsync()
         {
             InputValidations();
+
+            var memoryStream = new MemoryStream();
+            var st = await file.OpenReadAsync();
+            string filename = $"{file.FileName}";
+            var result = CrossFirebaseStorage.Current
+                .Instance
+                .RootReference
+                .Child("Documents")
+                .Child(filename);
+
+            await result.PutStreamAsync(st);
+
+            var url = await result.GetDownloadUrlAsync();
 
             UserSignUp user = new UserSignUp()
             {
@@ -171,55 +209,6 @@ namespace KotaPalace.Activities
                 var str_r = await results.Content.ReadAsStringAsync();
 
                 ErrorMessage(str_r);
-            }
-        }
-
-        private async void UploadMenuImageAsync()
-        {
-            try
-            {
-                var file = await PickAndShow();
-
-                var memoryStream = new MemoryStream();
-                var st = await file.OpenReadAsync();
-                string filename = $"{file.FileName}";
-                var results = CrossFirebaseStorage.Current
-                    .Instance
-                    .RootReference
-                    .Child("Documents")
-                    .Child(filename);
-
-                await results.PutStreamAsync(st);
-
-                var url = await results.GetDownloadUrlAsync();
-
-                UpdateUser update = new UpdateUser()
-                {
-                    Id = Preferences.Get("Id",null),
-                    Url = url.ToString()
-                };
-
-                var j_data = Newtonsoft.Json.JsonConvert.SerializeObject(update);
-                HttpContent httpContent = new StringContent(j_data, Encoding.UTF8, mediaType: "application/json");
-                HttpClient httpClient = new HttpClient();
-
-                var response = await httpClient.PutAsync($"{API.Url}/account/", httpContent);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    string str_out = await response.Content.ReadAsStringAsync();
-
-                    AndHUD.Shared.ShowSuccess(this, "Menu has image", MaskType.None, TimeSpan.FromSeconds(3));
-                }
-                else
-                {
-                    var str_r = await response.Content.ReadAsStringAsync();
-                    SuccessMessage(str_r);
-                }
-            }
-            catch (Exception ex)
-            {
-                ErrorMessage(ex.Message);
             }
         }
 
@@ -265,6 +254,7 @@ public class UserSignUp
     public string Lastname { get; set; }
     public string PhoneNumber { get; set; }
     public string UserType { get; set; }
+    public string Url { get; set; }
     
 }
 

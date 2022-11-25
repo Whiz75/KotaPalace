@@ -38,6 +38,7 @@ namespace KotaPalace.Fragments
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
+            
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -49,7 +50,7 @@ namespace KotaPalace.Fragments
             mContext = view.Context;
             Init(view);
             LoadReadyOrdersAsync();
-
+            container.StartLayoutAnimation();
             return view;
         }
 
@@ -64,8 +65,6 @@ namespace KotaPalace.Fragments
             var Id = Preferences.Get("Id", null);
             try
             {
-                container.StartLayoutAnimation();
-
                 HttpClient client = new HttpClient();
                 var response = await client.GetAsync($"{API.Url}/orders/completed/{businessId}"); 
 
