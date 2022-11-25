@@ -73,7 +73,7 @@ namespace KotaPalace.Adapters
 
             vh.BtnUpdate.Click += (s, e) =>
             {
-                BtnClick.Invoke(vh.ItemView.Context, new UserBtnClick { pos = position});
+                BtnClick.Invoke(vh.ItemView.Context, new UserBtnClick { Position = position});
             };
 
             vh.BtnDelete.Click += (s, e) =>
@@ -86,12 +86,12 @@ namespace KotaPalace.Adapters
 
         public class UserBtnClick: EventArgs
         {
-            public int pos { get; set; }
+            public int Position { get; set; }
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.menu_row, parent, false);
+            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.user_row, parent, false);
             UserViewHolder vh = new UserViewHolder(itemView);
             return vh;
         }
@@ -100,28 +100,29 @@ namespace KotaPalace.Adapters
         private void RemoveItem(int id)
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
-            builder.SetTitle("Remove Item");
-            builder.SetMessage("Are you sure want to remove item?");
+            builder.SetTitle("DELETE USER");
+            builder.SetMessage("Are you sure want to delete user?");
             builder.SetNegativeButton("No", delegate
             {
                 builder.Dispose();
             });
             builder.SetPositiveButton("Yes", async delegate
             {
-                HttpClient httpClient = new HttpClient();
+                //HttpClient httpClient = new HttpClient();
 
-                var result = await httpClient.DeleteAsync($"{API.Url}/menus/{id}");
+                //var result = await httpClient.DeleteAsync($"{API.Url}/menus/{id}");
 
-                if (result.IsSuccessStatusCode)
-                {
-                    string str_out = await result.Content.ReadAsStringAsync();
-                    AndHUD.Shared.ShowSuccess(context, str_out, MaskType.None, TimeSpan.FromSeconds(3));
-                }
-                else
-                {
-                    string str_out = await result.Content.ReadAsStringAsync();
-                    AndHUD.Shared.ShowError(context, str_out, MaskType.None, TimeSpan.FromSeconds(3));
-                }
+                //if (result.IsSuccessStatusCode)
+                //{
+                //    string str_out = await result.Content.ReadAsStringAsync();
+                //    AndHUD.Shared.ShowSuccess(context, str_out, MaskType.None, TimeSpan.FromSeconds(3));
+                //}
+                //else
+                //{
+                //    string str_out = await result.Content.ReadAsStringAsync();
+                //    AndHUD.Shared.ShowError(context, str_out, MaskType.None, TimeSpan.FromSeconds(3));
+                //}
+                AndHUD.Shared.ShowError(context, $"{id}", MaskType.None, TimeSpan.FromSeconds(3));
                 builder.Dispose();
             });
             builder.Show();
@@ -131,13 +132,10 @@ namespace KotaPalace.Adapters
     public class UserViewHolder : RecyclerView.ViewHolder
     {
         public AppCompatTextView Name { get; set; }
-        public AppCompatTextView Price { get; set; }
+        public AppCompatTextView Email { get; set; }
+        public AppCompatTextView PhoneNumber { get; set; }
 
-        public ChipGroup chipGroup { get; set; }
-
-        public AppCompatTextView MenuId { get;set; }
-
-        public AppCompatImageView row_menuIcon { get; set; }
+        public AppCompatImageView Image { get; set; }
 
         public MaterialButton BtnUpdate { get; set; }
         public MaterialButton BtnDelete { get; set; }
@@ -145,11 +143,10 @@ namespace KotaPalace.Adapters
         public UserViewHolder(View itemview) : base(itemview)
         {
             Name = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_name);
-            Price = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_price);
-            MenuId = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_menu_id);
-            row_menuIcon = itemview.FindViewById<AppCompatImageView>(Resource.Id.row_menuIcon);
+            Email = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_price);
+            PhoneNumber = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_menu_id);
 
-            chipGroup = itemview.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);
+            Image = itemview.FindViewById<AppCompatImageView>(Resource.Id.row_menuIcon);
 
             BtnUpdate = itemview.FindViewById<MaterialButton>(Resource.Id.row_btn_update);
             BtnDelete = itemview.FindViewById<MaterialButton>(Resource.Id.row_btn_delete);
