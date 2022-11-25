@@ -32,6 +32,7 @@ namespace KotaPalace.Fragments
 
         List<Order> OrderList = new List<Order>();
 
+        private int businessId = Preferences.Get("businessId", 0);
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -66,12 +67,11 @@ namespace KotaPalace.Fragments
                 container.StartLayoutAnimation();
 
                 HttpClient client = new HttpClient();
-                var response = await client.GetAsync($"{API.Url}/orders/completed/{Id}"); 
+                var response = await client.GetAsync($"{API.Url}/orders/completed/{businessId}"); 
 
                 RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(mContext);
                 ready_orders_recyclerView.SetLayoutManager(mLayoutManager);
                 ReadyOrdersAdapter mAdapter = new ReadyOrdersAdapter(OrderList);
-
 
                 ready_orders_recyclerView.HasFixedSize = true;
                 ready_orders_recyclerView.SetAdapter(mAdapter);
@@ -79,7 +79,6 @@ namespace KotaPalace.Fragments
                 if (response.IsSuccessStatusCode)
                 {
                     var str_results = await response.Content.ReadAsStringAsync();
-                    //get driver info
                     var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(str_results);
 
                     foreach (var item in results)
