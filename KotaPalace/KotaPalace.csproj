@@ -66,9 +66,11 @@
     <Compile Include="Activities\SignUp.cs" />
     <Compile Include="Activities\SignUpBusiness.cs" />
     <Compile Include="Activities\SplashScreen.cs" />
+    <Compile Include="Adapters\UsersAdapter.cs" />
     <Compile Include="Adapters\MenuAdapter.cs" />
+    <Compile Include="Adapters\ReadyOrdersAdapter.cs" />
     <Compile Include="Adapters\OrderItemsAdapter.cs" />
-    <Compile Include="Adapters\OrderAdapter.cs" />
+    <Compile Include="Adapters\PrepareOrderAdapter.cs" />
     <Compile Include="Dialogs\UpdateMenuDialogFragment.cs" />
     <Compile Include="Dialogs\BusinessAddressDialogFragment.cs" />
     <Compile Include="Dialogs\ForgotPasswordDialogFragment.cs" />
@@ -78,6 +80,7 @@
     <Compile Include="Fragments\MenuFragment.cs" />
     <Compile Include="Fragments\OrdersFragment.cs" />
     <Compile Include="Fragments\PrepareOrderFragmentTab.cs" />
+    <Compile Include="Fragments\AdminFragment.cs" />
     <Compile Include="Fragments\ProfileFragment.cs" />
     <Compile Include="Fragments\ReadyOrdersFragmentTab.cs" />
     <Compile Include="Fragments\ReportFragment.cs" />
@@ -393,6 +396,24 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\order_row.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ready_order_row.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_admin.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\user_row.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>

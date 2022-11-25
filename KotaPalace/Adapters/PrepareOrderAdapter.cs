@@ -21,11 +21,11 @@ using System.Threading.Tasks;
 
 namespace KotaPalace.Adapters
 {
-    public class OrderAdapter : RecyclerView.Adapter
+    public class PrepareOrderAdapter : RecyclerView.Adapter
     {
         List<Order> orders = new List<Order>();
 
-        public OrderAdapter(List<Order> orders)
+        public PrepareOrderAdapter(List<Order> orders)
         {
             this.orders = orders;
         }
@@ -38,11 +38,9 @@ namespace KotaPalace.Adapters
             var order = orders[position];
 
             vh.row_order_no.Text = $"{order.Id}";
-            //vh.row_order_id.Text = $"ORDER NO:{order.Id}";
             vh.row_order_status.Text = $"{order.Status}";
             vh.row_order_date.Text = order.OrderDate.ToString();
 
-            //vh.OrderId.Text = $"Available :{order.Id}";
             vh.view_btn.Click += (s, e) => { BtnClick.Invoke(vh.ItemView.Context, new OrderBtnClick() { Position = position }); };
 
             FindUserAsync(order.Customer_Id, vh.row_order_id);

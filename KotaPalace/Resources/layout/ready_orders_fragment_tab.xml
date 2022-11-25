@@ -5,9 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ORDERS READY"
-        android:layout_centerInParent="true"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ready_orders_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </RelativeLayout>

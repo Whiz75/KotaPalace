@@ -68,6 +68,9 @@ namespace KotaPalace
                 case 3:
                     SupportFragmentManager.BeginTransaction().Replace(Resource.Id.fragHost, new ReportFragment()).Commit();
                     break;
+                case 4:
+                    SupportFragmentManager.BeginTransaction().Replace(Resource.Id.fragHost, new AdminFragment()).Commit();
+                    break;
                 default:
                     SupportFragmentManager.BeginTransaction().Replace(Resource.Id.fragHost, new OrdersFragment()).Commit();
                     break;
@@ -86,9 +89,7 @@ namespace KotaPalace
                     var str = await response.Content.ReadAsStringAsync();
                     var b = Newtonsoft.Json.JsonConvert.DeserializeObject<Business>(str);
                     Preferences.Set("businessId", b.Id);
-                    
                 }
-
             }
             catch (Exception ex)
             {

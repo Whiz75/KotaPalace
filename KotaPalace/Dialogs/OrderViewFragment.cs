@@ -46,6 +46,8 @@ namespace KotaPalace.Dialogs
         private int id;
 
         private int businessId = Preferences.Get("businessId", 0);
+        private string Id = Preferences.Get("Id", null);
+
         private Order order;
         List<OrderItems> OrderItemList = new List<OrderItems>();
 
@@ -83,6 +85,7 @@ namespace KotaPalace.Dialogs
             View view = inflater.Inflate(Resource.Layout.order_row_view, container, false);
             context = view.Context;
             Init(view);
+            //CheckStatus();
             LoadOrdersAsync();
             //LoadOrderItemsAsync();
 
@@ -98,7 +101,6 @@ namespace KotaPalace.Dialogs
             business_Id = view.FindViewById<TextView>(Resource.Id.business_Id);
             business_status = view.FindViewById<TextView>(Resource.Id.business_status);
 
-            //order_quantity.Text = order.OrderItems.Count.ToString();
             business_status.Text = order.Status;
 
             orderItemsRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.orderItemsRecyclerView);
@@ -114,7 +116,7 @@ namespace KotaPalace.Dialogs
 
             BtnProcess.Click += (s, e) =>
             {
-                //ProcessOrderAsync();
+                ProcessOrderAsync();
             };
         }
 
@@ -178,37 +180,29 @@ namespace KotaPalace.Dialogs
             }
         }
 
-        private async void LoadOrderItemsAsync()
+        private async void CheckStatus()
         {
             HttpClient client = new HttpClient();
-            var response = await client.GetAsync($"{API.Url}/orders/{businessId}"); // car details
+            var response = await client.GetAsync($"{API.Url}/status/{id}");
 
-            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
-            orderItemsRecyclerView.SetLayoutManager(mLayoutManager);
-            OrderItemAdapter mAdapter = new OrderItemAdapter(OrderItemList);
-
-            if (response.IsSuccessStatusCode)
+            if(response.IsSuccessStatusCode)
             {
-                var str_results = await response.Content.ReadAsStringAsync();
+                var str = await response.Content.ReadAsStringAsync();
+                var order = Newtonsoft.Json.JsonConvert.DeserializeObject<Order>(str);
 
-                var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<OrderItems>>(str_results);
-
-                foreach (var item in results)
+                if(order.Status == "Pending")
                 {
-                    OrderItemList.Add(item);
-                    mAdapter.NotifyDataSetChanged();
+                    BtnProcess.Text = "PROCESS";
+                }else if(order.Status == "Accepted")
+                {
+                    BtnProcess.Text = "DONE!";
                 }
-
+                else
+                {
+                    BtnProcess.Text = "READY";
+                    BtnProcess.Enabled = false;
+                }
             }
-            else
-            {
-                var str_results = await response.Content.ReadAsStringAsync();
-                Message(str_results);
-            }
-
-            orderItemsRecyclerView.HasFixedSize = true;
-            orderItemsRecyclerView.SetAdapter(mAdapter);
-
         }
 
         private async void ProcessOrderAsync()
@@ -221,44 +215,18 @@ namespace KotaPalace.Dialogs
 
             try
             {
-                var status = await client.GetAsync($"{API.Url}/orders/single/{id}");
+                var response = await client.PutAsync($"{API.Url}/orders/process/{id}", data);
 
-                if (status.IsSuccessStatusCode)
+                if (response.IsSuccessStatusCode)
                 {
-                    var str = await status.Content.ReadAsStringAsync();
-                    var results = Newtonsoft.Json.JsonConvert.DeserializeObject<Order> (str);
 
-                    if(results != null)
-                    {
-                        
-                        var response = await client.PutAsync($"{API.Url}/orders/process/{id}", data);
-
-                        if (response.IsSuccessStatusCode)
-                        {
-                            if (results.Status == "Pending")
-                            {
-                                //var str_pending_results = await response.Content.ReadAsStringAsync();
-                            }
-
-                            if (results.Status == "In-process")
-                            {
-                                //var str_pending_results = await response.Content.ReadAsStringAsync();
-                            }
-
-                            if (results.Status == "Complete")
-                            {
-                                //var str_pending_results = await response.Content.ReadAsStringAsync();
-                            }
-
-                        }
-                        else
-                        {
-                            var str_results = await response.Content.ReadAsStringAsync();
-                            Message(str_results);
-                        }
-                    }
+                    string str_out = await response.Content.ReadAsStringAsync();
                 }
-                
+                else
+                {
+                    var str_results = await response.Content.ReadAsStringAsync();
+                    Message(str_results);
+                }
             }
             catch (HttpRequestException ex)
             {

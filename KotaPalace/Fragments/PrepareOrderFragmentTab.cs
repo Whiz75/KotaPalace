@@ -68,7 +68,7 @@ namespace KotaPalace.Fragments
 
                 RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
                 orders_rv.SetLayoutManager(mLayoutManager);
-                OrderAdapter mAdapter = new OrderAdapter(OrderList);
+                PrepareOrderAdapter mAdapter = new PrepareOrderAdapter(OrderList);
                 mAdapter.BtnClick += (s, e) =>
                 {
                     OrderViewFragment order = new OrderViewFragment(OrderList[e.Position]);
