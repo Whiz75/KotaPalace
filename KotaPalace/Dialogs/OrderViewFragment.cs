@@ -50,6 +50,7 @@ namespace KotaPalace.Dialogs
 
         private Order order;
         List<OrderItems> OrderItemList = new List<OrderItems>();
+        List<string> strings = new List<string>();
 
         public OrderViewFragment()
         {
@@ -125,48 +126,62 @@ namespace KotaPalace.Dialogs
             try
             {
                 HttpClient client = new HttpClient();
-                var response = await client.GetAsync($"{API.Url}/orders/{businessId}"); // car details
+                var response = await client.GetAsync($"{API.Url}/orders/single/{OrderItemList[id].Id}"); // car details
 
                 if (response.IsSuccessStatusCode)
                 {
                     var str_results = await response.Content.ReadAsStringAsync();
-                    var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(str_results);
+                    var results = Newtonsoft.Json.JsonConvert.DeserializeObject<Order>(str_results);
 
-                    Chip chip = new Chip(context);
+                    //Chip chip = new Chip(context);
 
-                    foreach (var item in results)
-                    {
-                        if (item.BusinessId == businessId)
-                        {
-                            business_Id.Text = $"Business ID: {item.BusinessId}";
-                            business_status.Text = $"Status: {item.Status}";
+                    //foreach (var item in results)
+                    //{
+                    //    if (item.BusinessId == businessId)
+                    //    {
+                    //        business_Id.Text = $"Business ID: {item.BusinessId}";
+                    //        business_status.Text = $"Status: {item.Status}";
 
-                            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
-                            orderItemsRecyclerView.SetLayoutManager(mLayoutManager);
-                            OrderItemAdapter mAdapter = new OrderItemAdapter(OrderItemList);
+                    //        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
+                    //        orderItemsRecyclerView.SetLayoutManager(mLayoutManager);
+                    //        OrderItemAdapter mAdapter = new OrderItemAdapter(OrderItemList);
 
-                            var extras = item.OrderItems;//.ToList<OrderItems>();
+                    //        var extras = item.OrderItems;//.ToList<OrderItems>();
+                           
 
-                            foreach (var item2 in extras)
-                            {
-                                //business_order_price.Text = $"R{item2.Price}";
-                                //order_quantity.Text = $"Quantity: {item2.Quantity}";
-                                //business_name.Text = item2.ItemName;
+                    //        foreach (var item2 in extras)
+                    //        {
+                    //            //business_order_price.Text = $"R{item2.Price}";
+                    //            //order_quantity.Text = $"Quantity: {item2.Quantity}";
+                    //            //business_name.Text = item2.ItemName;
 
-                                //string i = item2.Extras;
-                                //string[] itemList = i.Split('#', StringSplitOptions.RemoveEmptyEntries);
+                    //            string i = item2.Extras;
+                    //            string[] itemList = i.Split('#');
 
-                                //foreach (string str2 in itemList)
-                                //{
-                                //    Message(str2);
+                    //            //testing
+                    //            string[] extrasList = i.Split('#');
+                    //            foreach (string author in extrasList)
+                    //            Console.WriteLine(author);
 
-                                //}
-                                OrderItemList.Add(item2);
+                    //            try
+                    //            {
+                    //                //foreach (string str2 in itemList)
+                    //                //{
+                    //                //    //Message(str2);
+                    //                //    //strings.Add(str2);
+                    //                //}
+                    //                //Message(strings.ToString());
+                    //            }
+                    //            catch (Exception ex)
+                    //            {
+                    //                Message(ex.Message);
+                    //            }
+                    //            OrderItemList.Add(item2);
 
-                            }
-                            orderItemsRecyclerView.SetAdapter(mAdapter);
-                        }
-                    }
+                    //        }
+                    //        orderItemsRecyclerView.SetAdapter(mAdapter);
+                    //    }
+                    //}
                 }
                 else
                 {

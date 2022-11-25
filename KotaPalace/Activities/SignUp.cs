@@ -158,7 +158,7 @@ namespace KotaPalace.Activities
         {
             InputValidations();
 
-            var memoryStream = new MemoryStream();
+            //var memoryStream = new MemoryStream();
             var st = await file.OpenReadAsync();
             string filename = $"{file.FileName}";
             var result = CrossFirebaseStorage.Current
@@ -179,6 +179,7 @@ namespace KotaPalace.Activities
                 Email = InputEmail.Text.Trim(),
                 Password = InputPassword.Text.Trim(),
                 PhoneNumber = InputPhoneNumber.Text.Trim()
+                
             };
 
 

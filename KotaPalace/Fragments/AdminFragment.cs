@@ -13,6 +13,7 @@ using Google.Android.Material.MaterialSwitch;
 using Google.Android.Material.TextField;
 using Google.Android.Material.TextView;
 using KotaPalace.Adapters;
+using KotaPalace.Dialogs;
 using KotaPalace.Models;
 using KotaPalace_Api.Models;
 using System;
@@ -84,7 +85,8 @@ namespace KotaPalace.Fragments
                     UsersAdapter mAdapter = new UsersAdapter(UserList);
                     mAdapter.BtnClick += (s, e) =>
                     {
-                        
+                        UpdateUserDialogFragment updateUser = new UpdateUserDialogFragment(UserList[e.Position].Id);
+                        updateUser.Show(ChildFragmentManager.BeginTransaction(), "");
                     };
                     RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
                     usersRecyclerView.SetLayoutManager(mLayoutManager);

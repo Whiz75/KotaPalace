@@ -25,5 +25,6 @@ namespace KotaPalace_Api.Models
         public bool LockoutEnabled { get; set; }
         public long AccessFailedCount { get; set; }
         public int BusinessId { get; set; }
+        public string Url { get; set; }
     }
 }

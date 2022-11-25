@@ -71,6 +71,7 @@
     <Compile Include="Adapters\ReadyOrdersAdapter.cs" />
     <Compile Include="Adapters\OrderItemsAdapter.cs" />
     <Compile Include="Adapters\PrepareOrderAdapter.cs" />
+    <Compile Include="Dialogs\UpdateUserDialogFragment.cs" />
     <Compile Include="Dialogs\UpdateMenuDialogFragment.cs" />
     <Compile Include="Dialogs\BusinessAddressDialogFragment.cs" />
     <Compile Include="Dialogs\ForgotPasswordDialogFragment.cs" />
@@ -414,6 +415,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\user_row.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_update_user.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>

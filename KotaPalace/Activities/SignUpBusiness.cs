@@ -9,13 +9,16 @@ using AndroidHUD;
 using AndroidX.AppCompat.App;
 using AndroidX.Fragment.App;
 using Google.Android.Material.Button;
+using Google.Android.Material.FloatingActionButton;
 using Google.Android.Material.TextField;
 using KotaPalace.Dialogs;
 using KotaPalace.Models;
 using KotaPalace_Api.Models;
 using Org.Apache.Http;
+using Plugin.FirebaseStorage;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -27,6 +30,7 @@ namespace KotaPalace.Activities
     [Android.App.Activity(Label = "SignUpBusiness")]
     public class SignUpBusiness : AppCompatActivity
     {
+        private FloatingActionButton fab_edit_img;
 
         private TextInputEditText InputBusinessName;
         private TextInputEditText InputBusinessPhone;
@@ -41,6 +45,8 @@ namespace KotaPalace.Activities
 
         private MaterialButton InputBusinessAddress;
         private MaterialButton BtnUpdateBusinessProfile;
+
+        private FileResult file;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -57,6 +63,8 @@ namespace KotaPalace.Activities
 
         private void Init()
         {
+            fab_edit_img = FindViewById<FloatingActionButton>(Resource.Id.fab_edit_img);
+
             InputBusinessName = FindViewById<TextInputEditText>(Resource.Id.InputBusinessName);
             InputBusinessPhone = FindViewById<TextInputEditText>(Resource.Id.InputBusinessPhone);
             InputBusinessDescription = FindViewById<TextInputEditText>(Resource.Id.InputBusinessDescription);
@@ -72,6 +80,11 @@ namespace KotaPalace.Activities
             BtnUpdateBusinessProfile = FindViewById<MaterialButton>(Resource.Id.BtnUpdateBusinessProfile);
 
             InputBusinessAddress.Click += InputBusinessAddress_Click;
+
+            fab_edit_img.Click += async (s, e) =>
+            {
+                file = await PickAndShow();
+            };
 
             BtnUpdateBusinessProfile.Click += (s, e) =>
             {
@@ -157,13 +170,32 @@ namespace KotaPalace.Activities
                 InputBusinessSunClose.Error = "Provide business Sun close time";
                 return;
             }
+
+            if (file == null)
+            {
+                ErrorMessage("Please upload business logo");
+            }
         }
 
         private async void RegisterBusinessProfile()
         {
             Inputvalidation();
             string Ownerid = Preferences.Get("Id", null);
-            Business user = new Business()
+
+            var memoryStream = new MemoryStream();
+            var st = await file.OpenReadAsync();
+            string filename = $"{file.FileName}";
+            var result = CrossFirebaseStorage.Current
+                .Instance
+                .RootReference
+                .Child("Business logo")
+                .Child(filename);
+
+            await result.PutStreamAsync(st);
+
+            var url = await result.GetDownloadUrlAsync();
+
+            Business business = new Business()
             {
                 BusinessName = InputBusinessName.Text.Trim(),
                 BusinessPhoneNumber = InputBusinessPhone.Text.Trim(),
@@ -177,13 +209,13 @@ namespace KotaPalace.Activities
                 BusinessSunClose = InputBusinessSunClose.Text.Trim(),
                 BusinessAddress = address,
                 OnlineStatus = "Online",
-                ImgUrl = "",
+                ImgUrl = url.ToString(),
                 Coordinates = coordinates,
                 OwnerId = Ownerid
             };
 
 
-            var json = Newtonsoft.Json.JsonConvert.SerializeObject(user);
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(business);
             HttpContent data = new StringContent(json, Encoding.UTF8, "application/json");
             HttpClient httpClient = new HttpClient();
             
@@ -253,6 +285,28 @@ namespace KotaPalace.Activities
             {
                 Timepicker(InputBusinessSunClose);
             };
+        }
+
+        private async Task<FileResult> PickAndShow()
+        {
+            try
+            {
+                var file = await FilePicker.PickAsync(new PickOptions()
+                {
+                    FileTypes = FilePickerFileType.Images
+                });
+
+                if (file != null)
+                {
+                    return file;
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage(ex.Message);
+            }
+
+            return null;
         }
 
         private void Timepicker(TextInputEditText tv)
