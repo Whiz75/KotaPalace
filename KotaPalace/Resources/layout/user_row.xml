@@ -27,13 +27,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/row_user_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_account_circle_black_18dp"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_centerVertical="true">
 
-                <com.google.android.material.textview.MaterialTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/row_user_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -44,7 +52,7 @@
                     android:textSize="16sp"
                     android:textAllCaps="true"/>
 
-                <com.google.android.material.textview.MaterialTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/row_user_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -53,7 +61,7 @@
                     android:textStyle="italic"
                     android:textColor="@color/price_color"
                     />
-                <com.google.android.material.textview.MaterialTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/row_phone_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

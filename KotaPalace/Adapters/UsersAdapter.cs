@@ -33,42 +33,32 @@ namespace KotaPalace.Adapters
     {
         Context context;
 
-        public ObservableCollection<Menu> MenuList;
+        public ObservableCollection<AppUsers> UserList;
 
-        public UsersAdapter(ObservableCollection<Menu> menuList)
+        public UsersAdapter(ObservableCollection<AppUsers> userList)
         {
-            MenuList = menuList;
+            UserList = userList;
         }
 
-        public override int ItemCount => MenuList.Count;
+        public override int ItemCount => UserList.Count;
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            MenuViewHolder vh = holder as MenuViewHolder;
-            var menu = MenuList[position];
+            UserViewHolder vh = holder as UserViewHolder;
+            var user = UserList[position];
             context = vh.ItemView.Context;
 
-            vh.Name.Text = $"{menu.Name}" ;
-            vh.Price.Text = $"R{menu.Price}";
-            vh.MenuId.Text = $"{menu.Id}";
+            vh.Name.Text = $"{user.Firstname}" ;
+            vh.Email.Text = $"{user.Email}";
+            vh.PhoneNumber.Text = $"{user.PhoneNumber}";
 
-            if(menu.Url != null)
-            {
-                ImageService
-                    .Instance
-                    .LoadUrl(menu.Url)
-                    .Into(vh.row_menuIcon);
-            }
-
-            vh.chipGroup.RemoveAllViews();
-
-            foreach (var i in menu.Extras)
-            {
-                Chip chip = new Chip(vh.ItemView.Context);
-
-                chip.Text = i.Title;
-                vh.chipGroup.AddView(chip);
-            }
+            //if(user.Url != null)
+            //{
+            //    ImageService
+            //        .Instance
+            //        .LoadUrl(user.Url)
+            //        .Into(vh.Image);
+            //}
             
 
             vh.BtnUpdate.Click += (s, e) =>
@@ -78,7 +68,7 @@ namespace KotaPalace.Adapters
 
             vh.BtnDelete.Click += (s, e) =>
             {
-                RemoveItem(menu.Id);
+                RemoveItem(user.Id);
             };   
         }
 
@@ -97,7 +87,7 @@ namespace KotaPalace.Adapters
         }
 
 
-        private void RemoveItem(int id)
+        private void RemoveItem(string id)
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
             builder.SetTitle("DELETE USER");
@@ -142,14 +132,14 @@ namespace KotaPalace.Adapters
 
         public UserViewHolder(View itemview) : base(itemview)
         {
-            Name = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_name);
-            Email = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_price);
-            PhoneNumber = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_menu_id);
+            Name = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_user_name);
+            Email = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_user_email);
+            PhoneNumber = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_phone_number);
 
-            Image = itemview.FindViewById<AppCompatImageView>(Resource.Id.row_menuIcon);
+            Image = itemview.FindViewById<AppCompatImageView>(Resource.Id.row_user_image);
 
-            BtnUpdate = itemview.FindViewById<MaterialButton>(Resource.Id.row_btn_update);
-            BtnDelete = itemview.FindViewById<MaterialButton>(Resource.Id.row_btn_delete);
+            BtnUpdate = itemview.FindViewById<MaterialButton>(Resource.Id.btn_update_user);
+            BtnDelete = itemview.FindViewById<MaterialButton>(Resource.Id.btn_delete_user);
         }
     }
 }
