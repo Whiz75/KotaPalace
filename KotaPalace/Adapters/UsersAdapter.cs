@@ -59,7 +59,6 @@ namespace KotaPalace.Adapters
             //        .LoadUrl(user.Url)
             //        .Into(vh.Image);
             //}
-            
 
             vh.BtnUpdate.Click += (s, e) =>
             {
