@@ -150,6 +150,7 @@
         app:civ_border_color="@color/white"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FabEditProfileImg"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/abc_edit_text_material"
