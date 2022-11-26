@@ -4,11 +4,13 @@ using Android.OS;
 using Android.Runtime;
 using AndroidHUD;
 using AndroidX.AppCompat.App;
+using Firebase.Firestore;
 using Google.Android.Material.Button;
 using Google.Android.Material.TextField;
 using Google.Android.Material.TextView;
 using KotaPalace.Dialogs;
 using KotaPalace.Models;
+using Plugin.FirebaseStorage;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -174,6 +176,11 @@ namespace KotaPalace.Activities
         {
             InputLoginEmail.Text = email;
             InputLoginPassword.Text = password;
+        }
+
+        private async void BringDialog()
+        {
+            
         }
 
         private void Message(string t)
