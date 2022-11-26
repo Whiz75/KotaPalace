@@ -2,10 +2,13 @@
 using Android.Views;
 using Android.Widget;
 using AndroidHUD;
+using AndroidX.AppCompat.Widget;
 using AndroidX.Fragment.App;
+using FFImageLoading;
 using Google.Android.Material.Button;
 using Google.Android.Material.TextField;
 using KotaPalace.Models;
+using Refractored.Controls;
 using System;
 using System.Net.Http;
 using System.Text;
@@ -16,7 +19,9 @@ namespace KotaPalace.Dialogs
     public class UpdateUserDialogFragment : DialogFragment
     {
         private Context mContext;
-        private ImageView cancel_iv;
+        private AppCompatImageView cancel_iv;
+
+        private CircleImageView UserProfileImg;
         private TextInputEditText InputUpdateFirstname;
         private TextInputEditText InputUpdateLastname;
         private TextInputEditText InputUpdateUserType;
@@ -47,7 +52,7 @@ namespace KotaPalace.Dialogs
         public override void OnStart()
         {
             base.OnStart();
-            Dialog.Window.SetLayout(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.WrapContent);
+            Dialog.Window.SetLayout(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
             Dialog.SetCanceledOnTouchOutside(false);
         }
 
@@ -67,7 +72,8 @@ namespace KotaPalace.Dialogs
 
         private void Init(View view)
         {
-            cancel_iv = view.FindViewById<ImageView>(Resource.Id.cancel_iv);
+            cancel_iv = view.FindViewById<AppCompatImageView>(Resource.Id.cancel_iv);
+            UserProfileImg = view.FindViewById<CircleImageView>(Resource.Id.UserProfileImg);
 
             InputUpdateFirstname = view.FindViewById<TextInputEditText>(Resource.Id.InputUpdateFirstname);
             InputUpdateLastname = view.FindViewById<TextInputEditText>(Resource.Id.InputUpdateLastname);
@@ -89,6 +95,13 @@ namespace KotaPalace.Dialogs
 
         private void GetUserInfo()
         {
+            if(users.Url != null)
+            {
+                ImageService
+                    .Instance
+                    .LoadUrl(users.Url)
+                    .Into(UserProfileImg);
+            }
             InputUpdateFirstname.Text = users.Firstname;
             InputUpdateLastname.Text = users.Lastname;
             InputUpdateUserType.Text = users.UserType;

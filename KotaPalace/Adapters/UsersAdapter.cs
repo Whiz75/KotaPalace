@@ -3,6 +3,7 @@ using Android.Views;
 using AndroidHUD;
 using AndroidX.AppCompat.Widget;
 using AndroidX.RecyclerView.Widget;
+using FFImageLoading;
 using Google.Android.Material.Button;
 using KotaPalace.Models;
 using System;
@@ -34,13 +35,13 @@ namespace KotaPalace.Adapters
             vh.Email.Text = $"{user.Email}";
             vh.PhoneNumber.Text = $"{user.PhoneNumber}";
 
-            //if(user.Url != null)
-            //{
-            //    ImageService
-            //        .Instance
-            //        .LoadUrl(user.Url)
-            //        .Into(vh.Image);
-            //}
+            if (user.Url != null)
+            {
+                ImageService
+                    .Instance
+                    .LoadUrl(user.Url)
+                    .Into(vh.Image);
+            }
 
             vh.BtnUpdate.Click += (s, e) =>
             {
