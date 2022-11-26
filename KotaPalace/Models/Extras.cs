@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System;
 
-namespace KotaPalace_Api.Models
+namespace KotaPalace.Models
 {
     public class Extras
     {

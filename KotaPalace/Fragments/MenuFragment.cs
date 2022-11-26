@@ -12,7 +12,7 @@ using Google.Android.Material.Button;
 using KotaPalace.Adapters;
 using KotaPalace.Dialogs;
 using KotaPalace.Models;
-using KotaPalace_Api.Models;
+using KotaPalace.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -22,7 +22,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using static AndroidX.RecyclerView.Widget.RecyclerView;
-using Menu = KotaPalace_Api.Models.Menu;
+using Menu = KotaPalace.Models.Menu;
 
 namespace KotaPalace.Fragments
 {

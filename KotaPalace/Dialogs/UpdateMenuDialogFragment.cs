@@ -9,7 +9,6 @@ using Google.Android.Material.Chip;
 using Google.Android.Material.FloatingActionButton;
 using Google.Android.Material.TextField;
 using KotaPalace.Models;
-using KotaPalace_Api.Models;
 using Plugin.FirebaseStorage;
 using System;
 using System.Collections.Generic;
@@ -19,7 +18,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
-using Menu = KotaPalace_Api.Models.Menu;
+using Menu = KotaPalace.Models.Menu;
 
 namespace KotaPalace.Dialogs
 {

@@ -1,31 +1,17 @@
 ﻿using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
-using Android.Widget;
 using AndroidHUD;
 using AndroidX.AppCompat.Widget;
-using AndroidX.Fragment.App;
 using AndroidX.RecyclerView.Widget;
 using FFImageLoading;
 using Google.Android.Material.Button;
 using Google.Android.Material.Chip;
-using Java.Util.Zip;
-using KotaPalace.Dialogs;
 using KotaPalace.Models;
-using KotaPalace_Api.Models;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Net.Http;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using static Android.Resource;
-using static Android.Views.View;
 using Context = Android.Content.Context;
-using Menu = KotaPalace_Api.Models.Menu;
+using Menu = KotaPalace.Models.Menu;
 
 namespace KotaPalace.Adapters
 {
@@ -95,7 +81,6 @@ namespace KotaPalace.Adapters
             MenuViewHolder vh = new MenuViewHolder(itemView);
             return vh;
         }
-
 
         private void RemoveItem(int id)
         {

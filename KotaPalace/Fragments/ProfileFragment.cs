@@ -12,7 +12,7 @@ using Google.Android.Material.MaterialSwitch;
 using Google.Android.Material.TextField;
 using Google.Android.Material.TextView;
 using KotaPalace.Models;
-using KotaPalace_Api.Models;
+using KotaPalace.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

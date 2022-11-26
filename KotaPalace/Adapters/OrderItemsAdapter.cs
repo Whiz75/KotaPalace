@@ -10,12 +10,13 @@ using AndroidX.RecyclerView.Widget;
 using Google.Android.Material.Button;
 using Google.Android.Material.Chip;
 using Google.Android.Material.TextView;
-using KotaPalace_Api.Models;
+using KotaPalace.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using static Android.Resource;
 
 namespace KotaPalace.Adapters
 {
@@ -35,13 +36,22 @@ namespace KotaPalace.Adapters
             OrderItemViewHolder vh = holder as OrderItemViewHolder;
             var orderItems = orders[position];
 
-            var items = orderItems.Extras;
-            string[] strings = items.Split('#');
-
-            vh.Name.Text = $"Name:{strings}";
             
-            //vh.Price.Text = $"Price:R{orderItems.Price}";
-            //vh.Quantity.Text = orderItems.Quantity;
+
+            vh.Name.Text = $"Name:{orderItems.ItemName}";
+            vh.Price.Text = $"Price:R{orderItems.Price}";
+            vh.Quantity.Text = orderItems.Quantity;
+
+            var items = orderItems.Extras;
+            var extras = items.Split('#');
+
+            foreach (var i in extras)
+            {
+                Chip chip = new Chip(vh.ItemView.Context);
+
+                chip.Text = i;
+                vh.chipGroup.AddView(chip);
+            }
         }
         public event EventHandler<OrderBtnClick> BtnClick;
 
@@ -63,12 +73,15 @@ namespace KotaPalace.Adapters
         public MaterialTextView Quantity { get; set;}
         public MaterialTextView Price { get; set;}
         public MaterialTextView Name { get; set; }
+        public ChipGroup chipGroup { get; set;}
+
 
         public OrderItemViewHolder(View itemview) : base(itemview)
         {
             Name = itemview.FindViewById<MaterialTextView>(Resource.Id.order_item_name);
             Price = itemview.FindViewById<MaterialTextView>(Resource.Id.order_item_price);
             Quantity = itemview.FindViewById<MaterialTextView>(Resource.Id.order_item_quantity);
+            chipGroup = itemview.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);
 
         }
     }

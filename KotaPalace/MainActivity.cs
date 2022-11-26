@@ -8,7 +8,6 @@ using Gauravk.BubbleNavigation;
 using Gauravk.BubbleNavigation.Listeners;
 using KotaPalace.Fragments;
 using KotaPalace.Models;
-using KotaPalace_Api.Models;
 using System;
 using System.ComponentModel;
 using System.Net.Http;

@@ -19,7 +19,7 @@ using SkiaSharp;
 using System.Net.Http;
 using KotaPalace.Models;
 using Xamarin.Essentials;
-using KotaPalace_Api.Models;
+using KotaPalace.Models;
 using AndroidHUD;
 using OperationCanceledException = System.OperationCanceledException;
 using Google.Android.Material.Button;

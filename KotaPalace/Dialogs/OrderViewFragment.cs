@@ -11,7 +11,6 @@ using Google.Android.Material.Button;
 using Google.Android.Material.Chip;
 using KotaPalace.Adapters;
 using KotaPalace.Models;
-using KotaPalace_Api.Models;
 using Org.W3c.Dom;
 using System;
 using System.Collections.Generic;
@@ -51,8 +50,8 @@ namespace KotaPalace.Dialogs
         private string Id = Preferences.Get("Id", null);
 
         private Order order;
-        List<OrderItems> OrderItemList = new List<OrderItems>();
-        List<string> strings = new List<string>();
+        readonly List<string> ExtrasItemList = new List<string>();
+        readonly List<OrderItems> OrderItemList = new List<OrderItems>();
 
         public OrderViewFragment()
         {
@@ -134,79 +133,24 @@ namespace KotaPalace.Dialogs
                 {
                     var str_results = await response.Content.ReadAsStringAsync();
                     
-                    var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(str_results);
+                    var results = Newtonsoft.Json.JsonConvert.DeserializeObject<Order>(str_results);
 
                     RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
                     orderItemsRecyclerView.SetLayoutManager(mLayoutManager);
                     OrderItemAdapter mAdapter = new OrderItemAdapter(OrderItemList);
+                    orderItemsRecyclerView.SetAdapter(mAdapter);
 
-                    foreach (var order in results)
+                   
+                    business_Id.Text = $"Business ID: {order.BusinessId}";
+                    business_status.Text = $"Status: {order.Status}";
+
+                    var extras = order.OrderItems;
+
+                    foreach (var item in extras)
                     {
-                        business_Id.Text = $"Business ID: {order.BusinessId}";
-                        business_status.Text = $"Status: {order.Status}";
-
-                        var extras = order.OrderItems;
-
-                        foreach(var item in extras)
-                        {
-                            var i = item.Extras;
-                            var j = i.Split('#');
-                            foreach(var k in j)
-                            {
-                                //OrderItemList.Add(k);
-                            }
-                            orderItemsRecyclerView.SetAdapter(mAdapter);
-                        }
-                        
+                        OrderItemList.Add(item);
                     }
-
-                    //foreach (var item in results)
-                    //{
-                    //    if (item.BusinessId == businessId)
-                    //    {
-                    //        business_Id.Text = $"Business ID: {item.BusinessId}";
-                    //        business_status.Text = $"Status: {item.Status}";
-
-                    //        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
-                    //        orderItemsRecyclerView.SetLayoutManager(mLayoutManager);
-                    //        OrderItemAdapter mAdapter = new OrderItemAdapter(OrderItemList);
-
-                    //        var extras = item.OrderItems;//.ToList<OrderItems>();
-
-
-                    //        foreach (var item2 in extras)
-                    //        {
-                    //            //business_order_price.Text = $"R{item2.Price}";
-                    //            //order_quantity.Text = $"Quantity: {item2.Quantity}";
-                    //            //business_name.Text = item2.ItemName;
-
-                    //            string i = item2.Extras;
-                    //            string[] itemList = i.Split('#');
-
-                    //            //testing
-                    //            string[] extrasList = i.Split('#');
-                    //            foreach (string author in extrasList)
-                    //            Console.WriteLine(author);
-
-                    //            try
-                    //            {
-                    //                //foreach (string str2 in itemList)
-                    //                //{
-                    //                //    //Message(str2);
-                    //                //    //strings.Add(str2);
-                    //                //}
-                    //                //Message(strings.ToString());
-                    //            }
-                    //            catch (Exception ex)
-                    //            {
-                    //                Message(ex.Message);
-                    //            }
-                    //            OrderItemList.Add(item2);
-
-                    //        }
-                    //        orderItemsRecyclerView.SetAdapter(mAdapter);
-                    //    }
-                    //}
+                    mAdapter.NotifyDataSetChanged(); 
                 }
                 else
                 {

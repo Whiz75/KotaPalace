@@ -15,7 +15,7 @@ using Google.Android.Material.TextView;
 using KotaPalace.Adapters;
 using KotaPalace.Dialogs;
 using KotaPalace.Models;
-using KotaPalace_Api.Models;
+using KotaPalace.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

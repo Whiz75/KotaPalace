@@ -1,23 +1,12 @@
-﻿using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.Views;
 using AndroidX.AppCompat.Widget;
 using AndroidX.RecyclerView.Widget;
 using Google.Android.Material.Button;
-using Google.Android.Material.Chip;
 using Google.Android.Material.TextView;
 using KotaPalace.Models;
-using KotaPalace_Api.Models;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KotaPalace.Adapters
 {

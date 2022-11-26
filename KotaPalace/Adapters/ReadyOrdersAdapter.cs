@@ -10,7 +10,7 @@ using Google.Android.Material.Button;
 using Google.Android.Material.Chip;
 using Google.Android.Material.TextView;
 using KotaPalace.Models;
-using KotaPalace_Api.Models;
+using KotaPalace.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

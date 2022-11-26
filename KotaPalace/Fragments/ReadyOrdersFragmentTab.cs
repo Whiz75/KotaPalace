@@ -10,7 +10,7 @@ using AndroidX.RecyclerView.Widget;
 using Facebook.Shimmer;
 using KotaPalace.Adapters;
 using KotaPalace.Models;
-using KotaPalace_Api.Models;
+using KotaPalace.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

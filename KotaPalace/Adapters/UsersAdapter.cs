@@ -14,7 +14,7 @@ using Google.Android.Material.Chip;
 using Java.Util.Zip;
 using KotaPalace.Dialogs;
 using KotaPalace.Models;
-using KotaPalace_Api.Models;
+using KotaPalace.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -25,7 +25,7 @@ using System.Text;
 using static Android.Resource;
 using static Android.Views.View;
 using Context = Android.Content.Context;
-using Menu = KotaPalace_Api.Models.Menu;
+using Menu = KotaPalace.Models.Menu;
 
 namespace KotaPalace.Adapters
 {
