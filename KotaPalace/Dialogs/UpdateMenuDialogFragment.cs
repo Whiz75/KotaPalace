@@ -178,20 +178,12 @@ namespace KotaPalace.Dialogs
 
                     var url = await results.GetDownloadUrlAsync();
 
-                    //Menu menu = new Menu()
-                    //{
                     menu.BusinessId = businessId;
                     menu.Name = InputItemName.Text.Trim();
                     menu.Status = true;
                     menu.Price = Convert.ToDouble(InputItemPrice.Text);
                     menu.Extras = Items;
                     menu.Url = url.ToString();
-
-                    //    Price = Convert.ToDouble(InputItemPrice.Text),
-                    //    Extras = Items,
-                    //    Status = true,
-                    //    Url = url.ToString()
-                    //};
 
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(menu);
                     HttpContent data = new StringContent(json, Encoding.UTF8, "application/json");

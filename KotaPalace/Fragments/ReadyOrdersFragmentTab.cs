@@ -1,24 +1,14 @@
-﻿using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
+﻿using Android.OS;
 using Android.Views;
-using Android.Widget;
 using AndroidHUD;
 using AndroidX.Fragment.App;
 using AndroidX.RecyclerView.Widget;
 using Facebook.Shimmer;
 using KotaPalace.Adapters;
 using KotaPalace.Models;
-using KotaPalace.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
 using System.Net.Http;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Context = Android.Content.Context;
 

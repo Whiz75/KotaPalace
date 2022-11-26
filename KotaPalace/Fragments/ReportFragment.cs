@@ -1,25 +1,18 @@
 ﻿
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 using AndroidX.Fragment.App;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microcharts.Droid;
-using static Android.Provider.ContactsContract.RawContacts;
 using Facebook.Shimmer;
-using System.Threading.Tasks;
 using Microcharts;
 using SkiaSharp;
 using System.Net.Http;
 using KotaPalace.Models;
 using Xamarin.Essentials;
-using KotaPalace.Models;
 using AndroidHUD;
 using OperationCanceledException = System.OperationCanceledException;
 using Google.Android.Material.Button;
@@ -38,7 +31,7 @@ namespace KotaPalace.Fragments
         private readonly List<string> months = new List<string>();
         private readonly List<int> counter = new List<int>();
 
-        private int businessId = Preferences.Get("businessId", 0);
+        private readonly int businessId = Preferences.Get("businessId", 0);
 
         public ReportFragment()
         {

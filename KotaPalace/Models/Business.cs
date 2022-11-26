@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations;
-
-namespace KotaPalace.Models
+﻿namespace KotaPalace.Models
 {
     public class Business
     {

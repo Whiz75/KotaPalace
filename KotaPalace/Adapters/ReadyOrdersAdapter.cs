@@ -26,17 +26,11 @@ namespace KotaPalace.Adapters
             ReadyOrderViewHolder vh = holder as ReadyOrderViewHolder;
             var order = orders[position];
 
-            vh.row_order_no.Text = $"{order.Id}";
-            vh.row_order_status.Text = $"{order.Status}";
+            vh.row_order_no.Text = order.Id.ToString();
+            vh.row_order_status.Text = order.Status;
             vh.row_order_date.Text = order.OrderDate.ToString();
 
             FindUserAsync(order.Customer_Id, vh.row_order_id);
-        }
-        public event EventHandler<OrderBtnClick> BtnClick;
-
-        public class OrderBtnClick : EventArgs
-        {
-            public int Position { get; set; }
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

@@ -1,6 +1,5 @@
 ﻿using Android.OS;
 using Android.Views;
-using AndroidX.Fragment.App;
 using Facebook.Shimmer;
 using Google.Android.Material.Tabs;
 using System.Collections.Generic;
@@ -72,7 +71,7 @@ namespace KotaPalace.Fragments
     }
 }
 
-class Adapter : FragmentPagerAdapter
+class Adapter : AndroidX.Fragment.App.FragmentPagerAdapter
 {
     List<Fragment> fragments = new List<Fragment>();
     List<string> fragmentTitles = new List<string>();
@@ -93,10 +92,7 @@ class Adapter : FragmentPagerAdapter
     }
     public override int Count
     {
-        get
-        {
-            return fragments.Count;
-        }
+        get { return fragments.Count; }
     }
     public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
     {

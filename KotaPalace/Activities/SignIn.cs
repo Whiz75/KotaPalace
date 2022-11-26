@@ -1,4 +1,5 @@
 ﻿using Android.Content;
+using Android.Locations;
 using Android.OS;
 using Android.Runtime;
 using AndroidHUD;
@@ -38,11 +39,8 @@ namespace KotaPalace.Activities
             // Create your application here
             SetContentView(Resource.Layout.activity_sign_in);
 
-            //call methods here
             Init();
-            GoToSignuUp();
-            GoToMainActivity();
-            ResetPassword();
+            CheckGps();
 
             InitLogins();
         }
@@ -56,18 +54,12 @@ namespace KotaPalace.Activities
 
             btn_signin = FindViewById<MaterialButton>(Resource.Id.btn_signin);
             go_to_signup_text = FindViewById<MaterialTextView>(Resource.Id.go_to_signup_text);
-        }
 
-        private void GoToSignuUp()
-        {
             go_to_signup_text.Click += (s, e) =>
             {
-                StartActivity(new Intent(this,typeof(SignUp)));
+                StartActivity(new Intent(this, typeof(SignUp)));
             };
-        }
 
-        private void ResetPassword()
-        {
             TxtForgotPassword.Click += (s, e) =>
             {
                 try
@@ -80,10 +72,7 @@ namespace KotaPalace.Activities
                     Message(ex.Message);
                 }
             };
-        }
 
-        private void GoToMainActivity()
-        {
             btn_signin.Click += (s, e) =>
             {
                 try
@@ -154,6 +143,30 @@ namespace KotaPalace.Activities
             catch (HttpRequestException ex)
             {
                 Message(ex.Message);
+            }
+        }
+
+        private void CheckGps()
+        {
+            LocationManager locationManager = (LocationManager)GetSystemService(Context.LocationService);
+            bool gps_enable = false;
+            // bool newtwork_enable = false;
+            gps_enable = locationManager.IsProviderEnabled(LocationManager.GpsProvider);
+
+            if (!gps_enable)
+            {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.SetTitle("Confirm");
+                builder.SetMessage("Please enable your location to continue");
+                builder.SetNegativeButton("Cancel", delegate
+                {
+                    builder.Dispose();
+                });
+                builder.SetPositiveButton("Settings", delegate
+                {
+                    StartActivity(new Intent(Android.Provider.Settings.ActionLocationSourceSettings));
+                });
+                builder.Show();
             }
         }
 

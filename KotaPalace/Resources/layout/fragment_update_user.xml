@@ -63,7 +63,7 @@
                 android:id="@+id/textInputLayout1"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
                 
-                   <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Firstname"
@@ -146,14 +146,14 @@
         android:src="@drawable/ic_account_circle_black_18dp"
         android:layout_marginEnd="15dp"
         tools:ignore="ContentDescription"
+        android:scaleType="centerCrop"
         app:civ_border_width="2dp"
         app:civ_border_color="@color/white"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/FabEditProfileImg"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/abc_edit_text_material"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         app:backgroundTint="@color/colorThemeColor"
         app:layout_anchor="@+id/UserProfileImg"
         app:layout_anchorGravity="right|bottom"

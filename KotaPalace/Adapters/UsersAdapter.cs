@@ -6,6 +6,7 @@ using AndroidX.RecyclerView.Widget;
 using FFImageLoading;
 using Google.Android.Material.Button;
 using KotaPalace.Models;
+using Refractored.Controls;
 using System;
 using System.Collections.ObjectModel;
 using Context = Android.Content.Context;
@@ -78,7 +79,7 @@ namespace KotaPalace.Adapters
             {
                 builder.Dispose();
             });
-            builder.SetPositiveButton("Yes", async delegate
+            builder.SetPositiveButton("Yes", delegate
             {
                 //HttpClient httpClient = new HttpClient();
 
@@ -107,7 +108,7 @@ namespace KotaPalace.Adapters
         public AppCompatTextView Email { get; set; }
         public AppCompatTextView PhoneNumber { get; set; }
 
-        public AppCompatImageView Image { get; set; }
+        public CircleImageView Image { get; set; }
 
         public MaterialButton BtnUpdate { get; set; }
         public MaterialButton BtnDelete { get; set; }
@@ -118,7 +119,7 @@ namespace KotaPalace.Adapters
             Email = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_user_email);
             PhoneNumber = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_phone_number);
 
-            Image = itemview.FindViewById<AppCompatImageView>(Resource.Id.row_user_image);
+            Image = itemview.FindViewById<CircleImageView>(Resource.Id.row_user_image);
 
             BtnUpdate = itemview.FindViewById<MaterialButton>(Resource.Id.btn_update_user);
             BtnDelete = itemview.FindViewById<MaterialButton>(Resource.Id.btn_delete_user);
