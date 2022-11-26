@@ -20,6 +20,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using static Android.Content.ClipData;
 using Context = Android.Content.Context;
 
 namespace KotaPalace.Dialogs
@@ -126,14 +127,32 @@ namespace KotaPalace.Dialogs
             try
             {
                 HttpClient client = new HttpClient();
-                var response = await client.GetAsync($"{API.Url}/orders/single/{OrderItemList[id].Id}"); // car details
+                var response = await client.GetAsync($"{API.Url}/orders/single/{order.Id}"); // car details
 
                 if (response.IsSuccessStatusCode)
                 {
                     var str_results = await response.Content.ReadAsStringAsync();
-                    var results = Newtonsoft.Json.JsonConvert.DeserializeObject<Order>(str_results);
+                    
+                    var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(str_results);
 
-                    //Chip chip = new Chip(context);
+                    foreach(var order in results)
+                    {
+                        business_Id.Text = $"Business ID: {order.BusinessId}";
+                        business_status.Text = $"Status: {order.Status}";
+
+                        var extras = order.OrderItems;
+
+                        foreach(var item in extras)
+                        {
+                            var i = item.Extras;
+                            var j = i.Split('#');
+                            foreach(var k in j)
+                            {
+                                Console.WriteLine(k);
+                            }
+                        }
+                        
+                    }
 
                     //foreach (var item in results)
                     //{
@@ -147,7 +166,7 @@ namespace KotaPalace.Dialogs
                     //        OrderItemAdapter mAdapter = new OrderItemAdapter(OrderItemList);
 
                     //        var extras = item.OrderItems;//.ToList<OrderItems>();
-                           
+
 
                     //        foreach (var item2 in extras)
                     //        {

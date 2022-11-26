@@ -71,8 +71,14 @@ namespace KotaPalace.Fragments
                 PrepareOrderAdapter mAdapter = new PrepareOrderAdapter(OrderList);
                 mAdapter.BtnClick += (s, e) =>
                 {
+                    Bundle bundle = new Bundle();
+                    bundle.PutInt("OrderId", OrderList[e.Position].Id);
+
                     OrderViewFragment order = new OrderViewFragment(OrderList[e.Position]);
+
                     order.Show(ChildFragmentManager.BeginTransaction(), "");
+                    
+                    
                 };
 
                 orders_rv.HasFixedSize = true;
