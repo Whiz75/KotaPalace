@@ -35,9 +35,13 @@ namespace KotaPalace.Adapters
             OrderItemViewHolder vh = holder as OrderItemViewHolder;
             var orderItems = orders[position];
 
-            vh.Name.Text = $"Name:{orderItems.ItemName}" ;
-            vh.Price.Text = $"Price:R{orderItems.Price}";
-            vh.Quantity.Text = orderItems.Quantity;
+            var items = orderItems.Extras;
+            string[] strings = items.Split('#');
+
+            vh.Name.Text = $"Name:{strings}";
+            
+            //vh.Price.Text = $"Price:R{orderItems.Price}";
+            //vh.Quantity.Text = orderItems.Quantity;
         }
         public event EventHandler<OrderBtnClick> BtnClick;
 

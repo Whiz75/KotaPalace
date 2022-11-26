@@ -12,6 +12,7 @@ using Google.Android.Material.Chip;
 using KotaPalace.Adapters;
 using KotaPalace.Models;
 using KotaPalace_Api.Models;
+using Org.W3c.Dom;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -135,7 +136,11 @@ namespace KotaPalace.Dialogs
                     
                     var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(str_results);
 
-                    foreach(var order in results)
+                    RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
+                    orderItemsRecyclerView.SetLayoutManager(mLayoutManager);
+                    OrderItemAdapter mAdapter = new OrderItemAdapter(OrderItemList);
+
+                    foreach (var order in results)
                     {
                         business_Id.Text = $"Business ID: {order.BusinessId}";
                         business_status.Text = $"Status: {order.Status}";
@@ -148,8 +153,9 @@ namespace KotaPalace.Dialogs
                             var j = i.Split('#');
                             foreach(var k in j)
                             {
-                                Console.WriteLine(k);
+                                //OrderItemList.Add(k);
                             }
+                            orderItemsRecyclerView.SetAdapter(mAdapter);
                         }
                         
                     }
