@@ -1,10 +1,6 @@
 ﻿using Android.Content;
-using Android.Icu.Util;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
-using Android.Widget;
 using AndroidHUD;
 using AndroidX.Fragment.App;
 using AndroidX.RecyclerView.Widget;
@@ -12,16 +8,10 @@ using Google.Android.Material.Button;
 using KotaPalace.Adapters;
 using KotaPalace.Dialogs;
 using KotaPalace.Models;
-using KotaPalace.Models;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
-using static AndroidX.RecyclerView.Widget.RecyclerView;
 using Menu = KotaPalace.Models.Menu;
 
 namespace KotaPalace.Fragments
@@ -84,7 +74,6 @@ namespace KotaPalace.Fragments
             if (response.IsSuccessStatusCode)
             {
                 var str_results = await response.Content.ReadAsStringAsync();
-                //get driver info
                 var results = Newtonsoft.Json.JsonConvert.DeserializeObject<ObservableCollection<Menu>>(str_results);
 
                 ObservableCollection<Menu> MenuList = new ObservableCollection<Menu>();

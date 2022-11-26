@@ -13,7 +13,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using KotaPalace.Models;
-using KotaPalace.Models;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xamarin.Essentials;

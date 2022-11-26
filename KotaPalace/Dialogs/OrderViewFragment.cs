@@ -1,7 +1,4 @@
-﻿using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
+﻿using Android.OS;
 using Android.Views;
 using Android.Widget;
 using AndroidHUD;
@@ -11,16 +8,10 @@ using Google.Android.Material.Button;
 using Google.Android.Material.Chip;
 using KotaPalace.Adapters;
 using KotaPalace.Models;
-using Org.W3c.Dom;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Runtime.Remoting.Contexts;
 using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Essentials;
-using static Android.Content.ClipData;
 using Context = Android.Content.Context;
 
 namespace KotaPalace.Dialogs
@@ -31,12 +22,10 @@ namespace KotaPalace.Dialogs
 
         private ImageView close_order_view;
 
-        private TextView business_name;
-        private TextView business_order_price;
-        private TextView order_quantity;
-        private TextView business_order_description;
+        private TextView order_name;
+        private TextView order_price;
         private TextView business_Id;
-        private TextView business_status;
+        private TextView order_status;
 
         private RecyclerView orderItemsRecyclerView;
 
@@ -46,11 +35,10 @@ namespace KotaPalace.Dialogs
 
         private int id;
 
-        private int businessId = Preferences.Get("businessId", 0);
-        private string Id = Preferences.Get("Id", null);
+        //private int businessId = Preferences.Get("businessId", 0);
+        //private string Id = Preferences.Get("Id", null);
 
         private Order order;
-        readonly List<string> ExtrasItemList = new List<string>();
         readonly List<OrderItems> OrderItemList = new List<OrderItems>();
 
         public OrderViewFragment()
@@ -87,9 +75,7 @@ namespace KotaPalace.Dialogs
             View view = inflater.Inflate(Resource.Layout.order_row_view, container, false);
             context = view.Context;
             Init(view);
-            //CheckStatus();
             LoadOrdersAsync();
-            //LoadOrderItemsAsync();
 
             return view;
         }
@@ -98,12 +84,12 @@ namespace KotaPalace.Dialogs
         {
             close_order_view = view.FindViewById<ImageView>(Resource.Id.close_order_view);
 
-            business_name = view.FindViewById<TextView>(Resource.Id.business_name);
-            business_order_price = view.FindViewById<TextView>(Resource.Id.business_order_price);
+            order_name = view.FindViewById<TextView>(Resource.Id.order_name);
+            order_price = view.FindViewById<TextView>(Resource.Id.order_price);
             business_Id = view.FindViewById<TextView>(Resource.Id.business_Id);
-            business_status = view.FindViewById<TextView>(Resource.Id.business_status);
+            order_status = view.FindViewById<TextView>(Resource.Id.order_status);
 
-            business_status.Text = order.Status;
+            order_status.Text = order.Status;
 
             orderItemsRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.orderItemsRecyclerView);
 
@@ -122,41 +108,29 @@ namespace KotaPalace.Dialogs
             };
         }
 
-        private async void LoadOrdersAsync()
+        private void LoadOrdersAsync()
         {
             try
             {
-                HttpClient client = new HttpClient();
-                var response = await client.GetAsync($"{API.Url}/orders/single/{order.Id}"); // car details
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var str_results = await response.Content.ReadAsStringAsync();
-                    
-                    var results = Newtonsoft.Json.JsonConvert.DeserializeObject<Order>(str_results);
-
-                    RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
-                    orderItemsRecyclerView.SetLayoutManager(mLayoutManager);
-                    OrderItemAdapter mAdapter = new OrderItemAdapter(OrderItemList);
-                    orderItemsRecyclerView.SetAdapter(mAdapter);
+                RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
+                orderItemsRecyclerView.SetLayoutManager(mLayoutManager);
+                OrderItemAdapter mAdapter = new OrderItemAdapter(OrderItemList);
+                orderItemsRecyclerView.SetAdapter(mAdapter);
 
                    
-                    business_Id.Text = $"Business ID: {order.BusinessId}";
-                    business_status.Text = $"Status: {order.Status}";
+                business_Id.Text = $"Business ID: {order.BusinessId}";
+                order_status.Text = $"Status: {order.Status}";
 
-                    var extras = order.OrderItems;
+                var extras = order.OrderItems;
 
-                    foreach (var item in extras)
-                    {
-                        OrderItemList.Add(item);
-                    }
-                    mAdapter.NotifyDataSetChanged(); 
-                }
-                else
+                foreach (var item in extras)
                 {
-                    var str_results = await response.Content.ReadAsStringAsync();
-                    Message(str_results);
+                    OrderItemList.Add(item);
+                    order_price.Text = $"R{item.Price}";
+                    order_name.Text = item.ItemName;
                 }
+                mAdapter.NotifyDataSetChanged(); 
+                
             }
             catch (HttpRequestException e)
             {
@@ -164,34 +138,8 @@ namespace KotaPalace.Dialogs
             }
         }
 
-        private async void CheckStatus()
-        {
-            HttpClient client = new HttpClient();
-            var response = await client.GetAsync($"{API.Url}/status/{id}");
-
-            if(response.IsSuccessStatusCode)
-            {
-                var str = await response.Content.ReadAsStringAsync();
-                var order = Newtonsoft.Json.JsonConvert.DeserializeObject<Order>(str);
-
-                if(order.Status == "Pending")
-                {
-                    BtnProcess.Text = "PROCESS";
-                }else if(order.Status == "Accepted")
-                {
-                    BtnProcess.Text = "DONE!";
-                }
-                else
-                {
-                    BtnProcess.Text = "READY";
-                    BtnProcess.Enabled = false;
-                }
-            }
-        }
-
         private async void ProcessOrderAsync()
         {
-            Order order = new Order();
             HttpClient client = new HttpClient();
 
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(order);
@@ -199,12 +147,13 @@ namespace KotaPalace.Dialogs
 
             try
             {
-                var response = await client.PutAsync($"{API.Url}/orders/process/{id}", data);
+                var response = await client.PutAsync($"{API.Url}/orders/process/{order.Id}", data);
 
                 if (response.IsSuccessStatusCode)
                 {
 
                     string str_out = await response.Content.ReadAsStringAsync();
+                    SuccessMessage(str_out);
                 }
                 else
                 {
@@ -218,6 +167,10 @@ namespace KotaPalace.Dialogs
             }
         }
 
+        private void SuccessMessage(string str_results)
+        {
+            AndHUD.Shared.ShowSuccess(context, str_results, MaskType.None, TimeSpan.FromSeconds(3));
+        }
         private void Message(string str_results)
         {
             AndHUD.Shared.ShowError(context, str_results, MaskType.None, TimeSpan.FromSeconds(3));

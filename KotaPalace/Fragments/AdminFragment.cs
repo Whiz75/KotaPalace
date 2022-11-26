@@ -1,30 +1,15 @@
-﻿
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
+﻿using Android.OS;
 using Android.Views;
-using Android.Widget;
 using AndroidHUD;
 using AndroidX.Fragment.App;
 using AndroidX.RecyclerView.Widget;
 using Google.Android.Material.Button;
-using Google.Android.Material.MaterialSwitch;
-using Google.Android.Material.TextField;
-using Google.Android.Material.TextView;
 using KotaPalace.Adapters;
 using KotaPalace.Dialogs;
 using KotaPalace.Models;
-using KotaPalace.Models;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Net.Http;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Essentials;
 using Context = Android.Content.Context;
 
 namespace KotaPalace.Fragments
@@ -85,7 +70,7 @@ namespace KotaPalace.Fragments
                     UsersAdapter mAdapter = new UsersAdapter(UserList);
                     mAdapter.BtnClick += (s, e) =>
                     {
-                        UpdateUserDialogFragment updateUser = new UpdateUserDialogFragment(UserList[e.Position].Id);
+                        UpdateUserDialogFragment updateUser = new UpdateUserDialogFragment(UserList[e.Position]);
                         updateUser.Show(ChildFragmentManager.BeginTransaction(), "");
                     };
                     RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);

@@ -1,5 +1,6 @@
 ﻿using Android.OS;
 using Android.Views;
+using AndroidX.Fragment.App;
 using Facebook.Shimmer;
 using Google.Android.Material.Tabs;
 using System.Collections.Generic;
@@ -71,11 +72,16 @@ namespace KotaPalace.Fragments
     }
 }
 
-class Adapter : AndroidX.Fragment.App.FragmentPagerAdapter
+class Adapter : FragmentPagerAdapter
 {
     List<Fragment> fragments = new List<Fragment>();
     List<string> fragmentTitles = new List<string>();
     public Adapter(FragmentManager fm) : base(fm) { }
+
+    public Adapter(FragmentManager fm, int behavior) : base(fm, behavior)
+    {
+    }
+
     public void AddFragment(Fragment fragment, string title)
     {
         fragments.Add(fragment);

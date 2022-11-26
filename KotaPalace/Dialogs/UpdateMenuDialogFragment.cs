@@ -37,8 +37,6 @@ namespace KotaPalace.Dialogs
         private ChipGroup chipGroup;
         private  List<Extras> Items = new List<Extras>();
 
-        private Uri img_url = null;
-
         private MaterialButton BtnOpenAddDlg;
         private MaterialButton BtnSubmitMenu;
 

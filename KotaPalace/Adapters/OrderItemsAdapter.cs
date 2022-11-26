@@ -40,7 +40,7 @@ namespace KotaPalace.Adapters
 
             vh.Name.Text = $"Name:{orderItems.ItemName}";
             vh.Price.Text = $"Price:R{orderItems.Price}";
-            vh.Quantity.Text = orderItems.Quantity;
+            vh.Id.Text = orderItems.Id.ToString();
 
             var items = orderItems.Extras;
             var extras = items.Split('#');
@@ -53,12 +53,12 @@ namespace KotaPalace.Adapters
                 vh.chipGroup.AddView(chip);
             }
         }
-        public event EventHandler<OrderBtnClick> BtnClick;
+        //public event EventHandler<OrderBtnClick> BtnClick;
 
-        public class OrderBtnClick : EventArgs
-        {
-            public int Position { get; set; }
-        }
+        //public class OrderBtnClick : EventArgs
+        //{
+        //    public int Position { get; set; }
+        //}
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
@@ -70,7 +70,7 @@ namespace KotaPalace.Adapters
 
     public class OrderItemViewHolder : RecyclerView.ViewHolder
     {
-        public MaterialTextView Quantity { get; set;}
+        public MaterialTextView Id { get; set;}
         public MaterialTextView Price { get; set;}
         public MaterialTextView Name { get; set; }
         public ChipGroup chipGroup { get; set;}
@@ -80,7 +80,7 @@ namespace KotaPalace.Adapters
         {
             Name = itemview.FindViewById<MaterialTextView>(Resource.Id.order_item_name);
             Price = itemview.FindViewById<MaterialTextView>(Resource.Id.order_item_price);
-            Quantity = itemview.FindViewById<MaterialTextView>(Resource.Id.order_item_quantity);
+            Id = itemview.FindViewById<MaterialTextView>(Resource.Id.order_item_id);
             chipGroup = itemview.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);
 
         }

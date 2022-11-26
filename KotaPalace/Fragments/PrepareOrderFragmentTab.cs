@@ -1,9 +1,6 @@
 ﻿using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
-using Android.Widget;
 using AndroidHUD;
 using AndroidX.Fragment.App;
 using AndroidX.RecyclerView.Widget;
@@ -13,11 +10,7 @@ using KotaPalace.Dialogs;
 using KotaPalace.Models;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 
 namespace KotaPalace.Fragments
@@ -42,7 +35,7 @@ namespace KotaPalace.Fragments
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
 
             View view = inflater.Inflate(Resource.Layout.prepare_orders_fragment_tab, container, false);
-            
+            context = view.Context;
             Init(view);
             LoadOrdersAsync();
             
@@ -70,14 +63,8 @@ namespace KotaPalace.Fragments
                 PrepareOrderAdapter mAdapter = new PrepareOrderAdapter(OrderList);
                 mAdapter.BtnClick += (s, e) =>
                 {
-                    Bundle bundle = new Bundle();
-                    bundle.PutInt("OrderId", OrderList[e.Position].Id);
-
                     OrderViewFragment order = new OrderViewFragment(OrderList[e.Position]);
-
                     order.Show(ChildFragmentManager.BeginTransaction(), "");
-                    
-                    
                 };
 
                 orders_rv.HasFixedSize = true;
@@ -86,7 +73,6 @@ namespace KotaPalace.Fragments
                 if (response.IsSuccessStatusCode)
                 {
                     var str_results = await response.Content.ReadAsStringAsync();
-                    //get driver info
                     var results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Order>>(str_results);
 
                     foreach (var item in results)
