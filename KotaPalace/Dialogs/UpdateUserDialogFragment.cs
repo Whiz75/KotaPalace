@@ -110,6 +110,8 @@ namespace KotaPalace.Dialogs
 
         private async void UpdateUser()
         {
+            var userId = users.Id;
+
             HttpClient client = new HttpClient();
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(users);
             HttpContent data = new StringContent(json, Encoding.UTF8, "application/json");
