@@ -9,6 +9,8 @@ using KotaPalace.Models;
 using Refractored.Controls;
 using System;
 using System.Collections.ObjectModel;
+using System.Drawing;
+using XamarinTextDrawable;
 using Context = Android.Content.Context;
 
 namespace KotaPalace.Adapters
@@ -35,6 +37,9 @@ namespace KotaPalace.Adapters
             vh.Name.Text = $"{user.Firstname}" ;
             vh.Email.Text = $"{user.Email}";
             vh.PhoneNumber.Text = $"{user.PhoneNumber}";
+
+            //TextDrawable drawable = TextDrawable.Builder()
+            //    .buildRect("A", Color.Red);
 
             if (user.Url != null)
             {

@@ -31,15 +31,15 @@
                 android:id="@+id/row_user_image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="10dp"
+                android:layout_margin="5dp"
                 android:src="@drawable/ic_account_circle_black_18dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_centerVertical="true">
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/row_user_image">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/row_user_name"
@@ -58,16 +58,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="Email address"
-                    android:textStyle="italic"
-                    android:textColor="@color/price_color"
-                    />
+                    android:textStyle="normal"
+                    android:textColor="@color/colorThemeColor"/>
+
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/row_phone_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="Phone number"
-                    android:textStyle="italic"
+                    android:textStyle="normal"
                     android:textColor="@color/gray"
                     />
 
@@ -90,7 +90,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_marginEnd="5dp"
-                        android:text="delete" />
+                        android:text="delete" 
+                        android:backgroundTint="@color/red_active"/>
                 </LinearLayout>
             </LinearLayout>
 

@@ -62,6 +62,1499 @@ namespace KotaPalace
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::KotaPalace.Resource.Styleable.ProgressWheel_ahText;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::KotaPalace.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::KotaPalace.Resource.Styleable.ProgressWheel_ahTextSize;
+			global::XamarinTextDrawable.Resource.Animation.abc_fade_in = global::KotaPalace.Resource.Animation.abc_fade_in;
+			global::XamarinTextDrawable.Resource.Animation.abc_fade_out = global::KotaPalace.Resource.Animation.abc_fade_out;
+			global::XamarinTextDrawable.Resource.Animation.abc_grow_fade_in_from_bottom = global::KotaPalace.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::XamarinTextDrawable.Resource.Animation.abc_popup_enter = global::KotaPalace.Resource.Animation.abc_popup_enter;
+			global::XamarinTextDrawable.Resource.Animation.abc_popup_exit = global::KotaPalace.Resource.Animation.abc_popup_exit;
+			global::XamarinTextDrawable.Resource.Animation.abc_shrink_fade_out_from_bottom = global::KotaPalace.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::XamarinTextDrawable.Resource.Animation.abc_slide_in_bottom = global::KotaPalace.Resource.Animation.abc_slide_in_bottom;
+			global::XamarinTextDrawable.Resource.Animation.abc_slide_in_top = global::KotaPalace.Resource.Animation.abc_slide_in_top;
+			global::XamarinTextDrawable.Resource.Animation.abc_slide_out_bottom = global::KotaPalace.Resource.Animation.abc_slide_out_bottom;
+			global::XamarinTextDrawable.Resource.Animation.abc_slide_out_top = global::KotaPalace.Resource.Animation.abc_slide_out_top;
+			global::XamarinTextDrawable.Resource.Attribute.actionBarDivider = global::KotaPalace.Resource.Attribute.actionBarDivider;
+			global::XamarinTextDrawable.Resource.Attribute.actionBarItemBackground = global::KotaPalace.Resource.Attribute.actionBarItemBackground;
+			global::XamarinTextDrawable.Resource.Attribute.actionBarPopupTheme = global::KotaPalace.Resource.Attribute.actionBarPopupTheme;
+			global::XamarinTextDrawable.Resource.Attribute.actionBarSize = global::KotaPalace.Resource.Attribute.actionBarSize;
+			global::XamarinTextDrawable.Resource.Attribute.actionBarSplitStyle = global::KotaPalace.Resource.Attribute.actionBarSplitStyle;
+			global::XamarinTextDrawable.Resource.Attribute.actionBarStyle = global::KotaPalace.Resource.Attribute.actionBarStyle;
+			global::XamarinTextDrawable.Resource.Attribute.actionBarTabBarStyle = global::KotaPalace.Resource.Attribute.actionBarTabBarStyle;
+			global::XamarinTextDrawable.Resource.Attribute.actionBarTabStyle = global::KotaPalace.Resource.Attribute.actionBarTabStyle;
+			global::XamarinTextDrawable.Resource.Attribute.actionBarTabTextStyle = global::KotaPalace.Resource.Attribute.actionBarTabTextStyle;
+			global::XamarinTextDrawable.Resource.Attribute.actionBarTheme = global::KotaPalace.Resource.Attribute.actionBarTheme;
+			global::XamarinTextDrawable.Resource.Attribute.actionBarWidgetTheme = global::KotaPalace.Resource.Attribute.actionBarWidgetTheme;
+			global::XamarinTextDrawable.Resource.Attribute.actionButtonStyle = global::KotaPalace.Resource.Attribute.actionButtonStyle;
+			global::XamarinTextDrawable.Resource.Attribute.actionDropDownStyle = global::KotaPalace.Resource.Attribute.actionDropDownStyle;
+			global::XamarinTextDrawable.Resource.Attribute.actionLayout = global::KotaPalace.Resource.Attribute.actionLayout;
+			global::XamarinTextDrawable.Resource.Attribute.actionMenuTextAppearance = global::KotaPalace.Resource.Attribute.actionMenuTextAppearance;
+			global::XamarinTextDrawable.Resource.Attribute.actionMenuTextColor = global::KotaPalace.Resource.Attribute.actionMenuTextColor;
+			global::XamarinTextDrawable.Resource.Attribute.actionModeBackground = global::KotaPalace.Resource.Attribute.actionModeBackground;
+			global::XamarinTextDrawable.Resource.Attribute.actionModeCloseButtonStyle = global::KotaPalace.Resource.Attribute.actionModeCloseButtonStyle;
+			global::XamarinTextDrawable.Resource.Attribute.actionModeCloseDrawable = global::KotaPalace.Resource.Attribute.actionModeCloseDrawable;
+			global::XamarinTextDrawable.Resource.Attribute.actionModeCopyDrawable = global::KotaPalace.Resource.Attribute.actionModeCopyDrawable;
+			global::XamarinTextDrawable.Resource.Attribute.actionModeCutDrawable = global::KotaPalace.Resource.Attribute.actionModeCutDrawable;
+			global::XamarinTextDrawable.Resource.Attribute.actionModeFindDrawable = global::KotaPalace.Resource.Attribute.actionModeFindDrawable;
+			global::XamarinTextDrawable.Resource.Attribute.actionModePasteDrawable = global::KotaPalace.Resource.Attribute.actionModePasteDrawable;
+			global::XamarinTextDrawable.Resource.Attribute.actionModePopupWindowStyle = global::KotaPalace.Resource.Attribute.actionModePopupWindowStyle;
+			global::XamarinTextDrawable.Resource.Attribute.actionModeSelectAllDrawable = global::KotaPalace.Resource.Attribute.actionModeSelectAllDrawable;
+			global::XamarinTextDrawable.Resource.Attribute.actionModeShareDrawable = global::KotaPalace.Resource.Attribute.actionModeShareDrawable;
+			global::XamarinTextDrawable.Resource.Attribute.actionModeSplitBackground = global::KotaPalace.Resource.Attribute.actionModeSplitBackground;
+			global::XamarinTextDrawable.Resource.Attribute.actionModeStyle = global::KotaPalace.Resource.Attribute.actionModeStyle;
+			global::XamarinTextDrawable.Resource.Attribute.actionModeWebSearchDrawable = global::KotaPalace.Resource.Attribute.actionModeWebSearchDrawable;
+			global::XamarinTextDrawable.Resource.Attribute.actionOverflowButtonStyle = global::KotaPalace.Resource.Attribute.actionOverflowButtonStyle;
+			global::XamarinTextDrawable.Resource.Attribute.actionOverflowMenuStyle = global::KotaPalace.Resource.Attribute.actionOverflowMenuStyle;
+			global::XamarinTextDrawable.Resource.Attribute.actionProviderClass = global::KotaPalace.Resource.Attribute.actionProviderClass;
+			global::XamarinTextDrawable.Resource.Attribute.actionViewClass = global::KotaPalace.Resource.Attribute.actionViewClass;
+			global::XamarinTextDrawable.Resource.Attribute.activityChooserViewStyle = global::KotaPalace.Resource.Attribute.activityChooserViewStyle;
+			global::XamarinTextDrawable.Resource.Attribute.alertDialogButtonGroupStyle = global::KotaPalace.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::XamarinTextDrawable.Resource.Attribute.alertDialogCenterButtons = global::KotaPalace.Resource.Attribute.alertDialogCenterButtons;
+			global::XamarinTextDrawable.Resource.Attribute.alertDialogStyle = global::KotaPalace.Resource.Attribute.alertDialogStyle;
+			global::XamarinTextDrawable.Resource.Attribute.alertDialogTheme = global::KotaPalace.Resource.Attribute.alertDialogTheme;
+			global::XamarinTextDrawable.Resource.Attribute.allowStacking = global::KotaPalace.Resource.Attribute.allowStacking;
+			global::XamarinTextDrawable.Resource.Attribute.alpha = global::KotaPalace.Resource.Attribute.alpha;
+			global::XamarinTextDrawable.Resource.Attribute.alphabeticModifiers = global::KotaPalace.Resource.Attribute.alphabeticModifiers;
+			global::XamarinTextDrawable.Resource.Attribute.arrowHeadLength = global::KotaPalace.Resource.Attribute.arrowHeadLength;
+			global::XamarinTextDrawable.Resource.Attribute.arrowShaftLength = global::KotaPalace.Resource.Attribute.arrowShaftLength;
+			global::XamarinTextDrawable.Resource.Attribute.autoCompleteTextViewStyle = global::KotaPalace.Resource.Attribute.autoCompleteTextViewStyle;
+			global::XamarinTextDrawable.Resource.Attribute.autoSizeMaxTextSize = global::KotaPalace.Resource.Attribute.autoSizeMaxTextSize;
+			global::XamarinTextDrawable.Resource.Attribute.autoSizeMinTextSize = global::KotaPalace.Resource.Attribute.autoSizeMinTextSize;
+			global::XamarinTextDrawable.Resource.Attribute.autoSizePresetSizes = global::KotaPalace.Resource.Attribute.autoSizePresetSizes;
+			global::XamarinTextDrawable.Resource.Attribute.autoSizeStepGranularity = global::KotaPalace.Resource.Attribute.autoSizeStepGranularity;
+			global::XamarinTextDrawable.Resource.Attribute.autoSizeTextType = global::KotaPalace.Resource.Attribute.autoSizeTextType;
+			global::XamarinTextDrawable.Resource.Attribute.background = global::KotaPalace.Resource.Attribute.background;
+			global::XamarinTextDrawable.Resource.Attribute.backgroundSplit = global::KotaPalace.Resource.Attribute.backgroundSplit;
+			global::XamarinTextDrawable.Resource.Attribute.backgroundStacked = global::KotaPalace.Resource.Attribute.backgroundStacked;
+			global::XamarinTextDrawable.Resource.Attribute.backgroundTint = global::KotaPalace.Resource.Attribute.backgroundTint;
+			global::XamarinTextDrawable.Resource.Attribute.backgroundTintMode = global::KotaPalace.Resource.Attribute.backgroundTintMode;
+			global::XamarinTextDrawable.Resource.Attribute.barLength = global::KotaPalace.Resource.Attribute.barLength;
+			global::XamarinTextDrawable.Resource.Attribute.borderlessButtonStyle = global::KotaPalace.Resource.Attribute.borderlessButtonStyle;
+			global::XamarinTextDrawable.Resource.Attribute.buttonBarButtonStyle = global::KotaPalace.Resource.Attribute.buttonBarButtonStyle;
+			global::XamarinTextDrawable.Resource.Attribute.buttonBarNegativeButtonStyle = global::KotaPalace.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::XamarinTextDrawable.Resource.Attribute.buttonBarNeutralButtonStyle = global::KotaPalace.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::XamarinTextDrawable.Resource.Attribute.buttonBarPositiveButtonStyle = global::KotaPalace.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::XamarinTextDrawable.Resource.Attribute.buttonBarStyle = global::KotaPalace.Resource.Attribute.buttonBarStyle;
+			global::XamarinTextDrawable.Resource.Attribute.buttonGravity = global::KotaPalace.Resource.Attribute.buttonGravity;
+			global::XamarinTextDrawable.Resource.Attribute.buttonPanelSideLayout = global::KotaPalace.Resource.Attribute.buttonPanelSideLayout;
+			global::XamarinTextDrawable.Resource.Attribute.buttonStyle = global::KotaPalace.Resource.Attribute.buttonStyle;
+			global::XamarinTextDrawable.Resource.Attribute.buttonStyleSmall = global::KotaPalace.Resource.Attribute.buttonStyleSmall;
+			global::XamarinTextDrawable.Resource.Attribute.buttonTint = global::KotaPalace.Resource.Attribute.buttonTint;
+			global::XamarinTextDrawable.Resource.Attribute.buttonTintMode = global::KotaPalace.Resource.Attribute.buttonTintMode;
+			global::XamarinTextDrawable.Resource.Attribute.checkboxStyle = global::KotaPalace.Resource.Attribute.checkboxStyle;
+			global::XamarinTextDrawable.Resource.Attribute.checkedTextViewStyle = global::KotaPalace.Resource.Attribute.checkedTextViewStyle;
+			global::XamarinTextDrawable.Resource.Attribute.closeIcon = global::KotaPalace.Resource.Attribute.closeIcon;
+			global::XamarinTextDrawable.Resource.Attribute.closeItemLayout = global::KotaPalace.Resource.Attribute.closeItemLayout;
+			global::XamarinTextDrawable.Resource.Attribute.collapseContentDescription = global::KotaPalace.Resource.Attribute.collapseContentDescription;
+			global::XamarinTextDrawable.Resource.Attribute.collapseIcon = global::KotaPalace.Resource.Attribute.collapseIcon;
+			global::XamarinTextDrawable.Resource.Attribute.color = global::KotaPalace.Resource.Attribute.color;
+			global::XamarinTextDrawable.Resource.Attribute.colorAccent = global::KotaPalace.Resource.Attribute.colorAccent;
+			global::XamarinTextDrawable.Resource.Attribute.colorBackgroundFloating = global::KotaPalace.Resource.Attribute.colorBackgroundFloating;
+			global::XamarinTextDrawable.Resource.Attribute.colorButtonNormal = global::KotaPalace.Resource.Attribute.colorButtonNormal;
+			global::XamarinTextDrawable.Resource.Attribute.colorControlActivated = global::KotaPalace.Resource.Attribute.colorControlActivated;
+			global::XamarinTextDrawable.Resource.Attribute.colorControlHighlight = global::KotaPalace.Resource.Attribute.colorControlHighlight;
+			global::XamarinTextDrawable.Resource.Attribute.colorControlNormal = global::KotaPalace.Resource.Attribute.colorControlNormal;
+			global::XamarinTextDrawable.Resource.Attribute.colorError = global::KotaPalace.Resource.Attribute.colorError;
+			global::XamarinTextDrawable.Resource.Attribute.colorPrimary = global::KotaPalace.Resource.Attribute.colorPrimary;
+			global::XamarinTextDrawable.Resource.Attribute.colorPrimaryDark = global::KotaPalace.Resource.Attribute.colorPrimaryDark;
+			global::XamarinTextDrawable.Resource.Attribute.colorSwitchThumbNormal = global::KotaPalace.Resource.Attribute.colorSwitchThumbNormal;
+			global::XamarinTextDrawable.Resource.Attribute.commitIcon = global::KotaPalace.Resource.Attribute.commitIcon;
+			global::XamarinTextDrawable.Resource.Attribute.contentDescription = global::KotaPalace.Resource.Attribute.contentDescription;
+			global::XamarinTextDrawable.Resource.Attribute.contentInsetEnd = global::KotaPalace.Resource.Attribute.contentInsetEnd;
+			global::XamarinTextDrawable.Resource.Attribute.contentInsetEndWithActions = global::KotaPalace.Resource.Attribute.contentInsetEndWithActions;
+			global::XamarinTextDrawable.Resource.Attribute.contentInsetLeft = global::KotaPalace.Resource.Attribute.contentInsetLeft;
+			global::XamarinTextDrawable.Resource.Attribute.contentInsetRight = global::KotaPalace.Resource.Attribute.contentInsetRight;
+			global::XamarinTextDrawable.Resource.Attribute.contentInsetStart = global::KotaPalace.Resource.Attribute.contentInsetStart;
+			global::XamarinTextDrawable.Resource.Attribute.contentInsetStartWithNavigation = global::KotaPalace.Resource.Attribute.contentInsetStartWithNavigation;
+			global::XamarinTextDrawable.Resource.Attribute.controlBackground = global::KotaPalace.Resource.Attribute.controlBackground;
+			global::XamarinTextDrawable.Resource.Attribute.customNavigationLayout = global::KotaPalace.Resource.Attribute.customNavigationLayout;
+			global::XamarinTextDrawable.Resource.Attribute.defaultQueryHint = global::KotaPalace.Resource.Attribute.defaultQueryHint;
+			global::XamarinTextDrawable.Resource.Attribute.dialogPreferredPadding = global::KotaPalace.Resource.Attribute.dialogPreferredPadding;
+			global::XamarinTextDrawable.Resource.Attribute.dialogTheme = global::KotaPalace.Resource.Attribute.dialogTheme;
+			global::XamarinTextDrawable.Resource.Attribute.displayOptions = global::KotaPalace.Resource.Attribute.displayOptions;
+			global::XamarinTextDrawable.Resource.Attribute.divider = global::KotaPalace.Resource.Attribute.divider;
+			global::XamarinTextDrawable.Resource.Attribute.dividerHorizontal = global::KotaPalace.Resource.Attribute.dividerHorizontal;
+			global::XamarinTextDrawable.Resource.Attribute.dividerPadding = global::KotaPalace.Resource.Attribute.dividerPadding;
+			global::XamarinTextDrawable.Resource.Attribute.dividerVertical = global::KotaPalace.Resource.Attribute.dividerVertical;
+			global::XamarinTextDrawable.Resource.Attribute.drawableSize = global::KotaPalace.Resource.Attribute.drawableSize;
+			global::XamarinTextDrawable.Resource.Attribute.drawerArrowStyle = global::KotaPalace.Resource.Attribute.drawerArrowStyle;
+			global::XamarinTextDrawable.Resource.Attribute.dropDownListViewStyle = global::KotaPalace.Resource.Attribute.dropDownListViewStyle;
+			global::XamarinTextDrawable.Resource.Attribute.dropdownListPreferredItemHeight = global::KotaPalace.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::XamarinTextDrawable.Resource.Attribute.editTextBackground = global::KotaPalace.Resource.Attribute.editTextBackground;
+			global::XamarinTextDrawable.Resource.Attribute.editTextColor = global::KotaPalace.Resource.Attribute.editTextColor;
+			global::XamarinTextDrawable.Resource.Attribute.editTextStyle = global::KotaPalace.Resource.Attribute.editTextStyle;
+			global::XamarinTextDrawable.Resource.Attribute.elevation = global::KotaPalace.Resource.Attribute.elevation;
+			global::XamarinTextDrawable.Resource.Attribute.expandActivityOverflowButtonDrawable = global::KotaPalace.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::XamarinTextDrawable.Resource.Attribute.font = global::KotaPalace.Resource.Attribute.font;
+			global::XamarinTextDrawable.Resource.Attribute.fontFamily = global::KotaPalace.Resource.Attribute.fontFamily;
+			global::XamarinTextDrawable.Resource.Attribute.fontProviderAuthority = global::KotaPalace.Resource.Attribute.fontProviderAuthority;
+			global::XamarinTextDrawable.Resource.Attribute.fontProviderCerts = global::KotaPalace.Resource.Attribute.fontProviderCerts;
+			global::XamarinTextDrawable.Resource.Attribute.fontProviderFetchStrategy = global::KotaPalace.Resource.Attribute.fontProviderFetchStrategy;
+			global::XamarinTextDrawable.Resource.Attribute.fontProviderFetchTimeout = global::KotaPalace.Resource.Attribute.fontProviderFetchTimeout;
+			global::XamarinTextDrawable.Resource.Attribute.fontProviderPackage = global::KotaPalace.Resource.Attribute.fontProviderPackage;
+			global::XamarinTextDrawable.Resource.Attribute.fontProviderQuery = global::KotaPalace.Resource.Attribute.fontProviderQuery;
+			global::XamarinTextDrawable.Resource.Attribute.fontStyle = global::KotaPalace.Resource.Attribute.fontStyle;
+			global::XamarinTextDrawable.Resource.Attribute.fontWeight = global::KotaPalace.Resource.Attribute.fontWeight;
+			global::XamarinTextDrawable.Resource.Attribute.gapBetweenBars = global::KotaPalace.Resource.Attribute.gapBetweenBars;
+			global::XamarinTextDrawable.Resource.Attribute.goIcon = global::KotaPalace.Resource.Attribute.goIcon;
+			global::XamarinTextDrawable.Resource.Attribute.height = global::KotaPalace.Resource.Attribute.height;
+			global::XamarinTextDrawable.Resource.Attribute.hideOnContentScroll = global::KotaPalace.Resource.Attribute.hideOnContentScroll;
+			global::XamarinTextDrawable.Resource.Attribute.homeAsUpIndicator = global::KotaPalace.Resource.Attribute.homeAsUpIndicator;
+			global::XamarinTextDrawable.Resource.Attribute.homeLayout = global::KotaPalace.Resource.Attribute.homeLayout;
+			global::XamarinTextDrawable.Resource.Attribute.icon = global::KotaPalace.Resource.Attribute.icon;
+			global::XamarinTextDrawable.Resource.Attribute.iconTint = global::KotaPalace.Resource.Attribute.iconTint;
+			global::XamarinTextDrawable.Resource.Attribute.iconTintMode = global::KotaPalace.Resource.Attribute.iconTintMode;
+			global::XamarinTextDrawable.Resource.Attribute.iconifiedByDefault = global::KotaPalace.Resource.Attribute.iconifiedByDefault;
+			global::XamarinTextDrawable.Resource.Attribute.imageButtonStyle = global::KotaPalace.Resource.Attribute.imageButtonStyle;
+			global::XamarinTextDrawable.Resource.Attribute.indeterminateProgressStyle = global::KotaPalace.Resource.Attribute.indeterminateProgressStyle;
+			global::XamarinTextDrawable.Resource.Attribute.initialActivityCount = global::KotaPalace.Resource.Attribute.initialActivityCount;
+			global::XamarinTextDrawable.Resource.Attribute.isLightTheme = global::KotaPalace.Resource.Attribute.isLightTheme;
+			global::XamarinTextDrawable.Resource.Attribute.itemPadding = global::KotaPalace.Resource.Attribute.itemPadding;
+			global::XamarinTextDrawable.Resource.Attribute.layout = global::KotaPalace.Resource.Attribute.layout;
+			global::XamarinTextDrawable.Resource.Attribute.listChoiceBackgroundIndicator = global::KotaPalace.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::XamarinTextDrawable.Resource.Attribute.listDividerAlertDialog = global::KotaPalace.Resource.Attribute.listDividerAlertDialog;
+			global::XamarinTextDrawable.Resource.Attribute.listItemLayout = global::KotaPalace.Resource.Attribute.listItemLayout;
+			global::XamarinTextDrawable.Resource.Attribute.listLayout = global::KotaPalace.Resource.Attribute.listLayout;
+			global::XamarinTextDrawable.Resource.Attribute.listMenuViewStyle = global::KotaPalace.Resource.Attribute.listMenuViewStyle;
+			global::XamarinTextDrawable.Resource.Attribute.listPopupWindowStyle = global::KotaPalace.Resource.Attribute.listPopupWindowStyle;
+			global::XamarinTextDrawable.Resource.Attribute.listPreferredItemHeight = global::KotaPalace.Resource.Attribute.listPreferredItemHeight;
+			global::XamarinTextDrawable.Resource.Attribute.listPreferredItemHeightLarge = global::KotaPalace.Resource.Attribute.listPreferredItemHeightLarge;
+			global::XamarinTextDrawable.Resource.Attribute.listPreferredItemHeightSmall = global::KotaPalace.Resource.Attribute.listPreferredItemHeightSmall;
+			global::XamarinTextDrawable.Resource.Attribute.listPreferredItemPaddingLeft = global::KotaPalace.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::XamarinTextDrawable.Resource.Attribute.listPreferredItemPaddingRight = global::KotaPalace.Resource.Attribute.listPreferredItemPaddingRight;
+			global::XamarinTextDrawable.Resource.Attribute.logo = global::KotaPalace.Resource.Attribute.logo;
+			global::XamarinTextDrawable.Resource.Attribute.logoDescription = global::KotaPalace.Resource.Attribute.logoDescription;
+			global::XamarinTextDrawable.Resource.Attribute.maxButtonHeight = global::KotaPalace.Resource.Attribute.maxButtonHeight;
+			global::XamarinTextDrawable.Resource.Attribute.measureWithLargestChild = global::KotaPalace.Resource.Attribute.measureWithLargestChild;
+			global::XamarinTextDrawable.Resource.Attribute.multiChoiceItemLayout = global::KotaPalace.Resource.Attribute.multiChoiceItemLayout;
+			global::XamarinTextDrawable.Resource.Attribute.navigationContentDescription = global::KotaPalace.Resource.Attribute.navigationContentDescription;
+			global::XamarinTextDrawable.Resource.Attribute.navigationIcon = global::KotaPalace.Resource.Attribute.navigationIcon;
+			global::XamarinTextDrawable.Resource.Attribute.navigationMode = global::KotaPalace.Resource.Attribute.navigationMode;
+			global::XamarinTextDrawable.Resource.Attribute.numericModifiers = global::KotaPalace.Resource.Attribute.numericModifiers;
+			global::XamarinTextDrawable.Resource.Attribute.overlapAnchor = global::KotaPalace.Resource.Attribute.overlapAnchor;
+			global::XamarinTextDrawable.Resource.Attribute.paddingBottomNoButtons = global::KotaPalace.Resource.Attribute.paddingBottomNoButtons;
+			global::XamarinTextDrawable.Resource.Attribute.paddingEnd = global::KotaPalace.Resource.Attribute.paddingEnd;
+			global::XamarinTextDrawable.Resource.Attribute.paddingStart = global::KotaPalace.Resource.Attribute.paddingStart;
+			global::XamarinTextDrawable.Resource.Attribute.paddingTopNoTitle = global::KotaPalace.Resource.Attribute.paddingTopNoTitle;
+			global::XamarinTextDrawable.Resource.Attribute.panelBackground = global::KotaPalace.Resource.Attribute.panelBackground;
+			global::XamarinTextDrawable.Resource.Attribute.panelMenuListTheme = global::KotaPalace.Resource.Attribute.panelMenuListTheme;
+			global::XamarinTextDrawable.Resource.Attribute.panelMenuListWidth = global::KotaPalace.Resource.Attribute.panelMenuListWidth;
+			global::XamarinTextDrawable.Resource.Attribute.popupMenuStyle = global::KotaPalace.Resource.Attribute.popupMenuStyle;
+			global::XamarinTextDrawable.Resource.Attribute.popupTheme = global::KotaPalace.Resource.Attribute.popupTheme;
+			global::XamarinTextDrawable.Resource.Attribute.popupWindowStyle = global::KotaPalace.Resource.Attribute.popupWindowStyle;
+			global::XamarinTextDrawable.Resource.Attribute.preserveIconSpacing = global::KotaPalace.Resource.Attribute.preserveIconSpacing;
+			global::XamarinTextDrawable.Resource.Attribute.progressBarPadding = global::KotaPalace.Resource.Attribute.progressBarPadding;
+			global::XamarinTextDrawable.Resource.Attribute.progressBarStyle = global::KotaPalace.Resource.Attribute.progressBarStyle;
+			global::XamarinTextDrawable.Resource.Attribute.queryBackground = global::KotaPalace.Resource.Attribute.queryBackground;
+			global::XamarinTextDrawable.Resource.Attribute.queryHint = global::KotaPalace.Resource.Attribute.queryHint;
+			global::XamarinTextDrawable.Resource.Attribute.radioButtonStyle = global::KotaPalace.Resource.Attribute.radioButtonStyle;
+			global::XamarinTextDrawable.Resource.Attribute.ratingBarStyle = global::KotaPalace.Resource.Attribute.ratingBarStyle;
+			global::XamarinTextDrawable.Resource.Attribute.ratingBarStyleIndicator = global::KotaPalace.Resource.Attribute.ratingBarStyleIndicator;
+			global::XamarinTextDrawable.Resource.Attribute.ratingBarStyleSmall = global::KotaPalace.Resource.Attribute.ratingBarStyleSmall;
+			global::XamarinTextDrawable.Resource.Attribute.searchHintIcon = global::KotaPalace.Resource.Attribute.searchHintIcon;
+			global::XamarinTextDrawable.Resource.Attribute.searchIcon = global::KotaPalace.Resource.Attribute.searchIcon;
+			global::XamarinTextDrawable.Resource.Attribute.searchViewStyle = global::KotaPalace.Resource.Attribute.searchViewStyle;
+			global::XamarinTextDrawable.Resource.Attribute.seekBarStyle = global::KotaPalace.Resource.Attribute.seekBarStyle;
+			global::XamarinTextDrawable.Resource.Attribute.selectableItemBackground = global::KotaPalace.Resource.Attribute.selectableItemBackground;
+			global::XamarinTextDrawable.Resource.Attribute.selectableItemBackgroundBorderless = global::KotaPalace.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::XamarinTextDrawable.Resource.Attribute.showAsAction = global::KotaPalace.Resource.Attribute.showAsAction;
+			global::XamarinTextDrawable.Resource.Attribute.showDividers = global::KotaPalace.Resource.Attribute.showDividers;
+			global::XamarinTextDrawable.Resource.Attribute.showText = global::KotaPalace.Resource.Attribute.showText;
+			global::XamarinTextDrawable.Resource.Attribute.showTitle = global::KotaPalace.Resource.Attribute.showTitle;
+			global::XamarinTextDrawable.Resource.Attribute.singleChoiceItemLayout = global::KotaPalace.Resource.Attribute.singleChoiceItemLayout;
+			global::XamarinTextDrawable.Resource.Attribute.spinBars = global::KotaPalace.Resource.Attribute.spinBars;
+			global::XamarinTextDrawable.Resource.Attribute.spinnerDropDownItemStyle = global::KotaPalace.Resource.Attribute.spinnerDropDownItemStyle;
+			global::XamarinTextDrawable.Resource.Attribute.spinnerStyle = global::KotaPalace.Resource.Attribute.spinnerStyle;
+			global::XamarinTextDrawable.Resource.Attribute.splitTrack = global::KotaPalace.Resource.Attribute.splitTrack;
+			global::XamarinTextDrawable.Resource.Attribute.srcCompat = global::KotaPalace.Resource.Attribute.srcCompat;
+			global::XamarinTextDrawable.Resource.Attribute.state_above_anchor = global::KotaPalace.Resource.Attribute.state_above_anchor;
+			global::XamarinTextDrawable.Resource.Attribute.subMenuArrow = global::KotaPalace.Resource.Attribute.subMenuArrow;
+			global::XamarinTextDrawable.Resource.Attribute.submitBackground = global::KotaPalace.Resource.Attribute.submitBackground;
+			global::XamarinTextDrawable.Resource.Attribute.subtitle = global::KotaPalace.Resource.Attribute.subtitle;
+			global::XamarinTextDrawable.Resource.Attribute.subtitleTextAppearance = global::KotaPalace.Resource.Attribute.subtitleTextAppearance;
+			global::XamarinTextDrawable.Resource.Attribute.subtitleTextColor = global::KotaPalace.Resource.Attribute.subtitleTextColor;
+			global::XamarinTextDrawable.Resource.Attribute.subtitleTextStyle = global::KotaPalace.Resource.Attribute.subtitleTextStyle;
+			global::XamarinTextDrawable.Resource.Attribute.suggestionRowLayout = global::KotaPalace.Resource.Attribute.suggestionRowLayout;
+			global::XamarinTextDrawable.Resource.Attribute.switchMinWidth = global::KotaPalace.Resource.Attribute.switchMinWidth;
+			global::XamarinTextDrawable.Resource.Attribute.switchPadding = global::KotaPalace.Resource.Attribute.switchPadding;
+			global::XamarinTextDrawable.Resource.Attribute.switchStyle = global::KotaPalace.Resource.Attribute.switchStyle;
+			global::XamarinTextDrawable.Resource.Attribute.switchTextAppearance = global::KotaPalace.Resource.Attribute.switchTextAppearance;
+			global::XamarinTextDrawable.Resource.Attribute.textAllCaps = global::KotaPalace.Resource.Attribute.textAllCaps;
+			global::XamarinTextDrawable.Resource.Attribute.textAppearanceLargePopupMenu = global::KotaPalace.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::XamarinTextDrawable.Resource.Attribute.textAppearanceListItem = global::KotaPalace.Resource.Attribute.textAppearanceListItem;
+			global::XamarinTextDrawable.Resource.Attribute.textAppearanceListItemSecondary = global::KotaPalace.Resource.Attribute.textAppearanceListItemSecondary;
+			global::XamarinTextDrawable.Resource.Attribute.textAppearanceListItemSmall = global::KotaPalace.Resource.Attribute.textAppearanceListItemSmall;
+			global::XamarinTextDrawable.Resource.Attribute.textAppearancePopupMenuHeader = global::KotaPalace.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::XamarinTextDrawable.Resource.Attribute.textAppearanceSearchResultSubtitle = global::KotaPalace.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::XamarinTextDrawable.Resource.Attribute.textAppearanceSearchResultTitle = global::KotaPalace.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::XamarinTextDrawable.Resource.Attribute.textAppearanceSmallPopupMenu = global::KotaPalace.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::XamarinTextDrawable.Resource.Attribute.textColorAlertDialogListItem = global::KotaPalace.Resource.Attribute.textColorAlertDialogListItem;
+			global::XamarinTextDrawable.Resource.Attribute.textColorSearchUrl = global::KotaPalace.Resource.Attribute.textColorSearchUrl;
+			global::XamarinTextDrawable.Resource.Attribute.theme = global::KotaPalace.Resource.Attribute.theme;
+			global::XamarinTextDrawable.Resource.Attribute.thickness = global::KotaPalace.Resource.Attribute.thickness;
+			global::XamarinTextDrawable.Resource.Attribute.thumbTextPadding = global::KotaPalace.Resource.Attribute.thumbTextPadding;
+			global::XamarinTextDrawable.Resource.Attribute.thumbTint = global::KotaPalace.Resource.Attribute.thumbTint;
+			global::XamarinTextDrawable.Resource.Attribute.thumbTintMode = global::KotaPalace.Resource.Attribute.thumbTintMode;
+			global::XamarinTextDrawable.Resource.Attribute.tickMark = global::KotaPalace.Resource.Attribute.tickMark;
+			global::XamarinTextDrawable.Resource.Attribute.tickMarkTint = global::KotaPalace.Resource.Attribute.tickMarkTint;
+			global::XamarinTextDrawable.Resource.Attribute.tickMarkTintMode = global::KotaPalace.Resource.Attribute.tickMarkTintMode;
+			global::XamarinTextDrawable.Resource.Attribute.tint = global::KotaPalace.Resource.Attribute.tint;
+			global::XamarinTextDrawable.Resource.Attribute.tintMode = global::KotaPalace.Resource.Attribute.tintMode;
+			global::XamarinTextDrawable.Resource.Attribute.title = global::KotaPalace.Resource.Attribute.title;
+			global::XamarinTextDrawable.Resource.Attribute.titleMargin = global::KotaPalace.Resource.Attribute.titleMargin;
+			global::XamarinTextDrawable.Resource.Attribute.titleMarginBottom = global::KotaPalace.Resource.Attribute.titleMarginBottom;
+			global::XamarinTextDrawable.Resource.Attribute.titleMarginEnd = global::KotaPalace.Resource.Attribute.titleMarginEnd;
+			global::XamarinTextDrawable.Resource.Attribute.titleMarginStart = global::KotaPalace.Resource.Attribute.titleMarginStart;
+			global::XamarinTextDrawable.Resource.Attribute.titleMarginTop = global::KotaPalace.Resource.Attribute.titleMarginTop;
+			global::XamarinTextDrawable.Resource.Attribute.titleMargins = global::KotaPalace.Resource.Attribute.titleMargins;
+			global::XamarinTextDrawable.Resource.Attribute.titleTextAppearance = global::KotaPalace.Resource.Attribute.titleTextAppearance;
+			global::XamarinTextDrawable.Resource.Attribute.titleTextColor = global::KotaPalace.Resource.Attribute.titleTextColor;
+			global::XamarinTextDrawable.Resource.Attribute.titleTextStyle = global::KotaPalace.Resource.Attribute.titleTextStyle;
+			global::XamarinTextDrawable.Resource.Attribute.toolbarNavigationButtonStyle = global::KotaPalace.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::XamarinTextDrawable.Resource.Attribute.toolbarStyle = global::KotaPalace.Resource.Attribute.toolbarStyle;
+			global::XamarinTextDrawable.Resource.Attribute.tooltipForegroundColor = global::KotaPalace.Resource.Attribute.tooltipForegroundColor;
+			global::XamarinTextDrawable.Resource.Attribute.tooltipFrameBackground = global::KotaPalace.Resource.Attribute.tooltipFrameBackground;
+			global::XamarinTextDrawable.Resource.Attribute.tooltipText = global::KotaPalace.Resource.Attribute.tooltipText;
+			global::XamarinTextDrawable.Resource.Attribute.track = global::KotaPalace.Resource.Attribute.track;
+			global::XamarinTextDrawable.Resource.Attribute.trackTint = global::KotaPalace.Resource.Attribute.trackTint;
+			global::XamarinTextDrawable.Resource.Attribute.trackTintMode = global::KotaPalace.Resource.Attribute.trackTintMode;
+			global::XamarinTextDrawable.Resource.Attribute.voiceIcon = global::KotaPalace.Resource.Attribute.voiceIcon;
+			global::XamarinTextDrawable.Resource.Attribute.windowActionBar = global::KotaPalace.Resource.Attribute.windowActionBar;
+			global::XamarinTextDrawable.Resource.Attribute.windowActionBarOverlay = global::KotaPalace.Resource.Attribute.windowActionBarOverlay;
+			global::XamarinTextDrawable.Resource.Attribute.windowActionModeOverlay = global::KotaPalace.Resource.Attribute.windowActionModeOverlay;
+			global::XamarinTextDrawable.Resource.Attribute.windowFixedHeightMajor = global::KotaPalace.Resource.Attribute.windowFixedHeightMajor;
+			global::XamarinTextDrawable.Resource.Attribute.windowFixedHeightMinor = global::KotaPalace.Resource.Attribute.windowFixedHeightMinor;
+			global::XamarinTextDrawable.Resource.Attribute.windowFixedWidthMajor = global::KotaPalace.Resource.Attribute.windowFixedWidthMajor;
+			global::XamarinTextDrawable.Resource.Attribute.windowFixedWidthMinor = global::KotaPalace.Resource.Attribute.windowFixedWidthMinor;
+			global::XamarinTextDrawable.Resource.Attribute.windowMinWidthMajor = global::KotaPalace.Resource.Attribute.windowMinWidthMajor;
+			global::XamarinTextDrawable.Resource.Attribute.windowMinWidthMinor = global::KotaPalace.Resource.Attribute.windowMinWidthMinor;
+			global::XamarinTextDrawable.Resource.Attribute.windowNoTitle = global::KotaPalace.Resource.Attribute.windowNoTitle;
+			global::XamarinTextDrawable.Resource.Boolean.abc_action_bar_embed_tabs = global::KotaPalace.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::XamarinTextDrawable.Resource.Boolean.abc_allow_stacked_button_bar = global::KotaPalace.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::XamarinTextDrawable.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::KotaPalace.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::XamarinTextDrawable.Resource.Color.abc_background_cache_hint_selector_material_dark = global::KotaPalace.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::XamarinTextDrawable.Resource.Color.abc_background_cache_hint_selector_material_light = global::KotaPalace.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::XamarinTextDrawable.Resource.Color.abc_btn_colored_borderless_text_material = global::KotaPalace.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::XamarinTextDrawable.Resource.Color.abc_btn_colored_text_material = global::KotaPalace.Resource.Color.abc_btn_colored_text_material;
+			global::XamarinTextDrawable.Resource.Color.abc_color_highlight_material = global::KotaPalace.Resource.Color.abc_color_highlight_material;
+			global::XamarinTextDrawable.Resource.Color.abc_hint_foreground_material_dark = global::KotaPalace.Resource.Color.abc_hint_foreground_material_dark;
+			global::XamarinTextDrawable.Resource.Color.abc_hint_foreground_material_light = global::KotaPalace.Resource.Color.abc_hint_foreground_material_light;
+			global::XamarinTextDrawable.Resource.Color.abc_primary_text_disable_only_material_dark = global::KotaPalace.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::XamarinTextDrawable.Resource.Color.abc_primary_text_disable_only_material_light = global::KotaPalace.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::XamarinTextDrawable.Resource.Color.abc_primary_text_material_dark = global::KotaPalace.Resource.Color.abc_primary_text_material_dark;
+			global::XamarinTextDrawable.Resource.Color.abc_primary_text_material_light = global::KotaPalace.Resource.Color.abc_primary_text_material_light;
+			global::XamarinTextDrawable.Resource.Color.abc_search_url_text = global::KotaPalace.Resource.Color.abc_search_url_text;
+			global::XamarinTextDrawable.Resource.Color.abc_search_url_text_normal = global::KotaPalace.Resource.Color.abc_search_url_text_normal;
+			global::XamarinTextDrawable.Resource.Color.abc_search_url_text_pressed = global::KotaPalace.Resource.Color.abc_search_url_text_pressed;
+			global::XamarinTextDrawable.Resource.Color.abc_search_url_text_selected = global::KotaPalace.Resource.Color.abc_search_url_text_selected;
+			global::XamarinTextDrawable.Resource.Color.abc_secondary_text_material_dark = global::KotaPalace.Resource.Color.abc_secondary_text_material_dark;
+			global::XamarinTextDrawable.Resource.Color.abc_secondary_text_material_light = global::KotaPalace.Resource.Color.abc_secondary_text_material_light;
+			global::XamarinTextDrawable.Resource.Color.abc_tint_btn_checkable = global::KotaPalace.Resource.Color.abc_tint_btn_checkable;
+			global::XamarinTextDrawable.Resource.Color.abc_tint_default = global::KotaPalace.Resource.Color.abc_tint_default;
+			global::XamarinTextDrawable.Resource.Color.abc_tint_edittext = global::KotaPalace.Resource.Color.abc_tint_edittext;
+			global::XamarinTextDrawable.Resource.Color.abc_tint_seek_thumb = global::KotaPalace.Resource.Color.abc_tint_seek_thumb;
+			global::XamarinTextDrawable.Resource.Color.abc_tint_spinner = global::KotaPalace.Resource.Color.abc_tint_spinner;
+			global::XamarinTextDrawable.Resource.Color.abc_tint_switch_track = global::KotaPalace.Resource.Color.abc_tint_switch_track;
+			global::XamarinTextDrawable.Resource.Color.accent_material_dark = global::KotaPalace.Resource.Color.accent_material_dark;
+			global::XamarinTextDrawable.Resource.Color.accent_material_light = global::KotaPalace.Resource.Color.accent_material_light;
+			global::XamarinTextDrawable.Resource.Color.background_floating_material_dark = global::KotaPalace.Resource.Color.background_floating_material_dark;
+			global::XamarinTextDrawable.Resource.Color.background_floating_material_light = global::KotaPalace.Resource.Color.background_floating_material_light;
+			global::XamarinTextDrawable.Resource.Color.background_material_dark = global::KotaPalace.Resource.Color.background_material_dark;
+			global::XamarinTextDrawable.Resource.Color.background_material_light = global::KotaPalace.Resource.Color.background_material_light;
+			global::XamarinTextDrawable.Resource.Color.bright_foreground_disabled_material_dark = global::KotaPalace.Resource.Color.bright_foreground_disabled_material_dark;
+			global::XamarinTextDrawable.Resource.Color.bright_foreground_disabled_material_light = global::KotaPalace.Resource.Color.bright_foreground_disabled_material_light;
+			global::XamarinTextDrawable.Resource.Color.bright_foreground_inverse_material_dark = global::KotaPalace.Resource.Color.bright_foreground_inverse_material_dark;
+			global::XamarinTextDrawable.Resource.Color.bright_foreground_inverse_material_light = global::KotaPalace.Resource.Color.bright_foreground_inverse_material_light;
+			global::XamarinTextDrawable.Resource.Color.bright_foreground_material_dark = global::KotaPalace.Resource.Color.bright_foreground_material_dark;
+			global::XamarinTextDrawable.Resource.Color.bright_foreground_material_light = global::KotaPalace.Resource.Color.bright_foreground_material_light;
+			global::XamarinTextDrawable.Resource.Color.button_material_dark = global::KotaPalace.Resource.Color.button_material_dark;
+			global::XamarinTextDrawable.Resource.Color.button_material_light = global::KotaPalace.Resource.Color.button_material_light;
+			global::XamarinTextDrawable.Resource.Color.dim_foreground_disabled_material_dark = global::KotaPalace.Resource.Color.dim_foreground_disabled_material_dark;
+			global::XamarinTextDrawable.Resource.Color.dim_foreground_disabled_material_light = global::KotaPalace.Resource.Color.dim_foreground_disabled_material_light;
+			global::XamarinTextDrawable.Resource.Color.dim_foreground_material_dark = global::KotaPalace.Resource.Color.dim_foreground_material_dark;
+			global::XamarinTextDrawable.Resource.Color.dim_foreground_material_light = global::KotaPalace.Resource.Color.dim_foreground_material_light;
+			global::XamarinTextDrawable.Resource.Color.foreground_material_dark = global::KotaPalace.Resource.Color.foreground_material_dark;
+			global::XamarinTextDrawable.Resource.Color.foreground_material_light = global::KotaPalace.Resource.Color.foreground_material_light;
+			global::XamarinTextDrawable.Resource.Color.highlighted_text_material_dark = global::KotaPalace.Resource.Color.highlighted_text_material_dark;
+			global::XamarinTextDrawable.Resource.Color.highlighted_text_material_light = global::KotaPalace.Resource.Color.highlighted_text_material_light;
+			global::XamarinTextDrawable.Resource.Color.material_blue_grey_800 = global::KotaPalace.Resource.Color.material_blue_grey_800;
+			global::XamarinTextDrawable.Resource.Color.material_blue_grey_900 = global::KotaPalace.Resource.Color.material_blue_grey_900;
+			global::XamarinTextDrawable.Resource.Color.material_blue_grey_950 = global::KotaPalace.Resource.Color.material_blue_grey_950;
+			global::XamarinTextDrawable.Resource.Color.material_deep_teal_200 = global::KotaPalace.Resource.Color.material_deep_teal_200;
+			global::XamarinTextDrawable.Resource.Color.material_deep_teal_500 = global::KotaPalace.Resource.Color.material_deep_teal_500;
+			global::XamarinTextDrawable.Resource.Color.material_grey_100 = global::KotaPalace.Resource.Color.material_grey_100;
+			global::XamarinTextDrawable.Resource.Color.material_grey_300 = global::KotaPalace.Resource.Color.material_grey_300;
+			global::XamarinTextDrawable.Resource.Color.material_grey_50 = global::KotaPalace.Resource.Color.material_grey_50;
+			global::XamarinTextDrawable.Resource.Color.material_grey_600 = global::KotaPalace.Resource.Color.material_grey_600;
+			global::XamarinTextDrawable.Resource.Color.material_grey_800 = global::KotaPalace.Resource.Color.material_grey_800;
+			global::XamarinTextDrawable.Resource.Color.material_grey_850 = global::KotaPalace.Resource.Color.material_grey_850;
+			global::XamarinTextDrawable.Resource.Color.material_grey_900 = global::KotaPalace.Resource.Color.material_grey_900;
+			global::XamarinTextDrawable.Resource.Color.notification_action_color_filter = global::KotaPalace.Resource.Color.notification_action_color_filter;
+			global::XamarinTextDrawable.Resource.Color.notification_icon_bg_color = global::KotaPalace.Resource.Color.notification_icon_bg_color;
+			global::XamarinTextDrawable.Resource.Color.notification_material_background_media_default_color = global::KotaPalace.Resource.Color.notification_material_background_media_default_color;
+			global::XamarinTextDrawable.Resource.Color.primary_dark_material_dark = global::KotaPalace.Resource.Color.primary_dark_material_dark;
+			global::XamarinTextDrawable.Resource.Color.primary_dark_material_light = global::KotaPalace.Resource.Color.primary_dark_material_light;
+			global::XamarinTextDrawable.Resource.Color.primary_material_dark = global::KotaPalace.Resource.Color.primary_material_dark;
+			global::XamarinTextDrawable.Resource.Color.primary_material_light = global::KotaPalace.Resource.Color.primary_material_light;
+			global::XamarinTextDrawable.Resource.Color.primary_text_default_material_dark = global::KotaPalace.Resource.Color.primary_text_default_material_dark;
+			global::XamarinTextDrawable.Resource.Color.primary_text_default_material_light = global::KotaPalace.Resource.Color.primary_text_default_material_light;
+			global::XamarinTextDrawable.Resource.Color.primary_text_disabled_material_dark = global::KotaPalace.Resource.Color.primary_text_disabled_material_dark;
+			global::XamarinTextDrawable.Resource.Color.primary_text_disabled_material_light = global::KotaPalace.Resource.Color.primary_text_disabled_material_light;
+			global::XamarinTextDrawable.Resource.Color.ripple_material_dark = global::KotaPalace.Resource.Color.ripple_material_dark;
+			global::XamarinTextDrawable.Resource.Color.ripple_material_light = global::KotaPalace.Resource.Color.ripple_material_light;
+			global::XamarinTextDrawable.Resource.Color.secondary_text_default_material_dark = global::KotaPalace.Resource.Color.secondary_text_default_material_dark;
+			global::XamarinTextDrawable.Resource.Color.secondary_text_default_material_light = global::KotaPalace.Resource.Color.secondary_text_default_material_light;
+			global::XamarinTextDrawable.Resource.Color.secondary_text_disabled_material_dark = global::KotaPalace.Resource.Color.secondary_text_disabled_material_dark;
+			global::XamarinTextDrawable.Resource.Color.secondary_text_disabled_material_light = global::KotaPalace.Resource.Color.secondary_text_disabled_material_light;
+			global::XamarinTextDrawable.Resource.Color.switch_thumb_disabled_material_dark = global::KotaPalace.Resource.Color.switch_thumb_disabled_material_dark;
+			global::XamarinTextDrawable.Resource.Color.switch_thumb_disabled_material_light = global::KotaPalace.Resource.Color.switch_thumb_disabled_material_light;
+			global::XamarinTextDrawable.Resource.Color.switch_thumb_material_dark = global::KotaPalace.Resource.Color.switch_thumb_material_dark;
+			global::XamarinTextDrawable.Resource.Color.switch_thumb_material_light = global::KotaPalace.Resource.Color.switch_thumb_material_light;
+			global::XamarinTextDrawable.Resource.Color.switch_thumb_normal_material_dark = global::KotaPalace.Resource.Color.switch_thumb_normal_material_dark;
+			global::XamarinTextDrawable.Resource.Color.switch_thumb_normal_material_light = global::KotaPalace.Resource.Color.switch_thumb_normal_material_light;
+			global::XamarinTextDrawable.Resource.Color.tooltip_background_dark = global::KotaPalace.Resource.Color.tooltip_background_dark;
+			global::XamarinTextDrawable.Resource.Color.tooltip_background_light = global::KotaPalace.Resource.Color.tooltip_background_light;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_content_inset_material = global::KotaPalace.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::KotaPalace.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_default_height_material = global::KotaPalace.Resource.Dimension.abc_action_bar_default_height_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_default_padding_end_material = global::KotaPalace.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_default_padding_start_material = global::KotaPalace.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_elevation_material = global::KotaPalace.Resource.Dimension.abc_action_bar_elevation_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::KotaPalace.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::KotaPalace.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::KotaPalace.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_stacked_max_height = global::KotaPalace.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::KotaPalace.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::KotaPalace.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::KotaPalace.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_button_min_height_material = global::KotaPalace.Resource.Dimension.abc_action_button_min_height_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_button_min_width_material = global::KotaPalace.Resource.Dimension.abc_action_button_min_width_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_action_button_min_width_overflow_material = global::KotaPalace.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_alert_dialog_button_bar_height = global::KotaPalace.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::XamarinTextDrawable.Resource.Dimension.abc_button_inset_horizontal_material = global::KotaPalace.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_button_inset_vertical_material = global::KotaPalace.Resource.Dimension.abc_button_inset_vertical_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_button_padding_horizontal_material = global::KotaPalace.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_button_padding_vertical_material = global::KotaPalace.Resource.Dimension.abc_button_padding_vertical_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::KotaPalace.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::XamarinTextDrawable.Resource.Dimension.abc_config_prefDialogWidth = global::KotaPalace.Resource.Dimension.abc_config_prefDialogWidth;
+			global::XamarinTextDrawable.Resource.Dimension.abc_control_corner_material = global::KotaPalace.Resource.Dimension.abc_control_corner_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_control_inset_material = global::KotaPalace.Resource.Dimension.abc_control_inset_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_control_padding_material = global::KotaPalace.Resource.Dimension.abc_control_padding_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dialog_fixed_height_major = global::KotaPalace.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dialog_fixed_height_minor = global::KotaPalace.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dialog_fixed_width_major = global::KotaPalace.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dialog_fixed_width_minor = global::KotaPalace.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::KotaPalace.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::KotaPalace.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dialog_min_width_major = global::KotaPalace.Resource.Dimension.abc_dialog_min_width_major;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dialog_min_width_minor = global::KotaPalace.Resource.Dimension.abc_dialog_min_width_minor;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dialog_padding_material = global::KotaPalace.Resource.Dimension.abc_dialog_padding_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dialog_padding_top_material = global::KotaPalace.Resource.Dimension.abc_dialog_padding_top_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dialog_title_divider_material = global::KotaPalace.Resource.Dimension.abc_dialog_title_divider_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_disabled_alpha_material_dark = global::KotaPalace.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::XamarinTextDrawable.Resource.Dimension.abc_disabled_alpha_material_light = global::KotaPalace.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dropdownitem_icon_width = global::KotaPalace.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dropdownitem_text_padding_left = global::KotaPalace.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::XamarinTextDrawable.Resource.Dimension.abc_dropdownitem_text_padding_right = global::KotaPalace.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::XamarinTextDrawable.Resource.Dimension.abc_edit_text_inset_bottom_material = global::KotaPalace.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::KotaPalace.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_edit_text_inset_top_material = global::KotaPalace.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_floating_window_z = global::KotaPalace.Resource.Dimension.abc_floating_window_z;
+			global::XamarinTextDrawable.Resource.Dimension.abc_list_item_padding_horizontal_material = global::KotaPalace.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_panel_menu_list_width = global::KotaPalace.Resource.Dimension.abc_panel_menu_list_width;
+			global::XamarinTextDrawable.Resource.Dimension.abc_progress_bar_height_material = global::KotaPalace.Resource.Dimension.abc_progress_bar_height_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_search_view_preferred_height = global::KotaPalace.Resource.Dimension.abc_search_view_preferred_height;
+			global::XamarinTextDrawable.Resource.Dimension.abc_search_view_preferred_width = global::KotaPalace.Resource.Dimension.abc_search_view_preferred_width;
+			global::XamarinTextDrawable.Resource.Dimension.abc_seekbar_track_background_height_material = global::KotaPalace.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_seekbar_track_progress_height_material = global::KotaPalace.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_select_dialog_padding_start_material = global::KotaPalace.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_switch_padding = global::KotaPalace.Resource.Dimension.abc_switch_padding;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_body_1_material = global::KotaPalace.Resource.Dimension.abc_text_size_body_1_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_body_2_material = global::KotaPalace.Resource.Dimension.abc_text_size_body_2_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_button_material = global::KotaPalace.Resource.Dimension.abc_text_size_button_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_caption_material = global::KotaPalace.Resource.Dimension.abc_text_size_caption_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_display_1_material = global::KotaPalace.Resource.Dimension.abc_text_size_display_1_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_display_2_material = global::KotaPalace.Resource.Dimension.abc_text_size_display_2_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_display_3_material = global::KotaPalace.Resource.Dimension.abc_text_size_display_3_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_display_4_material = global::KotaPalace.Resource.Dimension.abc_text_size_display_4_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_headline_material = global::KotaPalace.Resource.Dimension.abc_text_size_headline_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_large_material = global::KotaPalace.Resource.Dimension.abc_text_size_large_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_medium_material = global::KotaPalace.Resource.Dimension.abc_text_size_medium_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_menu_header_material = global::KotaPalace.Resource.Dimension.abc_text_size_menu_header_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_menu_material = global::KotaPalace.Resource.Dimension.abc_text_size_menu_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_small_material = global::KotaPalace.Resource.Dimension.abc_text_size_small_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_subhead_material = global::KotaPalace.Resource.Dimension.abc_text_size_subhead_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::KotaPalace.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_title_material = global::KotaPalace.Resource.Dimension.abc_text_size_title_material;
+			global::XamarinTextDrawable.Resource.Dimension.abc_text_size_title_material_toolbar = global::KotaPalace.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::XamarinTextDrawable.Resource.Dimension.compat_button_inset_horizontal_material = global::KotaPalace.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::XamarinTextDrawable.Resource.Dimension.compat_button_inset_vertical_material = global::KotaPalace.Resource.Dimension.compat_button_inset_vertical_material;
+			global::XamarinTextDrawable.Resource.Dimension.compat_button_padding_horizontal_material = global::KotaPalace.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::XamarinTextDrawable.Resource.Dimension.compat_button_padding_vertical_material = global::KotaPalace.Resource.Dimension.compat_button_padding_vertical_material;
+			global::XamarinTextDrawable.Resource.Dimension.compat_control_corner_material = global::KotaPalace.Resource.Dimension.compat_control_corner_material;
+			global::XamarinTextDrawable.Resource.Dimension.disabled_alpha_material_dark = global::KotaPalace.Resource.Dimension.disabled_alpha_material_dark;
+			global::XamarinTextDrawable.Resource.Dimension.disabled_alpha_material_light = global::KotaPalace.Resource.Dimension.disabled_alpha_material_light;
+			global::XamarinTextDrawable.Resource.Dimension.highlight_alpha_material_colored = global::KotaPalace.Resource.Dimension.highlight_alpha_material_colored;
+			global::XamarinTextDrawable.Resource.Dimension.highlight_alpha_material_dark = global::KotaPalace.Resource.Dimension.highlight_alpha_material_dark;
+			global::XamarinTextDrawable.Resource.Dimension.highlight_alpha_material_light = global::KotaPalace.Resource.Dimension.highlight_alpha_material_light;
+			global::XamarinTextDrawable.Resource.Dimension.hint_alpha_material_dark = global::KotaPalace.Resource.Dimension.hint_alpha_material_dark;
+			global::XamarinTextDrawable.Resource.Dimension.hint_alpha_material_light = global::KotaPalace.Resource.Dimension.hint_alpha_material_light;
+			global::XamarinTextDrawable.Resource.Dimension.hint_pressed_alpha_material_dark = global::KotaPalace.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::XamarinTextDrawable.Resource.Dimension.hint_pressed_alpha_material_light = global::KotaPalace.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::XamarinTextDrawable.Resource.Dimension.notification_action_icon_size = global::KotaPalace.Resource.Dimension.notification_action_icon_size;
+			global::XamarinTextDrawable.Resource.Dimension.notification_action_text_size = global::KotaPalace.Resource.Dimension.notification_action_text_size;
+			global::XamarinTextDrawable.Resource.Dimension.notification_big_circle_margin = global::KotaPalace.Resource.Dimension.notification_big_circle_margin;
+			global::XamarinTextDrawable.Resource.Dimension.notification_content_margin_start = global::KotaPalace.Resource.Dimension.notification_content_margin_start;
+			global::XamarinTextDrawable.Resource.Dimension.notification_large_icon_height = global::KotaPalace.Resource.Dimension.notification_large_icon_height;
+			global::XamarinTextDrawable.Resource.Dimension.notification_large_icon_width = global::KotaPalace.Resource.Dimension.notification_large_icon_width;
+			global::XamarinTextDrawable.Resource.Dimension.notification_main_column_padding_top = global::KotaPalace.Resource.Dimension.notification_main_column_padding_top;
+			global::XamarinTextDrawable.Resource.Dimension.notification_media_narrow_margin = global::KotaPalace.Resource.Dimension.notification_media_narrow_margin;
+			global::XamarinTextDrawable.Resource.Dimension.notification_right_icon_size = global::KotaPalace.Resource.Dimension.notification_right_icon_size;
+			global::XamarinTextDrawable.Resource.Dimension.notification_right_side_padding_top = global::KotaPalace.Resource.Dimension.notification_right_side_padding_top;
+			global::XamarinTextDrawable.Resource.Dimension.notification_small_icon_background_padding = global::KotaPalace.Resource.Dimension.notification_small_icon_background_padding;
+			global::XamarinTextDrawable.Resource.Dimension.notification_small_icon_size_as_large = global::KotaPalace.Resource.Dimension.notification_small_icon_size_as_large;
+			global::XamarinTextDrawable.Resource.Dimension.notification_subtext_size = global::KotaPalace.Resource.Dimension.notification_subtext_size;
+			global::XamarinTextDrawable.Resource.Dimension.notification_top_pad = global::KotaPalace.Resource.Dimension.notification_top_pad;
+			global::XamarinTextDrawable.Resource.Dimension.notification_top_pad_large_text = global::KotaPalace.Resource.Dimension.notification_top_pad_large_text;
+			global::XamarinTextDrawable.Resource.Dimension.tooltip_corner_radius = global::KotaPalace.Resource.Dimension.tooltip_corner_radius;
+			global::XamarinTextDrawable.Resource.Dimension.tooltip_horizontal_padding = global::KotaPalace.Resource.Dimension.tooltip_horizontal_padding;
+			global::XamarinTextDrawable.Resource.Dimension.tooltip_margin = global::KotaPalace.Resource.Dimension.tooltip_margin;
+			global::XamarinTextDrawable.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::KotaPalace.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::XamarinTextDrawable.Resource.Dimension.tooltip_precise_anchor_threshold = global::KotaPalace.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::XamarinTextDrawable.Resource.Dimension.tooltip_vertical_padding = global::KotaPalace.Resource.Dimension.tooltip_vertical_padding;
+			global::XamarinTextDrawable.Resource.Dimension.tooltip_y_offset_non_touch = global::KotaPalace.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::XamarinTextDrawable.Resource.Dimension.tooltip_y_offset_touch = global::KotaPalace.Resource.Dimension.tooltip_y_offset_touch;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_action_bar_item_background_material = global::KotaPalace.Resource.Drawable.abc_action_bar_item_background_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_btn_borderless_material = global::KotaPalace.Resource.Drawable.abc_btn_borderless_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_btn_check_material = global::KotaPalace.Resource.Drawable.abc_btn_check_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::KotaPalace.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::XamarinTextDrawable.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::KotaPalace.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::XamarinTextDrawable.Resource.Drawable.abc_btn_colored_material = global::KotaPalace.Resource.Drawable.abc_btn_colored_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_btn_default_mtrl_shape = global::KotaPalace.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::XamarinTextDrawable.Resource.Drawable.abc_btn_radio_material = global::KotaPalace.Resource.Drawable.abc_btn_radio_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::KotaPalace.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::XamarinTextDrawable.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::KotaPalace.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::XamarinTextDrawable.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::KotaPalace.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::XamarinTextDrawable.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::KotaPalace.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::XamarinTextDrawable.Resource.Drawable.abc_cab_background_internal_bg = global::KotaPalace.Resource.Drawable.abc_cab_background_internal_bg;
+			global::XamarinTextDrawable.Resource.Drawable.abc_cab_background_top_material = global::KotaPalace.Resource.Drawable.abc_cab_background_top_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_control_background_material = global::KotaPalace.Resource.Drawable.abc_control_background_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_dialog_material_background = global::KotaPalace.Resource.Drawable.abc_dialog_material_background;
+			global::XamarinTextDrawable.Resource.Drawable.abc_edit_text_material = global::KotaPalace.Resource.Drawable.abc_edit_text_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_ab_back_material = global::KotaPalace.Resource.Drawable.abc_ic_ab_back_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::KotaPalace.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_clear_material = global::KotaPalace.Resource.Drawable.abc_ic_clear_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_go_search_api_material = global::KotaPalace.Resource.Drawable.abc_ic_go_search_api_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::KotaPalace.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_menu_overflow_material = global::KotaPalace.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::KotaPalace.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_search_api_material = global::KotaPalace.Resource.Drawable.abc_ic_search_api_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_star_black_16dp = global::KotaPalace.Resource.Drawable.abc_ic_star_black_16dp;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_star_black_36dp = global::KotaPalace.Resource.Drawable.abc_ic_star_black_36dp;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_star_black_48dp = global::KotaPalace.Resource.Drawable.abc_ic_star_black_48dp;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_star_half_black_16dp = global::KotaPalace.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_star_half_black_36dp = global::KotaPalace.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_star_half_black_48dp = global::KotaPalace.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ic_voice_search_api_material = global::KotaPalace.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_item_background_holo_dark = global::KotaPalace.Resource.Drawable.abc_item_background_holo_dark;
+			global::XamarinTextDrawable.Resource.Drawable.abc_item_background_holo_light = global::KotaPalace.Resource.Drawable.abc_item_background_holo_light;
+			global::XamarinTextDrawable.Resource.Drawable.abc_list_divider_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_list_focused_holo = global::KotaPalace.Resource.Drawable.abc_list_focused_holo;
+			global::XamarinTextDrawable.Resource.Drawable.abc_list_longpressed_holo = global::KotaPalace.Resource.Drawable.abc_list_longpressed_holo;
+			global::XamarinTextDrawable.Resource.Drawable.abc_list_pressed_holo_dark = global::KotaPalace.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::XamarinTextDrawable.Resource.Drawable.abc_list_pressed_holo_light = global::KotaPalace.Resource.Drawable.abc_list_pressed_holo_light;
+			global::XamarinTextDrawable.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::KotaPalace.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::XamarinTextDrawable.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::KotaPalace.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::XamarinTextDrawable.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::KotaPalace.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::XamarinTextDrawable.Resource.Drawable.abc_list_selector_disabled_holo_light = global::KotaPalace.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::XamarinTextDrawable.Resource.Drawable.abc_list_selector_holo_dark = global::KotaPalace.Resource.Drawable.abc_list_selector_holo_dark;
+			global::XamarinTextDrawable.Resource.Drawable.abc_list_selector_holo_light = global::KotaPalace.Resource.Drawable.abc_list_selector_holo_light;
+			global::XamarinTextDrawable.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::KotaPalace.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::XamarinTextDrawable.Resource.Drawable.abc_popup_background_mtrl_mult = global::KotaPalace.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ratingbar_indicator_material = global::KotaPalace.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ratingbar_material = global::KotaPalace.Resource.Drawable.abc_ratingbar_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_ratingbar_small_material = global::KotaPalace.Resource.Drawable.abc_ratingbar_small_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::KotaPalace.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::XamarinTextDrawable.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::KotaPalace.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::XamarinTextDrawable.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_seekbar_thumb_material = global::KotaPalace.Resource.Drawable.abc_seekbar_thumb_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_seekbar_tick_mark_material = global::KotaPalace.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_seekbar_track_material = global::KotaPalace.Resource.Drawable.abc_seekbar_track_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::KotaPalace.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_spinner_textfield_background_material = global::KotaPalace.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_switch_thumb_material = global::KotaPalace.Resource.Drawable.abc_switch_thumb_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_switch_track_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_tab_indicator_material = global::KotaPalace.Resource.Drawable.abc_tab_indicator_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_text_cursor_material = global::KotaPalace.Resource.Drawable.abc_text_cursor_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::KotaPalace.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::XamarinTextDrawable.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::KotaPalace.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::XamarinTextDrawable.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::KotaPalace.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::XamarinTextDrawable.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::KotaPalace.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::XamarinTextDrawable.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::KotaPalace.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::XamarinTextDrawable.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::KotaPalace.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::XamarinTextDrawable.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::KotaPalace.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::XamarinTextDrawable.Resource.Drawable.abc_textfield_search_material = global::KotaPalace.Resource.Drawable.abc_textfield_search_material;
+			global::XamarinTextDrawable.Resource.Drawable.abc_vector_test = global::KotaPalace.Resource.Drawable.abc_vector_test;
+			global::XamarinTextDrawable.Resource.Drawable.notification_action_background = global::KotaPalace.Resource.Drawable.notification_action_background;
+			global::XamarinTextDrawable.Resource.Drawable.notification_bg = global::KotaPalace.Resource.Drawable.notification_bg;
+			global::XamarinTextDrawable.Resource.Drawable.notification_bg_low = global::KotaPalace.Resource.Drawable.notification_bg_low;
+			global::XamarinTextDrawable.Resource.Drawable.notification_bg_low_normal = global::KotaPalace.Resource.Drawable.notification_bg_low_normal;
+			global::XamarinTextDrawable.Resource.Drawable.notification_bg_low_pressed = global::KotaPalace.Resource.Drawable.notification_bg_low_pressed;
+			global::XamarinTextDrawable.Resource.Drawable.notification_bg_normal = global::KotaPalace.Resource.Drawable.notification_bg_normal;
+			global::XamarinTextDrawable.Resource.Drawable.notification_bg_normal_pressed = global::KotaPalace.Resource.Drawable.notification_bg_normal_pressed;
+			global::XamarinTextDrawable.Resource.Drawable.notification_icon_background = global::KotaPalace.Resource.Drawable.notification_icon_background;
+			global::XamarinTextDrawable.Resource.Drawable.notification_template_icon_bg = global::KotaPalace.Resource.Drawable.notification_template_icon_bg;
+			global::XamarinTextDrawable.Resource.Drawable.notification_template_icon_low_bg = global::KotaPalace.Resource.Drawable.notification_template_icon_low_bg;
+			global::XamarinTextDrawable.Resource.Drawable.notification_tile_bg = global::KotaPalace.Resource.Drawable.notification_tile_bg;
+			global::XamarinTextDrawable.Resource.Drawable.notify_panel_notification_icon_bg = global::KotaPalace.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::XamarinTextDrawable.Resource.Drawable.tooltip_frame_dark = global::KotaPalace.Resource.Drawable.tooltip_frame_dark;
+			global::XamarinTextDrawable.Resource.Drawable.tooltip_frame_light = global::KotaPalace.Resource.Drawable.tooltip_frame_light;
+			global::XamarinTextDrawable.Resource.Id.ALT = global::KotaPalace.Resource.Id.ALT;
+			global::XamarinTextDrawable.Resource.Id.CTRL = global::KotaPalace.Resource.Id.CTRL;
+			global::XamarinTextDrawable.Resource.Id.FUNCTION = global::KotaPalace.Resource.Id.FUNCTION;
+			global::XamarinTextDrawable.Resource.Id.META = global::KotaPalace.Resource.Id.META;
+			global::XamarinTextDrawable.Resource.Id.SHIFT = global::KotaPalace.Resource.Id.SHIFT;
+			global::XamarinTextDrawable.Resource.Id.SYM = global::KotaPalace.Resource.Id.SYM;
+			global::XamarinTextDrawable.Resource.Id.action0 = global::KotaPalace.Resource.Id.action0;
+			global::XamarinTextDrawable.Resource.Id.action_bar = global::KotaPalace.Resource.Id.action_bar;
+			global::XamarinTextDrawable.Resource.Id.action_bar_activity_content = global::KotaPalace.Resource.Id.action_bar_activity_content;
+			global::XamarinTextDrawable.Resource.Id.action_bar_container = global::KotaPalace.Resource.Id.action_bar_container;
+			global::XamarinTextDrawable.Resource.Id.action_bar_root = global::KotaPalace.Resource.Id.action_bar_root;
+			global::XamarinTextDrawable.Resource.Id.action_bar_spinner = global::KotaPalace.Resource.Id.action_bar_spinner;
+			global::XamarinTextDrawable.Resource.Id.action_bar_subtitle = global::KotaPalace.Resource.Id.action_bar_subtitle;
+			global::XamarinTextDrawable.Resource.Id.action_bar_title = global::KotaPalace.Resource.Id.action_bar_title;
+			global::XamarinTextDrawable.Resource.Id.action_container = global::KotaPalace.Resource.Id.action_container;
+			global::XamarinTextDrawable.Resource.Id.action_context_bar = global::KotaPalace.Resource.Id.action_context_bar;
+			global::XamarinTextDrawable.Resource.Id.action_divider = global::KotaPalace.Resource.Id.action_divider;
+			global::XamarinTextDrawable.Resource.Id.action_image = global::KotaPalace.Resource.Id.action_image;
+			global::XamarinTextDrawable.Resource.Id.action_menu_divider = global::KotaPalace.Resource.Id.action_menu_divider;
+			global::XamarinTextDrawable.Resource.Id.action_menu_presenter = global::KotaPalace.Resource.Id.action_menu_presenter;
+			global::XamarinTextDrawable.Resource.Id.action_mode_bar = global::KotaPalace.Resource.Id.action_mode_bar;
+			global::XamarinTextDrawable.Resource.Id.action_mode_bar_stub = global::KotaPalace.Resource.Id.action_mode_bar_stub;
+			global::XamarinTextDrawable.Resource.Id.action_mode_close_button = global::KotaPalace.Resource.Id.action_mode_close_button;
+			global::XamarinTextDrawable.Resource.Id.action_text = global::KotaPalace.Resource.Id.action_text;
+			global::XamarinTextDrawable.Resource.Id.actions = global::KotaPalace.Resource.Id.actions;
+			global::XamarinTextDrawable.Resource.Id.activity_chooser_view_content = global::KotaPalace.Resource.Id.activity_chooser_view_content;
+			global::XamarinTextDrawable.Resource.Id.add = global::KotaPalace.Resource.Id.add;
+			global::XamarinTextDrawable.Resource.Id.alertTitle = global::KotaPalace.Resource.Id.alertTitle;
+			global::XamarinTextDrawable.Resource.Id.always = global::KotaPalace.Resource.Id.always;
+			global::XamarinTextDrawable.Resource.Id.async = global::KotaPalace.Resource.Id.async;
+			global::XamarinTextDrawable.Resource.Id.beginning = global::KotaPalace.Resource.Id.beginning;
+			global::XamarinTextDrawable.Resource.Id.blocking = global::KotaPalace.Resource.Id.blocking;
+			global::XamarinTextDrawable.Resource.Id.bottom = global::KotaPalace.Resource.Id.bottom;
+			global::XamarinTextDrawable.Resource.Id.buttonPanel = global::KotaPalace.Resource.Id.buttonPanel;
+			global::XamarinTextDrawable.Resource.Id.cancel_action = global::KotaPalace.Resource.Id.cancel_action;
+			global::XamarinTextDrawable.Resource.Id.checkbox = global::KotaPalace.Resource.Id.checkbox;
+			global::XamarinTextDrawable.Resource.Id.chronometer = global::KotaPalace.Resource.Id.chronometer;
+			global::XamarinTextDrawable.Resource.Id.collapseActionView = global::KotaPalace.Resource.Id.collapseActionView;
+			global::XamarinTextDrawable.Resource.Id.contentPanel = global::KotaPalace.Resource.Id.contentPanel;
+			global::XamarinTextDrawable.Resource.Id.custom = global::KotaPalace.Resource.Id.custom;
+			global::XamarinTextDrawable.Resource.Id.customPanel = global::KotaPalace.Resource.Id.customPanel;
+			global::XamarinTextDrawable.Resource.Id.decor_content_parent = global::KotaPalace.Resource.Id.decor_content_parent;
+			global::XamarinTextDrawable.Resource.Id.default_activity_button = global::KotaPalace.Resource.Id.default_activity_button;
+			global::XamarinTextDrawable.Resource.Id.disableHome = global::KotaPalace.Resource.Id.disableHome;
+			global::XamarinTextDrawable.Resource.Id.edit_query = global::KotaPalace.Resource.Id.edit_query;
+			global::XamarinTextDrawable.Resource.Id.end = global::KotaPalace.Resource.Id.end;
+			global::XamarinTextDrawable.Resource.Id.end_padder = global::KotaPalace.Resource.Id.end_padder;
+			global::XamarinTextDrawable.Resource.Id.expand_activities_button = global::KotaPalace.Resource.Id.expand_activities_button;
+			global::XamarinTextDrawable.Resource.Id.expanded_menu = global::KotaPalace.Resource.Id.expanded_menu;
+			global::XamarinTextDrawable.Resource.Id.forever = global::KotaPalace.Resource.Id.forever;
+			global::XamarinTextDrawable.Resource.Id.home = global::KotaPalace.Resource.Id.home;
+			global::XamarinTextDrawable.Resource.Id.homeAsUp = global::KotaPalace.Resource.Id.homeAsUp;
+			global::XamarinTextDrawable.Resource.Id.icon = global::KotaPalace.Resource.Id.icon;
+			global::XamarinTextDrawable.Resource.Id.icon_group = global::KotaPalace.Resource.Id.icon_group;
+			global::XamarinTextDrawable.Resource.Id.ifRoom = global::KotaPalace.Resource.Id.ifRoom;
+			global::XamarinTextDrawable.Resource.Id.image = global::KotaPalace.Resource.Id.image;
+			global::XamarinTextDrawable.Resource.Id.info = global::KotaPalace.Resource.Id.info;
+			global::XamarinTextDrawable.Resource.Id.italic = global::KotaPalace.Resource.Id.italic;
+			global::XamarinTextDrawable.Resource.Id.line1 = global::KotaPalace.Resource.Id.line1;
+			global::XamarinTextDrawable.Resource.Id.line3 = global::KotaPalace.Resource.Id.line3;
+			global::XamarinTextDrawable.Resource.Id.listMode = global::KotaPalace.Resource.Id.listMode;
+			global::XamarinTextDrawable.Resource.Id.list_item = global::KotaPalace.Resource.Id.list_item;
+			global::XamarinTextDrawable.Resource.Id.media_actions = global::KotaPalace.Resource.Id.media_actions;
+			global::XamarinTextDrawable.Resource.Id.message = global::KotaPalace.Resource.Id.message;
+			global::XamarinTextDrawable.Resource.Id.middle = global::KotaPalace.Resource.Id.middle;
+			global::XamarinTextDrawable.Resource.Id.multiply = global::KotaPalace.Resource.Id.multiply;
+			global::XamarinTextDrawable.Resource.Id.never = global::KotaPalace.Resource.Id.never;
+			global::XamarinTextDrawable.Resource.Id.none = global::KotaPalace.Resource.Id.none;
+			global::XamarinTextDrawable.Resource.Id.normal = global::KotaPalace.Resource.Id.normal;
+			global::XamarinTextDrawable.Resource.Id.notification_background = global::KotaPalace.Resource.Id.notification_background;
+			global::XamarinTextDrawable.Resource.Id.notification_main_column = global::KotaPalace.Resource.Id.notification_main_column;
+			global::XamarinTextDrawable.Resource.Id.notification_main_column_container = global::KotaPalace.Resource.Id.notification_main_column_container;
+			global::XamarinTextDrawable.Resource.Id.parentPanel = global::KotaPalace.Resource.Id.parentPanel;
+			global::XamarinTextDrawable.Resource.Id.progress_circular = global::KotaPalace.Resource.Id.progress_circular;
+			global::XamarinTextDrawable.Resource.Id.progress_horizontal = global::KotaPalace.Resource.Id.progress_horizontal;
+			global::XamarinTextDrawable.Resource.Id.radio = global::KotaPalace.Resource.Id.radio;
+			global::XamarinTextDrawable.Resource.Id.right_icon = global::KotaPalace.Resource.Id.right_icon;
+			global::XamarinTextDrawable.Resource.Id.right_side = global::KotaPalace.Resource.Id.right_side;
+			global::XamarinTextDrawable.Resource.Id.screen = global::KotaPalace.Resource.Id.screen;
+			global::XamarinTextDrawable.Resource.Id.scrollIndicatorDown = global::KotaPalace.Resource.Id.scrollIndicatorDown;
+			global::XamarinTextDrawable.Resource.Id.scrollIndicatorUp = global::KotaPalace.Resource.Id.scrollIndicatorUp;
+			global::XamarinTextDrawable.Resource.Id.scrollView = global::KotaPalace.Resource.Id.scrollView;
+			global::XamarinTextDrawable.Resource.Id.search_badge = global::KotaPalace.Resource.Id.search_badge;
+			global::XamarinTextDrawable.Resource.Id.search_bar = global::KotaPalace.Resource.Id.search_bar;
+			global::XamarinTextDrawable.Resource.Id.search_button = global::KotaPalace.Resource.Id.search_button;
+			global::XamarinTextDrawable.Resource.Id.search_close_btn = global::KotaPalace.Resource.Id.search_close_btn;
+			global::XamarinTextDrawable.Resource.Id.search_edit_frame = global::KotaPalace.Resource.Id.search_edit_frame;
+			global::XamarinTextDrawable.Resource.Id.search_go_btn = global::KotaPalace.Resource.Id.search_go_btn;
+			global::XamarinTextDrawable.Resource.Id.search_mag_icon = global::KotaPalace.Resource.Id.search_mag_icon;
+			global::XamarinTextDrawable.Resource.Id.search_plate = global::KotaPalace.Resource.Id.search_plate;
+			global::XamarinTextDrawable.Resource.Id.search_src_text = global::KotaPalace.Resource.Id.search_src_text;
+			global::XamarinTextDrawable.Resource.Id.search_voice_btn = global::KotaPalace.Resource.Id.search_voice_btn;
+			global::XamarinTextDrawable.Resource.Id.select_dialog_listview = global::KotaPalace.Resource.Id.select_dialog_listview;
+			global::XamarinTextDrawable.Resource.Id.shortcut = global::KotaPalace.Resource.Id.shortcut;
+			global::XamarinTextDrawable.Resource.Id.showCustom = global::KotaPalace.Resource.Id.showCustom;
+			global::XamarinTextDrawable.Resource.Id.showHome = global::KotaPalace.Resource.Id.showHome;
+			global::XamarinTextDrawable.Resource.Id.showTitle = global::KotaPalace.Resource.Id.showTitle;
+			global::XamarinTextDrawable.Resource.Id.spacer = global::KotaPalace.Resource.Id.spacer;
+			global::XamarinTextDrawable.Resource.Id.split_action_bar = global::KotaPalace.Resource.Id.split_action_bar;
+			global::XamarinTextDrawable.Resource.Id.src_atop = global::KotaPalace.Resource.Id.src_atop;
+			global::XamarinTextDrawable.Resource.Id.src_in = global::KotaPalace.Resource.Id.src_in;
+			global::XamarinTextDrawable.Resource.Id.src_over = global::KotaPalace.Resource.Id.src_over;
+			global::XamarinTextDrawable.Resource.Id.status_bar_latest_event_content = global::KotaPalace.Resource.Id.status_bar_latest_event_content;
+			global::XamarinTextDrawable.Resource.Id.submenuarrow = global::KotaPalace.Resource.Id.submenuarrow;
+			global::XamarinTextDrawable.Resource.Id.submit_area = global::KotaPalace.Resource.Id.submit_area;
+			global::XamarinTextDrawable.Resource.Id.tabMode = global::KotaPalace.Resource.Id.tabMode;
+			global::XamarinTextDrawable.Resource.Id.tag_transition_group = global::KotaPalace.Resource.Id.tag_transition_group;
+			global::XamarinTextDrawable.Resource.Id.text = global::KotaPalace.Resource.Id.text;
+			global::XamarinTextDrawable.Resource.Id.text2 = global::KotaPalace.Resource.Id.text2;
+			global::XamarinTextDrawable.Resource.Id.textSpacerNoButtons = global::KotaPalace.Resource.Id.textSpacerNoButtons;
+			global::XamarinTextDrawable.Resource.Id.textSpacerNoTitle = global::KotaPalace.Resource.Id.textSpacerNoTitle;
+			global::XamarinTextDrawable.Resource.Id.time = global::KotaPalace.Resource.Id.time;
+			global::XamarinTextDrawable.Resource.Id.title = global::KotaPalace.Resource.Id.title;
+			global::XamarinTextDrawable.Resource.Id.titleDividerNoCustom = global::KotaPalace.Resource.Id.titleDividerNoCustom;
+			global::XamarinTextDrawable.Resource.Id.title_template = global::KotaPalace.Resource.Id.title_template;
+			global::XamarinTextDrawable.Resource.Id.top = global::KotaPalace.Resource.Id.top;
+			global::XamarinTextDrawable.Resource.Id.topPanel = global::KotaPalace.Resource.Id.topPanel;
+			global::XamarinTextDrawable.Resource.Id.uniform = global::KotaPalace.Resource.Id.uniform;
+			global::XamarinTextDrawable.Resource.Id.up = global::KotaPalace.Resource.Id.up;
+			global::XamarinTextDrawable.Resource.Id.useLogo = global::KotaPalace.Resource.Id.useLogo;
+			global::XamarinTextDrawable.Resource.Id.withText = global::KotaPalace.Resource.Id.withText;
+			global::XamarinTextDrawable.Resource.Id.wrap_content = global::KotaPalace.Resource.Id.wrap_content;
+			global::XamarinTextDrawable.Resource.Integer.abc_config_activityDefaultDur = global::KotaPalace.Resource.Integer.abc_config_activityDefaultDur;
+			global::XamarinTextDrawable.Resource.Integer.abc_config_activityShortDur = global::KotaPalace.Resource.Integer.abc_config_activityShortDur;
+			global::XamarinTextDrawable.Resource.Integer.cancel_button_image_alpha = global::KotaPalace.Resource.Integer.cancel_button_image_alpha;
+			global::XamarinTextDrawable.Resource.Integer.config_tooltipAnimTime = global::KotaPalace.Resource.Integer.config_tooltipAnimTime;
+			global::XamarinTextDrawable.Resource.Integer.status_bar_notification_info_maxnum = global::KotaPalace.Resource.Integer.status_bar_notification_info_maxnum;
+			global::XamarinTextDrawable.Resource.Layout.abc_action_bar_title_item = global::KotaPalace.Resource.Layout.abc_action_bar_title_item;
+			global::XamarinTextDrawable.Resource.Layout.abc_action_bar_up_container = global::KotaPalace.Resource.Layout.abc_action_bar_up_container;
+			global::XamarinTextDrawable.Resource.Layout.abc_action_menu_item_layout = global::KotaPalace.Resource.Layout.abc_action_menu_item_layout;
+			global::XamarinTextDrawable.Resource.Layout.abc_action_menu_layout = global::KotaPalace.Resource.Layout.abc_action_menu_layout;
+			global::XamarinTextDrawable.Resource.Layout.abc_action_mode_bar = global::KotaPalace.Resource.Layout.abc_action_mode_bar;
+			global::XamarinTextDrawable.Resource.Layout.abc_action_mode_close_item_material = global::KotaPalace.Resource.Layout.abc_action_mode_close_item_material;
+			global::XamarinTextDrawable.Resource.Layout.abc_activity_chooser_view = global::KotaPalace.Resource.Layout.abc_activity_chooser_view;
+			global::XamarinTextDrawable.Resource.Layout.abc_activity_chooser_view_list_item = global::KotaPalace.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::XamarinTextDrawable.Resource.Layout.abc_alert_dialog_button_bar_material = global::KotaPalace.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::XamarinTextDrawable.Resource.Layout.abc_alert_dialog_material = global::KotaPalace.Resource.Layout.abc_alert_dialog_material;
+			global::XamarinTextDrawable.Resource.Layout.abc_alert_dialog_title_material = global::KotaPalace.Resource.Layout.abc_alert_dialog_title_material;
+			global::XamarinTextDrawable.Resource.Layout.abc_dialog_title_material = global::KotaPalace.Resource.Layout.abc_dialog_title_material;
+			global::XamarinTextDrawable.Resource.Layout.abc_expanded_menu_layout = global::KotaPalace.Resource.Layout.abc_expanded_menu_layout;
+			global::XamarinTextDrawable.Resource.Layout.abc_list_menu_item_checkbox = global::KotaPalace.Resource.Layout.abc_list_menu_item_checkbox;
+			global::XamarinTextDrawable.Resource.Layout.abc_list_menu_item_icon = global::KotaPalace.Resource.Layout.abc_list_menu_item_icon;
+			global::XamarinTextDrawable.Resource.Layout.abc_list_menu_item_layout = global::KotaPalace.Resource.Layout.abc_list_menu_item_layout;
+			global::XamarinTextDrawable.Resource.Layout.abc_list_menu_item_radio = global::KotaPalace.Resource.Layout.abc_list_menu_item_radio;
+			global::XamarinTextDrawable.Resource.Layout.abc_popup_menu_header_item_layout = global::KotaPalace.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::XamarinTextDrawable.Resource.Layout.abc_popup_menu_item_layout = global::KotaPalace.Resource.Layout.abc_popup_menu_item_layout;
+			global::XamarinTextDrawable.Resource.Layout.abc_screen_content_include = global::KotaPalace.Resource.Layout.abc_screen_content_include;
+			global::XamarinTextDrawable.Resource.Layout.abc_screen_simple = global::KotaPalace.Resource.Layout.abc_screen_simple;
+			global::XamarinTextDrawable.Resource.Layout.abc_screen_simple_overlay_action_mode = global::KotaPalace.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::XamarinTextDrawable.Resource.Layout.abc_screen_toolbar = global::KotaPalace.Resource.Layout.abc_screen_toolbar;
+			global::XamarinTextDrawable.Resource.Layout.abc_search_dropdown_item_icons_2line = global::KotaPalace.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::XamarinTextDrawable.Resource.Layout.abc_search_view = global::KotaPalace.Resource.Layout.abc_search_view;
+			global::XamarinTextDrawable.Resource.Layout.abc_select_dialog_material = global::KotaPalace.Resource.Layout.abc_select_dialog_material;
+			global::XamarinTextDrawable.Resource.Layout.notification_action = global::KotaPalace.Resource.Layout.notification_action;
+			global::XamarinTextDrawable.Resource.Layout.notification_action_tombstone = global::KotaPalace.Resource.Layout.notification_action_tombstone;
+			global::XamarinTextDrawable.Resource.Layout.notification_media_action = global::KotaPalace.Resource.Layout.notification_media_action;
+			global::XamarinTextDrawable.Resource.Layout.notification_media_cancel_action = global::KotaPalace.Resource.Layout.notification_media_cancel_action;
+			global::XamarinTextDrawable.Resource.Layout.notification_template_big_media = global::KotaPalace.Resource.Layout.notification_template_big_media;
+			global::XamarinTextDrawable.Resource.Layout.notification_template_big_media_custom = global::KotaPalace.Resource.Layout.notification_template_big_media_custom;
+			global::XamarinTextDrawable.Resource.Layout.notification_template_big_media_narrow = global::KotaPalace.Resource.Layout.notification_template_big_media_narrow;
+			global::XamarinTextDrawable.Resource.Layout.notification_template_big_media_narrow_custom = global::KotaPalace.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::XamarinTextDrawable.Resource.Layout.notification_template_custom_big = global::KotaPalace.Resource.Layout.notification_template_custom_big;
+			global::XamarinTextDrawable.Resource.Layout.notification_template_icon_group = global::KotaPalace.Resource.Layout.notification_template_icon_group;
+			global::XamarinTextDrawable.Resource.Layout.notification_template_lines_media = global::KotaPalace.Resource.Layout.notification_template_lines_media;
+			global::XamarinTextDrawable.Resource.Layout.notification_template_media = global::KotaPalace.Resource.Layout.notification_template_media;
+			global::XamarinTextDrawable.Resource.Layout.notification_template_media_custom = global::KotaPalace.Resource.Layout.notification_template_media_custom;
+			global::XamarinTextDrawable.Resource.Layout.notification_template_part_chronometer = global::KotaPalace.Resource.Layout.notification_template_part_chronometer;
+			global::XamarinTextDrawable.Resource.Layout.notification_template_part_time = global::KotaPalace.Resource.Layout.notification_template_part_time;
+			global::XamarinTextDrawable.Resource.Layout.select_dialog_item_material = global::KotaPalace.Resource.Layout.select_dialog_item_material;
+			global::XamarinTextDrawable.Resource.Layout.select_dialog_multichoice_material = global::KotaPalace.Resource.Layout.select_dialog_multichoice_material;
+			global::XamarinTextDrawable.Resource.Layout.select_dialog_singlechoice_material = global::KotaPalace.Resource.Layout.select_dialog_singlechoice_material;
+			global::XamarinTextDrawable.Resource.Layout.support_simple_spinner_dropdown_item = global::KotaPalace.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::XamarinTextDrawable.Resource.String.abc_action_bar_home_description = global::KotaPalace.Resource.String.abc_action_bar_home_description;
+			global::XamarinTextDrawable.Resource.String.abc_action_bar_up_description = global::KotaPalace.Resource.String.abc_action_bar_up_description;
+			global::XamarinTextDrawable.Resource.String.abc_action_menu_overflow_description = global::KotaPalace.Resource.String.abc_action_menu_overflow_description;
+			global::XamarinTextDrawable.Resource.String.abc_action_mode_done = global::KotaPalace.Resource.String.abc_action_mode_done;
+			global::XamarinTextDrawable.Resource.String.abc_activity_chooser_view_see_all = global::KotaPalace.Resource.String.abc_activity_chooser_view_see_all;
+			global::XamarinTextDrawable.Resource.String.abc_activitychooserview_choose_application = global::KotaPalace.Resource.String.abc_activitychooserview_choose_application;
+			global::XamarinTextDrawable.Resource.String.abc_capital_off = global::KotaPalace.Resource.String.abc_capital_off;
+			global::XamarinTextDrawable.Resource.String.abc_capital_on = global::KotaPalace.Resource.String.abc_capital_on;
+			global::XamarinTextDrawable.Resource.String.abc_search_hint = global::KotaPalace.Resource.String.abc_search_hint;
+			global::XamarinTextDrawable.Resource.String.abc_searchview_description_clear = global::KotaPalace.Resource.String.abc_searchview_description_clear;
+			global::XamarinTextDrawable.Resource.String.abc_searchview_description_query = global::KotaPalace.Resource.String.abc_searchview_description_query;
+			global::XamarinTextDrawable.Resource.String.abc_searchview_description_search = global::KotaPalace.Resource.String.abc_searchview_description_search;
+			global::XamarinTextDrawable.Resource.String.abc_searchview_description_submit = global::KotaPalace.Resource.String.abc_searchview_description_submit;
+			global::XamarinTextDrawable.Resource.String.abc_searchview_description_voice = global::KotaPalace.Resource.String.abc_searchview_description_voice;
+			global::XamarinTextDrawable.Resource.String.abc_shareactionprovider_share_with = global::KotaPalace.Resource.String.abc_shareactionprovider_share_with;
+			global::XamarinTextDrawable.Resource.String.abc_shareactionprovider_share_with_application = global::KotaPalace.Resource.String.abc_shareactionprovider_share_with_application;
+			global::XamarinTextDrawable.Resource.String.abc_toolbar_collapse_description = global::KotaPalace.Resource.String.abc_toolbar_collapse_description;
+			global::XamarinTextDrawable.Resource.String.app_name = global::KotaPalace.Resource.String.app_name;
+			global::XamarinTextDrawable.Resource.String.hello = global::KotaPalace.Resource.String.hello;
+			global::XamarinTextDrawable.Resource.String.search_menu_title = global::KotaPalace.Resource.String.search_menu_title;
+			global::XamarinTextDrawable.Resource.String.status_bar_notification_info_overflow = global::KotaPalace.Resource.String.status_bar_notification_info_overflow;
+			global::XamarinTextDrawable.Resource.Style.AlertDialog_AppCompat = global::KotaPalace.Resource.Style.AlertDialog_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.AlertDialog_AppCompat_Light = global::KotaPalace.Resource.Style.AlertDialog_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Animation_AppCompat_Dialog = global::KotaPalace.Resource.Style.Animation_AppCompat_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Animation_AppCompat_DropDownUp = global::KotaPalace.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::XamarinTextDrawable.Resource.Style.Animation_AppCompat_Tooltip = global::KotaPalace.Resource.Style.Animation_AppCompat_Tooltip;
+			global::XamarinTextDrawable.Resource.Style.Base_AlertDialog_AppCompat = global::KotaPalace.Resource.Style.Base_AlertDialog_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Base_AlertDialog_AppCompat_Light = global::KotaPalace.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Base_Animation_AppCompat_Dialog = global::KotaPalace.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::KotaPalace.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::XamarinTextDrawable.Resource.Style.Base_Animation_AppCompat_Tooltip = global::KotaPalace.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::XamarinTextDrawable.Resource.Style.Base_DialogWindowTitle_AppCompat = global::KotaPalace.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::KotaPalace.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Button = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Large = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Small = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Title = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::KotaPalace.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::KotaPalace.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::KotaPalace.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::XamarinTextDrawable.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::KotaPalace.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat = global::KotaPalace.Resource.Style.Base_Theme_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_Dialog = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_Light = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::XamarinTextDrawable.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::KotaPalace.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::XamarinTextDrawable.Resource.Style.Base_ThemeOverlay_AppCompat = global::KotaPalace.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::KotaPalace.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::XamarinTextDrawable.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::KotaPalace.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::XamarinTextDrawable.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::KotaPalace.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::XamarinTextDrawable.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::KotaPalace.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::KotaPalace.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::XamarinTextDrawable.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::KotaPalace.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Base_V21_Theme_AppCompat = global::KotaPalace.Resource.Style.Base_V21_Theme_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::KotaPalace.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Base_V21_Theme_AppCompat_Light = global::KotaPalace.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::KotaPalace.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::KotaPalace.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Base_V22_Theme_AppCompat = global::KotaPalace.Resource.Style.Base_V22_Theme_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Base_V22_Theme_AppCompat_Light = global::KotaPalace.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Base_V23_Theme_AppCompat = global::KotaPalace.Resource.Style.Base_V23_Theme_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Base_V23_Theme_AppCompat_Light = global::KotaPalace.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Base_V26_Theme_AppCompat = global::KotaPalace.Resource.Style.Base_V26_Theme_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Base_V26_Theme_AppCompat_Light = global::KotaPalace.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::KotaPalace.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::XamarinTextDrawable.Resource.Style.Base_V7_Theme_AppCompat = global::KotaPalace.Resource.Style.Base_V7_Theme_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::KotaPalace.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Base_V7_Theme_AppCompat_Light = global::KotaPalace.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::KotaPalace.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::KotaPalace.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::KotaPalace.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::XamarinTextDrawable.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::KotaPalace.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::XamarinTextDrawable.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::KotaPalace.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ActionBar = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ActionButton = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ActionMode = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Button = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Button;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Button_Small = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_EditText = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ImageButton = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ListView = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_RatingBar = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_SearchView = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_SeekBar = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Spinner = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Toolbar = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::XamarinTextDrawable.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::KotaPalace.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::XamarinTextDrawable.Resource.Style.Platform_AppCompat = global::KotaPalace.Resource.Style.Platform_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Platform_AppCompat_Light = global::KotaPalace.Resource.Style.Platform_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Platform_ThemeOverlay_AppCompat = global::KotaPalace.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::KotaPalace.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::XamarinTextDrawable.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::KotaPalace.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Platform_V21_AppCompat = global::KotaPalace.Resource.Style.Platform_V21_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Platform_V21_AppCompat_Light = global::KotaPalace.Resource.Style.Platform_V21_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Platform_V25_AppCompat = global::KotaPalace.Resource.Style.Platform_V25_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Platform_V25_AppCompat_Light = global::KotaPalace.Resource.Style.Platform_V25_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Platform_Widget_AppCompat_Spinner = global::KotaPalace.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::XamarinTextDrawable.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::KotaPalace.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::KotaPalace.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::XamarinTextDrawable.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::KotaPalace.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::XamarinTextDrawable.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::KotaPalace.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::XamarinTextDrawable.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::KotaPalace.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::XamarinTextDrawable.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::KotaPalace.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::XamarinTextDrawable.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::KotaPalace.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::XamarinTextDrawable.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::KotaPalace.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::XamarinTextDrawable.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::KotaPalace.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::XamarinTextDrawable.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::KotaPalace.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::XamarinTextDrawable.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::KotaPalace.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::XamarinTextDrawable.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::KotaPalace.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::XamarinTextDrawable.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::KotaPalace.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::XamarinTextDrawable.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::KotaPalace.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat = global::KotaPalace.Resource.Style.TextAppearance_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Body1 = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Body2 = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Button = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Button;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Caption = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Display1 = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Display2 = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Display3 = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Display4 = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Headline = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Inverse = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Large = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Large;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Medium = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Menu = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Small = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Small;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Subhead = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Title = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Title;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Tooltip = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::KotaPalace.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Compat_Notification = global::KotaPalace.Resource.Style.TextAppearance_Compat_Notification;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Compat_Notification_Info = global::KotaPalace.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::KotaPalace.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::KotaPalace.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::KotaPalace.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Compat_Notification_Media = global::KotaPalace.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Compat_Notification_Time = global::KotaPalace.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::KotaPalace.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Compat_Notification_Title = global::KotaPalace.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::KotaPalace.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::KotaPalace.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::KotaPalace.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::XamarinTextDrawable.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::KotaPalace.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat = global::KotaPalace.Resource.Style.Theme_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_CompactMenu = global::KotaPalace.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_DayNight = global::KotaPalace.Resource.Style.Theme_AppCompat_DayNight;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::KotaPalace.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::KotaPalace.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::KotaPalace.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::KotaPalace.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::KotaPalace.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::KotaPalace.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_Dialog = global::KotaPalace.Resource.Style.Theme_AppCompat_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_Dialog_Alert = global::KotaPalace.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::KotaPalace.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::KotaPalace.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_Light = global::KotaPalace.Resource.Style.Theme_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::KotaPalace.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_Light_Dialog = global::KotaPalace.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::KotaPalace.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::KotaPalace.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::KotaPalace.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::KotaPalace.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::XamarinTextDrawable.Resource.Style.Theme_AppCompat_NoActionBar = global::KotaPalace.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::XamarinTextDrawable.Resource.Style.ThemeOverlay_AppCompat = global::KotaPalace.Resource.Style.ThemeOverlay_AppCompat;
+			global::XamarinTextDrawable.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::KotaPalace.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::XamarinTextDrawable.Resource.Style.ThemeOverlay_AppCompat_Dark = global::KotaPalace.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::XamarinTextDrawable.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::KotaPalace.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::XamarinTextDrawable.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::KotaPalace.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::XamarinTextDrawable.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::KotaPalace.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::XamarinTextDrawable.Resource.Style.ThemeOverlay_AppCompat_Light = global::KotaPalace.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ActionBar = global::KotaPalace.Resource.Style.Widget_AppCompat_ActionBar;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::KotaPalace.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::KotaPalace.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::KotaPalace.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::KotaPalace.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ActionButton = global::KotaPalace.Resource.Style.Widget_AppCompat_ActionButton;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::KotaPalace.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::KotaPalace.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ActionMode = global::KotaPalace.Resource.Style.Widget_AppCompat_ActionMode;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ActivityChooserView = global::KotaPalace.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::KotaPalace.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Button = global::KotaPalace.Resource.Style.Widget_AppCompat_Button;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Button_Borderless = global::KotaPalace.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::KotaPalace.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::KotaPalace.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Button_Colored = global::KotaPalace.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Button_Small = global::KotaPalace.Resource.Style.Widget_AppCompat_Button_Small;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ButtonBar = global::KotaPalace.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::KotaPalace.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::KotaPalace.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::KotaPalace.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::KotaPalace.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::KotaPalace.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::KotaPalace.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_EditText = global::KotaPalace.Resource.Style.Widget_AppCompat_EditText;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ImageButton = global::KotaPalace.Resource.Style.Widget_AppCompat_ImageButton;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionBar = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionButton = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_SearchView = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::KotaPalace.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ListMenuView = global::KotaPalace.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ListPopupWindow = global::KotaPalace.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ListView = global::KotaPalace.Resource.Style.Widget_AppCompat_ListView;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ListView_DropDown = global::KotaPalace.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ListView_Menu = global::KotaPalace.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_PopupMenu = global::KotaPalace.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::KotaPalace.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_PopupWindow = global::KotaPalace.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ProgressBar = global::KotaPalace.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::KotaPalace.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_RatingBar = global::KotaPalace.Resource.Style.Widget_AppCompat_RatingBar;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::KotaPalace.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_RatingBar_Small = global::KotaPalace.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_SearchView = global::KotaPalace.Resource.Style.Widget_AppCompat_SearchView;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::KotaPalace.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_SeekBar = global::KotaPalace.Resource.Style.Widget_AppCompat_SeekBar;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::KotaPalace.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Spinner = global::KotaPalace.Resource.Style.Widget_AppCompat_Spinner;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::KotaPalace.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::KotaPalace.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::KotaPalace.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::KotaPalace.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Toolbar = global::KotaPalace.Resource.Style.Widget_AppCompat_Toolbar;
+			global::XamarinTextDrawable.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::KotaPalace.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::XamarinTextDrawable.Resource.Style.Widget_Compat_NotificationActionContainer = global::KotaPalace.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::XamarinTextDrawable.Resource.Style.Widget_Compat_NotificationActionText = global::KotaPalace.Resource.Style.Widget_Compat_NotificationActionText;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar = global::KotaPalace.Resource.Styleable.ActionBar;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_background = global::KotaPalace.Resource.Styleable.ActionBar_background;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_backgroundSplit = global::KotaPalace.Resource.Styleable.ActionBar_backgroundSplit;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_backgroundStacked = global::KotaPalace.Resource.Styleable.ActionBar_backgroundStacked;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_contentInsetEnd = global::KotaPalace.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::KotaPalace.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_contentInsetLeft = global::KotaPalace.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_contentInsetRight = global::KotaPalace.Resource.Styleable.ActionBar_contentInsetRight;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_contentInsetStart = global::KotaPalace.Resource.Styleable.ActionBar_contentInsetStart;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::KotaPalace.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_customNavigationLayout = global::KotaPalace.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_displayOptions = global::KotaPalace.Resource.Styleable.ActionBar_displayOptions;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_divider = global::KotaPalace.Resource.Styleable.ActionBar_divider;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_elevation = global::KotaPalace.Resource.Styleable.ActionBar_elevation;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_height = global::KotaPalace.Resource.Styleable.ActionBar_height;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_hideOnContentScroll = global::KotaPalace.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_homeAsUpIndicator = global::KotaPalace.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_homeLayout = global::KotaPalace.Resource.Styleable.ActionBar_homeLayout;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_icon = global::KotaPalace.Resource.Styleable.ActionBar_icon;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::KotaPalace.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_itemPadding = global::KotaPalace.Resource.Styleable.ActionBar_itemPadding;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_logo = global::KotaPalace.Resource.Styleable.ActionBar_logo;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_navigationMode = global::KotaPalace.Resource.Styleable.ActionBar_navigationMode;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_popupTheme = global::KotaPalace.Resource.Styleable.ActionBar_popupTheme;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_progressBarPadding = global::KotaPalace.Resource.Styleable.ActionBar_progressBarPadding;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_progressBarStyle = global::KotaPalace.Resource.Styleable.ActionBar_progressBarStyle;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_subtitle = global::KotaPalace.Resource.Styleable.ActionBar_subtitle;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_subtitleTextStyle = global::KotaPalace.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_title = global::KotaPalace.Resource.Styleable.ActionBar_title;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBar_titleTextStyle = global::KotaPalace.Resource.Styleable.ActionBar_titleTextStyle;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBarLayout = global::KotaPalace.Resource.Styleable.ActionBarLayout;
+			global::XamarinTextDrawable.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::KotaPalace.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::XamarinTextDrawable.Resource.Styleable.ActionMenuItemView = global::KotaPalace.Resource.Styleable.ActionMenuItemView;
+			global::XamarinTextDrawable.Resource.Styleable.ActionMenuItemView_android_minWidth = global::KotaPalace.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::XamarinTextDrawable.Resource.Styleable.ActionMenuView = global::KotaPalace.Resource.Styleable.ActionMenuView;
+			global::XamarinTextDrawable.Resource.Styleable.ActionMode = global::KotaPalace.Resource.Styleable.ActionMode;
+			global::XamarinTextDrawable.Resource.Styleable.ActionMode_background = global::KotaPalace.Resource.Styleable.ActionMode_background;
+			global::XamarinTextDrawable.Resource.Styleable.ActionMode_backgroundSplit = global::KotaPalace.Resource.Styleable.ActionMode_backgroundSplit;
+			global::XamarinTextDrawable.Resource.Styleable.ActionMode_closeItemLayout = global::KotaPalace.Resource.Styleable.ActionMode_closeItemLayout;
+			global::XamarinTextDrawable.Resource.Styleable.ActionMode_height = global::KotaPalace.Resource.Styleable.ActionMode_height;
+			global::XamarinTextDrawable.Resource.Styleable.ActionMode_subtitleTextStyle = global::KotaPalace.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::XamarinTextDrawable.Resource.Styleable.ActionMode_titleTextStyle = global::KotaPalace.Resource.Styleable.ActionMode_titleTextStyle;
+			global::XamarinTextDrawable.Resource.Styleable.ActivityChooserView = global::KotaPalace.Resource.Styleable.ActivityChooserView;
+			global::XamarinTextDrawable.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::KotaPalace.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::XamarinTextDrawable.Resource.Styleable.ActivityChooserView_initialActivityCount = global::KotaPalace.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::XamarinTextDrawable.Resource.Styleable.AlertDialog = global::KotaPalace.Resource.Styleable.AlertDialog;
+			global::XamarinTextDrawable.Resource.Styleable.AlertDialog_android_layout = global::KotaPalace.Resource.Styleable.AlertDialog_android_layout;
+			global::XamarinTextDrawable.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::KotaPalace.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::XamarinTextDrawable.Resource.Styleable.AlertDialog_listItemLayout = global::KotaPalace.Resource.Styleable.AlertDialog_listItemLayout;
+			global::XamarinTextDrawable.Resource.Styleable.AlertDialog_listLayout = global::KotaPalace.Resource.Styleable.AlertDialog_listLayout;
+			global::XamarinTextDrawable.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::KotaPalace.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::XamarinTextDrawable.Resource.Styleable.AlertDialog_showTitle = global::KotaPalace.Resource.Styleable.AlertDialog_showTitle;
+			global::XamarinTextDrawable.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::KotaPalace.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatImageView = global::KotaPalace.Resource.Styleable.AppCompatImageView;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatImageView_android_src = global::KotaPalace.Resource.Styleable.AppCompatImageView_android_src;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatImageView_srcCompat = global::KotaPalace.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatImageView_tint = global::KotaPalace.Resource.Styleable.AppCompatImageView_tint;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatImageView_tintMode = global::KotaPalace.Resource.Styleable.AppCompatImageView_tintMode;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatSeekBar = global::KotaPalace.Resource.Styleable.AppCompatSeekBar;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatSeekBar_android_thumb = global::KotaPalace.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatSeekBar_tickMark = global::KotaPalace.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::KotaPalace.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::KotaPalace.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextHelper = global::KotaPalace.Resource.Styleable.AppCompatTextHelper;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::KotaPalace.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::KotaPalace.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::KotaPalace.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::KotaPalace.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::KotaPalace.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::KotaPalace.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::KotaPalace.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextView = global::KotaPalace.Resource.Styleable.AppCompatTextView;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextView_android_textAppearance = global::KotaPalace.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::KotaPalace.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::KotaPalace.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::KotaPalace.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::KotaPalace.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::KotaPalace.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextView_fontFamily = global::KotaPalace.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTextView_textAllCaps = global::KotaPalace.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme = global::KotaPalace.Resource.Styleable.AppCompatTheme;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionBarDivider = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionBarSize = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionBarStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionBarTheme = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModeBackground = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModeStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::KotaPalace.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::KotaPalace.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::KotaPalace.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_buttonStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::KotaPalace.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_checkboxStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_colorAccent = global::KotaPalace.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::KotaPalace.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::KotaPalace.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_colorControlActivated = global::KotaPalace.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::KotaPalace.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_colorControlNormal = global::KotaPalace.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_colorError = global::KotaPalace.Resource.Styleable.AppCompatTheme_colorError;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_colorPrimary = global::KotaPalace.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::KotaPalace.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::KotaPalace.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_controlBackground = global::KotaPalace.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::KotaPalace.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_dialogTheme = global::KotaPalace.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::KotaPalace.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_dividerVertical = global::KotaPalace.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::KotaPalace.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_editTextBackground = global::KotaPalace.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_editTextColor = global::KotaPalace.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_editTextStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::KotaPalace.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::KotaPalace.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::KotaPalace.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::KotaPalace.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::KotaPalace.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::KotaPalace.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::KotaPalace.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::KotaPalace.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_panelBackground = global::KotaPalace.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::KotaPalace.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::KotaPalace.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::KotaPalace.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::KotaPalace.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_searchViewStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_seekBarStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::KotaPalace.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::KotaPalace.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_spinnerStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_switchStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::KotaPalace.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::KotaPalace.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::KotaPalace.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::KotaPalace.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::KotaPalace.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::KotaPalace.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::KotaPalace.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::KotaPalace.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::KotaPalace.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::KotaPalace.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_toolbarStyle = global::KotaPalace.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::KotaPalace.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::KotaPalace.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_windowActionBar = global::KotaPalace.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::KotaPalace.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::KotaPalace.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::KotaPalace.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::KotaPalace.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::KotaPalace.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::KotaPalace.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::KotaPalace.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::KotaPalace.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::XamarinTextDrawable.Resource.Styleable.AppCompatTheme_windowNoTitle = global::KotaPalace.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::XamarinTextDrawable.Resource.Styleable.ButtonBarLayout = global::KotaPalace.Resource.Styleable.ButtonBarLayout;
+			global::XamarinTextDrawable.Resource.Styleable.ButtonBarLayout_allowStacking = global::KotaPalace.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::XamarinTextDrawable.Resource.Styleable.ColorStateListItem = global::KotaPalace.Resource.Styleable.ColorStateListItem;
+			global::XamarinTextDrawable.Resource.Styleable.ColorStateListItem_alpha = global::KotaPalace.Resource.Styleable.ColorStateListItem_alpha;
+			global::XamarinTextDrawable.Resource.Styleable.ColorStateListItem_android_alpha = global::KotaPalace.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::XamarinTextDrawable.Resource.Styleable.ColorStateListItem_android_color = global::KotaPalace.Resource.Styleable.ColorStateListItem_android_color;
+			global::XamarinTextDrawable.Resource.Styleable.CompoundButton = global::KotaPalace.Resource.Styleable.CompoundButton;
+			global::XamarinTextDrawable.Resource.Styleable.CompoundButton_android_button = global::KotaPalace.Resource.Styleable.CompoundButton_android_button;
+			global::XamarinTextDrawable.Resource.Styleable.CompoundButton_buttonTint = global::KotaPalace.Resource.Styleable.CompoundButton_buttonTint;
+			global::XamarinTextDrawable.Resource.Styleable.CompoundButton_buttonTintMode = global::KotaPalace.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::XamarinTextDrawable.Resource.Styleable.DrawerArrowToggle = global::KotaPalace.Resource.Styleable.DrawerArrowToggle;
+			global::XamarinTextDrawable.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::KotaPalace.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::XamarinTextDrawable.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::KotaPalace.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::XamarinTextDrawable.Resource.Styleable.DrawerArrowToggle_barLength = global::KotaPalace.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::XamarinTextDrawable.Resource.Styleable.DrawerArrowToggle_color = global::KotaPalace.Resource.Styleable.DrawerArrowToggle_color;
+			global::XamarinTextDrawable.Resource.Styleable.DrawerArrowToggle_drawableSize = global::KotaPalace.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::XamarinTextDrawable.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::KotaPalace.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::XamarinTextDrawable.Resource.Styleable.DrawerArrowToggle_spinBars = global::KotaPalace.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::XamarinTextDrawable.Resource.Styleable.DrawerArrowToggle_thickness = global::KotaPalace.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamily = global::KotaPalace.Resource.Styleable.FontFamily;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamily_fontProviderAuthority = global::KotaPalace.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamily_fontProviderCerts = global::KotaPalace.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::KotaPalace.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::KotaPalace.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamily_fontProviderPackage = global::KotaPalace.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamily_fontProviderQuery = global::KotaPalace.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamilyFont = global::KotaPalace.Resource.Styleable.FontFamilyFont;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamilyFont_android_font = global::KotaPalace.Resource.Styleable.FontFamilyFont_android_font;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamilyFont_android_fontStyle = global::KotaPalace.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamilyFont_android_fontWeight = global::KotaPalace.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamilyFont_font = global::KotaPalace.Resource.Styleable.FontFamilyFont_font;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamilyFont_fontStyle = global::KotaPalace.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::XamarinTextDrawable.Resource.Styleable.FontFamilyFont_fontWeight = global::KotaPalace.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat = global::KotaPalace.Resource.Styleable.LinearLayoutCompat;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_android_gravity = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_android_orientation = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_divider = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_divider;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_showDividers = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_Layout = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::XamarinTextDrawable.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::KotaPalace.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::XamarinTextDrawable.Resource.Styleable.ListPopupWindow = global::KotaPalace.Resource.Styleable.ListPopupWindow;
+			global::XamarinTextDrawable.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::KotaPalace.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::XamarinTextDrawable.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::KotaPalace.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::XamarinTextDrawable.Resource.Styleable.MenuGroup = global::KotaPalace.Resource.Styleable.MenuGroup;
+			global::XamarinTextDrawable.Resource.Styleable.MenuGroup_android_checkableBehavior = global::KotaPalace.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::XamarinTextDrawable.Resource.Styleable.MenuGroup_android_enabled = global::KotaPalace.Resource.Styleable.MenuGroup_android_enabled;
+			global::XamarinTextDrawable.Resource.Styleable.MenuGroup_android_id = global::KotaPalace.Resource.Styleable.MenuGroup_android_id;
+			global::XamarinTextDrawable.Resource.Styleable.MenuGroup_android_menuCategory = global::KotaPalace.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::XamarinTextDrawable.Resource.Styleable.MenuGroup_android_orderInCategory = global::KotaPalace.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::XamarinTextDrawable.Resource.Styleable.MenuGroup_android_visible = global::KotaPalace.Resource.Styleable.MenuGroup_android_visible;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem = global::KotaPalace.Resource.Styleable.MenuItem;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_actionLayout = global::KotaPalace.Resource.Styleable.MenuItem_actionLayout;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_actionProviderClass = global::KotaPalace.Resource.Styleable.MenuItem_actionProviderClass;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_actionViewClass = global::KotaPalace.Resource.Styleable.MenuItem_actionViewClass;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_alphabeticModifiers = global::KotaPalace.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::KotaPalace.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_checkable = global::KotaPalace.Resource.Styleable.MenuItem_android_checkable;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_checked = global::KotaPalace.Resource.Styleable.MenuItem_android_checked;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_enabled = global::KotaPalace.Resource.Styleable.MenuItem_android_enabled;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_icon = global::KotaPalace.Resource.Styleable.MenuItem_android_icon;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_id = global::KotaPalace.Resource.Styleable.MenuItem_android_id;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_menuCategory = global::KotaPalace.Resource.Styleable.MenuItem_android_menuCategory;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_numericShortcut = global::KotaPalace.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_onClick = global::KotaPalace.Resource.Styleable.MenuItem_android_onClick;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_orderInCategory = global::KotaPalace.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_title = global::KotaPalace.Resource.Styleable.MenuItem_android_title;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_titleCondensed = global::KotaPalace.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_android_visible = global::KotaPalace.Resource.Styleable.MenuItem_android_visible;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_contentDescription = global::KotaPalace.Resource.Styleable.MenuItem_contentDescription;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_iconTint = global::KotaPalace.Resource.Styleable.MenuItem_iconTint;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_iconTintMode = global::KotaPalace.Resource.Styleable.MenuItem_iconTintMode;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_numericModifiers = global::KotaPalace.Resource.Styleable.MenuItem_numericModifiers;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_showAsAction = global::KotaPalace.Resource.Styleable.MenuItem_showAsAction;
+			global::XamarinTextDrawable.Resource.Styleable.MenuItem_tooltipText = global::KotaPalace.Resource.Styleable.MenuItem_tooltipText;
+			global::XamarinTextDrawable.Resource.Styleable.MenuView = global::KotaPalace.Resource.Styleable.MenuView;
+			global::XamarinTextDrawable.Resource.Styleable.MenuView_android_headerBackground = global::KotaPalace.Resource.Styleable.MenuView_android_headerBackground;
+			global::XamarinTextDrawable.Resource.Styleable.MenuView_android_horizontalDivider = global::KotaPalace.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::XamarinTextDrawable.Resource.Styleable.MenuView_android_itemBackground = global::KotaPalace.Resource.Styleable.MenuView_android_itemBackground;
+			global::XamarinTextDrawable.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::KotaPalace.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::XamarinTextDrawable.Resource.Styleable.MenuView_android_itemTextAppearance = global::KotaPalace.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::XamarinTextDrawable.Resource.Styleable.MenuView_android_verticalDivider = global::KotaPalace.Resource.Styleable.MenuView_android_verticalDivider;
+			global::XamarinTextDrawable.Resource.Styleable.MenuView_android_windowAnimationStyle = global::KotaPalace.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::XamarinTextDrawable.Resource.Styleable.MenuView_preserveIconSpacing = global::KotaPalace.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::XamarinTextDrawable.Resource.Styleable.MenuView_subMenuArrow = global::KotaPalace.Resource.Styleable.MenuView_subMenuArrow;
+			global::XamarinTextDrawable.Resource.Styleable.PopupWindow = global::KotaPalace.Resource.Styleable.PopupWindow;
+			global::XamarinTextDrawable.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::KotaPalace.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::XamarinTextDrawable.Resource.Styleable.PopupWindow_android_popupBackground = global::KotaPalace.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::XamarinTextDrawable.Resource.Styleable.PopupWindow_overlapAnchor = global::KotaPalace.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::XamarinTextDrawable.Resource.Styleable.PopupWindowBackgroundState = global::KotaPalace.Resource.Styleable.PopupWindowBackgroundState;
+			global::XamarinTextDrawable.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::KotaPalace.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::XamarinTextDrawable.Resource.Styleable.RecycleListView = global::KotaPalace.Resource.Styleable.RecycleListView;
+			global::XamarinTextDrawable.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::KotaPalace.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::XamarinTextDrawable.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::KotaPalace.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView = global::KotaPalace.Resource.Styleable.SearchView;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_android_focusable = global::KotaPalace.Resource.Styleable.SearchView_android_focusable;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_android_imeOptions = global::KotaPalace.Resource.Styleable.SearchView_android_imeOptions;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_android_inputType = global::KotaPalace.Resource.Styleable.SearchView_android_inputType;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_android_maxWidth = global::KotaPalace.Resource.Styleable.SearchView_android_maxWidth;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_closeIcon = global::KotaPalace.Resource.Styleable.SearchView_closeIcon;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_commitIcon = global::KotaPalace.Resource.Styleable.SearchView_commitIcon;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_defaultQueryHint = global::KotaPalace.Resource.Styleable.SearchView_defaultQueryHint;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_goIcon = global::KotaPalace.Resource.Styleable.SearchView_goIcon;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_iconifiedByDefault = global::KotaPalace.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_layout = global::KotaPalace.Resource.Styleable.SearchView_layout;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_queryBackground = global::KotaPalace.Resource.Styleable.SearchView_queryBackground;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_queryHint = global::KotaPalace.Resource.Styleable.SearchView_queryHint;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_searchHintIcon = global::KotaPalace.Resource.Styleable.SearchView_searchHintIcon;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_searchIcon = global::KotaPalace.Resource.Styleable.SearchView_searchIcon;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_submitBackground = global::KotaPalace.Resource.Styleable.SearchView_submitBackground;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_suggestionRowLayout = global::KotaPalace.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::XamarinTextDrawable.Resource.Styleable.SearchView_voiceIcon = global::KotaPalace.Resource.Styleable.SearchView_voiceIcon;
+			global::XamarinTextDrawable.Resource.Styleable.Spinner = global::KotaPalace.Resource.Styleable.Spinner;
+			global::XamarinTextDrawable.Resource.Styleable.Spinner_android_dropDownWidth = global::KotaPalace.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::XamarinTextDrawable.Resource.Styleable.Spinner_android_entries = global::KotaPalace.Resource.Styleable.Spinner_android_entries;
+			global::XamarinTextDrawable.Resource.Styleable.Spinner_android_popupBackground = global::KotaPalace.Resource.Styleable.Spinner_android_popupBackground;
+			global::XamarinTextDrawable.Resource.Styleable.Spinner_android_prompt = global::KotaPalace.Resource.Styleable.Spinner_android_prompt;
+			global::XamarinTextDrawable.Resource.Styleable.Spinner_popupTheme = global::KotaPalace.Resource.Styleable.Spinner_popupTheme;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat = global::KotaPalace.Resource.Styleable.SwitchCompat;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_android_textOff = global::KotaPalace.Resource.Styleable.SwitchCompat_android_textOff;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_android_textOn = global::KotaPalace.Resource.Styleable.SwitchCompat_android_textOn;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_android_thumb = global::KotaPalace.Resource.Styleable.SwitchCompat_android_thumb;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_showText = global::KotaPalace.Resource.Styleable.SwitchCompat_showText;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_splitTrack = global::KotaPalace.Resource.Styleable.SwitchCompat_splitTrack;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_switchMinWidth = global::KotaPalace.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_switchPadding = global::KotaPalace.Resource.Styleable.SwitchCompat_switchPadding;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_switchTextAppearance = global::KotaPalace.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_thumbTextPadding = global::KotaPalace.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_thumbTint = global::KotaPalace.Resource.Styleable.SwitchCompat_thumbTint;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_thumbTintMode = global::KotaPalace.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_track = global::KotaPalace.Resource.Styleable.SwitchCompat_track;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_trackTint = global::KotaPalace.Resource.Styleable.SwitchCompat_trackTint;
+			global::XamarinTextDrawable.Resource.Styleable.SwitchCompat_trackTintMode = global::KotaPalace.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance = global::KotaPalace.Resource.Styleable.TextAppearance;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_android_fontFamily = global::KotaPalace.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_android_shadowColor = global::KotaPalace.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_android_shadowDx = global::KotaPalace.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_android_shadowDy = global::KotaPalace.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_android_shadowRadius = global::KotaPalace.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_android_textColor = global::KotaPalace.Resource.Styleable.TextAppearance_android_textColor;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_android_textColorHint = global::KotaPalace.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_android_textColorLink = global::KotaPalace.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_android_textSize = global::KotaPalace.Resource.Styleable.TextAppearance_android_textSize;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_android_textStyle = global::KotaPalace.Resource.Styleable.TextAppearance_android_textStyle;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_android_typeface = global::KotaPalace.Resource.Styleable.TextAppearance_android_typeface;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_fontFamily = global::KotaPalace.Resource.Styleable.TextAppearance_fontFamily;
+			global::XamarinTextDrawable.Resource.Styleable.TextAppearance_textAllCaps = global::KotaPalace.Resource.Styleable.TextAppearance_textAllCaps;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar = global::KotaPalace.Resource.Styleable.Toolbar;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_android_gravity = global::KotaPalace.Resource.Styleable.Toolbar_android_gravity;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_android_minHeight = global::KotaPalace.Resource.Styleable.Toolbar_android_minHeight;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_buttonGravity = global::KotaPalace.Resource.Styleable.Toolbar_buttonGravity;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_collapseContentDescription = global::KotaPalace.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_collapseIcon = global::KotaPalace.Resource.Styleable.Toolbar_collapseIcon;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_contentInsetEnd = global::KotaPalace.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::KotaPalace.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_contentInsetLeft = global::KotaPalace.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_contentInsetRight = global::KotaPalace.Resource.Styleable.Toolbar_contentInsetRight;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_contentInsetStart = global::KotaPalace.Resource.Styleable.Toolbar_contentInsetStart;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::KotaPalace.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_logo = global::KotaPalace.Resource.Styleable.Toolbar_logo;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_logoDescription = global::KotaPalace.Resource.Styleable.Toolbar_logoDescription;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_maxButtonHeight = global::KotaPalace.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_navigationContentDescription = global::KotaPalace.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_navigationIcon = global::KotaPalace.Resource.Styleable.Toolbar_navigationIcon;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_popupTheme = global::KotaPalace.Resource.Styleable.Toolbar_popupTheme;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_subtitle = global::KotaPalace.Resource.Styleable.Toolbar_subtitle;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_subtitleTextAppearance = global::KotaPalace.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_subtitleTextColor = global::KotaPalace.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_title = global::KotaPalace.Resource.Styleable.Toolbar_title;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_titleMargin = global::KotaPalace.Resource.Styleable.Toolbar_titleMargin;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_titleMarginBottom = global::KotaPalace.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_titleMarginEnd = global::KotaPalace.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_titleMarginStart = global::KotaPalace.Resource.Styleable.Toolbar_titleMarginStart;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_titleMarginTop = global::KotaPalace.Resource.Styleable.Toolbar_titleMarginTop;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_titleMargins = global::KotaPalace.Resource.Styleable.Toolbar_titleMargins;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_titleTextAppearance = global::KotaPalace.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::XamarinTextDrawable.Resource.Styleable.Toolbar_titleTextColor = global::KotaPalace.Resource.Styleable.Toolbar_titleTextColor;
+			global::XamarinTextDrawable.Resource.Styleable.View = global::KotaPalace.Resource.Styleable.View;
+			global::XamarinTextDrawable.Resource.Styleable.View_android_focusable = global::KotaPalace.Resource.Styleable.View_android_focusable;
+			global::XamarinTextDrawable.Resource.Styleable.View_android_theme = global::KotaPalace.Resource.Styleable.View_android_theme;
+			global::XamarinTextDrawable.Resource.Styleable.View_paddingEnd = global::KotaPalace.Resource.Styleable.View_paddingEnd;
+			global::XamarinTextDrawable.Resource.Styleable.View_paddingStart = global::KotaPalace.Resource.Styleable.View_paddingStart;
+			global::XamarinTextDrawable.Resource.Styleable.View_theme = global::KotaPalace.Resource.Styleable.View_theme;
+			global::XamarinTextDrawable.Resource.Styleable.ViewBackgroundHelper = global::KotaPalace.Resource.Styleable.ViewBackgroundHelper;
+			global::XamarinTextDrawable.Resource.Styleable.ViewBackgroundHelper_android_background = global::KotaPalace.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::XamarinTextDrawable.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::KotaPalace.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::XamarinTextDrawable.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::KotaPalace.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::XamarinTextDrawable.Resource.Styleable.ViewStubCompat = global::KotaPalace.Resource.Styleable.ViewStubCompat;
+			global::XamarinTextDrawable.Resource.Styleable.ViewStubCompat_android_id = global::KotaPalace.Resource.Styleable.ViewStubCompat_android_id;
+			global::XamarinTextDrawable.Resource.Styleable.ViewStubCompat_android_inflatedId = global::KotaPalace.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::XamarinTextDrawable.Resource.Styleable.ViewStubCompat_android_layout = global::KotaPalace.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Microcharts.Droid.Resource.String.library_name = global::KotaPalace.Resource.String.library_name;
 			global::Plugin.CloudFirestore.Resource.Attribute.alpha = global::KotaPalace.Resource.Attribute.alpha;
 			global::Plugin.CloudFirestore.Resource.Attribute.buttonSize = global::KotaPalace.Resource.Attribute.buttonSize;
@@ -12915,319 +14408,322 @@ namespace KotaPalace
 			public const int google_storage_bucket = 2131689545;
 			
 			// aapt resource value: 0x7F0F004A
-			public const int hide_bottom_view_on_scroll_behavior = 2131689546;
+			public const int hello = 2131689546;
 			
 			// aapt resource value: 0x7F0F004B
-			public const int icon_content_description = 2131689547;
+			public const int hide_bottom_view_on_scroll_behavior = 2131689547;
 			
 			// aapt resource value: 0x7F0F004C
-			public const int item_view_role_description = 2131689548;
+			public const int icon_content_description = 2131689548;
 			
 			// aapt resource value: 0x7F0F004D
-			public const int library_name = 2131689549;
+			public const int item_view_role_description = 2131689549;
 			
 			// aapt resource value: 0x7F0F004E
-			public const int m3_sys_motion_easing_emphasized = 2131689550;
+			public const int library_name = 2131689550;
 			
 			// aapt resource value: 0x7F0F004F
-			public const int m3_sys_motion_easing_emphasized_accelerate = 2131689551;
+			public const int m3_sys_motion_easing_emphasized = 2131689551;
 			
 			// aapt resource value: 0x7F0F0050
-			public const int m3_sys_motion_easing_emphasized_decelerate = 2131689552;
+			public const int m3_sys_motion_easing_emphasized_accelerate = 2131689552;
 			
 			// aapt resource value: 0x7F0F0051
-			public const int m3_sys_motion_easing_emphasized_path_data = 2131689553;
+			public const int m3_sys_motion_easing_emphasized_decelerate = 2131689553;
 			
 			// aapt resource value: 0x7F0F0052
-			public const int m3_sys_motion_easing_legacy = 2131689554;
+			public const int m3_sys_motion_easing_emphasized_path_data = 2131689554;
 			
 			// aapt resource value: 0x7F0F0053
-			public const int m3_sys_motion_easing_legacy_accelerate = 2131689555;
+			public const int m3_sys_motion_easing_legacy = 2131689555;
 			
 			// aapt resource value: 0x7F0F0054
-			public const int m3_sys_motion_easing_legacy_decelerate = 2131689556;
+			public const int m3_sys_motion_easing_legacy_accelerate = 2131689556;
 			
 			// aapt resource value: 0x7F0F0055
-			public const int m3_sys_motion_easing_linear = 2131689557;
+			public const int m3_sys_motion_easing_legacy_decelerate = 2131689557;
 			
 			// aapt resource value: 0x7F0F0056
-			public const int m3_sys_motion_easing_standard = 2131689558;
+			public const int m3_sys_motion_easing_linear = 2131689558;
 			
 			// aapt resource value: 0x7F0F0057
-			public const int m3_sys_motion_easing_standard_accelerate = 2131689559;
+			public const int m3_sys_motion_easing_standard = 2131689559;
 			
 			// aapt resource value: 0x7F0F0058
-			public const int m3_sys_motion_easing_standard_decelerate = 2131689560;
+			public const int m3_sys_motion_easing_standard_accelerate = 2131689560;
 			
 			// aapt resource value: 0x7F0F0059
-			public const int material_clock_display_divider = 2131689561;
+			public const int m3_sys_motion_easing_standard_decelerate = 2131689561;
 			
 			// aapt resource value: 0x7F0F005A
-			public const int material_clock_toggle_content_description = 2131689562;
+			public const int material_clock_display_divider = 2131689562;
 			
 			// aapt resource value: 0x7F0F005B
-			public const int material_hour_selection = 2131689563;
+			public const int material_clock_toggle_content_description = 2131689563;
 			
 			// aapt resource value: 0x7F0F005C
-			public const int material_hour_suffix = 2131689564;
+			public const int material_hour_selection = 2131689564;
 			
 			// aapt resource value: 0x7F0F005D
-			public const int material_minute_selection = 2131689565;
+			public const int material_hour_suffix = 2131689565;
 			
 			// aapt resource value: 0x7F0F005E
-			public const int material_minute_suffix = 2131689566;
+			public const int material_minute_selection = 2131689566;
 			
 			// aapt resource value: 0x7F0F005F
-			public const int material_motion_easing_accelerated = 2131689567;
+			public const int material_minute_suffix = 2131689567;
 			
 			// aapt resource value: 0x7F0F0060
-			public const int material_motion_easing_decelerated = 2131689568;
+			public const int material_motion_easing_accelerated = 2131689568;
 			
 			// aapt resource value: 0x7F0F0061
-			public const int material_motion_easing_emphasized = 2131689569;
+			public const int material_motion_easing_decelerated = 2131689569;
 			
 			// aapt resource value: 0x7F0F0062
-			public const int material_motion_easing_linear = 2131689570;
+			public const int material_motion_easing_emphasized = 2131689570;
 			
 			// aapt resource value: 0x7F0F0063
-			public const int material_motion_easing_standard = 2131689571;
+			public const int material_motion_easing_linear = 2131689571;
 			
 			// aapt resource value: 0x7F0F0064
-			public const int material_slider_range_end = 2131689572;
+			public const int material_motion_easing_standard = 2131689572;
 			
 			// aapt resource value: 0x7F0F0065
-			public const int material_slider_range_start = 2131689573;
+			public const int material_slider_range_end = 2131689573;
 			
 			// aapt resource value: 0x7F0F0066
-			public const int material_timepicker_am = 2131689574;
+			public const int material_slider_range_start = 2131689574;
 			
 			// aapt resource value: 0x7F0F0067
-			public const int material_timepicker_clock_mode_description = 2131689575;
+			public const int material_timepicker_am = 2131689575;
 			
 			// aapt resource value: 0x7F0F0068
-			public const int material_timepicker_hour = 2131689576;
+			public const int material_timepicker_clock_mode_description = 2131689576;
 			
 			// aapt resource value: 0x7F0F0069
-			public const int material_timepicker_minute = 2131689577;
+			public const int material_timepicker_hour = 2131689577;
 			
 			// aapt resource value: 0x7F0F006A
-			public const int material_timepicker_pm = 2131689578;
+			public const int material_timepicker_minute = 2131689578;
 			
 			// aapt resource value: 0x7F0F006B
-			public const int material_timepicker_select_time = 2131689579;
+			public const int material_timepicker_pm = 2131689579;
 			
 			// aapt resource value: 0x7F0F006C
-			public const int material_timepicker_text_input_mode_description = 2131689580;
+			public const int material_timepicker_select_time = 2131689580;
 			
 			// aapt resource value: 0x7F0F006D
-			public const int mtrl_badge_numberless_content_description = 2131689581;
+			public const int material_timepicker_text_input_mode_description = 2131689581;
 			
 			// aapt resource value: 0x7F0F006E
-			public const int mtrl_checkbox_button_icon_path_checked = 2131689582;
+			public const int mtrl_badge_numberless_content_description = 2131689582;
 			
 			// aapt resource value: 0x7F0F006F
-			public const int mtrl_checkbox_button_icon_path_group_name = 2131689583;
+			public const int mtrl_checkbox_button_icon_path_checked = 2131689583;
 			
 			// aapt resource value: 0x7F0F0070
-			public const int mtrl_checkbox_button_icon_path_indeterminate = 2131689584;
+			public const int mtrl_checkbox_button_icon_path_group_name = 2131689584;
 			
 			// aapt resource value: 0x7F0F0071
-			public const int mtrl_checkbox_button_icon_path_name = 2131689585;
+			public const int mtrl_checkbox_button_icon_path_indeterminate = 2131689585;
 			
 			// aapt resource value: 0x7F0F0072
-			public const int mtrl_checkbox_button_path_checked = 2131689586;
+			public const int mtrl_checkbox_button_icon_path_name = 2131689586;
 			
 			// aapt resource value: 0x7F0F0073
-			public const int mtrl_checkbox_button_path_group_name = 2131689587;
+			public const int mtrl_checkbox_button_path_checked = 2131689587;
 			
 			// aapt resource value: 0x7F0F0074
-			public const int mtrl_checkbox_button_path_name = 2131689588;
+			public const int mtrl_checkbox_button_path_group_name = 2131689588;
 			
 			// aapt resource value: 0x7F0F0075
-			public const int mtrl_checkbox_button_path_unchecked = 2131689589;
+			public const int mtrl_checkbox_button_path_name = 2131689589;
 			
 			// aapt resource value: 0x7F0F0076
-			public const int mtrl_checkbox_state_description_checked = 2131689590;
+			public const int mtrl_checkbox_button_path_unchecked = 2131689590;
 			
 			// aapt resource value: 0x7F0F0077
-			public const int mtrl_checkbox_state_description_indeterminate = 2131689591;
+			public const int mtrl_checkbox_state_description_checked = 2131689591;
 			
 			// aapt resource value: 0x7F0F0078
-			public const int mtrl_checkbox_state_description_unchecked = 2131689592;
+			public const int mtrl_checkbox_state_description_indeterminate = 2131689592;
 			
 			// aapt resource value: 0x7F0F0079
-			public const int mtrl_chip_close_icon_content_description = 2131689593;
+			public const int mtrl_checkbox_state_description_unchecked = 2131689593;
 			
 			// aapt resource value: 0x7F0F007A
-			public const int mtrl_exceed_max_badge_number_content_description = 2131689594;
+			public const int mtrl_chip_close_icon_content_description = 2131689594;
 			
 			// aapt resource value: 0x7F0F007B
-			public const int mtrl_exceed_max_badge_number_suffix = 2131689595;
+			public const int mtrl_exceed_max_badge_number_content_description = 2131689595;
 			
 			// aapt resource value: 0x7F0F007C
-			public const int mtrl_picker_a11y_next_month = 2131689596;
+			public const int mtrl_exceed_max_badge_number_suffix = 2131689596;
 			
 			// aapt resource value: 0x7F0F007D
-			public const int mtrl_picker_a11y_prev_month = 2131689597;
+			public const int mtrl_picker_a11y_next_month = 2131689597;
 			
 			// aapt resource value: 0x7F0F007E
-			public const int mtrl_picker_announce_current_selection = 2131689598;
+			public const int mtrl_picker_a11y_prev_month = 2131689598;
 			
 			// aapt resource value: 0x7F0F007F
-			public const int mtrl_picker_cancel = 2131689599;
+			public const int mtrl_picker_announce_current_selection = 2131689599;
 			
 			// aapt resource value: 0x7F0F0080
-			public const int mtrl_picker_confirm = 2131689600;
+			public const int mtrl_picker_cancel = 2131689600;
 			
 			// aapt resource value: 0x7F0F0081
-			public const int mtrl_picker_date_header_selected = 2131689601;
+			public const int mtrl_picker_confirm = 2131689601;
 			
 			// aapt resource value: 0x7F0F0082
-			public const int mtrl_picker_date_header_title = 2131689602;
+			public const int mtrl_picker_date_header_selected = 2131689602;
 			
 			// aapt resource value: 0x7F0F0083
-			public const int mtrl_picker_date_header_unselected = 2131689603;
+			public const int mtrl_picker_date_header_title = 2131689603;
 			
 			// aapt resource value: 0x7F0F0084
-			public const int mtrl_picker_day_of_week_column_header = 2131689604;
+			public const int mtrl_picker_date_header_unselected = 2131689604;
 			
 			// aapt resource value: 0x7F0F0085
-			public const int mtrl_picker_invalid_format = 2131689605;
+			public const int mtrl_picker_day_of_week_column_header = 2131689605;
 			
 			// aapt resource value: 0x7F0F0086
-			public const int mtrl_picker_invalid_format_example = 2131689606;
+			public const int mtrl_picker_invalid_format = 2131689606;
 			
 			// aapt resource value: 0x7F0F0087
-			public const int mtrl_picker_invalid_format_use = 2131689607;
+			public const int mtrl_picker_invalid_format_example = 2131689607;
 			
 			// aapt resource value: 0x7F0F0088
-			public const int mtrl_picker_invalid_range = 2131689608;
+			public const int mtrl_picker_invalid_format_use = 2131689608;
 			
 			// aapt resource value: 0x7F0F0089
-			public const int mtrl_picker_navigate_to_year_description = 2131689609;
+			public const int mtrl_picker_invalid_range = 2131689609;
 			
 			// aapt resource value: 0x7F0F008A
-			public const int mtrl_picker_out_of_range = 2131689610;
+			public const int mtrl_picker_navigate_to_year_description = 2131689610;
 			
 			// aapt resource value: 0x7F0F008B
-			public const int mtrl_picker_range_header_only_end_selected = 2131689611;
+			public const int mtrl_picker_out_of_range = 2131689611;
 			
 			// aapt resource value: 0x7F0F008C
-			public const int mtrl_picker_range_header_only_start_selected = 2131689612;
+			public const int mtrl_picker_range_header_only_end_selected = 2131689612;
 			
 			// aapt resource value: 0x7F0F008D
-			public const int mtrl_picker_range_header_selected = 2131689613;
+			public const int mtrl_picker_range_header_only_start_selected = 2131689613;
 			
 			// aapt resource value: 0x7F0F008E
-			public const int mtrl_picker_range_header_title = 2131689614;
+			public const int mtrl_picker_range_header_selected = 2131689614;
 			
 			// aapt resource value: 0x7F0F008F
-			public const int mtrl_picker_range_header_unselected = 2131689615;
+			public const int mtrl_picker_range_header_title = 2131689615;
 			
 			// aapt resource value: 0x7F0F0090
-			public const int mtrl_picker_save = 2131689616;
+			public const int mtrl_picker_range_header_unselected = 2131689616;
 			
 			// aapt resource value: 0x7F0F0091
-			public const int mtrl_picker_text_input_date_hint = 2131689617;
+			public const int mtrl_picker_save = 2131689617;
 			
 			// aapt resource value: 0x7F0F0092
-			public const int mtrl_picker_text_input_date_range_end_hint = 2131689618;
+			public const int mtrl_picker_text_input_date_hint = 2131689618;
 			
 			// aapt resource value: 0x7F0F0093
-			public const int mtrl_picker_text_input_date_range_start_hint = 2131689619;
+			public const int mtrl_picker_text_input_date_range_end_hint = 2131689619;
 			
 			// aapt resource value: 0x7F0F0094
-			public const int mtrl_picker_text_input_day_abbr = 2131689620;
+			public const int mtrl_picker_text_input_date_range_start_hint = 2131689620;
 			
 			// aapt resource value: 0x7F0F0095
-			public const int mtrl_picker_text_input_month_abbr = 2131689621;
+			public const int mtrl_picker_text_input_day_abbr = 2131689621;
 			
 			// aapt resource value: 0x7F0F0096
-			public const int mtrl_picker_text_input_year_abbr = 2131689622;
+			public const int mtrl_picker_text_input_month_abbr = 2131689622;
 			
 			// aapt resource value: 0x7F0F0097
-			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131689623;
+			public const int mtrl_picker_text_input_year_abbr = 2131689623;
 			
 			// aapt resource value: 0x7F0F0098
-			public const int mtrl_picker_toggle_to_day_selection = 2131689624;
+			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131689624;
 			
 			// aapt resource value: 0x7F0F0099
-			public const int mtrl_picker_toggle_to_text_input_mode = 2131689625;
+			public const int mtrl_picker_toggle_to_day_selection = 2131689625;
 			
 			// aapt resource value: 0x7F0F009A
-			public const int mtrl_picker_toggle_to_year_selection = 2131689626;
+			public const int mtrl_picker_toggle_to_text_input_mode = 2131689626;
 			
 			// aapt resource value: 0x7F0F009B
-			public const int mtrl_switch_thumb_group_name = 2131689627;
+			public const int mtrl_picker_toggle_to_year_selection = 2131689627;
 			
 			// aapt resource value: 0x7F0F009C
-			public const int mtrl_switch_thumb_path_checked = 2131689628;
+			public const int mtrl_switch_thumb_group_name = 2131689628;
 			
 			// aapt resource value: 0x7F0F009D
-			public const int mtrl_switch_thumb_path_morphing = 2131689629;
+			public const int mtrl_switch_thumb_path_checked = 2131689629;
 			
 			// aapt resource value: 0x7F0F009E
-			public const int mtrl_switch_thumb_path_name = 2131689630;
+			public const int mtrl_switch_thumb_path_morphing = 2131689630;
 			
 			// aapt resource value: 0x7F0F009F
-			public const int mtrl_switch_thumb_path_pressed = 2131689631;
+			public const int mtrl_switch_thumb_path_name = 2131689631;
 			
 			// aapt resource value: 0x7F0F00A0
-			public const int mtrl_switch_thumb_path_unchecked = 2131689632;
+			public const int mtrl_switch_thumb_path_pressed = 2131689632;
 			
 			// aapt resource value: 0x7F0F00A1
-			public const int mtrl_switch_track_decoration_path = 2131689633;
+			public const int mtrl_switch_thumb_path_unchecked = 2131689633;
 			
 			// aapt resource value: 0x7F0F00A2
-			public const int mtrl_switch_track_path = 2131689634;
+			public const int mtrl_switch_track_decoration_path = 2131689634;
 			
 			// aapt resource value: 0x7F0F00A3
-			public const int mtrl_timepicker_cancel = 2131689635;
+			public const int mtrl_switch_track_path = 2131689635;
 			
 			// aapt resource value: 0x7F0F00A4
-			public const int mtrl_timepicker_confirm = 2131689636;
+			public const int mtrl_timepicker_cancel = 2131689636;
 			
 			// aapt resource value: 0x7F0F00A5
-			public const int order_desc = 2131689637;
+			public const int mtrl_timepicker_confirm = 2131689637;
 			
 			// aapt resource value: 0x7F0F00A6
-			public const int order_id = 2131689638;
+			public const int order_desc = 2131689638;
 			
 			// aapt resource value: 0x7F0F00A7
-			public const int order_name = 2131689639;
+			public const int order_id = 2131689639;
 			
 			// aapt resource value: 0x7F0F00A8
-			public const int order_price = 2131689640;
+			public const int order_name = 2131689640;
 			
 			// aapt resource value: 0x7F0F00A9
-			public const int password_toggle_content_description = 2131689641;
+			public const int order_price = 2131689641;
 			
 			// aapt resource value: 0x7F0F00AA
-			public const int path_password_eye = 2131689642;
+			public const int password_toggle_content_description = 2131689642;
 			
 			// aapt resource value: 0x7F0F00AB
-			public const int path_password_eye_mask_strike_through = 2131689643;
+			public const int path_password_eye = 2131689643;
 			
 			// aapt resource value: 0x7F0F00AC
-			public const int path_password_eye_mask_visible = 2131689644;
+			public const int path_password_eye_mask_strike_through = 2131689644;
 			
 			// aapt resource value: 0x7F0F00AD
-			public const int path_password_strike_through = 2131689645;
+			public const int path_password_eye_mask_visible = 2131689645;
 			
 			// aapt resource value: 0x7F0F00AE
-			public const int place_autocomplete_clear_button = 2131689646;
+			public const int path_password_strike_through = 2131689646;
 			
 			// aapt resource value: 0x7F0F00AF
-			public const int place_autocomplete_search_hint = 2131689647;
+			public const int place_autocomplete_clear_button = 2131689647;
 			
 			// aapt resource value: 0x7F0F00B0
-			public const int project_id = 2131689648;
+			public const int place_autocomplete_search_hint = 2131689648;
 			
 			// aapt resource value: 0x7F0F00B1
-			public const int search_menu_title = 2131689649;
+			public const int project_id = 2131689649;
 			
 			// aapt resource value: 0x7F0F00B2
-			public const int status_bar_notification_info_overflow = 2131689650;
+			public const int search_menu_title = 2131689650;
+			
+			// aapt resource value: 0x7F0F00B3
+			public const int status_bar_notification_info_overflow = 2131689651;
 			
 			static String()
 			{

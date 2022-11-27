@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
+using XamarinTextDrawable;
 using Context = Android.Content.Context;
 
 namespace KotaPalace.Dialogs
@@ -76,6 +77,7 @@ namespace KotaPalace.Dialogs
             context = view.Context;
             Init(view);
             LoadOrdersAsync();
+            CheckOrderStatus();
 
             return view;
         }
@@ -106,6 +108,23 @@ namespace KotaPalace.Dialogs
             {
                 ProcessOrderAsync();
             };
+        }
+
+        private void CheckOrderStatus()
+        {
+            if(order.Status == "Pending")
+            {
+                BtnProcess.Text = "ACCEPT";
+
+            }else if(order.Status == "Accepted")
+            {
+                BtnProcess.Text = "FINISH";
+            }
+            else
+            {
+                BtnProcess.Enabled = false;
+                BtnProcess.Text = "DONE";
+            }
         }
 
         private void LoadOrdersAsync()

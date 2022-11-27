@@ -30,6 +30,12 @@ namespace KotaPalace.Adapters
             vh.row_order_status.Text = $"{order.Status}";
             vh.row_order_date.Text = order.OrderDate.ToString();
 
+            if(order.Status == "Ready")
+            {
+                vh.view_btn.Enabled = false;
+                vh.view_btn.Text = "DONE";
+            }
+
             vh.view_btn.Click += (s, e) => { BtnClick.Invoke(vh.ItemView.Context, new OrderBtnClick() { Position = position }); };
 
             FindUserAsync(order.Customer_Id, vh.row_order_id);

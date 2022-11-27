@@ -178,11 +178,6 @@ namespace KotaPalace.Activities
             InputLoginPassword.Text = password;
         }
 
-        private async void BringDialog()
-        {
-            
-        }
-
         private void Message(string t)
         {
             AndHUD.Shared.ShowError(this, t,MaskType.None,TimeSpan.FromSeconds(3));
