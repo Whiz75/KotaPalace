@@ -9,7 +9,6 @@ using Gauravk.BubbleNavigation.Listeners;
 using KotaPalace.Fragments;
 using KotaPalace.Models;
 using System;
-using System.ComponentModel;
 using System.Net.Http;
 using Xamarin.Essentials;
 
@@ -65,11 +64,14 @@ namespace KotaPalace
                     SupportFragmentManager.BeginTransaction().Replace(Resource.Id.fragHost, new ProfileFragment()).Commit();
                     break;
                 case 3:
-                    SupportFragmentManager.BeginTransaction().Replace(Resource.Id.fragHost, new ReportFragment()).Commit();
+                    SupportFragmentManager.BeginTransaction().Replace(Resource.Id.fragHost, new BusinessProfileFragment()).Commit();
                     break;
                 case 4:
-                    SupportFragmentManager.BeginTransaction().Replace(Resource.Id.fragHost, new AdminFragment()).Commit();
+                    SupportFragmentManager.BeginTransaction().Replace(Resource.Id.fragHost, new ReportFragment()).Commit();
                     break;
+                //case 4:
+                //    SupportFragmentManager.BeginTransaction().Replace(Resource.Id.fragHost, new AdminFragment()).Commit();
+                //    break;
                 default:
                     SupportFragmentManager.BeginTransaction().Replace(Resource.Id.fragHost, new OrdersFragment()).Commit();
                     break;

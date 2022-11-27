@@ -72,6 +72,7 @@
     <Compile Include="Adapters\OrderItemsAdapter.cs" />
     <Compile Include="Adapters\PrepareOrderAdapter.cs" />
     <Compile Include="Dialogs\AddUserDialogFragment.cs" />
+    <Compile Include="Dialogs\SelectDriverDialogFragment.cs" />
     <Compile Include="Dialogs\UpdateUserDialogFragment.cs" />
     <Compile Include="Dialogs\UpdateMenuDialogFragment.cs" />
     <Compile Include="Dialogs\BusinessAddressDialogFragment.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Fragments\OrdersFragment.cs" />
     <Compile Include="Fragments\PrepareOrderFragmentTab.cs" />
     <Compile Include="Fragments\AdminFragment.cs" />
+    <Compile Include="Fragments\BusinessProfileFragment.cs" />
     <Compile Include="Fragments\ProfileFragment.cs" />
     <Compile Include="Fragments\ReadyOrdersFragmentTab.cs" />
     <Compile Include="Fragments\ReportFragment.cs" />
@@ -440,6 +442,24 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\fragment_add_user.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_select_driver.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\select_user_row.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_business_profile.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>

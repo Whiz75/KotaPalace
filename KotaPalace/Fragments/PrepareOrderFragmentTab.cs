@@ -78,8 +78,8 @@ namespace KotaPalace.Fragments
                     foreach (var item in results)
                     {
                         OrderList.Add(item);
-                        mAdapter.NotifyDataSetChanged();
                     }
+                    mAdapter.NotifyDataSetChanged();
                 }
                 else
                 {

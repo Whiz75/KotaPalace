@@ -71,6 +71,19 @@
                 app:bt_titlePadding="5dp"/>
 
             <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/item_business_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_colorActive="@color/green_active"
+                app:bt_colorInactive="@color/green_inactive"
+                app:bt_icon="@drawable/user"
+                app:bt_shape="@drawable/transition_background_drawable_home"
+                app:bt_title="Business"
+                app:bt_padding="10dp"
+                app:bt_titlePadding="5dp"/>
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
                 android:id="@+id/item_about"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,7 +96,7 @@
                 app:bt_padding="10dp"
                 app:bt_titlePadding="5dp"/>
 
-            <com.gauravk.bubblenavigation.BubbleToggleView
+            <!--<com.gauravk.bubblenavigation.BubbleToggleView
                 android:id="@+id/item_admin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -94,7 +107,7 @@
                 app:bt_shape="@drawable/transition_background_drawable_home"
                 app:bt_title="Admin"
                 app:bt_padding="10dp"
-                app:bt_titlePadding="5dp"/>
+                app:bt_titlePadding="5dp"/>-->
         </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

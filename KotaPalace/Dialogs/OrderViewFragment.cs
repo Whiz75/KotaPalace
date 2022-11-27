@@ -122,28 +122,11 @@ namespace KotaPalace.Dialogs
 
         private void CheckOrderType()
         {
-            var random = new Random();
-            var list = new List<string> { };
-            int index = random.Next(list.Count);
+            //var random = new Random();
+            //var list = new List<string> { };
+            //int index = random.Next(list.Count);
 
-            Message(list[index]);
-
-            //man i'm goin to take a quick bath
-
-            //if (order.Option == "DELIVER")
-            //{
-
-            //}
-
-            //if (order.Option == "EAT-IN")
-            //{
-
-            //}
-
-            //if (order.Option == "COLLECT")
-            //{
-
-            //}
+            //Message(list[index]);
         }
 
         private void LoadOrdersAsync()
@@ -189,9 +172,12 @@ namespace KotaPalace.Dialogs
 
                 if (response.IsSuccessStatusCode)
                 {
-
                     string str_out = await response.Content.ReadAsStringAsync();
-                    SuccessMessage(str_out);
+                    //SuccessMessage(str_out);
+                    if(str_out == "Ready")
+                    {
+
+                    }
                 }
                 else
                 {
