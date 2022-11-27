@@ -122,11 +122,11 @@ namespace KotaPalace.Dialogs
 
         private void CheckOrderType()
         {
-            //var random = new Random();
-            //var list = new List<string> { };
-            //int index = random.Next(list.Count);
+            var random = new Random();
+            var list = new List<string> { };
+            int index = random.Next(list.Count);
 
-            //Message(list[index]);
+            Message(list[index]);
 
             //man i'm goin to take a quick bath
 
