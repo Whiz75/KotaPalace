@@ -28,9 +28,12 @@ namespace KotaPalace.Adapters
 
             vh.row_order_no.Text = $"{order.Id}";
             vh.row_order_status.Text = $"{order.Status}";
-            vh.row_order_date.Text = order.OrderDate.ToString();
 
-            if(order.Status == "Ready")
+            //var date = Convert.ToDateTime(order.OrderDate);
+            vh.row_order_date.Text = order.OrderDateUtc.ToString("ddd, dd MMM yyyy");
+            vh.row_order_time.Text = order.OrderDateUtc.ToString("HH:mm tt");
+
+            if (order.Status == "Ready")
             {
                 vh.view_btn.Enabled = false;
                 vh.view_btn.Text = "DONE";
@@ -74,11 +77,11 @@ namespace KotaPalace.Adapters
 
     public class OrderViewHolder : RecyclerView.ViewHolder
     {
-        public AppCompatImageView row_order_image { get; set; }
         public MaterialTextView row_order_id { get; set;}
         public MaterialTextView row_order_status { get; set;}
         public MaterialTextView row_order_no { get; set; }
         public MaterialTextView row_order_date { get; set; }
+        public AppCompatTextView row_order_time { get; set; }
         public MaterialButton view_btn { get; set; }
 
         public OrderViewHolder(View itemview) : base(itemview)
@@ -88,6 +91,7 @@ namespace KotaPalace.Adapters
             row_order_status = itemview.FindViewById<MaterialTextView>(Resource.Id.row_order_status);
             row_order_id = itemview.FindViewById<MaterialTextView>(Resource.Id.row_order_id);
             row_order_date = itemview.FindViewById<MaterialTextView>(Resource.Id.row_order_date);
+            row_order_time = itemview.FindViewById<AppCompatTextView>(Resource.Id.row_order_time);
 
             view_btn = itemview.FindViewById<MaterialButton>(Resource.Id.view_btn);
         }

@@ -305,7 +305,6 @@ namespace KotaPalace.Activities
 
         private void Timepicker(TextInputEditText tv)
         {
-            //tv.Text = 
             TimePickerDlg frag = TimePickerDlg.NewInstance(
             delegate (DateTime time)
             {

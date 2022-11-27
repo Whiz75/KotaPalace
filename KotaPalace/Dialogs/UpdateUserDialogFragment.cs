@@ -115,12 +115,19 @@ namespace KotaPalace.Dialogs
             HttpClient client = new HttpClient();
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(users);
             HttpContent data = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await client.PutAsync($"{API.Url}/update/{users.Id}",data);
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                string str = await response.Content.ReadAsStringAsync();
-                Message(str);
+                var response = await client.PutAsync($"{API.Url}/account/update/{users.Id}", data);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string str = await response.Content.ReadAsStringAsync();
+                    Message(str);
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                Message(ex.Message);
             }
         }
 

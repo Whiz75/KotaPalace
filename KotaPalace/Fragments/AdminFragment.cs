@@ -50,6 +50,12 @@ namespace KotaPalace.Fragments
         {
             BtnAddDriver = view.FindViewById<MaterialButton>(Resource.Id.btn_add_driver);
             usersRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.usersRecyclerView);
+
+            BtnAddDriver.Click += (s, e) =>
+            {
+                AddUserDialogFragment add = new AddUserDialogFragment();
+                add.Show(ChildFragmentManager.BeginTransaction(), "");
+            };
         }
 
         private async void GetUsersAsync()

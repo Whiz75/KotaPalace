@@ -71,6 +71,7 @@
     <Compile Include="Adapters\ReadyOrdersAdapter.cs" />
     <Compile Include="Adapters\OrderItemsAdapter.cs" />
     <Compile Include="Adapters\PrepareOrderAdapter.cs" />
+    <Compile Include="Dialogs\AddUserDialogFragment.cs" />
     <Compile Include="Dialogs\UpdateUserDialogFragment.cs" />
     <Compile Include="Dialogs\UpdateMenuDialogFragment.cs" />
     <Compile Include="Dialogs\BusinessAddressDialogFragment.cs" />
@@ -436,6 +437,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_add_user.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

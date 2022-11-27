@@ -52,8 +52,6 @@ namespace KotaPalace.Activities
 
             //call methods here
             Init();
-            GoToSignIn();
-            GoToBusinessSignUp();
             
         }
 
@@ -77,28 +75,70 @@ namespace KotaPalace.Activities
             {
                 file = await PickAndShow();
             };
-        }
 
-        private void GoToSignIn()
-        {
-            back_to_signin_text.Click += (s, e) =>
-            {
-                StartActivity(new Intent(this, typeof(SignIn)));
-                
-            };
-        }
-
-        private void GoToBusinessSignUp()
-        {
             btn_proceed_signup.Click += (s, e) =>
             {
                 SignUpUserAsync();
             };
+
+            back_to_signin_text.Click += (s, e) =>
+            {
+                StartActivity(new Intent(this, typeof(SignIn)));
+
+            };
         }
 
-        
+        //private void InputValidations()
+        //{
+        //    if (string.IsNullOrEmpty(InputFirstname.Text) || string.IsNullOrWhiteSpace(InputFirstname.Text))
+        //    {
+        //        InputFirstname.RequestFocus();
+        //        InputFirstname.Error = "Provide your firstname";
+        //        return;
+        //    }
 
-        private void InputValidations()
+        //    if (string.IsNullOrEmpty(InputLastname.Text) || string.IsNullOrWhiteSpace(InputLastname.Text))
+        //    {
+        //        InputLastname.RequestFocus();
+        //        InputLastname.Error = "Provide your lastname";
+        //        return;
+        //    }
+
+        //    if (string.IsNullOrEmpty(InputEmail.Text) || string.IsNullOrWhiteSpace(InputEmail.Text))
+        //    {
+        //        InputEmail.RequestFocus();
+        //        InputEmail.Error = "Provide your email";
+        //        return;
+        //    }
+            
+        //    if (string.IsNullOrEmpty(InputPhoneNumber.Text) || string.IsNullOrWhiteSpace(InputPhoneNumber.Text))
+        //    {
+        //        InputPhoneNumber.RequestFocus();
+        //        InputPhoneNumber.Error = "Provide your email";
+        //        return;
+        //    }
+
+        //    if (string.IsNullOrEmpty(InputPassword.Text) || string.IsNullOrWhiteSpace(InputPassword.Text))
+        //    {
+        //        InputPassword.RequestFocus();
+        //        InputPassword.Error = "Provide your password";
+        //        return;
+        //    }
+
+        //    if (string.IsNullOrEmpty(InputConfirmPassword.Text) || string.IsNullOrWhiteSpace(InputConfirmPassword.Text))
+        //    {
+        //        InputConfirmPassword.RequestFocus();
+        //        InputConfirmPassword.Error = "Provide email confirmation";
+        //        return;
+        //    }
+
+        //    if (file == null)
+        //    {
+        //        Message("Please upload image for your profile");
+        //    }
+        //}
+
+        private async void SignUpUserAsync()
         {
             if (string.IsNullOrEmpty(InputFirstname.Text) || string.IsNullOrWhiteSpace(InputFirstname.Text))
             {
@@ -107,108 +147,98 @@ namespace KotaPalace.Activities
                 return;
             }
 
-            if (string.IsNullOrEmpty(InputLastname.Text) || string.IsNullOrWhiteSpace(InputLastname.Text))
+            else if (string.IsNullOrEmpty(InputLastname.Text) || string.IsNullOrWhiteSpace(InputLastname.Text))
             {
                 InputLastname.RequestFocus();
                 InputLastname.Error = "Provide your lastname";
                 return;
             }
 
-            if (string.IsNullOrEmpty(InputEmail.Text) || string.IsNullOrWhiteSpace(InputEmail.Text))
+            else if (string.IsNullOrEmpty(InputEmail.Text) || string.IsNullOrWhiteSpace(InputEmail.Text))
             {
                 InputEmail.RequestFocus();
                 InputEmail.Error = "Provide your email";
                 return;
             }
-            
-            if (string.IsNullOrEmpty(InputPhoneNumber.Text) || string.IsNullOrWhiteSpace(InputPhoneNumber.Text))
+
+            else if (string.IsNullOrEmpty(InputPhoneNumber.Text) || string.IsNullOrWhiteSpace(InputPhoneNumber.Text))
             {
                 InputPhoneNumber.RequestFocus();
                 InputPhoneNumber.Error = "Provide your email";
                 return;
             }
 
-            if (string.IsNullOrEmpty(InputPassword.Text) || string.IsNullOrWhiteSpace(InputPassword.Text))
+            else if (string.IsNullOrEmpty(InputPassword.Text) || string.IsNullOrWhiteSpace(InputPassword.Text))
             {
                 InputPassword.RequestFocus();
                 InputPassword.Error = "Provide your password";
                 return;
             }
 
-            if (string.IsNullOrEmpty(InputConfirmPassword.Text) || string.IsNullOrWhiteSpace(InputConfirmPassword.Text))
+            else if (string.IsNullOrEmpty(InputConfirmPassword.Text) || string.IsNullOrWhiteSpace(InputConfirmPassword.Text))
             {
                 InputConfirmPassword.RequestFocus();
                 InputConfirmPassword.Error = "Provide email confirmation";
                 return;
-            }
-
-            //if(file == null)
-            //{
-            //    Message("Please upload image for your profile");
-            //}
-        }
-
-        private void Message(string v)
-        {
-            AndHUD.Shared.ShowError(this, v, MaskType.None, TimeSpan.FromSeconds(3));
-        }
-
-        private async void SignUpUserAsync()
-        {
-            InputValidations();
-
-            //var memoryStream = new MemoryStream();
-            var st = await file.OpenReadAsync();
-            string filename = $"{file.FileName}";
-            var result = CrossFirebaseStorage.Current
-                .Instance
-                .RootReference
-                .Child("Documents")
-                .Child(filename);
-
-            await result.PutStreamAsync(st);
-
-            var url = await result.GetDownloadUrlAsync();
-
-            UserSignUp user = new UserSignUp()
+            } else if (file == null)
             {
-                Firstname = InputFirstname.Text.Trim(),
-                UserType = "Admin",
-                Lastname = InputLastname.Text.Trim(),
-                Email = InputEmail.Text.Trim(),
-                Password = InputPassword.Text.Trim(),
-                PhoneNumber = InputPhoneNumber.Text.Trim()
-                
-            };
-
-
-            var json = Newtonsoft.Json.JsonConvert.SerializeObject(user);
-            HttpContent data = new StringContent(json, Encoding.UTF8, "application/json");
-            HttpClient httpClient = new HttpClient();
-
-            var results = await httpClient.PostAsync($"{API.Url}/account/signup", data);
-
-            if (results.IsSuccessStatusCode)
-            {
-                var str = await results.Content.ReadAsStringAsync();
-
-                if (str != null)
-                {
-                    //var response = Newtonsoft.Json.JsonConvert.DeserializeObject<AppUsers>(str);
-                    SuccessMessage("Your account has been successfully created");
-
-                    Preferences.Set("Id", str);
-
-                    //open sign up business activity
-                    StartActivity(new Intent(this, typeof(SignUpBusiness)));
-                    OverridePendingTransition(Resource.Animation.Side_in_left, Resource.Animation.Side_out_right);
-                }
+                Message("Please upload image for your profile");
             }
             else
             {
-                var str_r = await results.Content.ReadAsStringAsync();
+                //var memoryStream = new MemoryStream();
+                var st = await file.OpenReadAsync();
+                string filename = $"{file.FileName}";
+                var result = CrossFirebaseStorage.Current
+                    .Instance
+                    .RootReference
+                    .Child("images")
+                    .Child(filename);
 
-                ErrorMessage(str_r);
+                await result.PutStreamAsync(st);
+
+                var url = await result.GetDownloadUrlAsync();
+
+                UserSignUp user = new UserSignUp()
+                {
+                    Firstname = InputFirstname.Text.Trim(),
+                    UserType = "Admin",
+                    Lastname = InputLastname.Text.Trim(),
+                    Email = InputEmail.Text.Trim(),
+                    Password = InputPassword.Text.Trim(),
+                    PhoneNumber = InputPhoneNumber.Text.Trim(),
+                    Url = url.ToString()
+                };
+
+
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(user);
+                HttpContent data = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpClient httpClient = new HttpClient();
+
+                var results = await httpClient.PostAsync($"{API.Url}/account/signup", data);
+
+                if (results.IsSuccessStatusCode)
+                {
+                    var str = await results.Content.ReadAsStringAsync();
+
+                    if (str != null)
+                    {
+                        //var response = Newtonsoft.Json.JsonConvert.DeserializeObject<AppUsers>(str);
+                        SuccessMessage("Your account has been successfully created");
+
+                        Preferences.Set("Id", str);
+
+                        //open sign up business activity
+                        StartActivity(new Intent(this, typeof(SignUpBusiness)));
+                        OverridePendingTransition(Resource.Animation.Side_in_left, Resource.Animation.Side_out_right);
+                    }
+                }
+                else
+                {
+                    var str_r = await results.Content.ReadAsStringAsync();
+
+                    ErrorMessage(str_r);
+                }
             }
         }
 
@@ -243,20 +273,25 @@ namespace KotaPalace.Activities
         {
             AndHUD.Shared.ShowError(this, t, MaskType.None, TimeSpan.FromSeconds(3));
         }
+
+        private void Message(string v)
+        {
+            AndHUD.Shared.ShowError(this, v, MaskType.None, TimeSpan.FromSeconds(3));
+        }
     }
 }
 
-public class UserSignUp
-{
-    public string Email { get; set; }
-    public string Password { get; set; }
-    public string Firstname { get; set; }
-    public string Lastname { get; set; }
-    public string PhoneNumber { get; set; }
-    public string UserType { get; set; }
-    public string Url { get; set; }
+//public class UserSignUp
+//{
+//    public string Email { get; set; }
+//    public string Password { get; set; }
+//    public string Firstname { get; set; }
+//    public string Lastname { get; set; }
+//    public string PhoneNumber { get; set; }
+//    public string UserType { get; set; }
+//    public string Url { get; set; }
     
-}
+//}
 
 public class UpdateUser
 {

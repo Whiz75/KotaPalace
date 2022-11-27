@@ -28,7 +28,7 @@ namespace KotaPalace.Adapters
 
             vh.row_order_no.Text = order.Id.ToString();
             vh.row_order_status.Text = order.Status;
-            vh.row_order_date.Text = order.OrderDate.ToString();
+            vh.row_order_date.Text = order.OrderDateUtc.ToString("ddd, dd MMM yyyy");
 
             FindUserAsync(order.Customer_Id, vh.row_order_id);
         }

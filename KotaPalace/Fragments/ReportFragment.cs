@@ -16,6 +16,7 @@ using Xamarin.Essentials;
 using AndroidHUD;
 using OperationCanceledException = System.OperationCanceledException;
 using Google.Android.Material.Button;
+using System.Globalization;
 
 namespace KotaPalace.Fragments
 {
@@ -109,9 +110,15 @@ namespace KotaPalace.Fragments
                     {
                         foreach (var item in order)
                         {
-                            if (months.Contains(item.OrderDate.ToString("MMMM")))
+
+                            
+
+                            CultureInfo culture = new CultureInfo("en-US");
+                            var date = DateTime.Parse(item.OrderDateUtc.ToString("ddd, dd MMM yyyy"));
+
+                            if (months.Contains(item.OrderDateUtc.ToString("MMM")))
                             {
-                                int pos = months.IndexOf(item.OrderDate.ToString("MMMM"));
+                                int pos = months.IndexOf(item.OrderDateUtc.ToString("MMM"));
                                 counter[pos] = counter[pos] + 1;
                             }
                         }

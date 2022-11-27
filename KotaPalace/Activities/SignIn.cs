@@ -188,10 +188,6 @@ namespace KotaPalace.Activities
 
     public class UserLogin
     {
-        public UserLogin()
-        {
-        }
-
         public string Email { get; set; }
         public string Password { get; set; }
     }
@@ -208,5 +204,6 @@ namespace KotaPalace.Activities
         public string Lastname { get; set; }
         public string PhoneNumber { get; set; }
         public string UserType { get; set; }
+        public string Url { get; set; }
     }
 }
