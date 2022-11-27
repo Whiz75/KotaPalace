@@ -6,6 +6,7 @@ using AndroidX.Fragment.App;
 using AndroidX.RecyclerView.Widget;
 using Google.Android.Material.Button;
 using Google.Android.Material.Chip;
+using Java.Util;
 using KotaPalace.Adapters;
 using KotaPalace.Models;
 using System;
@@ -14,6 +15,7 @@ using System.Net.Http;
 using System.Text;
 using XamarinTextDrawable;
 using Context = Android.Content.Context;
+using Random = System.Random;
 
 namespace KotaPalace.Dialogs
 {
@@ -32,23 +34,15 @@ namespace KotaPalace.Dialogs
 
         private MaterialButton BtnProcess;
 
-        private ChipGroup chipGroup;
-
-        private int id;
-
         //private int businessId = Preferences.Get("businessId", 0);
         //private string Id = Preferences.Get("Id", null);
+        //List<string> options = { "DELIVER", "EAT-IN", "COLLECT" };
 
         private Order order;
         readonly List<OrderItems> OrderItemList = new List<OrderItems>();
 
         public OrderViewFragment()
         {
-        }
-
-        public OrderViewFragment(int id)
-        {
-            this.id = id;
         }
 
         public OrderViewFragment(Order order)
@@ -78,6 +72,7 @@ namespace KotaPalace.Dialogs
             Init(view);
             LoadOrdersAsync();
             CheckOrderStatus();
+            CheckOrderType();
 
             return view;
         }
@@ -96,8 +91,6 @@ namespace KotaPalace.Dialogs
             orderItemsRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.orderItemsRecyclerView);
 
             BtnProcess = view.FindViewById<MaterialButton>(Resource.Id.BtnProcess);
-
-            chipGroup = view.FindViewById<ChipGroup>(Resource.Id.AddOnsChips);
 
             close_order_view.Click += (s, e) =>
             {
@@ -125,6 +118,32 @@ namespace KotaPalace.Dialogs
                 BtnProcess.Enabled = false;
                 BtnProcess.Text = "DONE";
             }
+        }
+
+        private void CheckOrderType()
+        {
+            //var random = new Random();
+            //var list = new List<string> { };
+            //int index = random.Next(list.Count);
+
+            //Message(list[index]);
+
+            //man i'm goin to take a quick bath
+
+            //if (order.Option == "DELIVER")
+            //{
+
+            //}
+
+            //if (order.Option == "EAT-IN")
+            //{
+
+            //}
+
+            //if (order.Option == "COLLECT")
+            //{
+
+            //}
         }
 
         private void LoadOrdersAsync()

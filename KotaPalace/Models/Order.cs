@@ -16,6 +16,10 @@ namespace KotaPalace.Models
         public virtual ICollection<OrderItems> OrderItems { get; set; }
         //public string OrderDate { get; set; }
         public DateTime OrderDateUtc { get; set; }
+        public string Option { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string DriverId { get; set; }
 
     }
 }

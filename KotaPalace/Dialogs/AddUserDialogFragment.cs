@@ -7,6 +7,7 @@ using AndroidX.Fragment.App;
 using FFImageLoading;
 using Google.Android.Material.Button;
 using Google.Android.Material.TextField;
+using Google.Android.Material.TextView;
 using KotaPalace.Activities;
 using KotaPalace.Models;
 using Plugin.FirebaseStorage;
@@ -34,16 +35,18 @@ namespace KotaPalace.Dialogs
         private TextInputEditText InputAddPassword;
         private TextInputEditText InputAddConfirmPassword;
 
+        private MaterialTextView txt_pdp_copy;
+        private MaterialButton BtnPDPCopy;
+
+        private MaterialTextView txt_id_copy;
+        private MaterialButton BtnIdCopy; 
+
         private MaterialButton BtnAddUser;
 
         private string key;
         private FileResult file;
-
-
-        public AddUserDialogFragment(string key)
-        {
-            this.key = key;
-        }
+        private FileResult id_file;
+        private FileResult pdp_file;
 
         public AddUserDialogFragment()
         {
@@ -67,10 +70,9 @@ namespace KotaPalace.Dialogs
         {
             // Use this to return your custom view for this Fragment
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
-            View view = inflater.Inflate(Resource.Layout.fragment_update_user, container, false);
+            View view = inflater.Inflate(Resource.Layout.fragment_add_user, container, false);
 
             mContext = view.Context;
-
             Init(view);
 
             return view;
@@ -84,10 +86,15 @@ namespace KotaPalace.Dialogs
             InputAddFirstname = view.FindViewById<TextInputEditText>(Resource.Id.InputAddFirstname);
             InputAddLastname = view.FindViewById<TextInputEditText>(Resource.Id.InputAddLastname);
             InputAddEmail = view.FindViewById<TextInputEditText>(Resource.Id.InputAddEmail);
-            InputAddUserType = view.FindViewById<TextInputEditText>(Resource.Id.InputAddUserType);
             InputAddPhoneNumber = view.FindViewById<TextInputEditText>(Resource.Id.InputAddPhoneNumber);
             InputAddPassword = view.FindViewById<TextInputEditText>(Resource.Id.InputAddPassword);
             InputAddConfirmPassword = view.FindViewById<TextInputEditText>(Resource.Id.InputAddConfirmPassword);
+
+            //txt_id_copy = view.FindViewById<MaterialTextView>(Resource.Id.txt_id_copy);
+            //txt_pdp_copy = view.FindViewById<MaterialTextView>(Resource.Id.txt_pdp_copy);
+
+            //BtnIdCopy = view.FindViewById<MaterialButton>(Resource.Id.BtnIdCopy);
+            //BtnPDPCopy = view.FindViewById<MaterialButton>(Resource.Id.BtnPDPCopy);
 
             BtnAddUser = view.FindViewById<MaterialButton>(Resource.Id.BtnAddUser);
 
@@ -101,13 +108,23 @@ namespace KotaPalace.Dialogs
                 file = await PickAndShow();
             };
 
+            //BtnIdCopy.Click += async (s, e) =>
+            //{
+            //    id_file = await PickAndShowDoc();
+            //};
+
+            //BtnPDPCopy.Click += async (s, e) =>
+            //{
+            //    pdp_file = await PickAndShowDoc();
+            //};
+
             BtnAddUser.Click += (s, e) =>
             {
-                AddUser();
+                AddNewUser();
             };
         }
 
-        private async void AddUser()
+        private async void AddNewUser()
         {
             if (string.IsNullOrEmpty(InputAddFirstname.Text) || string.IsNullOrWhiteSpace(InputAddFirstname.Text))
             {
@@ -159,6 +176,17 @@ namespace KotaPalace.Dialogs
                 InputAddConfirmPassword.Error = "Passwords don't match!!!";
                 return ;
             }
+
+            //else if(id_file == null)
+            //{
+            //    Message("Please upload Id copy!");
+            //}
+
+            //else if (pdp_file == null)
+            //{
+            //    Message("Please upload PDP copy!");
+            //}
+
             else
             {
                 var st = await file.OpenReadAsync();
@@ -175,13 +203,13 @@ namespace KotaPalace.Dialogs
 
                 UserSignUp user = new UserSignUp()
                 {
-                    Firstname = InputAddFirstname.Text,
-                    Lastname = InputAddLastname.Text,
-                    Email = InputAddEmail.Text,
-                    PhoneNumber = InputAddPhoneNumber.Text,
-                    Url = url.ToString(),
-                    Password = InputAddPassword.Text,
-                    UserType = "Driver"
+                    Firstname = InputAddFirstname.Text.Trim(),
+                    UserType = "Driver",
+                    Lastname = InputAddLastname.Text.Trim(),
+                    Email = InputAddEmail.Text.Trim(),
+                    Password = InputAddPassword.Text.Trim(),
+                    PhoneNumber = InputAddPhoneNumber.Text.Trim(),
+                    Url = url.ToString()
                 };
 
                 try
@@ -191,7 +219,7 @@ namespace KotaPalace.Dialogs
                     HttpContent data = new StringContent(json, Encoding.UTF8, "application/json");
                     try
                     {
-                        var response = await client.PutAsync($"{API.Url}/account/signup", data);
+                        var response = await client.PostAsync($"{API.Url}/account/signup", data);
 
                         if (response.IsSuccessStatusCode)
                         {
@@ -219,6 +247,28 @@ namespace KotaPalace.Dialogs
                 var file = await FilePicker.PickAsync(new PickOptions()
                 {
                     FileTypes = FilePickerFileType.Images
+                });
+
+                if (file != null)
+                {
+                    return file;
+                }
+            }
+            catch (Exception ex)
+            {
+                Message(ex.Message);
+            }
+
+            return null;
+        }
+
+        private async Task<FileResult> PickAndShowDoc()
+        {
+            try
+            {
+                var file = await FilePicker.PickAsync(new PickOptions()
+                {
+                    FileTypes = FilePickerFileType.Pdf
                 });
 
                 if (file != null)

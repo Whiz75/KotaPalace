@@ -154,14 +154,8 @@ namespace KotaPalace.Dialogs
                 var add = await ReverseGeocodeCurrentLocation(location.Latitude, location.Longitude);
                 address = add?.GetAddressLine(0);
             }
-            
-
-
-
 
             this.googleMap.CameraIdle += GoogleMap_CameraIdle;
-
-            
         }
 
         private async void GoogleMap_CameraIdle(object sender, EventArgs e)
